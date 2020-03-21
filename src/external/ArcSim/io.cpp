@@ -25,17 +25,12 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 */
 
 #include "io.hpp"
-
-
-
 #include <cfloat>
-
 
 using namespace std;
 
-
+namespace ARCSim {
 const int FILE_VERSION = 1;
-
 
 // OBJ meshes
 
@@ -269,3 +264,4 @@ vector<Face*> triangulateARC(const vector<Vert*> &verts) {
 	}
 	return tris;
 }
+}  // namespace ARCSim

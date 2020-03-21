@@ -10,7 +10,7 @@
 using namespace std;
 using namespace Eigen;
 
-MatrixXd deform_grad(const Face *f)
+MatrixXd deform_grad(const ARCSim::Face *f)
 {
 	MatrixXd Dx(3, 2);
 	Dx(0, 0) = f->v[1]->node->x[0] - f->v[0]->node->x[0];
@@ -27,14 +27,13 @@ MatrixXd deform_grad(const Face *f)
 	return Dx * DX.inverse();
 }
 
-MatrixXd deform_grad_v(const Vert* v)
-{
+MatrixXd deform_grad_v(const ARCSim::Vert* v) {
 	double tot_ang = 0.0;
 	Matrix3d Q = Matrix3d::Zero();
 	Matrix2d P = Matrix2d::Zero();
 
 	for (int f = 0; f < v->adjf.size(); f++) {
-		Face* face = v->adjf[f];
+          ARCSim::Face* face = v->adjf[f];
 
 		MatrixXd F = deform_grad(face);
 		JacobiSVD<MatrixXd> svd(F, ComputeFullU | ComputeFullV);

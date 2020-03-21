@@ -27,9 +27,7 @@
 #ifndef SUBSET_HPP
 #define SUBSET_HPP
 
-
-
-
+namespace ARCSim {
 
 class MeshSubset {
 public:
@@ -52,5 +50,7 @@ public:
 private:
     void recompute_support(std::map<Node*,int>& acc);    
 };
+
+}  // namespace ARCSim
 
 #endif

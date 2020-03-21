@@ -28,6 +28,8 @@
 
 using namespace std;
 
+namespace ARCSim {
+
 struct Disk {
     Vec2 c;
     double r;
@@ -166,3 +168,5 @@ template <typename T> vector<T> cons (const T &x, const vector<T> &v) {
         w[i] = v[i-1];
     return w;
 }
+
+}  // namespace ARCSim

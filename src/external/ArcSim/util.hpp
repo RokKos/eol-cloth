@@ -36,6 +36,7 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #define NEXT(i) ((i)<2 ? (i)+1 : (i)-2)
 #define PREV(i) ((i)>0 ? (i)-1 : (i)+2)
 
+namespace ARCSim {
 typedef unsigned int uint;
 
 struct Transformation;
@@ -211,5 +212,7 @@ std::ostream &operator<< (std::ostream &out, const std::vector<T> &v) {
 #define REPORT(x) std::cout << #x << " = " << (x) << std::endl
 
 #define REPORT_ARRAY(x,n) std::cout << #x << "[" << #n << "] = " << vector<double>(&(x)[0], &(x)[n]) << std::endl
+
+}  // namespace ARCSim
 
 #endif

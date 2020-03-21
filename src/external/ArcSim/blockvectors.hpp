@@ -27,6 +27,8 @@
 #ifndef BLOCKVECTORS_HPP
 #define BLOCKVECTORS_HPP
 
+namespace ARCSim {
+
 template <int m, int n, typename T>
 Vec<m*n,T> mat_to_vec (const Mat<m,n,T> &A) {
     Vec<m*n,T> a;
@@ -71,5 +73,7 @@ template <> inline Mat<3,4> symmetrize<2> () {
     S(2,1) = S(2,2) = 1/2.f;
     return S;
 }
+
+}  // namespace ARCSim
 
 #endif

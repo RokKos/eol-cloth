@@ -30,13 +30,6 @@
 
 #if defined(_WIN32) && !defined(__CYGWIN__)
 
-#pragma warning(disable:4018) // signed/unsigned mismatch
-#pragma warning(disable:4244) // conversion from 'double' to 'float', possible loss of data
-#pragma warning(disable:4996) // this function or variable may be unsafe
-#pragma warning(disable:4251) // class needs to have dll-interface to be used by clients
-#pragma warning(disable:4800) // forcing value to bool 'true' or 'false'
-#pragma warning(disable:161)  // unrecognized #pragma
-
 
 #include <windows.h>
 #undef min
@@ -45,16 +38,17 @@
 
 #define snprintf _snprintf
 
-//#include <boost/math/special_functions/fpclassify.hpp> 
-//template <class T> inline bool isfinite(const T& number) { return boost::math::isfinite(number); }
-//template <class T> inline bool   finite(const T& number) { return boost::math::isfinite(number); }
+namespace ARCSim {
+    inline double sqrt(int n) { return sqrt(double(n)); }
 
-inline double sqrt(int n) { return sqrt(double(n)); }
+    template <class T>
+    inline T log2(const T& number) {
+      return log(number) / log(T(2));
+    }
 
-template <class T> inline T log2(const T& number) { return log(number)/log(T(2)); }
+    extern std::ostream cdbg;
 
-extern std::ostream cdbg;
-
+}  // namespace ARCSim
 #endif
 
 #endif

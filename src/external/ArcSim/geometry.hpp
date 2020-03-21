@@ -27,7 +27,7 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #ifndef GEOMETRY_HPP
 #define GEOMETRY_HPP
 
-
+namespace ARCSim {
 
 double signed_vf_distance(const Vec3 &x,
 	const Vec3 &y0, const Vec3 &y1, const Vec3 &y2,
@@ -102,5 +102,6 @@ template <> inline Vec3 &pos<MS>(Vert *vert) { return vert->u; }
 template <> inline Vec3 &pos<PS>(Vert *vert) { return vert->node->y; }
 template <> inline Vec3 &pos<WS>(Vert *vert) { return vert->node->x; }
 
+}  // namespace ARCSim
 
 #endif

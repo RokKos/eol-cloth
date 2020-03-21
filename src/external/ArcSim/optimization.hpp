@@ -27,8 +27,7 @@
 #ifndef OPTIMIZATION_HPP
 #define OPTIMIZATION_HPP
 
-//#include "sparse.hpp"
-
+namespace ARCSim {
 
 // Problems
 
@@ -127,5 +126,5 @@ template <int n> void add_subvec (double *x, int i, const Vec<n> &xi) {
 //        A(i*3+ii, j*3+jj) += Aij(ii,jj);
 //}
 
-
+}  // namespace ARCSim
 #endif

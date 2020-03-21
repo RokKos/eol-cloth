@@ -26,10 +26,9 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 
 #include "../../Cloth.h"
 
-
-#include <assert.h>
-
 using namespace std;
+
+namespace ARCSim {
 
 int uuid_src = 0;
 
@@ -533,3 +532,5 @@ void delete_mesh(Mesh &mesh) {
 	//	delete mesh.proxy;
 	//mesh.proxy = 0;
 }
+
+}  // namespace ARCSim

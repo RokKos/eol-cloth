@@ -25,20 +25,17 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 */
 
 #include "remesh.hpp"
-
 #include "../../Cloth.h"
-
 #include "blockvectors.hpp"
-
 #include "magic.hpp"
 #include "referenceshape.hpp"
 
 
-#include <assert.h>
 
 
 using namespace std;
 
+namespace ARCSim {
 // Helpers
 template <class T> static void delete_all(const vector<T>& a) { for (size_t i = 0; i<a.size(); i++) delete a[i]; }
 template <class T> static void remove_all(const vector<T>& a, Mesh& m) { for (size_t i = 0; i<a.size(); i++) m.remove(a[i]); }
@@ -370,7 +367,7 @@ RemeshOp split_edge(Edge* edge, double d) {
 		op.removed_faces.push_back(f);
 		Face* nf0 = new Face(v0, vnew[s], v2, f->Sp_str, f->Sp_bend, f->material, f->damage);
 		Face* nf1 = new Face(vnew[s], v1, v2, f->Sp_str, f->Sp_bend, f->material, f->damage);
-		if (min(aspect(nf0), aspect(nf1)) < 1e-3) {
+		if (std::min(aspect(nf0), aspect(nf1)) < 1e-3) {
 			op.cancel();
 			return op;
 		}
@@ -498,3 +495,5 @@ bool try_move_node(Node* node, Edge* edge, double d) {
 	//local_pop_filter(faces);
 	return true;
 }
+
+}  // namespace ARCSim

@@ -27,9 +27,7 @@
 #ifndef TRANSFORMATION_HPP
 #define TRANSFORMATION_HPP
 
-//#include "spline.hpp"
-
-
+namespace ARCSim {
 
 // Transform the mesh
 struct Quaternion {
@@ -81,4 +79,5 @@ typedef std::pair<Transformation,Transformation> DTransformation;
 //Vec3 apply_dtrans (const DTransformation &dT, const Vec3 &x0, Vec3 *vel=NULL);
 //Vec3 apply_dtrans_vec (const DTransformation &dT, const Vec3 &v0);
 
+}  // namespace ARCSim
 #endif

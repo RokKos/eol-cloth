@@ -51,6 +51,8 @@ extern "C" {
 
 }
 
+namespace ARCSim {
+
 template <int n> Vec<n> eigen_values(const Mat<n, n> &A) {
 	Vec<n*n> a = mat_to_vec(A);
 	Vec<n> w;
@@ -491,3 +493,5 @@ template <int m, int n> Vec<n> solve_llsq(const Mat<m, n> &A, const Vec<m>& b) {
 }
 
 template Vec3 solve_llsq(const Mat<6, 3>&, const Vec<6>&);
+
+}  // namespace ARCSim

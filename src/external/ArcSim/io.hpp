@@ -27,9 +27,7 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #ifndef IO_HPP
 #define IO_HPP
 
-
-
-//#include <zlib.h>
+namespace ARCSim {
 
 static double angle(const Vec3 &x0, const Vec3 &x1, const Vec3 &x2);
 std::vector<Face*> triangulateARC(const std::vector<Vert*> &verts);
@@ -41,5 +39,6 @@ void load_objs(std::vector<Mesh*> &meshes, const std::string &prefix);
 
 void load_cloth_obj(Mesh &mesh, const std::string &filename);
 
+}  // namespace ARCSim
 
 #endif

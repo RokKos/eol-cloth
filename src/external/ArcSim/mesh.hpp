@@ -29,6 +29,8 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 
 #include "transformation.hpp"
 
+namespace ARCSim {
+
 struct Serialize;
 
 // material space (not fused at seams)
@@ -39,7 +41,7 @@ struct Node;
 struct Edge;
 struct Material;
 struct ReferenceShape;
-struct Cloth;
+class Cloth;
 struct Mesh;
 
 struct Plane {
@@ -364,5 +366,7 @@ template <typename Prim> inline int count_elements(const std::vector<Mesh*>& mes
 		num += get<Prim>(*meshes[i]).size();
 	return num;
 }
+
+}  // namespace ARCSim
 
 #endif

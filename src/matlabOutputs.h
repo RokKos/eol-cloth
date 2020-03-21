@@ -14,7 +14,8 @@ void vec_to_file(const Eigen::VectorXd& vec, const std::string &var_name, const 
 
 void vec_to_file(const Eigen::VectorXi& vec, const std::string &var_name, const std::string &file_name, const bool &overwrite);
 
-void mesh2m(const Mesh& mesh, const std::string &file_name, const bool &overwrite);
+void mesh2m(const ARCSim::Mesh &mesh, const std::string &file_name,
+            const bool &overwrite);
 
 void double_to_file(double d, const std::string &var_name, const std::string &file_name, const bool &overwrite);
 

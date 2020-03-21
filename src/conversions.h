@@ -5,14 +5,14 @@
 // These conversions translate ArcSim vectors to Eigen vectors
 
 // Eigen 2 vec
-Vec2 e2v(const Eigen::Vector2d);
-Vec3 e2v(const Eigen::Vector3d);
+ARCSim::Vec2 e2v(const Eigen::Vector2d);
+ARCSim::Vec3 e2v(const Eigen::Vector3d);
 
 // Vec 2 Eigen
-Eigen::Vector2d v2e(const Vec2);
-Eigen::Vector3d v2e(const Vec3);
+Eigen::Vector2d v2e(const ARCSim::Vec2);
+Eigen::Vector3d v2e(const ARCSim::Vec3);
 
 // Vec 3D to Eigen 2D
-Eigen::Vector2d v322e(const Vec3 v);
+Eigen::Vector2d v322e(const ARCSim::Vec3 v);
 
 #endif

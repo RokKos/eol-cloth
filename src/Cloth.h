@@ -36,11 +36,11 @@ class Cloth : public Brenderable
 public:
 	EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 
-	Mesh mesh;
+	ARCSim::Mesh mesh;
 	Remeshing remeshing;
 	Material material;
 
-	Mesh last_mesh;
+	ARCSim::Mesh last_mesh;
 
 	std::vector<std::shared_ptr<FixedList> > fs;
 

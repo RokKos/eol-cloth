@@ -5,7 +5,7 @@
 using namespace std;
 using namespace Eigen;
 
-void CD(const Mesh& mesh, const shared_ptr<Obstacles> obs, std::vector<std::shared_ptr<btc::Collision> > &cls)
+void CD(const ARCSim::Mesh& mesh, const shared_ptr<Obstacles> obs, std::vector<std::shared_ptr<btc::Collision> > &cls)
 {
 	MatrixXd verts2(3, mesh.nodes.size());
 	MatrixXi faces2(3, mesh.faces.size());
@@ -49,8 +49,8 @@ void CD(const Mesh& mesh, const shared_ptr<Obstacles> obs, std::vector<std::shar
 	
 }
 
-void CD2(const Mesh& mesh, const shared_ptr<Obstacles> obs, std::vector<std::shared_ptr<btc::Collision> > &cls)
-{
+void CD2(const ARCSim::Mesh& mesh, const shared_ptr<Obstacles> obs,
+         std::vector<std::shared_ptr<btc::Collision> >& cls) {
 	MatrixXd verts2(3, mesh.nodes.size());
 	MatrixXi faces2(3, mesh.faces.size());
 	VectorXi EoLs;

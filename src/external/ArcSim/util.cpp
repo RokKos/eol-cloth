@@ -32,6 +32,8 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 
 using namespace std;
 
+namespace ARCSim {
+
 void Stats::add(double x) {
 	xs.push_back(x);
 	sum += x;
@@ -166,3 +168,5 @@ void build_node_lookup(map<const Node*, Vec3>& nodemap, const vector<Mesh*>& mes
 void segfault() {
 	raise(SIGSEGV);
 }
+
+}  // namespace ARCSim

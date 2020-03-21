@@ -126,8 +126,8 @@ void vec_to_file(const Eigen::VectorXi& vec, const string &var_name, const strin
 	ofs.close();
 }
 
-void mesh2m(const Mesh& mesh, const string &file_name, const bool &overwrite)
-{
+void mesh2m(const ARCSim::Mesh &mesh, const string &file_name,
+            const bool &overwrite) {
 	MatrixXd x_X(mesh.nodes.size(), 5);
 	MatrixXi faces2(3, mesh.faces.size());
 	VectorXi isEOL(mesh.nodes.size());

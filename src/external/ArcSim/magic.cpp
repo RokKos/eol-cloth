@@ -26,4 +26,8 @@
 
 #include "magic.hpp"
 
+namespace ARCSim {
+
 Magic magic;
+
+}  // namespace ARCSim

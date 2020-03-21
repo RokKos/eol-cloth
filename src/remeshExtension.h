@@ -4,10 +4,10 @@
 
 #include "external/ArcSim/remesh.hpp"
 
-RemeshOp split_edgeForced(Edge* edge, double d, double thresh);
+ARCSim::RemeshOp split_edgeForced(ARCSim::Edge* edge, double d, double thresh);
 
-RemeshOp collapse_edgeForced(Edge* edge, int i);
+ARCSim::RemeshOp collapse_edgeForced(ARCSim::Edge* edge, int i);
 
-RemeshOp split_face(Face* face, Vec3 b);
+ARCSim::RemeshOp split_face(ARCSim::Face* face, ARCSim::Vec3 b);
 
 #endif

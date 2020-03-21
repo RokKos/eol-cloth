@@ -27,6 +27,8 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #ifndef MAGIC_HPP
 #define MAGIC_HPP
 
+namespace ARCSim {
+
 // Magic numbers and other hacks
 
 struct Magic {
@@ -60,5 +62,7 @@ struct Magic {
 };
 
 extern Magic magic;
+
+}  // namespace ARCSim
 
 #endif

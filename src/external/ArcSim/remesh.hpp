@@ -27,6 +27,8 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #ifndef REMESH_HPP
 #define REMESH_HPP
 
+namespace ARCSim {
+
 // Pointers are owned by the RemeshOp.
 // Use done() and/or inverse().done() to free.
 
@@ -61,4 +63,5 @@ RemeshOp collapse_edge(Edge *edge, int which); // which end to delete
 
 RemeshOp flip_edge(Edge *edge);
 
+}  // namespace ARCSim
 #endif

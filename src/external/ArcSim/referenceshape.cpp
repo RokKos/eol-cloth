@@ -2,6 +2,8 @@
 
 using namespace std;
 
+namespace ARCSim {
+
 ReferenceSphere::ReferenceSphere(const Vec3& _center, double _radius) : center(_center), radius(_radius) {
 }
 
@@ -58,3 +60,5 @@ Vec3 ReferenceMesh::closest_point(const Vec3& p) {
 bool ReferenceMesh::raycast(Vec3& p, const Vec3& dir) {
     return false;
 }
+
+}  // namespace ARCSim

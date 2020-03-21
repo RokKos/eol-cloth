@@ -29,10 +29,7 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 
 #include "winport.hpp" // aa: windows bindings, etc
 
-
-
-//#include <zlib.h>
-
+namespace ARCSim {
 
 // aa: if defined, AVX SIMD doubles will be used for vector math.
 //#define _AVX
@@ -311,5 +308,7 @@ return C;
 }
 */
 #undef static_assert
+
+}  // namespace ARCSim
 
 #endif

@@ -24,10 +24,9 @@ IS". REGENTS HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT,
 UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 */
 
-
-
-
 using namespace std;
+
+namespace ARCSim {
 
 double signed_vf_distance(const Vec3 &x,
 	const Vec3 &y0, const Vec3 &y1, const Vec3 &y2,
@@ -80,7 +79,8 @@ double signed_ee_distance(const Vec3 &x0, const Vec3 &x1,
 		double p0min = dot(x0, e0), p0max = dot(x1, e0), p1min = dot(y0, e0), p1max = dot(y1, e0);
 		if (p1max < p1min) swap(p1max, p1min);
 
-		double a = max(p0min, p1min), b = min(p0max, p1max), c = 0.5*(a + b);
+		double a = std::max(p0min, p1min), b = std::min(p0max, p1max),
+                       c = 0.5 * (a + b);
 		if (a > b) return infinity;
 
 		Vec3 d = (y0 - x0) - dot(y0 - x0, e0)*e0;
@@ -444,3 +444,5 @@ bool triangle_ray_test(const Vec3 &x0, const Vec3& x1, const Vec3& x2,
 		*bary = Vec3((1.0 - u - v), u, v);
 	return true;
 }
+
+}  // namespace ARCSim

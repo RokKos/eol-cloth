@@ -26,9 +26,9 @@
 
 #include "subset.hpp"
 
-//#include "display.hpp"
-
 using namespace std;
+
+namespace ARCSim {
 
 vector<Node*> MeshSubset::get_all_nodes() {
     vector<Node*> nodes;
@@ -118,3 +118,5 @@ void MeshSubset::clear_flag(int flag) {
 //		Annotation::add(active_nodes[i],(active_nodes[i]->flag & Node::FlagMayBreak) ? Vec3(0,0.4,0) : Vec3(0.8,0,0.8));
 //	wait_key();
 //}
+
+}  // namespace ARCSim

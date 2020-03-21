@@ -2,15 +2,6 @@
 #ifndef __Constraints__
 #define __Constraints__
 
-
-
-
-
-
-
-
-
-
 #include <Eigen/StdVector>
 
 #ifdef EOLC_ONLINE
@@ -46,7 +37,10 @@ public:
 
 	void init(const std::shared_ptr<Obstacles> obs);
 	void updateTable(const std::shared_ptr<Obstacles> obs);
-	void fill(const Mesh& mesh, const std::shared_ptr<Obstacles> obs, const std::shared_ptr<FixedList> fs, double h, const bool& online);
+    void fill(const ARCSim::Mesh& mesh,
+                const std::shared_ptr<Obstacles> obs,
+                const std::shared_ptr<FixedList> fs, double h,
+                const bool& online);
 
 #ifdef EOLC_ONLINE
 	void drawSimple(std::shared_ptr<MatrixStack> MV, const std::shared_ptr<Program> p) const;

@@ -27,9 +27,10 @@
 #ifndef TENSORMAX_HPP
 #define TENSORMAX_HPP
 
+namespace ARCSim {
 
+Mat2x2 tensor_max(const std::vector<Mat2x2> &Ms);
 
-
-Mat2x2 tensor_max (const std::vector<Mat2x2> &Ms);
+}
 
 #endif

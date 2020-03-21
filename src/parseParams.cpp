@@ -70,7 +70,7 @@ struct Range {
 	Range(double &min, double &max) : min(min), max(max) {}
 };
 
-void parse(Range range, const Json::Value &json, Vec2 range0, const string key) {
+void parse(Range range, const Json::Value &json, ARCSim::Vec2 range0, const string key) {
 	if (json.isNull()) {
 		range.min = range0[0];
 		range.max = range0[1];
@@ -193,18 +193,18 @@ void load_matset(Material& material, const Json::Value& json)
 	parse(material.nu, json["poissons"], 0.01);
 	parse(material.beta, json["stiffness"], 1.0e-5);
 	parse(Range(material.dampingA, material.dampingB),
-		json["damping"], Vec2(0.0, 1.0), "damping");
+		json["damping"], ARCSim::Vec2(0.0, 1.0), "damping");
 }
 
 // Borrowed from ArcSim
 void load_remeshset(Remeshing& remeshing, const Json::Value& json)
 {
-	parse(remeshing.refine_angle, json["refine_angle"], infinity);
-	parse(remeshing.refine_compression, json["refine_compression"], infinity);
-	parse(remeshing.refine_velocity, json["refine_velocity"], infinity);
+	parse(remeshing.refine_angle, json["refine_angle"], ARCSim::infinity);
+	parse(remeshing.refine_compression, json["refine_compression"], ARCSim::infinity);
+	parse(remeshing.refine_velocity, json["refine_velocity"], ARCSim::infinity);
 	parse(Range(remeshing.size_min, remeshing.size_max),
-		json["size"], Vec2(-infinity, infinity), "size");
-	parse(remeshing.aspect_min, json["aspect_min"], -infinity);
+		json["size"], ARCSim::Vec2(-ARCSim::infinity, ARCSim::infinity), "size");
+	parse(remeshing.aspect_min, json["aspect_min"], -ARCSim::infinity);
 }
 
 void load_fixedset(vector<shared_ptr<FixedList> > &fsv, const Json::Value& json)
@@ -262,7 +262,7 @@ void load_defclothset(shared_ptr<Cloth> cloth, const Json::Value& json)
 	parse(p11, json["corner4"], dp11);
 	cloth->build(res, p00, p01, p10, p11);
 	cloth->mesh.parent = cloth;
-	cloth->mesh.ref = new ReferenceLinear(cloth->mesh);
+    cloth->mesh.ref = new ARCSim::ReferenceLinear(cloth->mesh);
 }
 
 void load_clothset(shared_ptr<Cloth> cloth, const Json::Value& json)

@@ -1,7 +1,7 @@
 #ifndef REFERENCESHAPE_HPP
 #define REFERENCESHAPE_HPP
 
-
+namespace ARCSim {
 
 class ReferenceShape {
 public:
@@ -37,5 +37,6 @@ public:
     bool raycast(Vec3& p, const Vec3& dir);
 };
 
+}  // namespace ARCSim
 
 #endif

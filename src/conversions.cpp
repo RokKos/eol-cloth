@@ -1,30 +1,19 @@
 #include "conversions.h"
 
+ARCSim::Vec2 e2v(const Eigen::Vector2d v) { return ARCSim::Vec2(v(0), v(1)); }
 
-
-using namespace Eigen;
-
-Vec2 e2v(const Vector2d v)
-{
-	return Vec2(v(0), v(1));
+ARCSim::Vec3 e2v(const Eigen::Vector3d v) {
+  return ARCSim::Vec3(v(0), v(1), v(2));
 }
 
-Vec3 e2v(const Vector3d v)
-{
-	return Vec3(v(0), v(1), v(2));
+Eigen::Vector2d v2e(const ARCSim::Vec2 v) {
+  return Eigen::Vector2d(v[0], v[1]);
 }
 
-Vector2d v2e(const Vec2 v)
-{
-	return Vector2d(v[0], v[1]);
+Eigen::Vector2d v322e(const ARCSim::Vec3 v) {
+  return Eigen::Vector2d(v[0], v[1]);
 }
 
-Vector2d v322e(const Vec3 v)
-{
-	return Vector2d(v[0], v[1]);
-}
-
-Vector3d v2e(const Vec3 v)
-{
-	return Vector3d(v[0], v[1], v[2]);
+Eigen::Vector3d v2e(const ARCSim::Vec3 v) {
+  return Eigen::Vector3d(v[0], v[1], v[2]);
 }

@@ -60,8 +60,7 @@ void Scene::init(const bool& online, const bool& exportObjs, const string& OUTPU
 	}
 }
 
-void printstate(Mesh& mesh)
-{
+void printstate(ARCSim::Mesh& mesh) {
 	for (int n = 0; n < mesh.nodes.size(); n++) {
 		if (mesh.nodes[n]->EoL) {
 			cout << mesh.nodes[n]->EoL_state << endl;

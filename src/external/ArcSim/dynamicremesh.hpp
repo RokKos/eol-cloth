@@ -29,7 +29,8 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 
 
 #include "../../Cloth.h"
-//#include "nearobs.hpp"
+
+namespace ARCSim {
 
 class MeshSubset;
 
@@ -41,5 +42,5 @@ void dynamic_remesh(MeshSubset& subset, const std::map<Node*, Plane> &planes);
 Mat3x3 compute_face_sizing(Remeshing& remeshing, const Face *face,
 	const std::map<Node*, Plane> &planes, bool debug = false);
 
-
+}  // namespace ARCSim
 #endif

@@ -28,6 +28,8 @@
 
 using namespace std;
 
+namespace ARCSim {
+
 Transformation tform::identity () {
     return Transformation();
 }
@@ -225,3 +227,5 @@ Quaternion normalize (const Quaternion &q) {
 //Vec3 apply_dtrans_vec (const DTransformation &dtrans, const Vec3 &v0) {
 //    return dtrans.first.apply_vec(v0);
 //}
+
+}  // namespace ARCSim
