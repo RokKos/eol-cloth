@@ -1,9 +1,9 @@
 // Small bench routine for Eigen available in Eigen
 // (C) Desire NUENTSA WAKAM, INRIA
 
-#include <iostream>
-#include <fstream>
-#include <iomanip>
+
+
+
 #include <unsupported/Eigen/SparseExtra>
 #include <Eigen/SparseLU>
 #include <bench/BenchTimer.h>

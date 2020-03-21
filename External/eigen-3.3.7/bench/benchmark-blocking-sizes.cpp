@@ -7,13 +7,6 @@
 // Public License v. 2.0. If a copy of the MPL was not distributed
 // with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-#include <iostream>
-#include <cstdint>
-#include <cstdlib>
-#include <vector>
-#include <fstream>
-#include <memory>
-#include <cstdio>
 
 bool eigen_use_specific_block_size;
 int eigen_block_size_k, eigen_block_size_m, eigen_block_size_n;
@@ -21,7 +14,7 @@ int eigen_block_size_k, eigen_block_size_m, eigen_block_size_n;
 #define EIGEN_TEST_SPECIFIC_BLOCKING_SIZE_K eigen_block_size_k
 #define EIGEN_TEST_SPECIFIC_BLOCKING_SIZE_M eigen_block_size_m
 #define EIGEN_TEST_SPECIFIC_BLOCKING_SIZE_N eigen_block_size_n
-#include <Eigen/Core>
+
 
 #include <bench/BenchTimer.h>
 

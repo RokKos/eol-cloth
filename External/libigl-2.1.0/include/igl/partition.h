@@ -8,7 +8,7 @@
 #ifndef IGL_PARTITION_H
 #define IGL_PARTITION_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 
 namespace igl
 {

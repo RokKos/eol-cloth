@@ -10,7 +10,7 @@
 #include "../../igl_inline.h"
 #include "RemeshSelfIntersectionsParam.h"
 
-#include <Eigen/Dense>
+
 
 namespace igl
 {

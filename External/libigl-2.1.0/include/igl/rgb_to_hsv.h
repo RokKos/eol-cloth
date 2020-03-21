@@ -8,7 +8,7 @@
 #ifndef IGL_RGB_TO_HSV_H
 #define IGL_RGB_TO_HSV_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Convert RGB to HSV

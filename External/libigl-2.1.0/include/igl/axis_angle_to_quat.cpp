@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "axis_angle_to_quat.h"
 #include "EPS.h"
-#include <cmath>
+
 
 // http://www.antisphere.com/Wiki/tools:anttweakbar
 template <typename Q_type>

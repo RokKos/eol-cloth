@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "readNODE.h"
 #include "matrix_to_list.h"
-#include <stdio.h>
+
 
 template <typename Scalar, typename Index>
 IGL_INLINE bool igl::readNODE(

@@ -9,10 +9,10 @@
 #define IGL_READTGF_H
 #include "igl_inline.h"
 
-#include <vector>
-#include <string>
+
+
 #ifndef IGL_NO_EIGEN
-#include <Eigen/Dense>
+
 #endif
 
 namespace igl

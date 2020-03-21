@@ -8,8 +8,8 @@
 #ifndef FACET_COMPONENTS_H
 #define FACET_COMPONENTS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 namespace igl
 {
   // Compute connected components of facets based on edge-edge adjacency.

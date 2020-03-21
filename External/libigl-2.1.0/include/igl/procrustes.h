@@ -9,7 +9,7 @@
 #define IGL_PROCRUSTES_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
+
 #include <Eigen/Geometry>
 
 namespace igl

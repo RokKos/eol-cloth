@@ -2,11 +2,11 @@
 #ifndef _SHAPE_H_
 #define _SHAPE_H_
 
-#include <string>
-#include <vector>
-#include <memory>
+
+
+
 #define EIGEN_DONT_ALIGN_STATICALLY
-#include <Eigen/Dense>
+
 
 #ifdef EOLC_ONLINE
 class Program;

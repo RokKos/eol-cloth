@@ -22,7 +22,7 @@
 #include "utilities.h"
 #include "STL_interface.hh"
 #include "STL_timer.hh"
-#include <string>
+
 #include "init_function.hh"
 #include "init_vector.hh"
 #include "init_matrix.hh"

@@ -8,7 +8,7 @@
 #ifndef IGL_EXTERIOR_EDGES_H
 #define IGL_EXTERIOR_EDGES_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // EXTERIOR_EDGES Determines boundary "edges" and also edges with an

@@ -25,7 +25,7 @@
 */
 
 #include "subset.hpp"
-#include "mesh.hpp"
+
 //#include "display.hpp"
 
 using namespace std;

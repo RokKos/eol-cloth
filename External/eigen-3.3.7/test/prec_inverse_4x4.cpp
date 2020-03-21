@@ -9,7 +9,7 @@
 
 #include "main.h"
 #include <Eigen/LU>
-#include <algorithm>
+
 
 template<typename MatrixType> void inverse_permutation_4x4()
 {

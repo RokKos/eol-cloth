@@ -17,11 +17,11 @@
 
 //#include <Eigen/SparseExtra>
 // Bug in unsupported/Eigen/SparseExtra needs iostream first
-#include <iostream>
+
 #include <unsupported/Eigen/SparseExtra>
-#include <cassert>
-#include <cstdio>
-#include <iostream>
+
+
+
 
 template <typename T, typename Derivedknown>
 IGL_INLINE bool igl::min_quad_with_fixed_precompute(

@@ -8,7 +8,7 @@
 #ifndef IGL_UNPROJECT_H
 #define IGL_UNPROJECT_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Eigen reimplementation of gluUnproject

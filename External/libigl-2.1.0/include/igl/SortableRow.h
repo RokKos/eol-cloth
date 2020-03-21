@@ -10,7 +10,7 @@
 
 // Simple class to contain a rowvector which allows rowwise sorting and
 // reordering
-#include <Eigen/Core>
+
 
 namespace igl
 {

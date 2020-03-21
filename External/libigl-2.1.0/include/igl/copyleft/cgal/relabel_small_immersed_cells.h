@@ -10,8 +10,8 @@
 #define IGL_RELABEL_SMALL_IMMERSED_CELLS
 
 #include "../../igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 
 namespace igl
 {

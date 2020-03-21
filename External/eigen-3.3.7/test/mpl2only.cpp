@@ -8,11 +8,11 @@
 // with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 #define EIGEN_MPL2_ONLY
-#include <Eigen/Dense>
+
 #include <Eigen/SparseCore>
 #include <Eigen/SparseLU>
 #include <Eigen/SparseQR>
-#include <Eigen/Sparse>
+
 #include <Eigen/IterativeLinearSolvers>
 #include <Eigen/Eigen>
 

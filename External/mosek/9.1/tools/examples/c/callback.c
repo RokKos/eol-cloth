@@ -18,9 +18,9 @@
               and intpnt is interior-point.
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+
+
+
 #include "mosek.h"
 
 #define CONT_EXAMPLE

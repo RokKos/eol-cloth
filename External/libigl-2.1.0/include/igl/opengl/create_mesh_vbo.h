@@ -9,7 +9,7 @@
 #define IGL_OPENGL_CREATE_MESH_VBO_H
 #include "../igl_inline.h"
 #include "gl.h"
-#include <Eigen/Core>
+
 
 // Create a VBO (Vertex Buffer Object) for a mesh. Actually two VBOs: one 
 // GL_ARRAY_BUFFER for the vertex positions (V) and one

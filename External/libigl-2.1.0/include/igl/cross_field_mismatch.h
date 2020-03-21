@@ -9,7 +9,7 @@
 #ifndef IGL_CROSS_FIELD_MISMATCH_H
 #define IGL_CROSS_FIELD_MISMATCH_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Calculates the mismatch (integer), at each face edge, of a cross field defined on the mesh faces.

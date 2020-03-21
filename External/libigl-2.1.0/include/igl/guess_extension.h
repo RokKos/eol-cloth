@@ -1,8 +1,8 @@
 #ifndef IGL_GUESS_EXTENSION_H
 #define IGL_GUESS_EXTENSION_H
 #include "igl_inline.h"
-#include <string>
-#include <cstdio>
+
+
 namespace igl
 {
   // Given a file pointer at the beginning of a "mesh" file, try to guess the

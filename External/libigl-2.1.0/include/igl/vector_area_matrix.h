@@ -9,8 +9,8 @@
 #define IGL_VECTOR_AREA_MATRIX_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 
 namespace igl
 {

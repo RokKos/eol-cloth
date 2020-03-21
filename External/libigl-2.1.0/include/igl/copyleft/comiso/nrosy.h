@@ -8,8 +8,8 @@
 #ifndef IGL_COMISO_NROSY_H
 #define IGL_COMISO_NROSY_H
 
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 #include "../../igl_inline.h"
 
 namespace igl

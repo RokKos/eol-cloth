@@ -9,10 +9,10 @@
 #include "min_quad_with_fixed.h"
 #include "harmonic.h"
 #include "parallel_for.h"
-#include <Eigen/Sparse>
-#include <iostream>
+
+
 #include <mutex>
-#include <cstdio>
+
 
 igl::BBWData::BBWData():
   partition_unity(false),

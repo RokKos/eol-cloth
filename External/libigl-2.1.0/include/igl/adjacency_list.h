@@ -9,9 +9,9 @@
 #define IGL_ADJACENCY_LIST_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
-#include <vector>
+
+
+
 namespace igl 
 {
   // Constructs the graph adjacency list of a given mesh (V,F)

@@ -6,16 +6,16 @@
 // #define EIGEN_DEFAULT_TO_ROW_MAJOR
 #define _FLOAT
 
-#include <iostream>
 
-#include <Eigen/Core>
+
+
 #include "BenchTimer.h"
 
 // include the BLAS headers
 extern "C" {
 #include <cblas.h>
 }
-#include <string>
+
 
 #ifdef _FLOAT
 typedef float Scalar;

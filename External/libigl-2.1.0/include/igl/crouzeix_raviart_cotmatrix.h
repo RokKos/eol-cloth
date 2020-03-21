@@ -8,8 +8,8 @@
 #ifndef IGL_CROUZEIX_RAVIART_COTMATRIX
 #define IGL_CROUZEIX_RAVIART_COTMATRIX
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 namespace igl
 {
   // CROUZEIX_RAVIART_COTMATRIX Compute the Crouzeix-Raviart cotangent

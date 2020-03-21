@@ -1,7 +1,7 @@
 #include "Rigid.h"
 #define _USE_MATH_DEFINES
 
-#include <iostream>
+
 
 #define EIGEN_DONT_ALIGN_STATICALLY
 #define EIGEN_NO_STATIC_ASSERT
@@ -143,7 +143,7 @@ Vector6d Rigid::log(const Eigen::Matrix4d & A)
 }
 
 
-// #include <iostream>
+// 
 // using namespace std;
 // int main(int argc, char **argv)
 // {

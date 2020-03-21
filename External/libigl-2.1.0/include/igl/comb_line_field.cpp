@@ -8,7 +8,7 @@
 
 #include "comb_line_field.h"
 
-#include <vector>
+
 #include <deque>
 #include "per_face_normals.h"
 #include "is_border_vertex.h"

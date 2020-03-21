@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #ifndef IGL_MATLAB_MEX_STREAM_H
 #define IGL_MATLAB_MEX_STREAM_H
-#include <iostream>
+
 namespace igl
 {
   namespace matlab

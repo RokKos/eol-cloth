@@ -8,8 +8,8 @@
 #include "median.h"
 #include "matrix_to_list.h"
 
-#include <vector>
-#include <algorithm>
+
+
 
 template <typename DerivedV, typename mType>
 IGL_INLINE bool igl::median(

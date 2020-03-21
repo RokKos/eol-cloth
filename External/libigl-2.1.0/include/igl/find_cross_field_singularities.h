@@ -9,7 +9,7 @@
 #ifndef IGL_FIND_CROSS_FIELD_SINGULARITIES_H
 #define IGL_FIND_CROSS_FIELD_SINGULARITIES_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Computes singularities of a cross field, assumed combed

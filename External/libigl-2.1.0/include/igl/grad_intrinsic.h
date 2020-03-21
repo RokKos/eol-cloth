@@ -9,8 +9,8 @@
 #define IGL_GRAD_INTRINSIC_H
 #include "igl_inline.h"
 
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 
 namespace igl {
   // GRAD_INTRINSIC Construct an intrinsic gradient operator.

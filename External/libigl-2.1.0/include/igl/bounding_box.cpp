@@ -6,7 +6,7 @@
 // v. 2.0. If a copy of the MPL was not distributed with this file, You can
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "bounding_box.h"
-#include <iostream>
+
 
 template <typename DerivedV, typename DerivedBV, typename DerivedBF>
 IGL_INLINE void igl::bounding_box(

@@ -8,7 +8,7 @@
 #ifndef IGL_UNIFORMLY_SAMPLE_TWO_MANIFOLD_H
 #define IGL_UNIFORMLY_SAMPLE_TWO_MANIFOLD_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // UNIFORMLY_SAMPLE_TWO_MANIFOLD Attempt to sample a mesh uniformly with

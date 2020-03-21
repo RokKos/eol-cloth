@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "edge_topology.h"
 #include "is_edge_manifold.h"
-#include <algorithm>
+
 
 template<typename DerivedV, typename DerivedF>
 IGL_INLINE void igl::edge_topology(

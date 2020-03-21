@@ -2,9 +2,9 @@
 #define _MOSEKTASK_H_
 
 #include <mosek.h>
-#include <string>
-#include <sstream>
-#include <memory>
+
+
+
 #include <functional>
 #include <monty_ndarray.h>
 #include <stdexcept>

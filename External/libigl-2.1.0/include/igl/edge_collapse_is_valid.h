@@ -8,7 +8,7 @@
 #ifndef IGL_EDGE_COLLAPSE_IS_VALID_H
 #define IGL_EDGE_COLLAPSE_IS_VALID_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Assumes (V,F) is a closed manifold mesh (except for previouslly collapsed

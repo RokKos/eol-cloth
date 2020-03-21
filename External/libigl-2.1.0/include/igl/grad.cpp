@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "grad.h"
 #include <Eigen/Geometry>
-#include <vector>
+
 
 #include "PI.h"
 #include "per_face_normals.h"

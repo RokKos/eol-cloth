@@ -1,7 +1,7 @@
 #include <glm/glm.hpp>
-#include <cstdio>
-#include <cstdlib>     //To define "exit", req'd by XLC.
-#include <ctime>
+
+     //To define "exit", req'd by XLC.
+
 
 int nlz(unsigned x)
 {

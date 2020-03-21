@@ -5,9 +5,9 @@
 //
 //   Purpose: A small example of how to access dual values.
 
-#include <memory>
-#include <iostream>
-#include <iomanip>
+
+
+
 #include "fusion.h"
 
 using namespace mosek::fusion;

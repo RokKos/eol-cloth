@@ -3,8 +3,8 @@
 
 #include <mosek.h>
 #include <mutex>
-#include <vector>
-#include <memory>
+
+
 
 #include "mosektask.h"
 

@@ -8,7 +8,7 @@
 #ifndef IGL_SVD3X3_SSE_H
 #define IGL_SVD3X3_SSE_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 
 namespace igl
 {

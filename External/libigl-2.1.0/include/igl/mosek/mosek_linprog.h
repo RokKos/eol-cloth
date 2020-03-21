@@ -8,8 +8,8 @@
 #ifndef IGL_MOSEK_MOSEK_LINPROG_H
 #define IGL_MOSEK_MOSEK_LINPROG_H
 #include "../igl_inline.h"
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 #include <mosek.h>
 namespace igl
 {

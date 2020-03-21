@@ -4,9 +4,9 @@
 #include <igl/edges.h>
 
 #include <array>
-#include <iostream>
-#include <vector>
-#include <set>
+
+
+
 
 namespace cut_to_disk_helper {
   template<typename DerivedV, typename DerivedF>

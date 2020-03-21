@@ -7,8 +7,8 @@
 #include "../vec3.hpp"
 #include "../vec4.hpp"
 #include "../detail/type_half.hpp"
-#include <cstring>
-#include <limits>
+
+
 
 namespace glm{
 namespace detail

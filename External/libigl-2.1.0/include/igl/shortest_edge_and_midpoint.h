@@ -8,8 +8,8 @@
 #ifndef IGL_SHORTEST_EDGE_AND_MIDPOINT_H
 #define IGL_SHORTEST_EDGE_AND_MIDPOINT_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 namespace igl
 {
   // Cost and placement function compatible with igl::decimate. The cost of

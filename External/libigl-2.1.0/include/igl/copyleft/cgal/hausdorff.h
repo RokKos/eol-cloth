@@ -9,9 +9,9 @@
 #define IGL_COPYLEFT_CGAL_HAUSDORFF_H
 #include "../../igl_inline.h"
 
-#include <Eigen/Dense>
+
 #include "CGAL_includes.hpp"
-#include <vector>
+
 
 namespace igl 
 {

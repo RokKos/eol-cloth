@@ -20,12 +20,12 @@ namespace igl
 
 
 
-#include <cstdio>
+
 #ifdef VERBOSE
 #  include <cstdarg>
 #endif
 
-#include <string>
+
 // http://channel9.msdn.com/forums/techoff/254707-wrapping-printf-in-c/
 #ifdef VERBOSE
 inline int igl::verbose(const char * msg,...)

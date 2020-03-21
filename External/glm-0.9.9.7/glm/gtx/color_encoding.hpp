@@ -17,7 +17,7 @@
 #include "../detail/setup.hpp"
 #include "../detail/qualifier.hpp"
 #include "../vec3.hpp"
-#include <limits>
+
 
 #if GLM_MESSAGES == GLM_ENABLE && !defined(GLM_EXT_INCLUDED)
 #	ifndef GLM_ENABLE_EXPERIMENTAL

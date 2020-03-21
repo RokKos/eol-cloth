@@ -2,7 +2,7 @@
 
 #include <cuda.h>
 #include <cuda_runtime.h>
-#include <iostream>
+
 
 #include "tensor_benchmarks.h"
 

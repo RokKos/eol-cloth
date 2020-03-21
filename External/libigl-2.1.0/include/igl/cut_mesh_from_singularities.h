@@ -9,7 +9,7 @@
 #ifndef IGL_CUT_MESH_FROM_SINGULARITIES_H
 #define IGL_CUT_MESH_FROM_SINGULARITIES_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Given a mesh (V,F) and the integer mismatch of a cross field per edge

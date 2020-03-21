@@ -10,7 +10,7 @@
 
 #include "../../opengl2/gl.h"
 
-#include <cstdlib>
+
 
 IGL_INLINE bool igl::opengl::render_to_tga(
   const std::string tga_file,

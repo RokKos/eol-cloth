@@ -16,9 +16,9 @@
                   diag(X) = e
                   X >= 0
 */
-#include <iostream>
-#include <iomanip>
-#include <cmath>
+
+
+
 
 #include "fusion.h"
 

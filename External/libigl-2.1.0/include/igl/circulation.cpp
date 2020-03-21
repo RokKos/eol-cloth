@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "circulation.h"
 #include "list_to_matrix.h"
-#include <cassert>
+
 
 IGL_INLINE std::vector<int> igl::circulation(
   const int e,

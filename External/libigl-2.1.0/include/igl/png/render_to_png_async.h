@@ -11,7 +11,7 @@
 #include <thread>
 //#include <boost/thread/thread.hpp>
 
-#include <string>
+
 namespace igl
 {
   namespace png

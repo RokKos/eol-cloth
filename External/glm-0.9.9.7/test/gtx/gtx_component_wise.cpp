@@ -3,7 +3,7 @@
 #include <glm/gtc/type_precision.hpp>
 #include <glm/gtc/epsilon.hpp>
 #include <glm/gtc/constants.hpp>
-#include <limits>
+
 
 namespace compNormalize
 {

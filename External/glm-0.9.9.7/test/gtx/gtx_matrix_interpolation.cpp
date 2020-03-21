@@ -2,7 +2,7 @@
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtx/matrix_interpolation.hpp>
 
-#include <iostream>
+
 
 static int test_axisAngle()
 {

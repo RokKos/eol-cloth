@@ -2,12 +2,12 @@
 #ifndef __FixedList__
 #define __FixedList__
 
-#include <vector>
-#include <memory>
-#include <string>
+
+
+
 
 #define EIGEN_DONT_ALIGN_STATICALLY
-#include <Eigen/Dense>
+
 
 class FixedList
 {

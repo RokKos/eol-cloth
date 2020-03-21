@@ -8,7 +8,7 @@
 #include "bounding_box_diagonal.h"
 #include "mat_max.h"
 #include "mat_min.h"
-#include <cmath>
+
 
 IGL_INLINE double igl::bounding_box_diagonal(
   const Eigen::MatrixXd & V)

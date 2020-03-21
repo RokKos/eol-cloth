@@ -9,9 +9,9 @@
 #include "list_to_matrix.h"
 #include "matrix_to_list.h"
 
-#include <map>
+
 #include "sort.h"
-#include <cassert>
+
 
 template <typename IntegerF, typename IntegerC>
 IGL_INLINE void igl::face_occurrences(

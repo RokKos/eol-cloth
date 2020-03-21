@@ -14,7 +14,7 @@
 #include <igl/copyleft/comiso/nrosy.h>
 #include <igl/PI.h>
 #include <igl/serialize.h>
-#include <sstream>
+
 #include <igl/writeDMAT.h>
 
 TEST_CASE("miq: 3_holes", "[igl/copyleft/comiso]")

@@ -1,6 +1,6 @@
 #define _USE_MATH_DEFINES
-#include <cmath> 
-#include <iostream>
+ 
+
 #include <glm/gtc/matrix_transform.hpp>
 #include "Camera.h"
 #include "MatrixStack.h"

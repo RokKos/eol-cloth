@@ -18,7 +18,7 @@
 #define REPEAT 1
 #endif
 
-#include <algorithm>
+
 #include "BenchTimer.h"
 #include "BenchUtil.h"
 #include "BenchSparseUtil.h"

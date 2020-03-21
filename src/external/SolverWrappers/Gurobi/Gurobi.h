@@ -17,8 +17,8 @@
 
 // includes
 // Eigen
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 
 //Gurobi
 #include <gurobi_c++.h>

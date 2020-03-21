@@ -9,7 +9,7 @@
 #ifdef WIN32
   #define _USE_MATH_DEFINES
 #endif
-#include <cmath>
+
 
 #include "comb_frame_field.h"
 #include "local_basis.h"

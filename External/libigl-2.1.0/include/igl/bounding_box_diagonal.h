@@ -8,7 +8,7 @@
 #ifndef IGL_BOUNDING_BOX_DIAGONAL_H
 #define IGL_BOUNDING_BOX_DIAGONAL_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // Compute the length of the diagonal of a given meshes axis-aligned bounding

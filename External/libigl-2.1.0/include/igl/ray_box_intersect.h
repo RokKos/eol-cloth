@@ -8,7 +8,7 @@
 #ifndef IGL_RAY_BOX_INTERSECT_H
 #define IGL_RAY_BOX_INTERSECT_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 #include <Eigen/Geometry>
 namespace igl
 {

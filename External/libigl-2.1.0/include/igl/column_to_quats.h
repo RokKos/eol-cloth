@@ -8,10 +8,10 @@
 #ifndef IGL_COLUMN_TO_QUATS_H
 #define IGL_COLUMN_TO_QUATS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 #include <Eigen/Geometry>
 #include <Eigen/StdVector>
-#include <vector>
+
 namespace igl
 {
   // "Columnize" a list of quaternions (q1x,q1y,q1z,q1w,q2x,q2y,q2z,q2w,...)

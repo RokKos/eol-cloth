@@ -7,9 +7,9 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "frame_field_deformer.h"
 
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
-#include <vector>
+
+
+
 
 #include <igl/cotmatrix_entries.h>
 #include <igl/cotmatrix.h>

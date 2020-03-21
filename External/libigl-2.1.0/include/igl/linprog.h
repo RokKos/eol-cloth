@@ -8,7 +8,7 @@
 #ifndef IGL_LINPROG_H
 #define IGL_LINPROG_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Solve a linear program given in "standard form"

@@ -8,13 +8,13 @@
 #ifndef IGL_MATLAB_MATLAB_WORKSPACE_H
 #define IGL_MATLAB_MATLAB_WORKSPACE_H
 
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 
 #include <mat.h>
 
-#include <string>
-#include <vector>
+
+
 
 namespace igl
 {
@@ -164,9 +164,9 @@ namespace igl
 #include "mat.h"
 
 // STL
-#include <iostream>
-#include <algorithm>
-#include <vector>
+
+
+
 
 inline igl::matlab::MatlabWorkspace::MatlabWorkspace():
   names(),

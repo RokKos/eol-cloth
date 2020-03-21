@@ -7,10 +7,10 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "min_quad_dense.h"
 
-#include <Eigen/Core>
+
 #include <Eigen/LU>
 #include "EPS.h"
-#include <cstdio>
+
 
 template <typename T>
 IGL_INLINE void igl::min_quad_dense_precompute(

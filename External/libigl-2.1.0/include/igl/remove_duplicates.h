@@ -9,7 +9,7 @@
 #define IGL_REMOVE_DUPLICATES_H
 #include "igl_inline.h"
 
-#include <Eigen/Core>
+
 namespace igl 
 {
   // [ NV, NF ] = remove_duplicates( V,F,epsilon )

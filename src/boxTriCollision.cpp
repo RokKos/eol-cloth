@@ -1,7 +1,7 @@
 #define _USE_MATH_DEFINES
-#include <cmath>
-#include <string.h>
-#include <iostream>
+
+
+
 #include <random>
 
 #include "boxTriCollision.h"

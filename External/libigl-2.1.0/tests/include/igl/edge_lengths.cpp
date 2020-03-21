@@ -1,6 +1,6 @@
 #include <test_common.h>
 #include <igl/edge_lengths.h>
-#include <iostream>
+
 
 TEST_CASE("edge_lengths: cube", "[igl]")
 {

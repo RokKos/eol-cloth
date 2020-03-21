@@ -5,13 +5,13 @@
 #include <igl/find.h>
 #include <igl/readDMAT.h>
 
-#include <Eigen/Core>
+
 #include <catch2/catch.hpp>
 
 #include <cctype>
-#include <string>
+
 #include <functional>
-#include <algorithm>
+
 #include <tuple>
 
 namespace test_common

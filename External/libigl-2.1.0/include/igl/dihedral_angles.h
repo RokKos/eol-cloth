@@ -8,7 +8,7 @@
 #ifndef IGL_DIHEDRAL_ANGLES_H
 #define IGL_DIHEDRAL_ANGLES_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // DIHEDRAL_ANGLES Compute dihedral angles for all tets of a given tet mesh

@@ -1,7 +1,7 @@
 // Copyright (C) 2020, Gurobi Optimization, LLC
 // All Rights Reserved
-#include <string.h>
-#include <cstdlib>
+
+
 #include "Common.h"
 #include "attrprivate.h"
 

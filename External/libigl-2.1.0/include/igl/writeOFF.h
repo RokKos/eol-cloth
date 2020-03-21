@@ -9,8 +9,8 @@
 #define IGL_WRITEOFF_H
 #include "igl_inline.h"
 
-#include <Eigen/Core>
-#include <string>
+
+
 
 namespace igl 
 {

@@ -8,8 +8,8 @@
 #ifndef IGL_BIHARMONIC_COORDINATES_H
 #define IGL_BIHARMONIC_COORDINATES_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
-#include <vector>
+
+
 namespace igl
 {
   // Compute "discrete biharmonic generalized barycentric coordinates" as

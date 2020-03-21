@@ -7,8 +7,8 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "faces_first.h"
 
-#include <vector>
-#include <Eigen/Dense>
+
+
 
 template <typename MatV, typename MatF, typename VecI>
 IGL_INLINE void igl::faces_first(

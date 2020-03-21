@@ -5,7 +5,7 @@
 
   Purpose: Library of simple building blocks in Mosek Fusion.
 */
-#include <iostream>
+
 #include "monty.h"
 #include "fusion.h"
 

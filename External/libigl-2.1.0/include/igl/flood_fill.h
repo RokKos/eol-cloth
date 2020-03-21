@@ -8,7 +8,7 @@
 #ifndef IGL_FLOOD_FILL_H
 #define IGL_FLOOD_FILL_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Given a 3D array with sparse non-nan (number?) data fill in the NaNs via

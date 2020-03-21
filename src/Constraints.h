@@ -2,15 +2,15 @@
 #ifndef __Constraints__
 #define __Constraints__
 
-#include <vector>
-#include <memory>
-#include <string>
 
-#include "external\ArcSim\mesh.hpp"
+
+
+
+
 
 #define EIGEN_DONT_ALIGN_STATICALLY
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 #include <Eigen/StdVector>
 
 #ifdef EOLC_ONLINE

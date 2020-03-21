@@ -9,7 +9,7 @@
 #include "normal_derivative.h"
 #include "cotmatrix_entries.h"
 #include "slice.h"
-#include <cassert>
+
 
 template <
   typename DerivedV,

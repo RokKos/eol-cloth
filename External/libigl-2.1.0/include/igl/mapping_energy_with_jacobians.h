@@ -9,7 +9,7 @@
 #define IGL_MAPPING_ENERGY_WITH_JACOBIANS_H
 
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 #include "MappingEnergyType.h"
 
 namespace igl

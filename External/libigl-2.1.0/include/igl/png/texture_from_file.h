@@ -10,7 +10,7 @@
 #include "../igl_inline.h"
 #include "../opengl/gl.h"
 
-#include <string>
+
 
 namespace igl
 {

@@ -7,8 +7,8 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "projected_delaunay.h"
 #include "../../REDRUM.h"
-#include <iostream>
-#include <cassert>
+
+
 
 #if CGAL_VERSION_NR < 1040611000
 #  warning "CGAL Version < 4.6.1 may result in crashes. Please upgrade CGAL"

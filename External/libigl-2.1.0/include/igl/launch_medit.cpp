@@ -7,10 +7,10 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "launch_medit.h"
 #include "writeMESH.h"
-#include <cstdio>
-#include <iostream>
-#include <string>
-#include <sstream>
+
+
+
+
 
 #define MEDIT_PATH "/opt/local/bin/medit"
 #define TEMP_MESH_FILE "/var/tmp/temp.mesh"

@@ -3,7 +3,7 @@
 #include "knn.h"
 #include "parallel_for.h"
 #include "PI.h"
-#include <vector>
+
 
 namespace igl {
   template <typename DerivedP, typename DerivedA, typename DerivedN,

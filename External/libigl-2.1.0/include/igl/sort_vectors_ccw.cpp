@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include <igl/sort_vectors_ccw.h>
 #include <igl/sort.h>
-#include <Eigen/Dense>
+
 
 template <typename DerivedS, typename DerivedI>
 IGL_INLINE void igl::sort_vectors_ccw(

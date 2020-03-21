@@ -22,7 +22,7 @@ Here is a concrete example adding support for the Adolc's \c adouble type. <a hr
 
 #define ADOLC_TAPELESS
 #include <adolc/adouble.h>
-#include <Eigen/Core>
+
 
 namespace Eigen {
 
@@ -63,7 +63,7 @@ This other example adds support for the \c mpq_class type from <a href="https://
 
 \code
 #include <gmpxx.h>
-#include <Eigen/Core>
+
 #include <boost/operators.hpp>
 
 namespace Eigen {

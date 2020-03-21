@@ -2,7 +2,7 @@
 #include <Eigen/MPRealSupport>
 #include <Eigen/LU>
 #include <Eigen/Eigenvalues>
-#include <sstream>
+
 
 using namespace mpfr;
 using namespace Eigen;

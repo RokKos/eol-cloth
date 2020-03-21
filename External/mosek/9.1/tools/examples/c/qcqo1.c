@@ -11,7 +11,7 @@
               x >= 0
 
  */
-#include <stdio.h>
+
 
 #include "mosek.h" /* Include the MOSEK definition file. */
 

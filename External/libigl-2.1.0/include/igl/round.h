@@ -8,7 +8,7 @@
 #ifndef IGL_ROUND_H
 #define IGL_ROUND_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // Round a scalar value

@@ -1,4 +1,4 @@
-#include <cmath>
+
 
 // An (internal) edge is defined by four vertices
 //

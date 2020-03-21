@@ -2,7 +2,7 @@
 #define IGL_STRAIGHTEN_SEAMS_H
 
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

@@ -9,7 +9,7 @@
 #define IGL_SLICE_H
 #include "igl_inline.h"
 
-#include <Eigen/Sparse>
+
 namespace igl
 {
   // Act like the matlab X(row_indices,col_indices) operator, where

@@ -9,9 +9,9 @@
 #define IGL_BOUNDARY_FACETS_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
 
-#include <vector>
+
+
 
 namespace igl
 {

@@ -2,8 +2,8 @@
 #ifndef __QuadProg_H__
 #define __QuadProg_H__
 
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 
 // Calling convention:
 // https://www.mathworks.com/help/optim/ug/quadprog.html

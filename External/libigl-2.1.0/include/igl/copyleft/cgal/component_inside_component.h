@@ -9,8 +9,8 @@
 #define IGL_COPYLEFT_CGAL_COMONENT_INSIDE_COMPONENT
 
 #include "../../igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 
 namespace igl {
   namespace copyleft

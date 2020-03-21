@@ -8,7 +8,7 @@
 #ifndef IGL_OPENGL_RENDER_TO_TGA_H
 #define IGL_OPENGL_RENDER_TO_TGA_H
 #include "../../igl_inline.h"
-#include <string>
+
 
 namespace igl
 {

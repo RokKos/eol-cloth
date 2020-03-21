@@ -1,6 +1,6 @@
 #ifndef GLM_SETUP_INCLUDED
 
-#include <cassert>
+
 #include <cstddef>
 
 #define GLM_VERSION_MAJOR			0
@@ -536,7 +536,7 @@
 #if GLM_COMPILER==GLM_COMPILER_SYCL
 
 #include <CL/sycl.hpp>
-#include <limits>
+
 
 namespace glm {
 namespace std {

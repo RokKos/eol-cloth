@@ -12,9 +12,9 @@
 #include "cat.h"
 //#include "matlab_format.h"
 
-#include <iostream>
-#include <limits>
-#include <algorithm>
+
+
+
 
 template <
   typename AT,

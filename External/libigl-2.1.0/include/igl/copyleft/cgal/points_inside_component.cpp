@@ -15,10 +15,10 @@
 #include <CGAL/AABB_triangle_primitive.h>
 #include <CGAL/Exact_predicates_exact_constructions_kernel.h>
 
-#include <cassert>
+
 #include <list>
-#include <limits>
-#include <vector>
+
+
 
 
 namespace igl {

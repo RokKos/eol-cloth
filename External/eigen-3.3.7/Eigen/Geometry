@@ -14,7 +14,7 @@
 
 #include "SVD"
 #include "LU"
-#include <limits>
+
 
 /** \defgroup Geometry_Module Geometry module
   *

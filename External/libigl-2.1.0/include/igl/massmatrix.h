@@ -9,8 +9,8 @@
 #define IGL_MASSMATRIX_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 
 namespace igl 
 {

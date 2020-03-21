@@ -8,8 +8,8 @@
 #ifndef IGL_DQS_H
 #define IGL_DQS_H
 #include "igl_inline.h"
-#include <vector>
-#include <Eigen/Core>
+
+
 namespace igl
 {
   // Dual quaternion skinning

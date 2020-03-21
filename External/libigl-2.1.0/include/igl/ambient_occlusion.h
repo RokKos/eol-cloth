@@ -9,7 +9,7 @@
 #define IGL_AMBIENT_OCCLUSION_H
 #include "igl_inline.h"
 #include "AABB.h"
-#include <Eigen/Core>
+
 #include <functional>
 namespace igl
 {

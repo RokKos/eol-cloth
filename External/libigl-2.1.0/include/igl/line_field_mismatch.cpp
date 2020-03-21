@@ -8,7 +8,7 @@
 
 #include "line_field_mismatch.h"
 
-#include <vector>
+
 #include <deque>
 #include <igl/comb_line_field.h>
 #include <igl/rotate_vectors.h>

@@ -1,7 +1,7 @@
 #ifndef IGL_RANDOM_SEARCH_H
 #define IGL_RANDOM_SEARCH_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 #include <functional>
 namespace igl
 {

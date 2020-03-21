@@ -8,7 +8,7 @@
 #ifndef IGL_CIRCUMRADIUS_H
 #define IGL_CIRCUMRADIUS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Compute the circumradius of each triangle in a mesh (V,F)

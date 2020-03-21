@@ -9,7 +9,7 @@
 #ifndef IGL_ROTATE_VECTORS_H
 #define IGL_ROTATE_VECTORS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Rotate the vectors V by A radians on the tangent plane spanned by B1 and

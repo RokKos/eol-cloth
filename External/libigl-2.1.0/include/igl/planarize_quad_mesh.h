@@ -8,7 +8,7 @@
 #ifndef IGL_PLANARIZE_QUAD_MESH_H
 #define IGL_PLANARIZE_QUAD_MESH_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Planarizes a given quad mesh using the algorithm described in the paper

@@ -8,7 +8,7 @@
 #ifndef IGL_SETUNION_H
 #define IGL_SETUNION_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Union of elements of matrices (like matlab's `union`)

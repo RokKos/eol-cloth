@@ -8,7 +8,7 @@
 #ifndef IGL_VOLUME_H
 #define IGL_VOLUME_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // VOLUME Compute volume for all tets of a given tet mesh

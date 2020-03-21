@@ -7,7 +7,7 @@
                  Determines points on the efficient frontier.
  */
 
-#include <stdio.h>
+
 
 #include "mosek.h"
 

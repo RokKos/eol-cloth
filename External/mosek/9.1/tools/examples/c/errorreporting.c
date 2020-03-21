@@ -5,9 +5,9 @@
 
    Purpose:   To demonstrate how the error reporting can be customized.
  */
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+
+
+
 #include "mosek.h"
 
 static MSKrescodee MSKAPI handleresponse(MSKuserhandle_t handle,

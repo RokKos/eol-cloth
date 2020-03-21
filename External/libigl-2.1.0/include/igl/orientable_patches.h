@@ -8,8 +8,8 @@
 #ifndef IGL_ORIENTABLE_PATCHES_H
 #define IGL_ORIENTABLE_PATCHES_H
 #include <igl/igl_inline.h>
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 namespace igl
 {
   //  Compute connected components of facets connected by manifold edges.

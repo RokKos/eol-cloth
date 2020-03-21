@@ -14,8 +14,6 @@
  * limitations under the License.
  */
 #include <stddef.h>
-#include <stdint.h>
-#include <vector>
 
 namespace testing {
 class Benchmark {

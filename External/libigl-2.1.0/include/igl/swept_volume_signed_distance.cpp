@@ -15,8 +15,8 @@
 #include "per_vertex_normals.h"
 #include "per_edge_normals.h"
 #include <Eigen/Geometry>
-#include <cmath>
-#include <algorithm>
+
+
 
 IGL_INLINE void igl::swept_volume_signed_distance(
   const Eigen::MatrixXd & V,

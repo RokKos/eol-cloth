@@ -13,9 +13,9 @@
 #include "list_to_matrix.h"
 #include "matrix_to_list.h"
 
-#include <algorithm>
-#include <iostream>
-#include <map>
+
+
+
 
 template <typename T>
 IGL_INLINE void igl::unique(

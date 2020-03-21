@@ -9,8 +9,8 @@
 #define IGL_XML_WRITE_TRIANGLE_MESH_H
 #include "../igl_inline.h"
 
-#include <Eigen/Core>
-#include <string>
+
+
 
 namespace igl
 {

@@ -7,12 +7,12 @@
 #include "monty_iterator.h"
 
 #include <initializer_list>
-#include <vector>
-#include <memory>
+
+
 #include <functional>
-#include <string>
-#include <sstream>
-#include <iostream>
+
+
+
 #include <stddef.h>
 #include <assert.h>
 #include <cstddef>

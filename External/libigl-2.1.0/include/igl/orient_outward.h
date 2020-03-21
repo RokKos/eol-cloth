@@ -8,7 +8,7 @@
 #ifndef IGL_ORIENT_OUTWARD_H
 #define IGL_ORIENT_OUTWARD_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Orient each component (identified by C) of a mesh (V,F) so the normals on

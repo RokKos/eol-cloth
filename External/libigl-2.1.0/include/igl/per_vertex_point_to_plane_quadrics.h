@@ -8,8 +8,8 @@
 #ifndef IGL_PER_VERTEX_POINT_TO_PLANE_QUADRICS_H
 #define IGL_PER_VERTEX_POINT_TO_PLANE_QUADRICS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 #include <tuple>
 namespace igl
 {

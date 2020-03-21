@@ -67,9 +67,9 @@ namespace igl
 #include "doublearea.h"
 #include "per_face_normals.h"
 
-#include <limits>
-#include <vector>
-#include <iostream>
+
+
+
 
 // Minimum number of faces in a hierarchy element (this is probably dependent
 // on speed of machine and compiler optimization)

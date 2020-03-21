@@ -27,13 +27,7 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #ifndef UTIL_HPP
 #define UTIL_HPP
 
-#include <string> // aa: win
-#include "mesh.hpp"
-#include <iostream>
-#include <string>
-#include <vector>
-#include <map>
-#include <vector>
+ // aa: win
 
 #define EPSILON		1e-7f
 

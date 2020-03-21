@@ -8,9 +8,9 @@
 #ifndef IGL_FACE_OCCURRENCES
 #define IGL_FACE_OCCURRENCES
 #include "igl_inline.h"
-#include <Eigen/Core>
 
-#include <vector>
+
+
 namespace igl
 {
   // Count the occurances of each face (row) in a list of face indices

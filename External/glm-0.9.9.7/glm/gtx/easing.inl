@@ -1,6 +1,6 @@
 /// @ref gtx_easing
 
-#include <cmath>
+
 
 namespace glm{
 

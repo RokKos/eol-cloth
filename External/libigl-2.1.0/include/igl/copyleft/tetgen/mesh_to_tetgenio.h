@@ -13,8 +13,8 @@
 #  define TETLIBRARY 
 #endif
 #include "tetgen.h" // Defined tetgenio, REAL
-#include <vector>
-#include <Eigen/Core>
+
+
 
 namespace igl
 {

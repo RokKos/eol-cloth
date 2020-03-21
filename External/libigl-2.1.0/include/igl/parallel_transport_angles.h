@@ -10,8 +10,8 @@
 #define IGL_PARALLEL_TRANSPORT_ANGLE
 #include "igl_inline.h"
 
-#include <Eigen/Core>
-#include <vector>
+
+
 
 namespace igl {
   // Given the per-face local bases computed via igl::local_basis, this function

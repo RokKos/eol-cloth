@@ -8,7 +8,7 @@
 #include "slice.h"
 #include "colon.h"
 
-#include <vector>
+
 #include <unsupported/Eigen/SparseExtra>
 
 template <typename TX, typename TY>

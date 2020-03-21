@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "init_render_to_texture.h"
 #include "gl.h"
-#include <cassert>
+
 
 IGL_INLINE void igl::opengl::init_render_to_texture(
   const size_t width,

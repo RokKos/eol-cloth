@@ -9,8 +9,8 @@
 #define IGL_RANDOM_POINTS_ON_MESH_H
 
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 
 namespace igl
 {

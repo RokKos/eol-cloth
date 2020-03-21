@@ -1,7 +1,7 @@
 #include <test_common.h>
 #include <igl/tet_tet_adjacency.h>
 #include <igl/readMESH.h>
-#include <iostream>
+
 
 
 

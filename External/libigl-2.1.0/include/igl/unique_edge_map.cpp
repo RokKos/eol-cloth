@@ -8,8 +8,8 @@
 #include "unique_edge_map.h"
 #include "oriented_facets.h"
 #include "unique_simplices.h"
-#include <cassert>
-#include <algorithm>
+
+
 template <
   typename DerivedF,
   typename DerivedE,

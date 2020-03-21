@@ -12,7 +12,7 @@
 #include "assign.h"
 #include "cell_adjacency.h"
 
-#include <vector>
+
 
 template<
   typename DerivedV,

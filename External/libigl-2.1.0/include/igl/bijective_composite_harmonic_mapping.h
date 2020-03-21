@@ -8,7 +8,7 @@
 #ifndef IGL_BIJECTIVE_COMPOSITE_HARMONIC_MAPPING_H
 #define IGL_BIJECTIVE_COMPOSITE_HARMONIC_MAPPING_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl 
 {

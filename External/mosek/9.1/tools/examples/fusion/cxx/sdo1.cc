@@ -20,7 +20,7 @@
 //
 //                   X >> 0,  x0 >= (x1^2 + x2^2) ^ (1/2)
 //
-#include <iostream>
+
 #include "fusion.h"
 
 using namespace mosek::fusion;

@@ -9,7 +9,7 @@
 #ifndef IGL_COMB_CROSS_FIELD_H
 #define IGL_COMB_CROSS_FIELD_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Computes principal matchings of the vectors of a cross field across face edges,

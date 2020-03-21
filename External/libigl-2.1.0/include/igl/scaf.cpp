@@ -8,9 +8,9 @@
 
 #include "scaf.h"
 
-#include <Eigen/Dense>
+
 #include <Eigen/IterativeLinearSolvers>
-#include <Eigen/Sparse>
+
 #include <Eigen/SparseCholesky>
 #include <Eigen/SparseQR>
 #include <igl/PI.h>
@@ -31,11 +31,11 @@
 #include <igl/triangle/triangulate.h>
 #include "mapping_energy_with_jacobians.h"
 
-#include <iostream>
-#include <map>
-#include <algorithm>
-#include <set>
-#include <vector>
+
+
+
+
+
 namespace igl
 {
 

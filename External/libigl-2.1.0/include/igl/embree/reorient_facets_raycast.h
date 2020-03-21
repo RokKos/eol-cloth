@@ -8,7 +8,7 @@
 #ifndef IGL_EMBREE_REORIENT_FACETS_RAYCAST_H
 #define IGL_EMBREE_REORIENT_FACETS_RAYCAST_H
 #include "../igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   namespace embree

@@ -12,8 +12,8 @@
 #include "unique_edge_map.h"
 #include "is_delaunay.h"
 
-#include <vector>
-#include <sstream>
+
+
 
 template<
   typename DerivedV,

@@ -2,11 +2,11 @@
 #ifndef __Box__
 #define __Box__
 
-#include <vector>
-#include <memory>
+
+
 
 #define EIGEN_DONT_ALIGN_STATICALLY
-#include <Eigen/Dense>
+
 
 #include "Brenderable.h"
 

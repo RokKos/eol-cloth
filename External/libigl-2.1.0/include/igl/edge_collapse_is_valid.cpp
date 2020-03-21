@@ -11,7 +11,7 @@
 #include "intersect.h"
 #include "unique.h"
 #include "list_to_matrix.h"
-#include <vector>
+
 
 IGL_INLINE bool igl::edge_collapse_is_valid(
   const int e,

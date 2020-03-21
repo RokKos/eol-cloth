@@ -7,8 +7,8 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "print_shader_info_log.h"
 
-#include <cstdio>
-#include <stdlib.h>
+
+
 // Copyright Denis Kovacs 4/10/08
 IGL_INLINE void igl::opengl::print_shader_info_log(const GLuint obj)
 {

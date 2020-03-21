@@ -9,9 +9,9 @@
 #define IGL_WRITEMESH_H
 #include "igl_inline.h"
 
-#include <string>
-#include <vector>
-#include <Eigen/Core>
+
+
+
 
 namespace igl
 {

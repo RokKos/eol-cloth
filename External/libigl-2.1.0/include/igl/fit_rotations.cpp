@@ -12,7 +12,7 @@
 #include "polar_dec.h"
 #include "polar_svd.h"
 #include "C_STR.h"
-#include <iostream>
+
 
 template <typename DerivedS, typename DerivedD>
 IGL_INLINE void igl::fit_rotations(

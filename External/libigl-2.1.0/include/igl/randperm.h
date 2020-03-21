@@ -8,7 +8,7 @@
 #ifndef IGL_RANDPERM_H
 #define IGL_RANDPERM_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 #include <random>
 namespace igl
 {

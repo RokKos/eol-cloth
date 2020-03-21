@@ -8,7 +8,7 @@
 #ifndef IGL_TRIANGLES_FROM_STRIP_H
 #define IGL_TRIANGLES_FROM_STRIP_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // TRIANGLES_FROM_STRIP Create a list of triangles from a stream of indices

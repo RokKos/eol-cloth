@@ -8,7 +8,7 @@
 #ifndef IGL_TRACKBALL_H
 #define IGL_TRACKBALL_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 #include <Eigen/Geometry>
 
 namespace igl

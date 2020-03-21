@@ -10,7 +10,7 @@
 #ifndef IGL_COPYLEFT_CGAL_LEXICOGRAPHIC_TRIANGULATION_H
 #define IGL_COPYLEFT_CGAL_LEXICOGRAPHIC_TRIANGULATION_H
 #include "../../igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

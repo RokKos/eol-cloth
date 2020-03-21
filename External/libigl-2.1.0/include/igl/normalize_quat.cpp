@@ -8,7 +8,7 @@
 #include "normalize_quat.h"
 
 #include "EPS.h"
-#include <cmath>
+
 
 template <typename Q_type>
 IGL_INLINE bool igl::normalize_quat(

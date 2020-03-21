@@ -9,7 +9,7 @@
 
 #define EIGEN_RUNTIME_NO_MALLOC
 #include "main.h"
-#include <limits>
+
 #include <Eigen/Eigenvalues>
 
 template<typename MatrixType> void real_qz(const MatrixType& m)

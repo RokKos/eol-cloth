@@ -7,7 +7,7 @@
               problem using the MOSEK API.
  */
 
-#include <stdio.h>
+
 
 #include "mosek.h" /* Include the MOSEK definition file. */
 

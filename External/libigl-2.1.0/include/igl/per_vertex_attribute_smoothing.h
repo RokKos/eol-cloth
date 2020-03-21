@@ -8,7 +8,7 @@
 #ifndef IGL_PER_VERTEX_ATTRIBUTE_SMOOTHING_H
 #define IGL_PER_VERTEX_ATTRIBUTE_SMOOTHING_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

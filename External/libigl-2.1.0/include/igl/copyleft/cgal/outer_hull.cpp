@@ -113,10 +113,10 @@ IGL_INLINE void igl::copyleft::cgal::outer_hull(
 #include "../../per_face_normals.h"
 #include "../../sort_angles.h"
 #include <Eigen/Geometry>
-#include <vector>
-#include <map>
+
+
 #include <queue>
-#include <iostream>
+
 #include <type_traits>
 #include <CGAL/number_utils.h>
 //#define IGL_OUTER_HULL_DEBUG

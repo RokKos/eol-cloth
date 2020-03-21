@@ -8,8 +8,8 @@
 #ifndef IGL_CIRCULATION_H
 #define IGL_CIRCULATION_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 
 namespace igl
 {

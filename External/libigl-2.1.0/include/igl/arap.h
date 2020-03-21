@@ -10,8 +10,8 @@
 #include "igl_inline.h"
 #include "min_quad_with_fixed.h"
 #include "ARAPEnergyType.h"
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 
 namespace igl
 {

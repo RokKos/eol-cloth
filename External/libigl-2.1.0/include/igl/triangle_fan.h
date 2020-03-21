@@ -8,7 +8,7 @@
 #ifndef IGL_TRIANGLE_FAN_H
 #define IGL_TRIANGLE_FAN_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // Given a list of faces tessellate all of the "exterior" edges forming another

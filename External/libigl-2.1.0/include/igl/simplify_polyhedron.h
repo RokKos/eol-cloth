@@ -8,7 +8,7 @@
 #ifndef IGL_SIMPLIFY_POLYHEDRON_H
 #define IGL_SIMPLIFY_POLYHEDRON_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Simplify a polyhedron represented as a triangle mesh (OV,OF) by collapsing

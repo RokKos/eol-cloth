@@ -8,10 +8,10 @@
 #include <glm/gtc/constants.hpp>
 #include <glm/gtc/vec1.hpp>
 #include <glm/trigonometric.hpp>
-#include <cmath>
-#include <ctime>
-#include <cstdio>
-#include <vector>
+
+
+
+
 
 namespace fastCos
 {

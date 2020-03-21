@@ -7,8 +7,8 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "rows_to_matrix.h"
 
-#include <cassert>
-#include <cstdio>
+
+
 
 #include "max_size.h"
 #include "min_size.h"

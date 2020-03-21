@@ -9,7 +9,7 @@
 #ifndef IGL_POINT_AREAS_H
 #define IGL_POINT_AREAS_H
 #include "../../igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   namespace copyleft

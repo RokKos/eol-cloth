@@ -35,9 +35,9 @@
 #include <glm/gtc/random.hpp>
 #include <glm/gtx/simd_vec4.hpp>
 #include <glm/gtx/simd_mat4.hpp>
-#include <cstdio>
-#include <ctime>
-#include <vector>
+
+
+
 
 #if(GLM_ARCH != GLM_ARCH_PURE)
 

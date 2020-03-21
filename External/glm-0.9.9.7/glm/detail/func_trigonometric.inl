@@ -1,6 +1,6 @@
 #include "_vectorize.hpp"
-#include <cmath>
-#include <limits>
+
+
 
 namespace glm
 {

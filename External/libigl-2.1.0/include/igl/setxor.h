@@ -8,7 +8,7 @@
 #ifndef IGL_SETXOR_H
 #define IGL_SETXOR_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Set xor of elements of matrices

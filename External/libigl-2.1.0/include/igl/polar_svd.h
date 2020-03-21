@@ -8,7 +8,7 @@
 #ifndef IGL_POLAR_SVD
 #define IGL_POLAR_SVD
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

@@ -8,7 +8,7 @@
 #ifndef IGL_PER_VERTEX_NORMALS_H
 #define IGL_PER_VERTEX_NORMALS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 // Note: It would be nice to support more or all of the methods here:
 // "A comparison of algorithms for vertex normal computation"
 namespace igl

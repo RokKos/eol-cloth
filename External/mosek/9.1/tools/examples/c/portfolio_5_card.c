@@ -7,7 +7,7 @@
                  with cardinality constraints on number of assets traded.
  */
 
-#include <stdio.h>
+
 
 #include "mosek.h"
 

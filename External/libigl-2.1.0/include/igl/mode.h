@@ -8,7 +8,7 @@
 #ifndef IGL_MODE_H
 #define IGL_MODE_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // Takes mode of coefficients in a matrix along a given dension

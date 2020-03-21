@@ -1,8 +1,8 @@
 #ifndef IGL_DFS_H
 #define IGL_DFS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 namespace igl
 {
   // Traverse a **directed** graph represented by an adjacency list using

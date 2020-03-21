@@ -17,9 +17,9 @@
 #include "../../PI.h"
 
 #include <Eigen/Geometry>
-#include <Eigen/Sparse>
+
 #include <queue>
-#include <vector>
+
 
 #include <gmm/gmm.h>
 #include <CoMISo/Solver/ConstrainedSolver.hh>

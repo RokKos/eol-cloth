@@ -1,7 +1,7 @@
 #ifndef IGL_COPYLEFT_CGAL_HALF_SPACE_BOX_H
 #define IGL_COPYLEFT_CGAL_HALF_SPACE_BOX_H
 #include "../../igl_inline.h"
-#include <Eigen/Core>
+
 #include <CGAL/Exact_predicates_exact_constructions_kernel.h>
 #include <CGAL/Plane_3.h>
 

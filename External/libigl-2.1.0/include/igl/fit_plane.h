@@ -9,7 +9,7 @@
 #define IGL_FIT_PLANE_H
 
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 
 namespace igl
 {

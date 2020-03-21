@@ -9,7 +9,7 @@
 #define IGL_COPYLEFT_CGAL_MINKOWSKI_SUM_H
 
 #include "../../igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

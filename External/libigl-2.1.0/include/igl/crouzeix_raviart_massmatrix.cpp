@@ -13,8 +13,8 @@
 #include "doublearea.h"
 #include "volume.h"
 
-#include <cassert>
-#include <vector>
+
+
 
 template <typename MT, typename DerivedV, typename DerivedF, typename DerivedE, typename DerivedEMAP>
 void igl::crouzeix_raviart_massmatrix(

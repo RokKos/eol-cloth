@@ -18,7 +18,7 @@
 //       C_3 = { z1,z2,z3 :      z1 >= sqrt(z2^2 + z3^2) }
 //       K_3 = { z1,z2,z3 : 2 z1 z2 >= z3^2              }
 //
-#include <iostream>
+
 #include "fusion.h"
 
 using namespace mosek::fusion;

@@ -8,7 +8,7 @@
 #ifndef IGL_PATH_TO_EXECUTABLE_H
 #define IGL_PATH_TO_EXECUTABLE_H
 #include "igl_inline.h"
-#include <string>
+
 namespace igl
 {
   // Return the path of the current executable.

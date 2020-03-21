@@ -7,8 +7,8 @@
 #include "../gl.h"
 #include <GLFW/glfw3.h>
 
-#include <iostream>
-#include <string>
+
+
 
 template <typename DerivedV, typename DerivedF, typename DerivedU>
 IGL_INLINE bool igl::opengl::glfw::map_texture(

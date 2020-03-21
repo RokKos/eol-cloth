@@ -8,7 +8,7 @@
 #ifndef IGL_EMBREE_SHAPE_DIAMETER_FUNCTION_H
 #define IGL_EMBREE_SHAPE_DIAMETER_FUNCTION_H
 #include "../igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   namespace embree

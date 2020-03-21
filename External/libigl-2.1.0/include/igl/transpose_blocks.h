@@ -9,7 +9,7 @@
 #define IGL_TRANSPOSE_BLOCKS_H
 #include "igl_inline.h"
 
-#include <Eigen/Core>
+
 
 namespace igl
 {

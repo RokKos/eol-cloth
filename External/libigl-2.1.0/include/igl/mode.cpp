@@ -8,7 +8,7 @@
 #include "mode.h"
 
 // Implementation 
-#include <vector>
+
 
 template <typename T>
 IGL_INLINE void igl::mode(

@@ -9,9 +9,9 @@
 #define IGL_COPYLEFT_TETGEN_TETRAHEDRALIZE_H
 #include "../../igl_inline.h"
 
-#include <vector>
-#include <string>
-#include <Eigen/Core>
+
+
+
 #ifndef TETLIBRARY
 #define TETLIBRARY 
 #endif

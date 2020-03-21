@@ -1,5 +1,5 @@
 #include "quadprog.h"
-#include <vector>
+
 /*
  FILE eiquadprog.hh
  
@@ -79,7 +79,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 */
 
-#include <Eigen/Dense>
+
 
 IGL_INLINE bool igl::copyleft::quadprog(
   const Eigen::MatrixXd & G,  

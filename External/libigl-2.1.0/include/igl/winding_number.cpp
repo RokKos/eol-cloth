@@ -12,7 +12,7 @@
 #include "solid_angle.h"
 #include "PI.h"
 
-#include <cmath>
+
 
 template <
   typename DerivedV,

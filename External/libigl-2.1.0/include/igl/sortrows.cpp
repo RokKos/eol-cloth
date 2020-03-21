@@ -13,7 +13,7 @@
 #include "colon.h"
 #include "IndexComparison.h"
 
-#include <vector>
+
 
 // Obsolete slower version converst to vector
 //template <typename DerivedX, typename DerivedIX>

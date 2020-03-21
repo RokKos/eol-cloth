@@ -14,7 +14,7 @@
 #include "writeSTL.h"
 #include "writeWRL.h"
 
-#include <iostream>
+
 
 template <typename DerivedV, typename DerivedF>
 IGL_INLINE bool igl::write_triangle_mesh(

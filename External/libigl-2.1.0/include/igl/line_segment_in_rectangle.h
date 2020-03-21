@@ -8,7 +8,7 @@
 #ifndef IGL_LINE_SEGMENT_IN_RECTANGLE_H
 #define IGL_LINE_SEGMENT_IN_RECTANGLE_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Determine whether a line segment overlaps with a rectangle.

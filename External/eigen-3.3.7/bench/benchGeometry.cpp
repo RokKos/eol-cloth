@@ -1,6 +1,6 @@
-#include <iostream>
-#include <iomanip>
-#include <Eigen/Core>
+
+
+
 #include <Eigen/Geometry>
 #include <bench/BenchTimer.h>
 

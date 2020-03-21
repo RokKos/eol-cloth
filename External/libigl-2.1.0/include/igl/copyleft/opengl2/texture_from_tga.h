@@ -9,7 +9,7 @@
 #define IGL_OPENGL_TEXTURE_FROM_TGA_H
 #include "../../igl_inline.h"
 #include "../../opengl2/gl.h"
-#include <string>
+
 
 namespace igl
 {

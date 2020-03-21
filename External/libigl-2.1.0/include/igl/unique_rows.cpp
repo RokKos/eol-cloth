@@ -8,9 +8,9 @@
 #include "unique_rows.h"
 #include "sortrows.h"
 
-#include <algorithm>
-#include <iostream>
-#include <map>
+
+
+
 
 
 template <typename DerivedA, typename DerivedC, typename DerivedIA, typename DerivedIC>

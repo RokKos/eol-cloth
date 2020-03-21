@@ -9,7 +9,7 @@
 #include <glm/ext/vector_double2.hpp>
 #include <glm/ext/vector_double3.hpp>
 #include <glm/ext/vector_double4.hpp>
-#include <limits>
+
 
 namespace length
 {

@@ -7,8 +7,8 @@
              optimization problem using the MOSEK API
              and modify and re-optimize the problem.
 */
-#include <iostream>
-#include <cmath>
+
+
 
 #include "fusion.h"
 

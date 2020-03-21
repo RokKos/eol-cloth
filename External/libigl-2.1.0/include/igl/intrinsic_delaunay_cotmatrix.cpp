@@ -9,7 +9,7 @@
 #include "edge_lengths.h"
 #include "intrinsic_delaunay_triangulation.h"
 #include "cotmatrix_intrinsic.h"
-#include <cassert>
+
 
 template <typename DerivedV, typename DerivedF, typename Scalar>
 IGL_INLINE void igl::intrinsic_delaunay_cotmatrix(

@@ -14,7 +14,7 @@
                   C1, C2, A1, A2 are assumed to be constant symmetric matrices,
                   and b, k are constants.
 */
-#include <iostream>
+
 #include "fusion.h"
 
 using namespace mosek::fusion;

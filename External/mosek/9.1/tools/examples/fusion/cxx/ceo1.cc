@@ -11,7 +11,7 @@
 //                x1,x2    >= 0.0
 //   and      x1 >= x2 * exp(x3/x2)
 //
-#include <iostream>
+
 #include "fusion.h"
 
 using namespace mosek::fusion;

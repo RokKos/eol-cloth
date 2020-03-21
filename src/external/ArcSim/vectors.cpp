@@ -24,10 +24,10 @@ IS". REGENTS HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT,
 UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 */
 
-#include "vectors.hpp"
+
 #include "blockvectors.hpp"
-#include "util.hpp"
-#include <cmath>
+
+
 #include <cfloat>
 using namespace std;
 

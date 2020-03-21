@@ -10,7 +10,7 @@
 #define IGL_COPYLEFT_RESOLVE_DUPLICATED_FACES
 
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl {
 

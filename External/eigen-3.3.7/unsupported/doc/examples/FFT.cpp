@@ -8,12 +8,12 @@
 #include <fftw3.h>
 #endif
 
-#include <vector>
+
 #include <complex>
-#include <algorithm>
+
 #include <iterator>
-#include <iostream>
-#include <Eigen/Core>
+
+
 #include <unsupported/Eigen/FFT>
 
 using namespace std;

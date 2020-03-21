@@ -21,7 +21,7 @@
 #define BLITZ_LU_SOLVE_INTERFACE_HH
 
 #include "blitz/array.h"
-#include <vector>
+
 
 BZ_USING_NAMESPACE(blitz)
 

@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "is_delaunay.h"
 #include "unique_edge_map.h"
-#include <cassert>
+
 
 template <
   typename DerivedV,

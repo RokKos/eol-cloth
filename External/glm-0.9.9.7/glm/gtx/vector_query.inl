@@ -1,6 +1,6 @@
 /// @ref gtx_vector_query
 
-#include <cassert>
+
 
 namespace glm{
 namespace detail

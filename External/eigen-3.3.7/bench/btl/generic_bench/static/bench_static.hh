@@ -22,7 +22,7 @@
 
 #include "btl.hh"
 #include "bench_parameter.hh"
-#include <iostream>
+
 #include "utilities.h"
 #include "xy_file.hh"
 #include "static/static_size_generator.hh"

@@ -11,10 +11,10 @@
 #include "max_size.h"
 #include "min_size.h"
 
-#include <iostream>
-#include <cstdio>
-#include <fstream>
-#include <sstream>
+
+
+
+
 #include <iterator>
 
 template <typename Scalar, typename Index>

@@ -15,7 +15,7 @@
 //           0 < x1 < 10
 ////
 
-#include <iostream>
+
 #include "fusion.h"
 using namespace mosek::fusion;
 using namespace monty;

@@ -10,8 +10,8 @@
 #define IGL_FLIP_EDGE_H
 
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 
 namespace igl
 {

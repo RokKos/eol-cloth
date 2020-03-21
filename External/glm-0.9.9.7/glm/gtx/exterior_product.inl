@@ -1,6 +1,6 @@
 /// @ref gtx_exterior_product
 
-#include <limits>
+
 
 namespace glm {
 namespace detail

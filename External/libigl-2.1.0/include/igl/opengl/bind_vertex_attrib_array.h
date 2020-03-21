@@ -2,8 +2,8 @@
 #define IGL_OPENGL_BIND_VERTEX_ATTRIB_ARRAY_H
 #include "gl.h"
 #include "../igl_inline.h"
-#include <Eigen/Core>
-#include <string>
+
+
 namespace igl
 {
   namespace opengl

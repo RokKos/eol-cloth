@@ -10,7 +10,7 @@
 #define IGL_COPYLEFT_CGAL_DELAUNAY_TRIANGULATION_H
 
 #include "../../igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

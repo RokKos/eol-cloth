@@ -10,7 +10,7 @@
 #include "../igl_inline.h"
 #include "mosek_quadprog.h"
 #include "../bbw.h"
-#include <Eigen/Dense>
+
 
 namespace igl
 {

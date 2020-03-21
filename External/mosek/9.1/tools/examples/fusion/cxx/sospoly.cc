@@ -20,11 +20,11 @@
 //  [1] "Squared Functional Systems and Optimization Problems",
 //      Y. Nesterov, in High Performance Optimization,
 //      Kluwer Academic Publishers, 2000.
-#include <string>
-#include <iostream>
-#include <cmath>
+
+
+
 #include "fusion.h"
-#include <cassert>
+
 
 using namespace mosek::fusion;
 using namespace monty;

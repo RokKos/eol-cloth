@@ -9,10 +9,10 @@
 #define IGL_READMESH_H
 #include "igl_inline.h"
 
-#include <Eigen/Core>
-#include <string>
-#include <vector>
-#include <cstdio>
+
+
+
+
 
 namespace igl
 {

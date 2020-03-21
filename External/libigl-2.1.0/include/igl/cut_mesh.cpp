@@ -10,7 +10,7 @@
 #include <igl/triangle_triangle_adjacency.h>
 #include <igl/is_border_vertex.h>
 #include <igl/HalfEdgeIterator.h>
-#include <set>
+
 
 // This file violates many of the libigl style guidelines.
 

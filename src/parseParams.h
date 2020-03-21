@@ -4,8 +4,8 @@
 
 #include "genSet.h"
 #include "Scene.h"
-#include <string>
-#include <memory>
+
+
 
 void load_genset(const std::shared_ptr<genSet> genset, const std::string &JSON_FILE);
 

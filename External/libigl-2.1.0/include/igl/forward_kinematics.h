@@ -8,10 +8,10 @@
 #ifndef IGL_FORWARD_KINEMATICS_H
 #define IGL_FORWARD_KINEMATICS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 #include <Eigen/Geometry>
 #include <Eigen/StdVector>
-#include <vector>
+
 
 namespace igl
 {

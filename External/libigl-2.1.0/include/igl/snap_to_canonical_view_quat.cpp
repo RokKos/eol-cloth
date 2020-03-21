@@ -10,8 +10,8 @@
 #include "canonical_quaternions.h"
 #include "normalize_quat.h"
 
-#include <cstdio>
-#include <cassert>
+
+
 
 // Note: For the canonical view quaternions it should be completely possible to
 // determine this anaylitcally. That is the max_distance should be a

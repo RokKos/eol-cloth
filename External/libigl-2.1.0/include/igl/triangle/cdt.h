@@ -2,7 +2,7 @@
 #define IGL_TRIANGLE_CDT_H
 
 #include "../igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

@@ -9,8 +9,8 @@
 #define IGL_SORTROWS_H
 #include "igl_inline.h"
 
-#include <vector>
-#include <Eigen/Core>
+
+
 namespace igl
 {
   // Act like matlab's [Y,I] = sortrows(X)

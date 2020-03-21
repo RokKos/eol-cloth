@@ -8,7 +8,7 @@
 #include "polar_svd.h"
 #include <Eigen/SVD>
 #include <Eigen/Geometry>
-#include <iostream>
+
 
 // Adapted from Olga's CGAL mentee's ARAP code
 template <

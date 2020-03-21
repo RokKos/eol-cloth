@@ -7,8 +7,8 @@
 //              integer linear optimization problem
 //              providing an initial feasible solution.
 //
-#include <memory>
-#include <iostream>
+
+
 
 
 #include "fusion.h"

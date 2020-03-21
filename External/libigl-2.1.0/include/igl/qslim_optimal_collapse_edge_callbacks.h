@@ -8,11 +8,11 @@
 #ifndef IGL_QSLIM_OPTIMAL_COLLAPSE_EDGE_CALLBACKS_H
 #define IGL_QSLIM_OPTIMAL_COLLAPSE_EDGE_CALLBACKS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 #include <functional>
-#include <vector>
+
 #include <tuple>
-#include <set>
+
 namespace igl
 {
 

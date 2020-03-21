@@ -7,9 +7,9 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "planarize_quad_mesh.h"
 #include "quad_planarity.h"
-#include <Eigen/Sparse>
+
 #include <Eigen/Eigenvalues> 
-#include <iostream>
+
 
 namespace igl
 {

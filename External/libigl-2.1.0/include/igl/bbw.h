@@ -9,7 +9,7 @@
 #define IGL_BBW_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
+
 #include <igl/active_set.h>
 
 namespace igl

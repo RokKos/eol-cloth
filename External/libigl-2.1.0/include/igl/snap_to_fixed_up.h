@@ -9,7 +9,7 @@
 #define IGL_SNAP_TO_FIXED_UP_H
 
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 #include <Eigen/Geometry>
 
 namespace igl

@@ -9,7 +9,7 @@
 #define IGL_IS_SYMMETRIC_H
 #include "igl_inline.h"
 #define EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET
-#include <Eigen/Sparse>
+
 namespace igl
 {
   // Returns true if the given matrix is symmetric

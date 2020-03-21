@@ -6,7 +6,7 @@
    Purpose: Demonstrate the sparse Cholesky factorization.
  */
 
-#include <stdio.h>
+
 #include "mosek.h"
 
 /* Prints out a Cholesky factor presented in sparse form */

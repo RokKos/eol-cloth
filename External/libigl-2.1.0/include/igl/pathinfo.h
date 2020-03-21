@@ -9,7 +9,7 @@
 #define IGL_PATHINFO_H
 #include "igl_inline.h"
 
-#include <string>
+
 
 namespace igl
 {

@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "project_to_line_segment.h"
 #include "project_to_line.h"
-#include <Eigen/Core>
+
 
 template <
   typename DerivedP,

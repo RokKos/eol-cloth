@@ -9,8 +9,8 @@
 
 #include "main.h"
 #include <unsupported/Eigen/Polynomials>
-#include <iostream>
-#include <algorithm>
+
+
 
 using namespace std;
 

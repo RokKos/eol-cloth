@@ -21,12 +21,12 @@
 //  nutritive_value - Two-dimensional MxN array of floats where each row
 //              denotes the nutrient values for a single food per $ spent.
 
-#include <string>
-#include <iostream>
-#include <iomanip>
-#include <cmath>
+
+
+
+
 #include "fusion.h"
-#include <cassert>
+
 
 using namespace mosek::fusion;
 using namespace monty;

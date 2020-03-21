@@ -29,8 +29,8 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 
 #include "winport.hpp" // aa: windows bindings, etc
 
-#include <cmath>
-#include <iostream>
+
+
 //#include <zlib.h>
 
 
@@ -46,7 +46,7 @@ inline void aligned_free(void *ptr) { _aligned_free(ptr); }
 #else
 // This is for Linux, Apple OS will require a separate treatment...
 #define __align(sz) __attribute__((aligned(sz)))
-#include <stdlib.h>
+
 #include <assert.h>
 inline void* malloc_align(size_t size, size_t alignment = 32) {
 	void* ptr;

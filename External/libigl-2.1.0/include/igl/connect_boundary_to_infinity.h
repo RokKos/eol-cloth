@@ -8,7 +8,7 @@
 #ifndef IGL_CONNECT_BOUNDARY_TO_INFINITY_H
 #define IGL_CONNECT_BOUNDARY_TO_INFINITY_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Connect all boundary edges to a fictitious point at infinity.

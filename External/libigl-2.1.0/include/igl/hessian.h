@@ -11,8 +11,8 @@
 #define IGL_FEM_HESSIAN_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 
 
 namespace igl

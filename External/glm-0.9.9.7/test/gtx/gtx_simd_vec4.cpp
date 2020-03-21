@@ -31,7 +31,7 @@
 
 #include <glm/glm.hpp>
 #include <glm/gtx/simd_vec4.hpp>
-#include <cstdio>
+
 
 #if(GLM_ARCH != GLM_ARCH_PURE)
 

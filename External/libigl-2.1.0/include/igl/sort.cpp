@@ -13,9 +13,9 @@
 #include "colon.h"
 #include "parallel_for.h"
 
-#include <cassert>
-#include <algorithm>
-#include <iostream>
+
+
+
 
 template <typename DerivedX, typename DerivedY, typename DerivedIX>
 IGL_INLINE void igl::sort(

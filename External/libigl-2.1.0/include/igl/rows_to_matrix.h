@@ -8,7 +8,7 @@
 #ifndef IGL_ROWS_TO_MATRIX_H
 #define IGL_ROWS_TO_MATRIX_H
 #include "igl_inline.h"
-#include <vector>
+
 namespace igl
 {
   // Convert a list (std::vector) of row vectors of the same length to a matrix

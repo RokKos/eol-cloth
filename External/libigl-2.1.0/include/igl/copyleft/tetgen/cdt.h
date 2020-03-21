@@ -9,8 +9,8 @@
 #define IGL_COPYLEFT_TETGEN_CDT_H
 #include "../../igl_inline.h"
 
-#include <Eigen/Core>
-#include <string>
+
+
 #ifndef TETLIBRARY
 #  define TETLIBRARY 
 #endif

@@ -1,8 +1,8 @@
 #include <test_common.h>
 #include <igl/pathinfo.h>
 
-#include <string>
-#include <vector>
+
+
 #include <tuple>
 
 TEST_CASE("pathinfo: examples", "[igl]")

@@ -8,7 +8,7 @@
 #include "find.h"
 
 #include "verbose.h"
-#include <iostream>
+
   
 template <
   typename T, 

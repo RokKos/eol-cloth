@@ -7,8 +7,8 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "extract_manifold_patches.h"
 #include "unique_edge_map.h"
-#include <cassert>
-#include <limits>
+
+
 #include <queue>
 
 template<

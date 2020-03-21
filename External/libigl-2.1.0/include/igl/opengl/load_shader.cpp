@@ -9,7 +9,7 @@
 
 // Copyright Denis Kovacs 4/10/08
 #include "print_shader_info_log.h"
-#include <cstdio>
+
 IGL_INLINE GLuint igl::opengl::load_shader(
   const std::string & src,const GLenum type)
 {

@@ -323,8 +323,8 @@ set(CMAKE_REQUIRED_INCLUDES ${SCOTCH_INCLUDE_DIRS})
 include(CheckCSourceRuns)
 #stdio.h and stdint.h should be included by scotch.h directly
 set(SCOTCH_C_TEST_SCOTCH_Num_4 "
-#include <stdio.h>
-#include <stdint.h>
+
+
 #include <scotch.h>
 int main(int argc, char **argv) {
   if (sizeof(SCOTCH_Num) == 4)
@@ -335,8 +335,8 @@ int main(int argc, char **argv) {
 ")
 
 set(SCOTCH_C_TEST_SCOTCH_Num_8 "
-#include <stdio.h>
-#include <stdint.h>
+
+
 #include <scotch.h>
 int main(int argc, char **argv) {
   if (sizeof(SCOTCH_Num) == 8)

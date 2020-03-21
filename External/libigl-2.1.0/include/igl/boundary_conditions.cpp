@@ -11,9 +11,9 @@
 #include "EPS.h"
 #include "project_to_line.h"
 
-#include <vector>
-#include <map>
-#include <iostream>
+
+
+
 
 IGL_INLINE bool igl::boundary_conditions(
   const Eigen::MatrixXd & V  ,

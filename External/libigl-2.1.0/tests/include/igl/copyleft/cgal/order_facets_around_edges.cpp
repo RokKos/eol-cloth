@@ -1,8 +1,8 @@
 #include <test_common.h>
 
-#include <algorithm>
-#include <iostream>
-#include <vector>
+
+
+
 
 #include <CGAL/Exact_predicates_exact_constructions_kernel.h>
 #include <igl/copyleft/cgal/order_facets_around_edges.h>

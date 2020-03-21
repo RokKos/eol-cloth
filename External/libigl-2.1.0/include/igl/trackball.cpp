@@ -12,11 +12,11 @@
 #include "cross.h"
 #include "axis_angle_to_quat.h"
 #include "quat_mult.h"
-#include <cmath>
-#include <cstdlib>
-#include <cassert>
-#include <algorithm>
-#include <iostream>
+
+
+
+
+
 
 // Utility IGL_INLINE functions
 template <typename Q_type>

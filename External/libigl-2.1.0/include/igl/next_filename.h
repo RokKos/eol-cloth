@@ -8,7 +8,7 @@
 #ifndef IGL_NEXT_FILENAME_H
 #define IGL_NEXT_FILENAME_H
 #include "igl_inline.h"
-#include <string>
+
 namespace igl
 {
   // Find the file with the first filename of the form

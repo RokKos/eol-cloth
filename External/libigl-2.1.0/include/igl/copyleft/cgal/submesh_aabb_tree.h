@@ -10,8 +10,8 @@
 #define IGL_COPYLET_CGAL_SUBMESH_AABB_TREE_H
 
 #include "../../igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 
 #include <CGAL/AABB_tree.h>
 #include <CGAL/AABB_traits.h>

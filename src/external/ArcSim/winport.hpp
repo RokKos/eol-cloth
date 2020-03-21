@@ -38,15 +38,15 @@
 #pragma warning(disable:161)  // unrecognized #pragma
 
 #define _USE_MATH_DEFINES // just to have M_PI
-#include <cmath>
 
-#include <algorithm>
+
+
 
 #include <windows.h>
 #undef min
 #undef max
-#include <stdio.h>
-#include <iostream>
+
+
 #define snprintf _snprintf
 
 //#include <boost/math/special_functions/fpclassify.hpp> 

@@ -37,7 +37,7 @@ namespace std {
 
 #include <Eigen/Cholesky>
 #include <Eigen/LU>
-#include <Eigen/Sparse>
+
 
 enum {
   ForceNonZeroDiag = 1,

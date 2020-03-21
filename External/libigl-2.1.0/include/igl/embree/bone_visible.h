@@ -8,7 +8,7 @@
 #ifndef IGL_EMBREE_BONE_VISIBLE_H
 #define IGL_EMBREE_BONE_VISIBLE_H
 #include <igl/igl_inline.h>
-#include <Eigen/Core>
+
 #include "EmbreeIntersector.h"
 namespace igl
 {

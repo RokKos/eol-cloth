@@ -9,7 +9,7 @@
 #define IGL_COPYLEFT_CORK_FROM_CORK_MESH_H
 #include "../../igl_inline.h"
 #include <cork.h>
-#include <Eigen/Core>
+
 namespace igl
 {
   namespace copyleft

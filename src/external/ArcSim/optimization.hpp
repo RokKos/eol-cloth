@@ -28,7 +28,7 @@
 #define OPTIMIZATION_HPP
 
 //#include "sparse.hpp"
-#include "vectors.hpp"
+
 
 // Problems
 

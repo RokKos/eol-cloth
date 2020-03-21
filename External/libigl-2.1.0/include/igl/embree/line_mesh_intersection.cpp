@@ -9,8 +9,8 @@
 #include "../Hit.h"
 
 // For error printing
-#include <cstdio>
-#include <vector>
+
+
 
 #include <igl/per_vertex_normals.h>
 #include <igl/embree/EmbreeIntersector.h>

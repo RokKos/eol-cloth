@@ -10,9 +10,9 @@
 #include <glm/ext/vector_float4.hpp>
 #if GLM_CONFIG_SIMD == GLM_ENABLE
 #include <glm/gtc/type_aligned.hpp>
-#include <vector>
+
 #include <chrono>
-#include <cstdio>
+
 
 template <typename matType, typename vecType>
 static void test_mat_mul_vec(matType const& M, std::vector<vecType> const& I, std::vector<vecType>& O)

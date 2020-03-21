@@ -3,7 +3,7 @@
 #define _MONTY_SHAPE_H_
 
 #include <functional>
-#include <sstream>
+
 #include <stddef.h>
 
 

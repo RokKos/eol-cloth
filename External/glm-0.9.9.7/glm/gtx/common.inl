@@ -1,6 +1,6 @@
 /// @ref gtx_common
 
-#include <cmath>
+
 #include "../gtc/epsilon.hpp"
 #include "../gtc/constants.hpp"
 

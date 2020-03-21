@@ -8,14 +8,14 @@
 #ifndef IGL_MOSEK_MOSEK_QUADPROG_H
 #define IGL_MOSEK_MOSEK_QUADPROG_H
 #include "../igl_inline.h"
-#include <vector>
-#include <map>
+
+
 #include <mosek.h>
 
 
 #define EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 
 namespace igl
 {

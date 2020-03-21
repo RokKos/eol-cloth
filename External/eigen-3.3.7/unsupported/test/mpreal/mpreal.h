@@ -48,16 +48,16 @@
 #ifndef __MPREAL_H__
 #define __MPREAL_H__
 
-#include <string>
-#include <iostream>
-#include <sstream>
+
+
+
 #include <stdexcept>
 #include <cfloat>
-#include <cmath>
-#include <cstring>
-#include <limits>
+
+
+
 #include <complex>
-#include <algorithm>
+
 
 // Options
 #define MPREAL_HAVE_MSVC_DEBUGVIEW              // Enable Debugger Visualizer for "Debug" builds in MSVC.
@@ -118,7 +118,7 @@
 #include <mpfr.h>
 
 #if (MPFR_VERSION < MPFR_VERSION_NUM(3,0,0))
-    #include <cstdlib>                          // Needed for random()
+                              // Needed for random()
 #endif
 
 // Less important options

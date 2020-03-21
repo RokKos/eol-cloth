@@ -8,8 +8,8 @@
 #ifndef IGL_PNG_READ_PNG_H
 #define IGL_PNG_READ_PNG_H
 #include "../igl_inline.h"
-#include <Eigen/Core>
-#include <string>
+
+
 
 namespace igl
 {

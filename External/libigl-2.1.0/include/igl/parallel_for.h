@@ -89,11 +89,11 @@ namespace igl
 
 // Implementation
 
-#include <cmath>
-#include <cassert>
+
+
 #include <thread>
-#include <vector>
-#include <algorithm>
+
+
 
 template<typename Index, typename FunctionType >
 inline bool igl::parallel_for(

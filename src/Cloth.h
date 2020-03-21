@@ -2,15 +2,8 @@
 #ifndef __Cloth__
 #define __Cloth__
 
-#include <vector>
-#include <memory>
-
 #define EIGEN_DONT_ALIGN_STATICALLY
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
 
-// ArcSim
-#include "external/ArcSim//mesh.hpp"
 
 #include "Brenderable.h"
 

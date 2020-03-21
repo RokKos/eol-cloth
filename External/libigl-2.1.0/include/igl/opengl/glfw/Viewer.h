@@ -18,12 +18,12 @@
 #include "../ViewerData.h"
 #include "ViewerPlugin.h"
 
-#include <Eigen/Core>
+
 #include <Eigen/Geometry>
 
-#include <vector>
-#include <string>
-#include <cstdint>
+
+
+
 
 #define IGL_MOD_SHIFT           0x0001
 #define IGL_MOD_CONTROL         0x0002

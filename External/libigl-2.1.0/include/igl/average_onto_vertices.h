@@ -9,7 +9,7 @@
 #define IGL_AVERAGE_ONTO_VERTICES_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
+
 namespace igl 
 {
   // average_onto_vertices 

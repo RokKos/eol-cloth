@@ -8,8 +8,8 @@
 #include "quat_to_axis_angle.h"
 #include "EPS.h"
 #include "PI.h"
-#include <cmath>
-#include <cstdio>
+
+
 //
 // http://www.antisphere.com/Wiki/tools:anttweakbar
 template <typename Q_type>

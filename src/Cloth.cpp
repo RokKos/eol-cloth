@@ -8,9 +8,8 @@
 #include "UtilEOL.h"
 #include "matlabOutputs.h"
 
-#include "external\ArcSim\mesh.hpp"
-#include "external\ArcSim\io.hpp"
-#include "external\ArcSim\geometry.hpp"
+#include "external/ArcSim/io.hpp"
+
 
 #ifdef EOLC_ONLINE
 #define GLM_FORCE_RADIANS

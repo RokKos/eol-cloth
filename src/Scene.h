@@ -2,12 +2,12 @@
 #ifndef __Scene__
 #define __Scene__
 
-#include <vector>
-#include <memory>
-#include <string>
+
+
+
 
 #define EIGEN_DONT_ALIGN_STATICALLY
-#include <Eigen/Dense>
+
 
 #include "boxTriCollision.h"
 #include "BrenderManager.h"

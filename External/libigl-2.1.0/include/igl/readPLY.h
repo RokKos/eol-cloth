@@ -8,10 +8,10 @@
 #ifndef IGL_READPLY_H
 #define IGL_READPLY_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <string>
-#include <vector>
-#include <cstdio>
+
+
+
+
 
 namespace igl
 {

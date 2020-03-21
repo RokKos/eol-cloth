@@ -1,6 +1,6 @@
 /// @ref gtx_quaternion
 
-#include <limits>
+
 #include "../gtc/constants.hpp"
 
 namespace glm

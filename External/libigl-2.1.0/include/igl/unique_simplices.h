@@ -8,7 +8,7 @@
 #ifndef IGL_UNIQUE_SIMPLICES_H
 #define IGL_UNIQUE_SIMPLICES_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // Find *combinatorially* unique simplices in F.  **Order independent**

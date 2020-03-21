@@ -14,9 +14,9 @@
 #ifndef IGL_NO_EIGEN
 #  include <Eigen/Core>
 #endif
-#include <string>
-#include <vector>
-#include <cstdio>
+
+
+
 
 namespace igl 
 {

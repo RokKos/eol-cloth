@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #ifndef IGL_COPYLEFT_PROGRESSIVE_HULLS_COST_AND_PLACEMENT_H
 #define IGL_COPYLEFT_PROGRESSIVE_HULLS_COST_AND_PLACEMENT_H
-#include <Eigen/Core>
+
 #include "../igl_inline.h"
 namespace igl
 {

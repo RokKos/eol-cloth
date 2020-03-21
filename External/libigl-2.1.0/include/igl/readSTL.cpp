@@ -8,7 +8,7 @@
 #include "readSTL.h"
 #include "list_to_matrix.h"
 
-#include <iostream>
+
 template <typename DerivedV, typename DerivedF, typename DerivedN>
 IGL_INLINE bool igl::readSTL(
   const std::string & filename,

@@ -10,7 +10,7 @@
 #include "triangle_triangle_adjacency.h"
 #include "vertex_triangle_adjacency.h"
 #include "is_border_vertex.h"
-#include <set>
+
 
 template <typename DerivedF, typename Index>
 IGL_INLINE void igl::boundary_loop(

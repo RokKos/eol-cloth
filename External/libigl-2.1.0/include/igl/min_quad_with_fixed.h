@@ -10,11 +10,11 @@
 #include "igl_inline.h"
 
 #define EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET
-#include <Eigen/Core>
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
+
 // Bug in unsupported/Eigen/SparseExtra needs iostream first
-#include <iostream>
+
 #include <unsupported/Eigen/SparseExtra>
 
 namespace igl

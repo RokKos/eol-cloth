@@ -1,11 +1,11 @@
-#include <iostream>
+
 struct init {
   init() { std::cout << "[" << "init" << "]" << std::endl; }
 };
 init init_obj;
 // [init]
-#include <iostream>
-#include <Eigen/Dense>
+
+
 
 using namespace std;
 using namespace Eigen;

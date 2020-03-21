@@ -1,7 +1,7 @@
 #ifndef IGL_EARS_H
 #define IGL_EARS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // FIND_EARS  Find all ears (faces with two boundary edges) in a given mesh

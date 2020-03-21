@@ -7,11 +7,11 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "local_basis.h"
 
-#include <sstream>
-#include <string>
-#include <fstream>
 
-#include <vector>
+
+
+
+
 #include <Eigen/Geometry>
 
 

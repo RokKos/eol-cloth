@@ -9,7 +9,7 @@
 #include "edge_lengths.h"
 #include "face_areas.h"
 
-#include <cassert>
+
 
 template <
   typename DerivedV, 

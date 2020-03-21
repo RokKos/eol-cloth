@@ -12,7 +12,7 @@
 #include "parallel_for.h"
 
 #include <array>
-#include <vector>
+
 
 template <typename DerivedT, typename DerivedTT, typename DerivedTTi>
 IGL_INLINE void

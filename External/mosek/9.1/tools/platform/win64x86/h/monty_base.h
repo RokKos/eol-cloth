@@ -2,7 +2,7 @@
 #define _MONTY_BASE_H_
 
 #include <stddef.h>
-#include <cassert>
+
 
 namespace monty
 {

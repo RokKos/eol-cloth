@@ -8,8 +8,8 @@
 #include "peel_outer_hull_layers.h"
 #include "outer_hull.h"
 #include "../../LinSpaced.h"
-#include <vector>
-#include <iostream>
+
+
 //#define IGL_PEEL_OUTER_HULL_LAYERS_DEBUG
 #ifdef IGL_PEEL_OUTER_HULL_LAYERS_DEBUG
 #include "../../writePLY.h"

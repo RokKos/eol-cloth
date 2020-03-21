@@ -7,9 +7,9 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "AtA_cached.h"
 
-#include <iostream>
-#include <vector>
-#include <utility>
+
+
+
 
 template <typename Scalar>
 IGL_INLINE void igl::AtA_cached_precompute(

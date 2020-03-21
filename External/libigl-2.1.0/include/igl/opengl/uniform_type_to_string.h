@@ -9,7 +9,7 @@
 #define IGL_OPENGL_UNIFORM_TYPE_TO_STRING_H
 #include "../igl_inline.h"
 #include "gl.h"
-#include <string>
+
 
 namespace igl
 {

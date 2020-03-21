@@ -9,7 +9,7 @@
 #define IGL_POINT_IN_POLY_H
 #include "igl_inline.h"
 
-#include <vector>
+
 
 namespace igl
 {

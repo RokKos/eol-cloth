@@ -9,8 +9,8 @@
 #define IGL_UNIQUE_H
 #include "igl_inline.h"
 
-#include <vector>
-#include <Eigen/Core>
+
+
 namespace igl
 {
   // Act like matlab's [C,IA,IC] = unique(X)

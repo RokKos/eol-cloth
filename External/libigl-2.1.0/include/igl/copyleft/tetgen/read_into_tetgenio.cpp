@@ -21,9 +21,9 @@
 #endif
 
 // STL includes
-#include <algorithm>
-#include <iostream>
-#include <vector>
+
+
+
 
 IGL_INLINE bool igl::copyleft::tetgen::read_into_tetgenio(
   const std::string & path,

@@ -9,9 +9,9 @@
 #include "edge_lengths.h"
 #include "parallel_for.h"
 #include "sort.h"
-#include <cassert>
-#include <iostream>
-#include <limits>
+
+
+
 
 template <typename DerivedV, typename DerivedF, typename DeriveddblA>
 IGL_INLINE void igl::doublearea(

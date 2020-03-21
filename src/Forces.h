@@ -2,17 +2,17 @@
 #ifndef __Forces__
 #define __Forces__
 
-#include <vector>
-#include <memory>
-#include <string>
+
+
+
 
 #include "Cloth.h"
 
-#include "external\ArcSim\mesh.hpp"
+
 
 #define EIGEN_DONT_ALIGN_STATICALLY
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 #include <Eigen/StdVector>
 
 #ifdef EOLC_ONLINE

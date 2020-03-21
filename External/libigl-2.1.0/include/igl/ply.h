@@ -74,10 +74,10 @@ properly to target OSs with binary files.
 
 
 
-#include <stdlib.h>
-#include <stdio.h>
+
+
 #include <stddef.h>
-#include <string.h>
+
 
 namespace igl {
     namespace ply {
@@ -319,10 +319,10 @@ properly to target OSs with binary files.
 
 */
 
-#include <stdio.h>
-#include <stdlib.h>
 
-#include <string.h>
+
+
+
 //#include "ply.h"
 
 

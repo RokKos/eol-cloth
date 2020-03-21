@@ -1,7 +1,7 @@
 #ifndef IGL_SIGNED_ANGLE_H
 #define IGL_SIGNED_ANGLE_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // Compute the signed angle subtended by the oriented 3d triangle (A,B,C) at some point P

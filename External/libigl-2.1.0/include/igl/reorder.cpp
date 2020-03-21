@@ -8,7 +8,7 @@
 #include "reorder.h"
 #include "SortableRow.h"
 #ifndef IGL_NO_EIGEN
-#include <Eigen/Core>
+
 #endif
 
 // This implementation is O(n), but also uses O(n) extra memory

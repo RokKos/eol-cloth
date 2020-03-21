@@ -10,7 +10,7 @@
 #include "quat_conjugate.h"
 #include "quat_mult.h"
 #include "normalize_quat.h"
-#include <cassert>
+
 
 template <typename Q_type>
 IGL_INLINE void igl::rotate_by_quat(

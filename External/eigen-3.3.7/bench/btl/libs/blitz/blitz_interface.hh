@@ -26,7 +26,7 @@
 #include <blitz/vector-et.h>
 #include <blitz/vecwhere.h>
 #include <blitz/matrix.h>
-#include <vector>
+
 
 BZ_USING_NAMESPACE(blitz)
 

@@ -8,8 +8,8 @@
 #ifndef IGL_WRITEBF_H
 #define IGL_WRITEBF_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <string>
+
+
 namespace igl
 {
   // Write a bones forest to a file

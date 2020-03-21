@@ -8,8 +8,8 @@
 #ifndef IGL_COMISO_MIQ_H
 #define IGL_COMISO_MIQ_H
 #include "../../igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 
 namespace igl
 {

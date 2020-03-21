@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "quat_mult.h"
 
-#include <cassert>
+
 // http://www.antisphere.com/Wiki/tools:anttweakbar
 template <typename Q_type>
 IGL_INLINE void igl::quat_mult(

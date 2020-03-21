@@ -7,7 +7,7 @@
               parameters and read information items
               with MOSEK Fusion
 */
-#include <iostream>
+
 #include "fusion.h"
 
 using namespace mosek::fusion;

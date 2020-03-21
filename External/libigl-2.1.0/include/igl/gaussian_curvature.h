@@ -8,7 +8,7 @@
 #ifndef IGL_GAUSSIAN_CURVATURE_H
 #define IGL_GAUSSIAN_CURVATURE_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Compute discrete local integral gaussian curvature (angle deficit, without

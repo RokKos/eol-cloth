@@ -1,7 +1,7 @@
 #include <test_common.h>
 
 #include <igl/copyleft/cgal/points_inside_component.h>
-#include <limits>
+
 
 TEST_CASE("PointInsideComponent: simple", "[igl/copyleft/cgal]")
 {

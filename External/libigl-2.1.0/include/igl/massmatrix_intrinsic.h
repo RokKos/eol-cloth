@@ -10,8 +10,8 @@
 #include "igl_inline.h"
 #include "massmatrix.h"
 
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 
 namespace igl 
 {

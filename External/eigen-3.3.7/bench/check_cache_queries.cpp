@@ -1,6 +1,6 @@
 
 #define EIGEN_INTERNAL_DEBUG_CACHE_QUERY
-#include <iostream>
+
 #include "../Eigen/Core"
 
 using namespace Eigen;

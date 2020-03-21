@@ -17,7 +17,7 @@
 #endif
 
 #if EIGEN_COMP_ICC>=1600 &&  __cplusplus >= 201103L
-#include <cstdint>
+
 #endif
 
 namespace Eigen {

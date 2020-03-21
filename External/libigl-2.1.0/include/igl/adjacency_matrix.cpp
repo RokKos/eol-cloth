@@ -9,7 +9,7 @@
 
 #include "verbose.h"
 
-#include <vector>
+
 
 template <typename DerivedF, typename T>
 IGL_INLINE void igl::adjacency_matrix(

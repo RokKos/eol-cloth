@@ -9,7 +9,7 @@
 #ifndef IGL_GRID_H
 #define IGL_GRID_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Construct vertices of a regular grid, suitable for input to

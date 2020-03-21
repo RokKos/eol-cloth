@@ -15,8 +15,8 @@
 #include "Hit.h"
 #include "parallel_for.h"
 #include <functional>
-#include <vector>
-#include <algorithm>
+
+
 
 template <
   typename DerivedP,

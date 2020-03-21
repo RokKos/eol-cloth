@@ -7,7 +7,7 @@
              for problems solved with the interior-point optimizers.
 */
 
-#include <stdio.h>
+
 #include "mosek.h"
 
 /* Log handler */

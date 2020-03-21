@@ -11,7 +11,7 @@
 #include <igl/edge_topology.h>
 #include <igl/per_face_normals.h>
 #include <igl/copyleft/comiso/nrosy.h>
-#include <iostream>
+
 
 namespace igl
 {

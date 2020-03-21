@@ -8,7 +8,7 @@
 //
 #include "closest_facet.h"
 
-#include <vector>
+
 #include <stdexcept>
 #include <unordered_map>
 

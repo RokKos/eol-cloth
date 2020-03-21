@@ -25,19 +25,19 @@
 //
  
 #include <type_traits>
-#include <iostream>
-#include <fstream>
-#include <cstdint>
+
+
+
 #include <numeric>
-#include <vector>
-#include <set>
-#include <map>
-#include <memory>
-#include <cstdint>
+
+
+
+
+
 #include <list>
  
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
  
 #include "igl_inline.h"
  

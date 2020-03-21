@@ -8,8 +8,8 @@
 #ifdef __AVX__
 #include "svd3x3_avx.h"
 
-#include <cmath>
-#include <algorithm>
+
+
 
 #undef USE_SCALAR_IMPLEMENTATION
 #undef USE_SSE_IMPLEMENTATION

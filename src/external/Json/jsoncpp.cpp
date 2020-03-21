@@ -227,15 +227,15 @@ static inline void fixNumericLocaleInput(char* begin, char* end) {
 #include <json/value.h>
 #include "json_tool.h"
 #endif // if !defined(JSON_IS_AMALGAMATION)
-#include <utility>
-#include <cstdio>
-#include <cassert>
-#include <cstring>
+
+
+
+
 #include <istream>
-#include <sstream>
-#include <memory>
-#include <set>
-#include <limits>
+
+
+
+
 
 #if defined(_MSC_VER)
 #if !defined(WINCE) && defined(__STDC_SECURE_LIB__) && _MSC_VER >= 1500 // VC++ 9.0 and above 
@@ -2485,15 +2485,15 @@ ValueIterator& ValueIterator::operator=(const SelfType& other) {
 #include <json/writer.h>
 #endif // if !defined(JSON_IS_AMALGAMATION)
 
-#include <sstream>
-#include <utility>
-#include <cstring>
-#include <cassert>
+
+
+
+
 #ifdef JSON_USE_CPPTL
 #include <cpptl/conststring.h>
 #endif
 #include <cstddef> // size_t
-#include <algorithm> // min()
+ // min()
 
 #define JSON_ASSERT_UNREACHABLE assert(false)
 
@@ -4159,14 +4159,14 @@ Value& Path::make(Value& root) const {
 #include <json/writer.h>
 #include "json_tool.h"
 #endif // if !defined(JSON_IS_AMALGAMATION)
-#include <iomanip>
-#include <memory>
-#include <sstream>
-#include <utility>
-#include <set>
-#include <cassert>
-#include <cstring>
-#include <cstdio>
+
+
+
+
+
+
+
+
 
 #if defined(_MSC_VER) && _MSC_VER >= 1200 && _MSC_VER < 1800 // Between VC++ 6.0 and VC++ 11.0
 #include <float.h>
@@ -4192,7 +4192,7 @@ Value& Path::make(Value& root) const {
 #endif
 #endif
 #else
-#include <cmath>
+
 #if !(defined(__QNXNTO__)) // QNX already defines isfinite
 #define isfinite std::isfinite
 #endif

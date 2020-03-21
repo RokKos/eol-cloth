@@ -9,7 +9,7 @@
 #define IGL_MIN_QUAD_DENSE_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
+
 
 //// debug
 //#include <matlabinterface.h>

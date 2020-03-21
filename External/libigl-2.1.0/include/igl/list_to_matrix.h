@@ -8,8 +8,8 @@
 #ifndef IGL_LIST_TO_MATRIX_H
 #define IGL_LIST_TO_MATRIX_H
 #include "igl_inline.h"
-#include <vector>
-#include <Eigen/Core>
+
+
 
 namespace igl
 {

@@ -7,9 +7,9 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "writeDMAT.h"
 #include "list_to_matrix.h"
-#include <Eigen/Core>
 
-#include <cstdio>
+
+
 
 template <typename DerivedW>
 IGL_INLINE bool igl::writeDMAT(

@@ -7,8 +7,8 @@
 *            convex relaxation of a mixed-integer QCQP
 **/
 #include <random>
-#include <iostream>
-#include <ctime>
+
+
 #include "fusion.h"
 
 using namespace mosek::fusion;

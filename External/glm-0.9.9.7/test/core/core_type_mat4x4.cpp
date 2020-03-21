@@ -5,7 +5,7 @@
 #include <glm/matrix.hpp>
 #include <glm/mat4x4.hpp>
 #include <glm/vec4.hpp>
-#include <vector>
+
 
 template <typename matType, typename vecType>
 static int test_operators()

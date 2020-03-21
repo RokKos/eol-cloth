@@ -8,7 +8,7 @@
 #ifndef IGL_COLON_H
 #define IGL_COLON_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // Note:

@@ -8,7 +8,7 @@
 #include "vertex_components.h"
 #include "adjacency_matrix.h"
 #include <queue>
-#include <vector>
+
 
 template <typename AScalar, typename DerivedC, typename Derivedcounts>
 IGL_INLINE void igl::vertex_components(

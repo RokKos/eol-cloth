@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "create_vector_vbo.h"
 
-#include <cassert>
+
 
 // http://www.songho.ca/opengl/gl_vbo.html#create
 template <typename T>

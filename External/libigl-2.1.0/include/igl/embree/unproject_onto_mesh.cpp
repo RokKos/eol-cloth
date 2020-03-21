@@ -8,7 +8,7 @@
 #include "unproject_onto_mesh.h"
 #include "EmbreeIntersector.h"
 #include "../unproject_onto_mesh.h"
-#include <vector>
+
 
 IGL_INLINE bool igl::embree::unproject_onto_mesh(
   const Eigen::Vector2f& pos,

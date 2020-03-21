@@ -8,7 +8,7 @@
 #ifndef IGL_MOD_H
 #define IGL_MOD_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Compute elementwise mod: B = A % base

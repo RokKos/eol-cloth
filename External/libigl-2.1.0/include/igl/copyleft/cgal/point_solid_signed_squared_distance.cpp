@@ -10,8 +10,8 @@
 #include "point_mesh_squared_distance.h"
 #include "../../list_to_matrix.h"
 #include "../../slice_mask.h"
-#include <vector>
-#include <Eigen/Core>
+
+
 
 template <
   typename DerivedQ,

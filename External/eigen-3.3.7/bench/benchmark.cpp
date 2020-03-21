@@ -1,8 +1,8 @@
 // g++ -O3 -DNDEBUG -DMATSIZE=<x> benchmark.cpp -o benchmark && time ./benchmark
 
-#include <iostream>
 
-#include <Eigen/Core>
+
+
 
 #ifndef MATSIZE
 #define MATSIZE 3

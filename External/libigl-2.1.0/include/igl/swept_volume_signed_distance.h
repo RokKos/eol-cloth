@@ -8,7 +8,7 @@
 #ifndef IGL_SWEPT_VOLUME_SIGNED_DISTANCE_H
 #define IGL_SWEPT_VOLUME_SIGNED_DISTANCE_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 #include <Eigen/Geometry>
 #include <functional>
 namespace igl

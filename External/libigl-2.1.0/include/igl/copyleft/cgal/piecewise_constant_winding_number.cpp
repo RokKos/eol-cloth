@@ -9,7 +9,7 @@
 #include "../../piecewise_constant_winding_number.h"
 #include "remesh_self_intersections.h"
 #include <CGAL/Exact_predicates_exact_constructions_kernel.h>
-#include <algorithm>
+
 
 template < typename DerivedV, typename DerivedF>
 IGL_INLINE bool igl::copyleft::cgal::piecewise_constant_winding_number(

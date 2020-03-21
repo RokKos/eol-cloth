@@ -1,7 +1,7 @@
 #ifndef IGL_IS_STL_H
 #define IGL_IS_STL_H
 #include "igl_inline.h"
-#include <cstdio>
+
 namespace igl
 {
   // Given a file pointer, determine if it contains an .stl file and then

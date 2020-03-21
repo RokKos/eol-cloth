@@ -11,7 +11,7 @@
 #include "../../list_to_matrix.h"
 
 // STL includes
-#include <iostream>
+
 
 IGL_INLINE bool igl::copyleft::tetgen::tetgenio_to_tetmesh(
   const tetgenio & out,

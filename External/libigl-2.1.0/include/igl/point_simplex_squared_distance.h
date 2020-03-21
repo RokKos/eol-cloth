@@ -8,7 +8,7 @@
 #ifndef IGL_POINT_SIMPLEX_SQUARED_DISTANCE_H
 #define IGL_POINT_SIMPLEX_SQUARED_DISTANCE_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Determine squared distance from a point to linear simplex. 

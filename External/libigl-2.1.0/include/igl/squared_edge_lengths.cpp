@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "squared_edge_lengths.h"
 #include "parallel_for.h"
-#include <iostream>
+
   
 template <typename DerivedV, typename DerivedF, typename DerivedL>
 IGL_INLINE void igl::squared_edge_lengths(

@@ -10,8 +10,8 @@
 #include "tan_half_angle.h"
 #include "EPS.h"
 #include "cotmatrix_entries.h"
-#include <iostream>
-#include <cassert>
+
+
 template <
   typename Derivedl,
   typename DerivedF,

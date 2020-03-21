@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "bfs_orient.h"
 #include "orientable_patches.h"
-#include <Eigen/Sparse>
+
 #include <queue>
 
 template <typename DerivedF, typename DerivedFF, typename DerivedC>

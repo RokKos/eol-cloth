@@ -24,7 +24,7 @@
 #include "cuda_common.h"
 
 // Check that dense modules can be properly parsed by nvcc
-#include <Eigen/Dense>
+
 
 // struct Foo{
 //   EIGEN_DEVICE_FUNC

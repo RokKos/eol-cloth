@@ -21,7 +21,7 @@
 //  We use the form Q = U^T * U, where U is a Cholesky factor of Q.
 //
 
-#include <iostream>
+
 #include "monty.h"
 #include "fusion.h"
 

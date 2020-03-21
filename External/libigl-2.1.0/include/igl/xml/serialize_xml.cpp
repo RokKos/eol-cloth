@@ -12,8 +12,8 @@
 #include "XMLSerializable.h"
 
 #include <iterator>
-#include <limits>
-#include <iomanip>
+
+
 
 namespace igl
 {

@@ -9,9 +9,9 @@
 #include "mosek_quadprog.h"
 #include "../harmonic.h"
 #include "../slice_into.h"
-#include <Eigen/Sparse>
-#include <iostream>
-#include <cstdio>
+
+
+
 
 
 template <

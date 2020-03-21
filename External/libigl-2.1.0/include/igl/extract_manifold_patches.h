@@ -9,8 +9,8 @@
 #define IGL_EXTRACT_MANIFOLD_PATCHES
 
 #include "igl_inline.h"
-#include <Eigen/Dense>
-#include <vector>
+
+
 
 namespace igl {
     // Extract a set of maximal patches from a given mesh.

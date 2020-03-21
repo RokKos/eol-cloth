@@ -15,8 +15,8 @@
 //#####################################################################
 
 #ifdef PRINT_DEBUGGING_OUTPUT
-#include <iomanip>
-#include <iostream>
+
+
 #endif
 
 // Prevent warnings
@@ -67,7 +67,7 @@ inline float rsqrt(const float f)
     return buf[0];
 }
 #else
-#include <cmath>
+
 inline float rsqrt(const float f)
 {
   return 1./sqrtf(f);

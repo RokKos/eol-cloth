@@ -8,7 +8,7 @@
  */
 
 #include "mosek.h"
-#include <stdio.h>
+
 
 static void MSKAPI printstr(void        *handle,
                             const char str[])

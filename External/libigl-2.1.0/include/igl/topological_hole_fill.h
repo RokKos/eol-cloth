@@ -8,8 +8,8 @@
 #ifndef IGL_TOPOLOGICAL_HOLE_FILL_H
 #define IGL_TOPOLOGICAL_HOLE_FILL_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 namespace igl
 {
     

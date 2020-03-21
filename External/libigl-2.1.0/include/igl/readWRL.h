@@ -9,9 +9,9 @@
 #define IGL_READWRL_H
 #include "igl_inline.h"
 
-#include <string>
-#include <vector>
-#include <cstdio>
+
+
+
 
 namespace igl 
 {

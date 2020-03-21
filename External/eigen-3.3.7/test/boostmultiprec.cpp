@@ -7,7 +7,7 @@
 // Public License v. 2.0. If a copy of the MPL was not distributed
 // with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-#include <sstream>
+
 
 #ifdef EIGEN_TEST_MAX_SIZE
 #undef EIGEN_TEST_MAX_SIZE
@@ -55,7 +55,7 @@
 #include "bdcsvd.cpp"
 #endif
 
-#include <Eigen/Dense>
+
 
 #undef min
 #undef max
@@ -197,5 +197,11 @@ void test_boostmultiprec()
 
   CALL_SUBTEST_9(( jacobisvd(Mat(internal::random<int>(EIGEN_TEST_MAX_SIZE/4, EIGEN_TEST_MAX_SIZE), internal::random<int>(EIGEN_TEST_MAX_SIZE/4, EIGEN_TEST_MAX_SIZE/2))) ));
   CALL_SUBTEST_10(( bdcsvd(Mat(internal::random<int>(EIGEN_TEST_MAX_SIZE/4, EIGEN_TEST_MAX_SIZE), internal::random<int>(EIGEN_TEST_MAX_SIZE/4, EIGEN_TEST_MAX_SIZE/2))) ));
+}
+
+_MAX_SIZE/2))) ));
+}
+
+_SIZE/2))) ));
 }
 

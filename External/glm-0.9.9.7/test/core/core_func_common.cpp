@@ -9,10 +9,10 @@
 #include <glm/vec4.hpp>
 #include <glm/vec3.hpp>
 #include <glm/vec2.hpp>
-#include <vector>
-#include <cstdio>
-#include <cmath>
-#include <ctime>
+
+
+
+
 
 // This file has divisions by zero to test isnan
 #if GLM_COMPILER & GLM_COMPILER_VC

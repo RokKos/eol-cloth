@@ -8,8 +8,8 @@
 #ifndef IGL_COPYLEFT_CGAL_POINT_MESH_SQUARED_DISTANCE_H
 #define IGL_COPYLEFT_CGAL_POINT_MESH_SQUARED_DISTANCE_H
 #include "../../igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 #include "CGAL_includes.hpp"
 namespace igl
 {

@@ -3,7 +3,7 @@
 #include "type_mat4x4.hpp"
 #include "../geometric.hpp"
 #include "../simd/matrix.h"
-#include <cstring>
+
 
 namespace glm{
 namespace detail

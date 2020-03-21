@@ -9,8 +9,8 @@
 #define IGL_PRINT_IJV_H
 #include "igl_inline.h"
 #define EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 namespace igl
 {
   // Prints a 3 column matrix representing [I,J,V] = find(X). That is, each

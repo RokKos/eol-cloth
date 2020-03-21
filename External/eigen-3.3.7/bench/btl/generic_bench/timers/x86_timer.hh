@@ -28,10 +28,10 @@
 #define u32 unsigned int
 #include <asm/msr.h>
 #include "utilities.h"
-#include <map>
-#include <fstream>
-#include <string>
-#include <iostream>
+
+
+
+
 
 // frequence de la becanne en Hz
 //#define FREQUENCY 648000000

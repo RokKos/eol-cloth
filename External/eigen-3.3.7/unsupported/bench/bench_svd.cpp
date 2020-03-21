@@ -12,7 +12,7 @@
 
 // Bench to compare the efficiency of SVD algorithms
 
-#include <iostream>
+
 #include <bench/BenchTimer.h>
 #include <unsupported/Eigen/SVD>
 

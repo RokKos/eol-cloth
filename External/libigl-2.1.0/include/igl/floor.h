@@ -8,7 +8,7 @@
 #ifndef IGL_FLOOR_H
 #define IGL_FLOOR_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // Floor a given matrix to nearest integers 

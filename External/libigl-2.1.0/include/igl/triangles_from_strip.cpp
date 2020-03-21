@@ -6,7 +6,7 @@
 // v. 2.0. If a copy of the MPL was not distributed with this file, You can 
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "triangles_from_strip.h"
-#include <iostream>
+
 
 template <typename DerivedS, typename DerivedF>
 IGL_INLINE void igl::triangles_from_strip(

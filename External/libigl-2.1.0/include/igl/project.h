@@ -8,7 +8,7 @@
 #ifndef IGL_PROJECT_H
 #define IGL_PROJECT_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // Eigen reimplementation of gluProject

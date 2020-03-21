@@ -8,7 +8,7 @@
 #ifndef IGL_QSLIM_H
 #define IGL_QSLIM_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
 

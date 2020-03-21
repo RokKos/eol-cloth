@@ -25,22 +25,13 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 */
 
 #include "dynamicremesh.hpp"
-//#include "mesh.hpp"
-#include "geometry.hpp"
-//#include "sepstrength.hpp"
-//#include "physics.hpp"
 #include "magic.hpp"
 #include "remesh.hpp"
-//#include "simulation.hpp"
 #include "tensormax.hpp"
-//#include "timer.hpp"
-//#include "cloth.hpp"
-#include "util.hpp"
-//#include "display.hpp"
 #include "subset.hpp"
-#include <algorithm>
-#include <cstdlib>
-#include <map>
+
+
+
 using namespace std;
 
 static const bool verbose = false;

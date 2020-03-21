@@ -20,7 +20,7 @@
 
   The example uses basis type sensitivity analysis.
 */
-#include <stdio.h>
+
 
 #include "mosek.h" /* Include the MOSEK definition file. */
 

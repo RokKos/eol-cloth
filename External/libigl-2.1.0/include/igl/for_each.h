@@ -1,8 +1,8 @@
 #ifndef IGL_FOR_EACH_H
 #define IGL_FOR_EACH_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 namespace igl
 {
   // FOR_EACH  Call a given function for each non-zero (i.e., explicit value

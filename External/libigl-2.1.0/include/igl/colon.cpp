@@ -8,7 +8,7 @@
 #include "colon.h"
 #include "LinSpaced.h"
 
-#include <cstdio>
+
 
 template <typename L,typename S,typename H,typename T>
 IGL_INLINE void igl::colon(

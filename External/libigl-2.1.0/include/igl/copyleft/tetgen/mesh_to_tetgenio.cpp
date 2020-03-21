@@ -11,7 +11,7 @@
 #include "../../matrix_to_list.h"
 
 // STL includes
-#include <cassert>
+
 
 
 IGL_INLINE bool igl::copyleft::tetgen::mesh_to_tetgenio(

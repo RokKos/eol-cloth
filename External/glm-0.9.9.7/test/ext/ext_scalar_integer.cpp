@@ -1,9 +1,9 @@
 #include <glm/ext/scalar_integer.hpp>
 #include <glm/ext/scalar_int_sized.hpp>
 #include <glm/ext/scalar_uint_sized.hpp>
-#include <vector>
-#include <ctime>
-#include <cstdio>
+
+
+
 
 #if GLM_LANG & GLM_LANG_CXX11_FLAG
 #include <chrono>

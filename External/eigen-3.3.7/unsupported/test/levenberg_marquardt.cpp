@@ -12,7 +12,7 @@
 // FIXME: These tests all check for hard-coded values. Ideally, parameters and start estimates should be randomized.
 
 
-#include <stdio.h>
+
 
 #include "main.h"
 #include <unsupported/Eigen/LevenbergMarquardt>

@@ -8,7 +8,7 @@
 #ifndef IGL_MAT_MIN_H
 #define IGL_MAT_MIN_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 
 namespace igl
 {

@@ -9,7 +9,7 @@
 #define IGL_COPYLEFT_CORK_MESH_BOOLEAN_H
 #include "../../MeshBooleanType.h"
 #include "../../igl_inline.h"
-#include <Eigen/Core>
+
 #include <cork.h> // for consistent uint
 
 namespace igl

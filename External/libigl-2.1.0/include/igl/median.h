@@ -8,7 +8,7 @@
 #ifndef IGL_MEDIAN_H
 #define IGL_MEDIAN_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // Compute the median of an eigen vector

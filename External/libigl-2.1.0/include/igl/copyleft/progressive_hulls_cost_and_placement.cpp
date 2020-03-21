@@ -9,9 +9,9 @@
 #include "quadprog.h"
 #include "../unique.h"
 #include "../circulation.h"
-#include <cassert>
-#include <vector>
-#include <limits>
+
+
+
 
 IGL_INLINE void igl::copyleft::progressive_hulls_cost_and_placement(
   const int e,

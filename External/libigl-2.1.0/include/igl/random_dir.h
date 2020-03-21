@@ -9,7 +9,7 @@
 #define IGL_RANDOM_DIR_H
 #include "igl_inline.h"
 
-#include <Eigen/Core>
+
 
 namespace igl
 {

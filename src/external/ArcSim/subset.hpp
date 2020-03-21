@@ -27,9 +27,9 @@
 #ifndef SUBSET_HPP
 #define SUBSET_HPP
 
-#include "mesh.hpp"
-#include "util.hpp"
-#include <map>
+
+
+
 
 class MeshSubset {
 public:

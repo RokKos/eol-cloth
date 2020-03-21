@@ -10,7 +10,7 @@
 #define IGL_DIRNAME_H
 #include "igl_inline.h"
 
-#include <string>
+
 
 namespace igl
 {

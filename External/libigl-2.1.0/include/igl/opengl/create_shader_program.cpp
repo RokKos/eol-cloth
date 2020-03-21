@@ -9,8 +9,8 @@
 
 #include "load_shader.h"
 #include "print_program_info_log.h"
-#include <iostream>
-#include <cstdio>
+
+
 
 IGL_INLINE bool igl::opengl::create_shader_program(
   const std::string & geom_source,

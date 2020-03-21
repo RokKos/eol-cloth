@@ -1,6 +1,6 @@
 #include <test_common.h>
-#include <iostream>
-#include <Eigen/Dense>
+
+
 
 #include <igl/copyleft/cgal/peel_outer_hull_layers.h>
 #include <igl/copyleft/cgal/remesh_self_intersections.h>

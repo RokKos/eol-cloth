@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "sort_angles.h"
 #include "LinSpaced.h"
-#include <algorithm>
+
 
 template <typename DerivedM, typename DerivedR>
 IGL_INLINE void igl::sort_angles(

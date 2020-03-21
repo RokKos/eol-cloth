@@ -2,9 +2,9 @@
 #include <glm/gtc/type_precision.hpp>
 #include <glm/gtc/vec1.hpp>
 #include <glm/gtc/epsilon.hpp>
-#include <vector>
-#include <ctime>
-#include <cstdio>
+
+
+
 
 namespace isPowerOfTwo
 {

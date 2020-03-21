@@ -27,8 +27,6 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #ifndef REMESH_HPP
 #define REMESH_HPP
 
-#include "mesh.hpp"
-
 // Pointers are owned by the RemeshOp.
 // Use done() and/or inverse().done() to free.
 

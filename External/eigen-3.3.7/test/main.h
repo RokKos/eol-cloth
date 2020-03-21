@@ -8,14 +8,8 @@
 // Public License v. 2.0. If a copy of the MPL was not distributed
 // with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-#include <cstdlib>
+
 #include <cerrno>
-#include <ctime>
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <sstream>
-#include <vector>
 #include <typeinfo>
 
 // The following includes of STL headers have to be done _before_ the
@@ -36,12 +30,12 @@
 // included before any Eigen header and because the STL headers are guarded
 // against multiple inclusions, no STL header will see our own min/max macro
 // definitions.
-#include <limits>
-#include <algorithm>
+
+
 #include <complex>
 #include <deque>
 #include <queue>
-#include <cassert>
+
 #include <list>
 #if __cplusplus >= 201103L
 #include <random>

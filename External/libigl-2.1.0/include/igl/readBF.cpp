@@ -7,10 +7,10 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "readBF.h"
 #include "list_to_matrix.h"
-#include <vector>
-#include <cstdio>
-#include <fstream>
-#include <cassert>
+
+
+
+
 #include <functional>
 template < 
   typename DerivedWI,

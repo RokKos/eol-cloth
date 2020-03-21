@@ -1,6 +1,6 @@
 #include <test_common.h>
 
-#include <vector>
+
 
 #include <igl/copyleft/cgal/mesh_boolean.h>
 #include <igl/MeshBooleanType.h>

@@ -3,8 +3,8 @@
 #define _RIGID_H_
 
 #define EIGEN_DONT_ALIGN_STATICALLY
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 
 typedef Eigen::Matrix<double, 6, 1> Vector6d;
 typedef Eigen::Matrix<double, 6, 6> Matrix6d;

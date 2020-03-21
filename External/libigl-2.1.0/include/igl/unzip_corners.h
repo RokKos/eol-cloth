@@ -8,8 +8,8 @@
 #ifndef IGL_UNZIP_CORNERS_H
 #define IGL_UNZIP_CORNERS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 #include <functional>
 
 namespace igl

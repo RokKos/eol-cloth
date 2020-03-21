@@ -11,7 +11,7 @@
 #ifndef EIGEN_INCOMPLETE_CHOlESKY_H
 #define EIGEN_INCOMPLETE_CHOlESKY_H
 
-#include <vector>
+
 #include <list>
 
 namespace Eigen {  

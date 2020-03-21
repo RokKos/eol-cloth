@@ -7,7 +7,7 @@
 extern "C" {
 #endif
  
-#include <stdio.h>
+
 
 typedef struct _GRBbatch GRBbatch;
 typedef struct _GRBmodel GRBmodel;

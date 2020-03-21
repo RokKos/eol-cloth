@@ -8,7 +8,7 @@
 #ifndef IGL_QUADRIC_BINARY_PLUS_OPERATOR_H
 #define IGL_QUADRIC_BINARY_PLUS_OPERATOR_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 #include <tuple>
 
 namespace igl

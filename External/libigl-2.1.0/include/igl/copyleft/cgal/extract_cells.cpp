@@ -24,11 +24,11 @@
 #include <CGAL/intersections.h>
 #include <CGAL/Exact_predicates_exact_constructions_kernel.h>
 
-#include <iostream>
-#include <vector>
+
+
 #include <queue>
-#include <map>
-#include <set>
+
+
 
 //#define EXTRACT_CELLS_DEBUG
 

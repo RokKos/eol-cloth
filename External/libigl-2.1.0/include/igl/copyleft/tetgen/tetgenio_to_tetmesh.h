@@ -13,9 +13,9 @@
 #define TETLIBRARY 
 #endif
 #include "tetgen.h" // Defined tetgenio, REAL
-#include <vector>
+
 #include <unordered_map>
-#include <Eigen/Core>
+
 namespace igl
 {
   namespace copyleft

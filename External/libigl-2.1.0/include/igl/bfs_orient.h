@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #ifndef IGL_BFS_ORIENT_H
 #define IGL_BFS_ORIENT_H
-#include <Eigen/Core>
+
 #include <igl/igl_inline.h>
 
 namespace igl

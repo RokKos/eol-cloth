@@ -8,7 +8,7 @@
 #ifndef IGL_CYLINDER_H
 #define IGL_CYLINDER_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Construct a triangle mesh of a cylinder (without caps)

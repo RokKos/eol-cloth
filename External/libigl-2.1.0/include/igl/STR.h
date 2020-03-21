@@ -8,8 +8,8 @@
 #ifndef IGL_STR_H
 #define IGL_STR_H
 // http://stackoverflow.com/a/2433143/148668
-#include <string>
-#include <sstream>
+
+
 // Suppose you have a function:
 //   void func(std::string c);
 // Then you can write:

@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "cotmatrix_intrinsic.h"
 #include "cotmatrix_entries.h"
-#include <iostream>
+
 
 template <typename Derivedl, typename DerivedF, typename Scalar>
 IGL_INLINE void igl::cotmatrix_intrinsic(

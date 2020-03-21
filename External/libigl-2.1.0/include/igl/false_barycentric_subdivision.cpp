@@ -8,7 +8,7 @@
 #include "false_barycentric_subdivision.h"
 
 #include "verbose.h"
-#include <algorithm>
+
 #include <igl/barycenter.h>
 
 template <typename Scalar, typename Index>

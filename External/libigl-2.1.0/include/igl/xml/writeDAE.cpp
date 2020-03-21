@@ -8,7 +8,7 @@
 #include "writeDAE.h"
 #include "../STR.h"
 #include <tinyxml2.h>
-#include <map>
+
 #include <list>
 
 template <typename DerivedV, typename DerivedF>

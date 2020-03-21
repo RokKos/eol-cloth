@@ -8,7 +8,7 @@
 #include "arap_linear_block.h"
 #include "verbose.h"
 #include "cotmatrix_entries.h"
-#include <Eigen/Dense>
+
 
 template <typename MatV, typename MatF, typename Scalar>
 IGL_INLINE void igl::arap_linear_block(

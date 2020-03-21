@@ -9,7 +9,7 @@
 #define IGL_HAUSDORFF_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
+
 #include <functional>
 
 namespace igl 

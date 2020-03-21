@@ -2,8 +2,8 @@
 #include <glm/gtc/packing.hpp>
 #include <glm/gtc/epsilon.hpp>
 #include <glm/ext/vector_relational.hpp>
-#include <cstdio>
-#include <vector>
+
+
 
 void print_bits(float const& s)
 {

@@ -8,7 +8,7 @@
 #ifndef IGL_CEIL_H
 #define IGL_CEIL_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // Ceil a given matrix to nearest integers 

@@ -8,7 +8,7 @@
                  as a mixed-integer problem.
  */
 
-#include <stdio.h>
+
 
 #include "mosek.h"
 

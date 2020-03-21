@@ -8,8 +8,8 @@
 #ifndef IGL_EIGS_H
 #define IGL_EIGS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 
 namespace igl
 {

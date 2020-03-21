@@ -15,7 +15,7 @@
 
 // Dependency:
 #include <cfloat>
-#include <limits>
+
 #include "../glm.hpp"
 #include "../geometric.hpp"
 #include "../gtx/closest_point.hpp"

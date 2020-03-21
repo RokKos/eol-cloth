@@ -8,7 +8,7 @@
 #ifndef IGL_NORMALIZE_ROW_SUMS_H
 #define IGL_NORMALIZE_ROW_SUMS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

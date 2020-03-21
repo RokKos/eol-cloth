@@ -9,7 +9,7 @@
 #ifndef IGL_COTMATRIX_ENTRIES_H
 #define IGL_COTMATRIX_ENTRIES_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // COTMATRIX_ENTRIES compute the cotangents of each angle in mesh (V,F)

@@ -8,9 +8,9 @@
 #ifndef IGL_MAX_FACES_STOPPING_CONDITION_H
 #define IGL_MAX_FACES_STOPPING_CONDITION_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
-#include <set>
+
+
+
 #include <functional>
 namespace igl
 {

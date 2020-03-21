@@ -2,7 +2,7 @@
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtc/constants.hpp>
 #include <glm/ext/vector_relational.hpp>
-#include <vector>
+
 #if GLM_HAS_OPENMP
 #	include <omp.h>
 #endif

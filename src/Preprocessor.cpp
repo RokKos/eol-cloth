@@ -5,10 +5,10 @@
 #include "conversions.h"
 #include "UtilEOL.h"
 
-#include "external\ArcSim\geometry.hpp"
-#include "external\ArcSim\subset.hpp"
 
-#include <stdlib.h>
+#include "external/ArcSim/subset.hpp"
+
+
 
 using namespace std;
 using namespace Eigen;

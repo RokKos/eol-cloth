@@ -8,8 +8,8 @@
 #include "per_vertex_point_to_plane_quadrics.h"
 #include "quadric_binary_plus_operator.h"
 #include <Eigen/QR>
-#include <cassert>
-#include <cmath>
+
+
 
 
 IGL_INLINE void igl::per_vertex_point_to_plane_quadrics(

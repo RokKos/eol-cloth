@@ -12,9 +12,9 @@
 #ifndef IGL_NO_EIGEN
 #  include <Eigen/Core>
 #endif
-#include <string>
-#include <cstdio>
-#include <vector>
+
+
+
 // History:
 //  renamed read -> read_triangle_mesh     Daniele 24 June 2014
 //  return type changed from void to bool  Alec 18 Sept 2011

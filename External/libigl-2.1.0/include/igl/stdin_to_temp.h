@@ -8,7 +8,7 @@
 #ifndef IGL_STDIN_TO_TEMP_H
 #define IGL_STDIN_TO_TEMP_H
 #include "igl_inline.h"
-#include <cstdio>
+
 namespace igl
 {
   // Write stdin/piped input to a temporary file which can than be preprocessed as it

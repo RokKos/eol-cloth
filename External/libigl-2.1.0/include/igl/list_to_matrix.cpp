@@ -7,10 +7,10 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "list_to_matrix.h"
 
-#include <cassert>
-#include <cstdio>
 
-#include <Eigen/Dense>
+
+
+
 
 #include "max_size.h"
 #include "min_size.h"

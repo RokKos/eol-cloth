@@ -5,7 +5,7 @@
 #include <glm/ext/vector_relational.hpp>
 #include <glm/vector_relational.hpp>
 #include <glm/vec2.hpp>
-#include <vector>
+
 #if GLM_HAS_TRIVIAL_QUERIES
 #	include <type_traits>
 #endif

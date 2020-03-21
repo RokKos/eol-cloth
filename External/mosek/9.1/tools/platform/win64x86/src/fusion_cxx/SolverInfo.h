@@ -1,7 +1,7 @@
 #include <mosek.h>
-#include <string>
-#include <vector>
-#include <algorithm>
+
+
+
 namespace mosek {
 namespace fusion {
 class SolverInfo

@@ -18,7 +18,7 @@
 #include "../barycenter.h"
 #include "../PI.h"
 #include <Eigen/Geometry>
-#include <iostream>
+
 
 IGL_INLINE void igl::opengl::ViewerCore::align_camera_center(
   const Eigen::MatrixXd& V,

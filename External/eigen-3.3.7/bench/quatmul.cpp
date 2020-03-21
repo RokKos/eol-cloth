@@ -1,5 +1,5 @@
-#include <iostream>
-#include <Eigen/Core>
+
+
 #include <Eigen/Geometry>
 #include <bench/BenchTimer.h>
 

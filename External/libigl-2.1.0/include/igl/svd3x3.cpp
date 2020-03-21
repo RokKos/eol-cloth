@@ -7,8 +7,8 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "svd3x3.h"
 
-#include <cmath>
-#include <algorithm>
+
+
 
 #define USE_SCALAR_IMPLEMENTATION
 #undef USE_SSE_IMPLEMENTATION

@@ -4,7 +4,7 @@
 #include "../../knn.h"
 #include "../../parallel_for.h"
 #include "point_areas.h"
-#include <vector>
+
 
 template <
   typename DerivedP, 

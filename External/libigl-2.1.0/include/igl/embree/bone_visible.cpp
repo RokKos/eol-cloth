@@ -10,7 +10,7 @@
 #include "../EPS.h"
 #include "../Hit.h"
 #include "../Timer.h"
-#include <iostream>
+
 
 template <
   typename DerivedV, 

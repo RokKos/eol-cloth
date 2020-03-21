@@ -28,8 +28,8 @@
 #define TRANSFORMATION_HPP
 
 //#include "spline.hpp"
-#include "vectors.hpp"
-#include <iostream>
+
+
 
 // Transform the mesh
 struct Quaternion {

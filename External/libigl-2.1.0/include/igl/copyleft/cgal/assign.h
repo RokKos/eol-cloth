@@ -8,7 +8,7 @@
 #ifndef IGL_COPYLEFT_CGAL_ASSIGN_H
 #define IGL_COPYLEFT_CGAL_ASSIGN_H
 #include "../../igl_inline.h"
-#include <Eigen/Core>
+
 #include <CGAL/Exact_predicates_exact_constructions_kernel.h>
 
 namespace igl

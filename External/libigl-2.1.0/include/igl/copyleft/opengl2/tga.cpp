@@ -42,9 +42,9 @@
 
 #include "tga.h"
 #include "../../opengl2/glext.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+
+
+
 #include <assert.h>
 
 static char error[256];

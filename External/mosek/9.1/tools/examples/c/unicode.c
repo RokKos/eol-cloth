@@ -6,9 +6,9 @@
    Purpose:   To demonstrate how to use unicoded strings.
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+
+
+
 
 #include "mosek.h"
 

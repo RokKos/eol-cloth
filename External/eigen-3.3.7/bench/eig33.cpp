@@ -36,8 +36,8 @@
 // ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-#include <iostream>
-#include <Eigen/Core>
+
+
 #include <Eigen/Eigenvalues>
 #include <Eigen/Geometry>
 #include <bench/BenchTimer.h>

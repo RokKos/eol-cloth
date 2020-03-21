@@ -13,9 +13,9 @@
 // * pass time in draw function
 // * remove Preview3D from comments
 // * clean comments
-#include <string>
+
 #include <igl/igl_inline.h>
-#include <vector>
+
 
 namespace igl
 {

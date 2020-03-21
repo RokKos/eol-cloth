@@ -15,7 +15,7 @@
 #include "min_quad_with_fixed.h"
 #include "speye.h"
 #include "sum.h"
-#include <Eigen/Sparse>
+
 
 template <
   typename DerivedV,

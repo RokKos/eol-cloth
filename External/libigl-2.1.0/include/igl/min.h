@@ -1,8 +1,8 @@
 #ifndef IGL_MIN_H
 #define IGL_MIN_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 namespace igl
 {
   // Inputs:

@@ -22,12 +22,12 @@
 
 #include "btl.hh"
 #include "bench_parameter.hh"
-#include <iostream>
+
 #include "utilities.h"
 #include "size_lin_log.hh"
 #include "xy_file.hh"
-#include <vector>
-#include <string>
+
+
 #include "timers/portable_perf_analyzer.hh"
 // #include "timers/mixed_perf_analyzer.hh"
 // #include "timers/x86_perf_analyzer.hh"

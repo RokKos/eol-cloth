@@ -1,7 +1,7 @@
 /// @ref gtx_io
 /// @author Jan P Springer (regnirpsj@gmail.com)
 
-#include <iomanip>                  // std::fixed, std::setfill<>, std::setprecision, std::right, std::setw
+                  // std::fixed, std::setfill<>, std::setprecision, std::right, std::setw
 #include <ostream>                  // std::basic_ostream<>
 #include "../gtc/matrix_access.hpp" // glm::col, glm::row
 #include "../gtx/type_trait.hpp"    // glm::type<>

@@ -8,7 +8,7 @@
 #ifndef IGL_OUTER_ELEMENT_H
 #define IGL_OUTER_ELEMENT_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Find a vertex that is reachable from infinite without crossing any faces.

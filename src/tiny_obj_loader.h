@@ -39,9 +39,9 @@ THE SOFTWARE.
 #ifndef TINY_OBJ_LOADER_H_
 #define TINY_OBJ_LOADER_H_
 
-#include <map>
-#include <string>
-#include <vector>
+
+
+
 
 namespace tinyobj {
 
@@ -331,16 +331,16 @@ void LoadMtl(std::map<std::string, int> *material_map,
 }  // namespace tinyobj
 
 #ifdef TINYOBJLOADER_IMPLEMENTATION
-#include <cassert>
-#include <cctype>
-#include <cmath>
-#include <cstddef>
-#include <cstdlib>
-#include <cstring>
-#include <utility>
 
-#include <fstream>
-#include <sstream>
+#include <cctype>
+
+#include <cstddef>
+
+
+
+
+
+
 
 namespace tinyobj {
 

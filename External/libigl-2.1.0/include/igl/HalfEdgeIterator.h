@@ -8,9 +8,9 @@
 #ifndef IGL_HALFEDGEITERATOR_H
 #define IGL_HALFEDGEITERATOR_H
 
-#include <Eigen/Core>
 
-#include <vector>
+
+
 #include <igl/igl_inline.h>
 
 // This file violates many of the libigl style guidelines.

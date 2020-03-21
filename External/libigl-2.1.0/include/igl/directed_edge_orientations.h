@@ -9,10 +9,10 @@
 #define IGL_DIRECTED_EDGE_ORIENTATIONS_H
 #include "igl_inline.h"
 
-#include <Eigen/Core>
+
 #include <Eigen/Geometry>
 #include <Eigen/StdVector>
-#include <vector>
+
 
 namespace igl
 {

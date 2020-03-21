@@ -10,7 +10,7 @@
 #include "slice_into.h"
 #include "find.h"
 #include "colon.h"
-#include <iostream>
+
 
 //#define IGL_LINPROG_VERBOSE
 IGL_INLINE bool igl::linprog(

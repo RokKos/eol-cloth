@@ -9,8 +9,8 @@
 #define IGL_HARWELL_BOEING_H
 #include "igl_inline.h"
 
-#include <Eigen/Sparse>
-#include <vector>
+
+
 
 
 namespace igl

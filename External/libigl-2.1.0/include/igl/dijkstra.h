@@ -10,9 +10,9 @@
 #define IGL_DIJKSTRA
 #include "igl_inline.h"
 
-#include <Eigen/Core>
-#include <vector>
-#include <set>
+
+
+
 
 namespace igl {
 

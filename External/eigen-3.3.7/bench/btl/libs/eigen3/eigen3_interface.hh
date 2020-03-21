@@ -19,7 +19,7 @@
 #define EIGEN3_INTERFACE_HH
 
 #include <Eigen/Eigen>
-#include <vector>
+
 #include "btl.hh"
 
 using namespace Eigen;

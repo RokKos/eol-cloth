@@ -5,7 +5,7 @@
 #include <igl/setxor.h>
 
 #include <igl/matlab_format.h>
-#include <iostream>
+
 
 
 TEST_CASE("boundary_facets: single_tet", "[igl]")

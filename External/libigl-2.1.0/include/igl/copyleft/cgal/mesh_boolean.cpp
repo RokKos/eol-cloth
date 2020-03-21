@@ -26,7 +26,7 @@
 #include "../../unique_simplices.h"
 
 #include <CGAL/Exact_predicates_exact_constructions_kernel.h>
-#include <algorithm>
+
 
 //#define MESH_BOOLEAN_TIMING
 //#define DOUBLE_CHECK_EXACT_OUTPUT

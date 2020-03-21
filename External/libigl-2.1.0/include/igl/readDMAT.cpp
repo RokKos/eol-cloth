@@ -8,10 +8,10 @@
 #include "readDMAT.h"
 
 #include "verbose.h"
-#include <cstdio>
-#include <iostream>
-#include <cassert>
-#include <memory>
+
+
+
+
 
 // Static helper method reads the first to elements in the given file
 // Inputs:

@@ -1,7 +1,7 @@
 /// @ref gtx_dual_quaternion
 
 #include "../geometric.hpp"
-#include <limits>
+
 
 namespace glm
 {

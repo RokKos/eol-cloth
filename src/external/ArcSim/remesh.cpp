@@ -29,14 +29,14 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #include "../../Cloth.h"
 
 #include "blockvectors.hpp"
-#include "geometry.hpp"
+
 #include "magic.hpp"
 #include "referenceshape.hpp"
-#include "util.hpp"
+
 
 #include <assert.h>
-#include <cstdlib>
-#include <cstdio>
+
+
 using namespace std;
 
 // Helpers

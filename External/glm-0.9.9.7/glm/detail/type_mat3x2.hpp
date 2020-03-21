@@ -5,7 +5,7 @@
 
 #include "type_vec2.hpp"
 #include "type_vec3.hpp"
-#include <limits>
+
 #include <cstddef>
 
 namespace glm

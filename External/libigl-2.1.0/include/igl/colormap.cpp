@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "colormap.h"
 #include "jet.h"
-#include <algorithm>
+
 
 // One of the new matplotlib colormaps by Nathaniel J.Smith, Stefan van der Walt, and (in the case of viridis) Eric Firing.
 // Released under the CC0 license / public domain dedication

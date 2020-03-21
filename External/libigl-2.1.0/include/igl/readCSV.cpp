@@ -7,12 +7,12 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "readCSV.h"
 
-#include <sstream>
-#include <string>
-#include <fstream>
-#include <iostream>
 
-#include <vector>
+
+
+
+
+
 
 template <typename Scalar>
 IGL_INLINE bool igl::readCSV(

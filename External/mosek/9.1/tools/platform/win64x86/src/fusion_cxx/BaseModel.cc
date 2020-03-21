@@ -2,11 +2,11 @@
 #include "mosektask.h"
 #include "mosektask_p.h"
 #include "fusion_p.h"
-#include <string>
-#include <vector>
-#include <map>
-#include <memory>
-#include <cassert>
+
+
+
+
+
 #include <SolverInfo.h>
 
 #include "mosektask_p.h"

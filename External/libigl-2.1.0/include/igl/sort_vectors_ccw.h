@@ -10,7 +10,7 @@
 #define IGL_SORT_VECTORS_CCW
 #include "igl_inline.h"
 
-#include <Eigen/Core>
+
 
 namespace igl {
   // Sorts a set of N coplanar vectors in a ccw order, and returns their order.

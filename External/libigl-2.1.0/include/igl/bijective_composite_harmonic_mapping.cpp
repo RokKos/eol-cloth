@@ -11,7 +11,7 @@
 #include "doublearea.h"
 #include "harmonic.h"
 //#include "matlab/MatlabWorkspace.h"
-#include <iostream>
+
 
 template <
   typename DerivedV,

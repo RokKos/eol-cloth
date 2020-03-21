@@ -1,5 +1,5 @@
 #include <test_common.h>
-#include <Eigen/Dense>
+
 
 #include <igl/copyleft/cgal/remesh_self_intersections.h>
 #include <igl/copyleft/cgal/RemeshSelfIntersectionsParam.h>

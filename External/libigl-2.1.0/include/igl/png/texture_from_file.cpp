@@ -12,9 +12,9 @@
 #include "../pathinfo.h"
 #include "../opengl/report_gl_error.h"
 //#include "../opengl2/texture_from_tga.h"
-#include <string>
-#include <algorithm>
-#include <iostream>
+
+
+
 
 IGL_INLINE bool igl::png::texture_from_file(const std::string filename, GLuint & id)
 {

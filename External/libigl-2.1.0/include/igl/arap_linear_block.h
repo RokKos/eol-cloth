@@ -9,7 +9,7 @@
 #define IGL_ARAP_LINEAR_BLOCK_H
 #include "igl_inline.h"
 
-#include <Eigen/Sparse>
+
 #include <igl/ARAPEnergyType.h>
 
 namespace igl

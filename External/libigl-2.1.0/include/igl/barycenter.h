@@ -8,7 +8,7 @@
 #ifndef IGL_BARYCENTER_H
 #define IGL_BARYCENTER_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // Computes the barycenter of every simplex

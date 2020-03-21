@@ -9,8 +9,8 @@
 #include "line_search.h"
 #include "PI.h"
 
-#include <Eigen/Dense>
-#include <vector>
+
+
 
 namespace igl
 {

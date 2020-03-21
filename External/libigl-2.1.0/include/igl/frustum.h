@@ -9,7 +9,7 @@
 #define IGL_FRUSTUM_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
+
 
 namespace igl 
 {

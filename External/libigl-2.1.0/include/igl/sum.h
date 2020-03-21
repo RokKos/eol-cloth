@@ -8,7 +8,7 @@
 #ifndef IGL_SUM_H
 #define IGL_SUM_H
 #include "igl_inline.h"
-#include <Eigen/Sparse>
+
 
 namespace igl
 {

@@ -5,7 +5,7 @@
 #include <cuda.h>
 #include <cuda_runtime.h>
 #include <cuda_runtime_api.h>
-#include <iostream>
+
 
 #ifndef __CUDACC__
 dim3 threadIdx, blockDim, blockIdx;

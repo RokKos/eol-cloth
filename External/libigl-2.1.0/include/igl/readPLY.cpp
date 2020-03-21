@@ -8,7 +8,7 @@
 #include "readPLY.h"
 #include "list_to_matrix.h"
 #include "ply.h"
-#include <iostream>
+
 
 template <
   typename Vtype,

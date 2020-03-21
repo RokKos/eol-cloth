@@ -7,7 +7,7 @@
               integer linear optimization problem using
               the MOSEK API.
 */
-#include <stdio.h>
+
 #include "mosek.h" /* Include the MOSEK definition file. */
 
 static void MSKAPI printstr(void *handle,

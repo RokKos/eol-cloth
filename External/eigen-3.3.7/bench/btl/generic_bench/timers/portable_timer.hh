@@ -22,9 +22,6 @@
 #ifndef _PORTABLE_TIMER_HH
 #define _PORTABLE_TIMER_HH
 
-#include <ctime>
-#include <cstdlib>
-
 #include <time.h>
 
 

@@ -9,7 +9,7 @@
 #define IGL_LAUNCH_MEDIT_H
 #include "igl_inline.h"
 
-#include <Eigen/Core>
+
 
 namespace igl 
 {

@@ -8,7 +8,7 @@
 #ifndef IGL_COPYLEFT_CGAL_POLYHEDRON_TO_MESH_H
 #define IGL_COPYLEFT_CGAL_POLYHEDRON_TO_MESH_H
 #include "../../igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

@@ -9,10 +9,10 @@
 #ifndef IGL_COPYLEFT_CGAL_CELL_ADJACENCY_H
 #define IGL_COPYLEFT_CGAL_CELL_ADJACENCY_H
 #include "../../igl_inline.h"
-#include <Eigen/Core>
-#include <set>
+
+
 #include <tuple>
-#include <vector>
+
 
 namespace igl
 {

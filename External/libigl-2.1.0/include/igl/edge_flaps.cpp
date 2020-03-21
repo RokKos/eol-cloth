@@ -7,8 +7,8 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "edge_flaps.h"
 #include "unique_edge_map.h"
-#include <vector>
-#include <cassert>
+
+
 
 IGL_INLINE void igl::edge_flaps(
   const Eigen::MatrixXi & F,

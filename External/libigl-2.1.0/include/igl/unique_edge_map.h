@@ -8,8 +8,8 @@
 #ifndef IGL_UNIQUE_EDGE_MAP_H
 #define IGL_UNIQUE_EDGE_MAP_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
-#include <vector>
+
+
 namespace igl
 {
   // Construct relationships between facet "half"-(or rather "viewed")-edges E

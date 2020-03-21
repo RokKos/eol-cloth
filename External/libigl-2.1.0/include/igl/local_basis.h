@@ -9,9 +9,9 @@
 #define IGL_LOCALBASIS_H
 
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <string>
-#include <vector>
+
+
+
 
 namespace igl 
 {

@@ -7,12 +7,12 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "sparse_cached.h"
 
-#include <iostream>
-#include <vector>
+
+
 #include <array>
 #include <unordered_map>
-#include <map>
-#include <utility>
+
+
 
 template <typename DerivedI, typename Scalar>
 IGL_INLINE void igl::sparse_cached_precompute(

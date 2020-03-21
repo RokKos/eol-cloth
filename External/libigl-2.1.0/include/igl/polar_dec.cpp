@@ -11,9 +11,9 @@
 #else
 #  include <fenv.h>
 #endif
-#include <cmath>
+
 #include <Eigen/Eigenvalues>
-#include <iostream>
+
 #include <cfenv>
 
 // From Olga's CGAL mentee's ARAP code

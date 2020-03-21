@@ -7,12 +7,12 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "writeOBJ.h"
 
-#include <iostream>
-#include <limits>
-#include <iomanip>
-#include <fstream>
-#include <cstdio>
-#include <cassert>
+
+
+
+
+
+
 
 template <
   typename DerivedV, 

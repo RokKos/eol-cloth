@@ -8,7 +8,7 @@
 #include "avg_edge_length.h"
 #include "edges.h"
 
-#include <vector>
+
 
 template <typename DerivedV, typename DerivedF>
 IGL_INLINE double igl::avg_edge_length(

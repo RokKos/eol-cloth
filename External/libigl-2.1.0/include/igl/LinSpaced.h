@@ -1,6 +1,6 @@
 #ifndef IGL_LINSPACED_H
 #define IGL_LINSPACED_H
-#include <Eigen/Core>
+
 // This function is not intended to be a permanent function of libigl. Rather
 // it is a "drop-in" workaround for documented bug in Eigen:
 // http://eigen.tuxfamily.org/bz/show_bug.cgi?id=1383

@@ -9,10 +9,10 @@
 //              Example from
 //                https://gpkit.readthedocs.io/en/latest/examples.html//maximizing-the-volume-of-a-box
 //
-#include <string>
-#include <iostream>
-#include <iomanip>
-#include <cmath>
+
+
+
+
 #include "fusion.h"
 
 using namespace mosek::fusion;

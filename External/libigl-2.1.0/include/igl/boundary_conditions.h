@@ -8,7 +8,7 @@
 #ifndef IGL_BOUNDARY_CONDITIONS_H
 #define IGL_BOUNDARY_CONDITIONS_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 
 namespace igl
 {

@@ -8,7 +8,7 @@
 #ifndef IGL_ORIENTED_FACETS_H
 #define IGL_ORIENTED_FACETS_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // ORIENTED_FACETS Determines all "directed

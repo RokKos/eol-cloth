@@ -9,10 +9,10 @@
 #define IGL_ARAP_ENERGY_TYPE_DOF_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 #include "ARAPEnergyType.h"
-#include <vector>
+
 
 namespace igl
 {

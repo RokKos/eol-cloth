@@ -1,4 +1,4 @@
-#include <cmath>
+
 void ComputeMembrane(
    const double *xa, // [input 3x1] World position of vertex A
    const double *xb, // [input 3x1] World position of vertex B

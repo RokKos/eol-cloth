@@ -11,9 +11,9 @@
 #define EIGEN_FFT_H
 
 #include <complex>
-#include <vector>
-#include <map>
-#include <Eigen/Core>
+
+
+
 
 
 /**

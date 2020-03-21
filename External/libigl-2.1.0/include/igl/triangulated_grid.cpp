@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "triangulated_grid.h"
 #include "grid.h"
-#include <cassert>
+
 
 template <
   typename XType,

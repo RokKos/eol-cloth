@@ -1,6 +1,6 @@
 /// @ref gtx_component_wise
 
-#include <limits>
+
 
 namespace glm{
 namespace detail

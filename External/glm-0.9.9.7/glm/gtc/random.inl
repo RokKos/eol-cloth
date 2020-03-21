@@ -2,10 +2,10 @@
 #include "../exponential.hpp"
 #include "../trigonometric.hpp"
 #include "../detail/type_vec1.hpp"
-#include <cstdlib>
-#include <ctime>
-#include <cassert>
-#include <cmath>
+
+
+
+
 
 namespace glm{
 namespace detail

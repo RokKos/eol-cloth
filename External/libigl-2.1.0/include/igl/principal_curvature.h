@@ -10,9 +10,9 @@
 
 
 #include <Eigen/Geometry>
-#include <Eigen/Dense>
 
-#include <vector>
+
+
 
 #include "igl_inline.h"
 //#include <igl/cotmatrix.h>

@@ -8,8 +8,8 @@
 #include "barycentric_to_global.h"
 
 // For error printing
-#include <cstdio>
-#include <vector>
+
+
 
 namespace igl
 {

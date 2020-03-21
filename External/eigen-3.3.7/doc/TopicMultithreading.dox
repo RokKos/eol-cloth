@@ -33,7 +33,7 @@ Currently, the following algorithms can make use of multi-threading:
 
 In the case your own application is multithreaded, and multiple threads make calls to Eigen, then you have to initialize Eigen by calling the following routine \b before creating the threads:
 \code
-#include <Eigen/Core>
+
 
 int main(int argc, char** argv)
 {

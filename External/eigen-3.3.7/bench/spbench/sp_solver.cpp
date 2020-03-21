@@ -1,9 +1,9 @@
 // Small bench routine for Eigen available in Eigen
 // (C) Desire NUENTSA WAKAM, INRIA
 
-#include <iostream>
-#include <fstream>
-#include <iomanip>
+
+
+
 #include <Eigen/Jacobi>
 #include <Eigen/Householder>
 #include <Eigen/IterativeLinearSolvers>

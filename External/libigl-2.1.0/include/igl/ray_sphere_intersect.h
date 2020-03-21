@@ -8,7 +8,7 @@
 #ifndef IGL_RAY_SPHERE_INTERSECT_H
 #define IGL_RAY_SPHERE_INTERSECT_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Compute the intersection between a ray from O in direction D and a sphere

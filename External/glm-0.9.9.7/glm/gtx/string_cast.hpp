@@ -21,8 +21,8 @@
 #include "../gtc/type_precision.hpp"
 #include "../gtc/quaternion.hpp"
 #include "../gtx/dual_quaternion.hpp"
-#include <string>
-#include <cmath>
+
+
 
 #if GLM_MESSAGES == GLM_ENABLE && !defined(GLM_EXT_INCLUDED)
 #	ifndef GLM_ENABLE_EXPERIMENTAL

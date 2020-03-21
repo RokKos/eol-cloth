@@ -27,8 +27,8 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #ifndef IO_HPP
 #define IO_HPP
 
-#include "mesh.hpp"
-#include "util.hpp"
+
+
 //#include <zlib.h>
 
 static double angle(const Vec3 &x0, const Vec3 &x1, const Vec3 &x2);

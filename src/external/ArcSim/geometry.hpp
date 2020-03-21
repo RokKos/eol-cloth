@@ -27,8 +27,7 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #ifndef GEOMETRY_HPP
 #define GEOMETRY_HPP
 
-#include "mesh.hpp"
-#include "util.hpp"
+
 
 double signed_vf_distance(const Vec3 &x,
 	const Vec3 &y0, const Vec3 &y1, const Vec3 &y2,

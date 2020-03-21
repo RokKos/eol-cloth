@@ -9,7 +9,7 @@
 #include "outer_facet.h"
 #include "outer_element.h"
 #include "order_facets_around_edge.h"
-#include <algorithm>
+
 #include <CGAL/Exact_predicates_exact_constructions_kernel.h>
 
 template<

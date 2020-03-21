@@ -9,7 +9,7 @@
 #define IGL_PRINT_VECTOR_H
 #include "igl_inline.h"
 
-#include <vector>
+
 namespace igl 
 {
   // Not clear what these are supposed to be doing. Currently they print

@@ -17,9 +17,9 @@
 #include "ray_box_intersect.h"
 #include "parallel_for.h"
 #include "ray_mesh_intersect.h"
-#include <iostream>
-#include <iomanip>
-#include <limits>
+
+
+
 #include <list>
 #include <queue>
 #include <stack>

@@ -12,7 +12,7 @@
 #include <igl/triangle_triangle_adjacency.h>
 #include <igl/unique.h>
 
-#include <vector>
+
 
 template <
   typename DerivedF,

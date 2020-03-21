@@ -7,7 +7,7 @@
 //
 //          Demonstrates using the exponential cone and log-sum-exp in Optimizer API.
 
-#include <stdio.h>
+
 #include "mosek.h" /* Include the MOSEK definition file. */
 
 #define MSKCALL(x) if (res==MSK_RES_OK) res = (x);

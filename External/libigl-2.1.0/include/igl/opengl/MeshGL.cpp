@@ -10,7 +10,7 @@
 #include "bind_vertex_attrib_array.h"
 #include "create_shader_program.h"
 #include "destroy_shader_program.h"
-#include <iostream>
+
 
 IGL_INLINE void igl::opengl::MeshGL::init_buffers()
 {

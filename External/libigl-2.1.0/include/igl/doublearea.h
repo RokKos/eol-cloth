@@ -8,7 +8,7 @@
 #ifndef IGL_DOUBLEAREA_H
 #define IGL_DOUBLEAREA_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // DOUBLEAREA computes twice the area for each input triangle[quad]

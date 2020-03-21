@@ -1,6 +1,6 @@
 #include <unsupported/Eigen/Polynomials>
-#include <vector>
-#include <iostream>
+
+
 
 using namespace Eigen;
 using namespace std;

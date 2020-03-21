@@ -8,7 +8,7 @@
 #ifndef IGL_CROSS_H
 #define IGL_CROSS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Computes out = cross(a,b)

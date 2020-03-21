@@ -7,10 +7,10 @@
     Implements a basic portfolio optimization model.
 */
 
-#include <iostream>
-#include <fstream>
-#include <iomanip>
-#include <string>
+
+
+
+
 #include "monty.h"
 #include "fusion.h"
 

@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "readTGF.h"
 
-#include <cstdio>
+
 
 IGL_INLINE bool igl::readTGF(
   const std::string tgf_filename,

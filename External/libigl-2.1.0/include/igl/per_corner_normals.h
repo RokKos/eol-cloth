@@ -8,8 +8,8 @@
 #ifndef IGL_PER_CORNER_NORMALS_H
 #define IGL_PER_CORNER_NORMALS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 
 namespace igl
 {

@@ -8,7 +8,7 @@
 #ifndef IGL_COUNT_H
 #define IGL_COUNT_H
 #include "igl_inline.h"
-#include <Eigen/Sparse>
+
 
 namespace igl
 {

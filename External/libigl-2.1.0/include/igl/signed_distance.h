@@ -11,8 +11,8 @@
 #include "igl_inline.h"
 #include "AABB.h"
 #include "WindingNumberAABB.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 namespace igl
 {
   enum SignedDistanceType

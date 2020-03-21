@@ -8,7 +8,7 @@
 #ifndef IGL_WINDING_NUMBER_H
 #define IGL_WINDING_NUMBER_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 
 // Minimum number of iterms per openmp thread
 #ifndef IGL_WINDING_NUMBER_OMP_MIN_VALUE

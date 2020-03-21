@@ -27,8 +27,6 @@
 #ifndef BLOCKVECTORS_HPP
 #define BLOCKVECTORS_HPP
 
-#include "vectors.hpp"
-
 template <int m, int n, typename T>
 Vec<m*n,T> mat_to_vec (const Mat<m,n,T> &A) {
     Vec<m*n,T> a;

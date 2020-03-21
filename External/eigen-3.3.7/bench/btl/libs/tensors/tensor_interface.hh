@@ -10,7 +10,7 @@
 #define TENSOR_INTERFACE_HH
 
 #include <unsupported/Eigen/CXX11/Tensor>
-#include <vector>
+
 #include "btl.hh"
 
 using namespace Eigen;

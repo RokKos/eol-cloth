@@ -8,7 +8,7 @@
 #ifndef IGL_BONE_PARENTS_H
 #define IGL_BONE_PARENTS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // BONE_PARENTS Recover "parent" bones from directed graph representation.

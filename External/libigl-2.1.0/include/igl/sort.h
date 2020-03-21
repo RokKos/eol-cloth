@@ -9,8 +9,8 @@
 #define IGL_SORT_H
 #include "igl_inline.h"
 
-#include <vector>
-#include <Eigen/Core>
+
+
 namespace igl
 {
 

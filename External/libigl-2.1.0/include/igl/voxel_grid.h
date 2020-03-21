@@ -8,7 +8,7 @@
 #ifndef IGL_VOXEL_GRID_H
 #define IGL_VOXEL_GRID_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 #include <Eigen/Geometry>
 namespace igl
 {

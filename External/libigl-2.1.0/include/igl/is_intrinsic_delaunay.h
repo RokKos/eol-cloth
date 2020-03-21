@@ -8,8 +8,8 @@
 #ifndef IGL_IS_INTRINSIC_DELAUNAY_H
 #define IGL_IS_INTRINSIC_DELAUNAY_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 namespace igl
 {
   // IS_INTRINSIC_DELAUNAY Determine if each edge in the mesh (V,F) is Delaunay.

@@ -11,9 +11,9 @@
 // History:
 //  return type changed from void to bool  Alec 20 Sept 2011
 
-#include <Eigen/Core>
-#include <string>
-#include <vector>
+
+
+
 
 namespace igl 
 {

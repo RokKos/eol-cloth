@@ -7,7 +7,7 @@
                  with transaction costs of order x^(3/2).
  */
 
-#include <stdio.h>
+
 
 #include "mosek.h"
 

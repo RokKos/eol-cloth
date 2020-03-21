@@ -1,5 +1,5 @@
 #include "Shape.h"
-#include <iostream>
+
 
 #ifdef EOLC_ONLINE
 #include "online/GLSL.h"

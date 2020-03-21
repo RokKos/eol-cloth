@@ -16,15 +16,15 @@
 #include "../gl.h"
 #include <GLFW/glfw3.h>
 
-#include <cmath>
-#include <cstdio>
-#include <sstream>
-#include <iomanip>
-#include <iostream>
-#include <fstream>
-#include <algorithm>
-#include <limits>
-#include <cassert>
+
+
+
+
+
+
+
+
+
 
 #include <igl/project.h>
 #include <igl/get_seconds.h>

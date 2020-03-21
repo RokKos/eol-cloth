@@ -13,9 +13,9 @@
 #include "colon.h"
 #include "faces_first.h"
 
-#include <limits>
 
-#include <iostream>
+
+
 
 void igl::collapse_small_triangles(
   const Eigen::MatrixXd & V,

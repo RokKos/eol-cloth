@@ -8,9 +8,9 @@
 #ifndef IGL_EMBREE_UNPROJECT_ONTO_MESH_H
 #define IGL_EMBREE_UNPROJECT_ONTO_MESH_H
 #include <igl/igl_inline.h>
-#include <Eigen/Core>
 
-#include <vector>
+
+
 
 namespace igl
 {

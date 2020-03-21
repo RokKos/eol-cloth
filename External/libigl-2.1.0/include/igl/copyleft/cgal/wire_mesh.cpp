@@ -6,7 +6,7 @@
 #include "convex_hull.h"
 #include "mesh_boolean.h"
 #include <Eigen/Geometry>
-#include <vector>
+
 
 template <
   typename DerivedWV,

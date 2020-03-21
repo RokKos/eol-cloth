@@ -1,9 +1,9 @@
 #ifndef IGL_BFS_H
 #define IGL_BFS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
-#include <Eigen/Sparse>
+
+
+
 namespace igl
 {
   // Traverse a **directed** graph represented by an adjacency list using

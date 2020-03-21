@@ -3,9 +3,9 @@
 
 #include "../vector_relational.hpp"
 #include "_vectorize.hpp"
-#include <limits>
-#include <cmath>
-#include <cassert>
+
+
+
 
 namespace glm{
 namespace detail

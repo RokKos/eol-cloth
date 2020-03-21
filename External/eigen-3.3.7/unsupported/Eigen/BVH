@@ -10,10 +10,10 @@
 #ifndef EIGEN_BVH_MODULE_H
 #define EIGEN_BVH_MODULE_H
 
-#include <Eigen/Core>
+
 #include <Eigen/Geometry>
 #include <Eigen/StdVector>
-#include <algorithm>
+
 #include <queue>
 
 namespace Eigen {

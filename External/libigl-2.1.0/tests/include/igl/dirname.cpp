@@ -1,8 +1,8 @@
 #include <test_common.h>
 #include <igl/dirname.h>
 
-#include <string>
-#include <vector>
+
+
 #include <tuple>
 
 TEST_CASE("dirname: examples", "[igl]")

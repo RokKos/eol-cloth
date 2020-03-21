@@ -9,8 +9,8 @@
 #include "vertex_components.h"
 #include "sort.h"
 #include "unique_rows.h"
-#include <vector>
-#include <iostream>
+
+
 
 template <typename DerivedF, typename DerivedC, typename AScalar>
 IGL_INLINE void igl::orientable_patches(

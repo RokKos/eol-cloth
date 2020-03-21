@@ -12,7 +12,7 @@
 #ifndef IGL_NO_EIGEN
 #  include <Eigen/Core>
 #endif
-#include <vector>
+
 
 namespace igl
 {

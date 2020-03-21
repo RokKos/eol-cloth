@@ -1,6 +1,6 @@
 #include "pinv.h"
-#include <limits>
-#include <cmath>
+
+
 
 template <typename DerivedA, typename DerivedX>
 void igl::pinv(

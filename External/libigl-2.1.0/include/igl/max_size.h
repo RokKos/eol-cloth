@@ -8,7 +8,7 @@
 #ifndef IGL_MAX_SIZE_H
 #define IGL_MAX_SIZE_H
 #include "igl_inline.h"
-#include <vector>
+
 
 namespace igl
 {

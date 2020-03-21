@@ -8,7 +8,7 @@
 #ifndef IGL_ALL_EDGES_H
 #define IGL_ALL_EDGES_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // Deprecated: call oriented_facets instead.

@@ -9,7 +9,7 @@
 #define IGL_COLUMNIZE_H
 #include "igl_inline.h"
 
-#include <Eigen/Core>
+
 namespace igl
 {
   // "Columnize" a stack of block matrices. If A = [A1,A2,A3,...,Ak] with each A*

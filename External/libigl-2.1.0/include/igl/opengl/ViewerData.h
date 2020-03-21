@@ -10,11 +10,11 @@
 
 #include "../igl_inline.h"
 #include "MeshGL.h"
-#include <cassert>
-#include <cstdint>
-#include <Eigen/Core>
-#include <memory>
-#include <vector>
+
+
+
+
+
 
 // Alec: This is a mesh class containing a variety of data types (normals,
 // overlays, material colors, etc.)

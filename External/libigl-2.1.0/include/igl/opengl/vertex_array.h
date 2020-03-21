@@ -2,7 +2,7 @@
 #define IGL_OPENGL_VERTEX_ARRAY_H
 #include <igl/opengl/../igl_inline.h>
 #include <igl/opengl/gl.h>
-#include <Eigen/Core>
+
 namespace igl
 {
   namespace opengl

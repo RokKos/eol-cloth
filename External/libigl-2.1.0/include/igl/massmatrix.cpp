@@ -13,7 +13,7 @@
 #include "doublearea.h"
 #include "repmat.h"
 #include <Eigen/Geometry>
-#include <iostream>
+
 
 template <typename DerivedV, typename DerivedF, typename Scalar>
 IGL_INLINE void igl::massmatrix(

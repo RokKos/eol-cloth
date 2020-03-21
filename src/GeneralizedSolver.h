@@ -2,12 +2,12 @@
 #ifndef __GeneralizedSolver__
 #define __GeneralizedSolver__
 
-#include <vector>
-#include <memory>
+
+
 
 #define EIGEN_DONT_ALIGN_STATICALLY
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 
 class GeneralizedSolver
 {

@@ -15,7 +15,7 @@
 #define IGL_REMOVE_UNREFERENCED_H
 #include "igl_inline.h"
 
-#include <Eigen/Core>
+
 namespace igl 
 {
   // Remove unreferenced vertices from V, updating F accordingly

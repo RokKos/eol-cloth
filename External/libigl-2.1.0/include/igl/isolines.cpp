@@ -9,9 +9,9 @@
 
 #include "isolines.h"
 
-#include <vector>
+
 #include <array>
-#include <iostream>
+
 
 #include "remove_duplicate_vertices.h"
 

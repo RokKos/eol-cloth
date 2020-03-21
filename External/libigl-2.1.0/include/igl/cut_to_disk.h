@@ -2,9 +2,9 @@
 #define IGL_CUT_TO_DISK_H
 #include "igl_inline.h"
 
-#include <Eigen/Core>
 
-#include <vector>
+
+
 
 namespace igl
 {

@@ -22,7 +22,7 @@
 #include <blaze/Blaze.h>
 // using namespace blaze;
 
-#include <vector>
+
 
 template<class real>
 class blaze_interface {

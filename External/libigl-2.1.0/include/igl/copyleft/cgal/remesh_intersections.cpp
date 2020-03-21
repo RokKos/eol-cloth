@@ -14,11 +14,11 @@
 #include "../../LinSpaced.h"
 #include "../../unique_rows.h"
 
-#include <vector>
-#include <map>
+
+
 #include <queue>
 #include <unordered_map>
-#include <iostream>
+
 
 //#define REMESH_INTERSECTIONS_TIMING
 

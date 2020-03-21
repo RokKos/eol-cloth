@@ -9,8 +9,8 @@
 #define IGL_RAY_MESH_INTERSECT_H
 #include "igl_inline.h"
 #include "Hit.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 namespace igl
 {
   // Shoot a ray against a mesh (V,F) and collect all hits.

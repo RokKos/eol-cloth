@@ -1,6 +1,6 @@
 #include "grid_search.h"
-#include <iostream>
-#include <cassert>
+
+
 
 template <
   typename Scalar, 

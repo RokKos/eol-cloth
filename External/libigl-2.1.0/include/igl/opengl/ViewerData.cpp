@@ -14,7 +14,7 @@
 #include "../parula.h"
 #include "../per_vertex_normals.h"
 
-#include <iostream>
+
 
 
 IGL_INLINE igl::opengl::ViewerData::ViewerData()

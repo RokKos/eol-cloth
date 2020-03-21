@@ -8,7 +8,7 @@
 #ifndef IGL_COPYLEFT_CGAL_RESOLVE_INTERSECTIONS_H
 #define IGL_COPYLEFT_CGAL_RESOLVE_INTERSECTIONS_H
 #include "../../igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

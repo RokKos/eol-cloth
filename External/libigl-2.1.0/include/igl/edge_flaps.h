@@ -8,7 +8,7 @@
 #ifndef IGL_EDGE_FLAPS_H
 #define IGL_EDGE_FLAPS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Determine "edge flaps": two faces on either side of a unique edge (assumes

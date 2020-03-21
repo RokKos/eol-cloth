@@ -1,5 +1,5 @@
 #include "fusion_p.h"
-#include <string>
+
 #include "monty.h"
 
 namespace mosek

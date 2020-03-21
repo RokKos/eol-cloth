@@ -10,9 +10,9 @@
 #define IGL_EULER_CHARACTERISTIC_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
-#include <vector>
+
+
+
 namespace igl
 {
   // Computes the Euler characteristic of a given mesh (V,F)

@@ -9,7 +9,7 @@
 #define IGL_SHAPE_DIAMETER_FUNCTION_H
 #include "igl_inline.h"
 #include "AABB.h"
-#include <Eigen/Core>
+
 #include <functional>
 namespace igl
 {

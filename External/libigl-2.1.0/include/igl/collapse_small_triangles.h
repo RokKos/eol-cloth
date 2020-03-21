@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #ifndef IGL_COLLAPSE_SMALL_TRIANGLES_H
 #define IGL_COLLAPSE_SMALL_TRIANGLES_H
-#include <Eigen/Dense>
+
 namespace igl
 {
   // Given a triangle mesh (V,F) compute a new mesh (VV,FF) which contains the

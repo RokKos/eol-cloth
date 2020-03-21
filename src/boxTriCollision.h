@@ -2,10 +2,10 @@
 #ifndef BOXTRICOLLISION_H_
 #define BOXTRICOLLISION_H_
 
-#include <memory>
-#include <vector>
+
+
 #define EIGEN_DONT_ALIGN_STATICALLY
-#include <Eigen/Dense>
+
 
 // Throughout this code, `1` refers to the box and `2` refers to the cloth.
 // For example, `pos1` is the collision point on the box, and `pos2` is the

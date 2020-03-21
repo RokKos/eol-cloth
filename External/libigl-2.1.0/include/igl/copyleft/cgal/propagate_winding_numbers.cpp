@@ -24,8 +24,8 @@
 #include "cell_adjacency.h"
 
 #include <stdexcept>
-#include <limits>
-#include <vector>
+
+
 #include <tuple>
 #include <queue>
 

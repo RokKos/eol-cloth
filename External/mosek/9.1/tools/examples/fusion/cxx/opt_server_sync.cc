@@ -7,8 +7,8 @@
 //              to solve optimization problem synchronously
 //
 #include <fusion.h>
-#include <stdlib.h>
-#include <iostream>
+
+
 
 using namespace mosek::fusion;
 using namespace monty;

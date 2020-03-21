@@ -9,7 +9,7 @@
 #define IGL_COPYLEFT_CGAL_COMPLEX_TO_MESH_H
 #include "../../igl_inline.h"
 
-#include <Eigen/Dense>
+
 #include <CGAL/Complex_2_in_triangulation_3.h>
 
 namespace igl 

@@ -18,8 +18,8 @@
 #include "boundary_facets.h"
 #include "polygon_mesh_to_triangle_mesh.h"
 
-#include <algorithm>
-#include <iostream>
+
+
 
 
 template <typename Scalar, typename Index>

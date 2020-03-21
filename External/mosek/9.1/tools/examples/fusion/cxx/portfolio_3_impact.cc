@@ -7,10 +7,10 @@
                  with transaction costs of order x^(3/2).
 */
 
-#include <iostream>
-#include <fstream>
-#include <iomanip>
-#include <string>
+
+
+
+
 #include "monty.h"
 #include "fusion.h"
 

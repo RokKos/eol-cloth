@@ -2,7 +2,7 @@
 #include "../geometric.hpp"
 #include "../exponential.hpp"
 #include "epsilon.hpp"
-#include <limits>
+
 
 namespace glm
 {

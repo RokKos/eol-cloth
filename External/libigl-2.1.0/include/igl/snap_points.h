@@ -9,7 +9,7 @@
 #define IGL_SNAP_POINTS_H
 
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

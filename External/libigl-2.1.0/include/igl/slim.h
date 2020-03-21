@@ -10,8 +10,8 @@
 
 #include "igl_inline.h"
 #include "MappingEnergyType.h"
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 
 // This option makes the iterations faster (all except the first) by caching the 
 // sparsity pattern of the matrix involved in the assembly. It should be on if you plan to do many iterations, off if you have to change the matrix structure at every iteration.

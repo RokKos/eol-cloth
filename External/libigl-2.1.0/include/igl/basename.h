@@ -9,7 +9,7 @@
 #define IGL_BASENAME_H
 #include "igl_inline.h"
 
-#include <string>
+
 
 namespace igl
 {

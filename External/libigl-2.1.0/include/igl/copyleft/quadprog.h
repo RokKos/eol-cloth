@@ -9,7 +9,7 @@
 #define IGL_COPYLEFT_QUADPROG_H
 
 #include "../igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   namespace copyleft

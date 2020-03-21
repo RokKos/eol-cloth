@@ -8,9 +8,9 @@
 #include "mosek_linprog.h"
 #include "../mosek/mosek_guarded.h"
 #include "../harwell_boeing.h"
-#include <limits>
-#include <cmath>
-#include <vector>
+
+
+
 
 IGL_INLINE bool igl::mosek::mosek_linprog(
   const Eigen::VectorXd & c,

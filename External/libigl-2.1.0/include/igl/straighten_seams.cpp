@@ -25,7 +25,7 @@
 #include "slice.h"
 #include "sum.h"
 #include "find.h"
-#include <iostream>
+
 
 template <
   typename DerivedV,

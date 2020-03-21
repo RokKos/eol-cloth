@@ -8,7 +8,7 @@
 #ifndef IGL_INRADIUS_H
 #define IGL_INRADIUS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Compute the inradius of each triangle in a mesh (V,F)

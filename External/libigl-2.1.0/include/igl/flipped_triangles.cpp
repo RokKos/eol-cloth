@@ -8,7 +8,7 @@
 #include "flipped_triangles.h"
 
 #include "list_to_matrix.h"
-#include <vector>
+
 template <typename DerivedV, typename DerivedF, typename DerivedX>
 IGL_INLINE void igl::flipped_triangles(
   const Eigen::PlainObjectBase<DerivedV> & V,

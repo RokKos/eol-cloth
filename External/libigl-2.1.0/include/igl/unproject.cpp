@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "unproject.h"
 
-#include <Eigen/Dense>
+
 #include <Eigen/LU>
 
 template <

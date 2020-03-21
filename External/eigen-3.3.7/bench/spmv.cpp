@@ -3,8 +3,8 @@
 
 #define SCALAR double
 
-#include <iostream>
-#include <algorithm>
+
+
 #include "BenchTimer.h"
 #include "BenchSparseUtil.h"
 

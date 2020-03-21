@@ -1,7 +1,7 @@
 #ifndef IGL_COPYLEFT_CGAL_PEEL_WINDING_NUMBER_LAYERS_H
 #define IGL_COPYLEFT_CGAL_PEEL_WINDING_NUMBER_LAYERS_H
 #include "../../igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl {
   namespace copyleft {

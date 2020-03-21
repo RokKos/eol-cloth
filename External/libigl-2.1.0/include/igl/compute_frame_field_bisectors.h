@@ -9,7 +9,7 @@
 #ifndef IGL_COMPUTE_FRAME_FIELD_BISECTORS_H
 #define IGL_COMPUTE_FRAME_FIELD_BISECTORS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Compute bisectors of a frame field defined on mesh faces

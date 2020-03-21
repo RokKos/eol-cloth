@@ -8,7 +8,7 @@
 #include "print_ijv.h"
 
 #include "find.h"
-#include <iostream>
+
 
 template <typename T>
 IGL_INLINE void igl::print_ijv(

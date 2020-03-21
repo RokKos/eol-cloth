@@ -9,7 +9,7 @@
 
 #include "main.h"
 #include <unsupported/Eigen/Polynomials>
-#include <iostream>
+
 
 using namespace std;
 

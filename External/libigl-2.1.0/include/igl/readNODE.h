@@ -9,9 +9,9 @@
 #define IGL_READNODE_H
 #include "igl_inline.h"
 
-#include <string>
-#include <vector>
-#include <Eigen/Core>
+
+
+
 
 namespace igl
 {

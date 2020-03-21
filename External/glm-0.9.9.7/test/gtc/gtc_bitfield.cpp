@@ -2,9 +2,9 @@
 #include <glm/gtc/type_precision.hpp>
 #include <glm/vector_relational.hpp>
 #include <glm/integer.hpp>
-#include <ctime>
-#include <cstdio>
-#include <vector>
+
+
+
 
 namespace mask
 {

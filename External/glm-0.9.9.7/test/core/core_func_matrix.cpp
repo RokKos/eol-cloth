@@ -3,9 +3,9 @@
 #include <glm/gtc/ulp.hpp>
 #include <glm/gtc/epsilon.hpp>
 #include <glm/gtc/constants.hpp>
-#include <vector>
-#include <ctime>
-#include <cstdio>
+
+
+
 
 using namespace glm;
 

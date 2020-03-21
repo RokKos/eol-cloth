@@ -9,8 +9,8 @@
 #define IGL_COTMATRIX_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 
 // History:
 //  Used const references rather than copying the entire mesh 

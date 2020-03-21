@@ -9,8 +9,8 @@
 #define IGL_BOUNDARY_LOOP_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
-#include <vector>
+
+
 
 namespace igl
 {

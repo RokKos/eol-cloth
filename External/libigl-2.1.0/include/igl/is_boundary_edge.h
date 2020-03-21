@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #ifndef IS_BOUNDARY_EDGE_H
 #define IS_BOUNDARY_EDGE_H
-#include <Eigen/Dense>
+
 
 namespace igl
 {

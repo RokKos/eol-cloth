@@ -12,8 +12,8 @@
 #include "doublearea.h"
 #include "repmat.h"
 #include <Eigen/Geometry>
-#include <iostream>
-#include <cassert>
+
+
 
 template <typename Derivedl, typename DerivedF, typename Scalar>
 IGL_INLINE void igl::massmatrix_intrinsic(

@@ -9,7 +9,7 @@
 #define IGL_COPYLEFT_TETGEN_READ_INTO_TETGENIO_H
 #include "../../igl_inline.h"
 
-#include <string>
+
 #ifndef TETLIBRARY
 #define TETLIBRARY 
 #endif

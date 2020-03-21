@@ -25,7 +25,7 @@
 */
 
 #include "tensormax.hpp"
-#include "util.hpp"
+
 using namespace std;
 
 struct Disk {

@@ -10,8 +10,8 @@
 #define IGL_MARCHING_TETS_H
 
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 
 namespace igl {
   // marching_tets( TV, TT, S, isovalue, SV, SF, J, BC)

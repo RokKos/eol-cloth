@@ -9,9 +9,9 @@
 #define IGL_READ_CSV_H
 
 #include "igl/igl_inline.h"
-#include <Eigen/Core>
-#include <string>
-#include <vector>
+
+
+
 
 namespace igl 
 {

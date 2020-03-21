@@ -2,7 +2,7 @@
 #ifndef __Camera__
 #define __Camera__
 
-#include <memory>
+
 
 #define GLM_FORCE_RADIANS
 #include <glm/glm.hpp>

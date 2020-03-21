@@ -9,7 +9,7 @@
 //           st x + y + 0.5z = 2
 //              x,y,z >= 0
 //
-#include <iostream>
+
 #include "fusion.h"
 
 using namespace mosek::fusion;

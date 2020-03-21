@@ -8,8 +8,8 @@
 #ifndef IGL_TRIANGLE_TRIANGLE_ADJACENCY_H
 #define IGL_TRIANGLE_TRIANGLE_ADJACENCY_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 
 namespace igl
 {

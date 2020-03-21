@@ -9,7 +9,7 @@
 #define IGL_OPENGL_CREATE_INDEX_VBO_H
 #include "../igl_inline.h"
 #include "gl.h"
-#include <Eigen/Core>
+
 
 // Create a VBO (Vertex Buffer Object) for a list of indices:
 // GL_ELEMENT_ARRAY_BUFFER_ARB for the triangle indices (F)

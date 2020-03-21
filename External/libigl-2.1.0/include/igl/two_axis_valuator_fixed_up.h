@@ -9,7 +9,7 @@
 #define IGL_TWO_AXIS_VALUATOR_FIXED_AXIS_UP_H
 
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 #include <Eigen/Geometry>
 
 namespace igl

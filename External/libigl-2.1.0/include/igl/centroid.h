@@ -8,7 +8,7 @@
 #ifndef IGL_CENTROID_H
 #define IGL_CENTROID_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // CENTROID Computes the centroid of a closed mesh using a surface integral.

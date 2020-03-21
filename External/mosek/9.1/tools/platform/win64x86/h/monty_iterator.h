@@ -3,8 +3,8 @@
 
 #include <stddef.h>
 #include "monty_base.h"
-#include <cassert>
-#include <iostream>
+
+
 
 namespace monty
 {

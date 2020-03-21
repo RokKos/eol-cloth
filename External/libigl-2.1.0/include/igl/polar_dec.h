@@ -8,7 +8,7 @@
 #ifndef IGL_POLAR_DEC
 #define IGL_POLAR_DEC
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

@@ -24,8 +24,8 @@ IS". REGENTS HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT,
 UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 */
 
-#include "geometry.hpp"
-#include <cstdlib>
+
+
 
 using namespace std;
 

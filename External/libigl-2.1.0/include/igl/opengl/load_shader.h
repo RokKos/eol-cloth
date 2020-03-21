@@ -9,7 +9,7 @@
 #define IGL_OPENGL_LOAD_SHADER_H
 #include "../igl_inline.h" 
 #include "gl.h"
-#include <string>
+
 
 namespace igl
 {

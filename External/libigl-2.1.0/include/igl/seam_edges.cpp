@@ -9,7 +9,7 @@
 #include "seam_edges.h"
 #include <unordered_map>
 #include <unordered_set>
-#include <cassert>
+
 
 // Yotam has verified that this function produces the exact same output as
 // `find_seam_fast.py` for `cow_triangled.obj`.

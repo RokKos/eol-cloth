@@ -8,9 +8,9 @@
 #ifndef IGL_ON_BOUNDARY_H
 #define IGL_ON_BOUNDARY_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
 
-#include <vector>
+
+
 
 namespace igl
 {

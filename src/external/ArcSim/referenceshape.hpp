@@ -1,7 +1,7 @@
 #ifndef REFERENCESHAPE_HPP
 #define REFERENCESHAPE_HPP
 
-#include "mesh.hpp"
+
 
 class ReferenceShape {
 public:

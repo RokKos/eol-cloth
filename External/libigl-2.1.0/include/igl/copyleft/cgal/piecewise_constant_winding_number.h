@@ -8,8 +8,8 @@
 #ifndef IGL_COPYLEFT_CGAL_PIECEWISE_CONSTANT_WINDING_NUMBER_H
 #define IGL_COPYLEFT_CGAL_PIECEWISE_CONSTANT_WINDING_NUMBER_H
 #include "../../igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 namespace igl
 {
   namespace copyleft

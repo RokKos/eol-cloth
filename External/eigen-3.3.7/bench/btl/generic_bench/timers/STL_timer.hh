@@ -20,11 +20,11 @@
 // STL Timer Class. Adapted (L.P.) from the timer class by Musser et Al
 // described int the Book : STL Tutorial and reference guide.
 // Define a timer class for analyzing algorithm performance.
-#include <iostream>
-#include <iomanip>
-#include <vector>
-#include <map>
-#include <algorithm>
+
+
+
+
+
 using namespace std;
 
 class STL_Timer {

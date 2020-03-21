@@ -1,7 +1,7 @@
 #ifndef IGL_EDGES_TO_PATH_H
 #define IGL_EDGES_TO_PATH_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // EDGES_TO_PATH Given a set of undirected, unique edges such that all form a

@@ -19,10 +19,10 @@
  */
 
 
-#include <memory>
+
 #include <random>
-#include <iostream>
-#include <string>
+
+
 
 #include "mosek.h"
 #include "fusion.h"

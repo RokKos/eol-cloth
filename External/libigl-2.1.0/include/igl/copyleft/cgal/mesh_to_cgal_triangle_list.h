@@ -8,7 +8,7 @@
 #ifndef IGL_COPYLEFT_CGAL_MESH_TO_CGAL_TRIANGLE_LIST_H
 #define IGL_COPYLEFT_CGAL_MESH_TO_CGAL_TRIANGLE_LIST_H
 #include "../../igl_inline.h"
-#include <Eigen/Core>
+
 #include "CGAL_includes.hpp"
 namespace igl
 {

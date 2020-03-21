@@ -29,7 +29,7 @@
 #include <CGAL/function_objects.h>
 #include <CGAL/Join_input_iterator.h>
 #include <CGAL/algorithm.h>
-#include <vector>
+
 
 // Axis-aligned bounding box tree for tet tri intersection
 #include <CGAL/AABB_tree.h>

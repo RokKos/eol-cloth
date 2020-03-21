@@ -32,18 +32,18 @@
 // compiler supports it.
 #if __cplusplus > 199711L || EIGEN_COMP_MSVC >= 1900
 #include <cstddef>
-#include <cstring>
-#include <stdint.h>
+
+
 #include <time.h>
 
-#include <vector>
+
 #include <atomic>
 #include <condition_variable>
 #include <deque>
 #include <mutex>
 #include <thread>
 #include <functional>
-#include <memory>
+
 
 #include "src/util/CXX11Meta.h"
 #include "src/util/MaxSizeVector.h"

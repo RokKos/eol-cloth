@@ -2,7 +2,7 @@
 #include <test_common.h>
 #include <igl/guess_extension.h>
 #include <igl/pathinfo.h>
-#include <cstdio>
+
 
 
 TEST_CASE("guess_extension: all_meshes", "[igl]")

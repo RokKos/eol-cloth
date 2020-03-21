@@ -9,7 +9,7 @@
 
 #include "sparse.h"
 #include <Eigen/SparseCore>
-#include <sstream>
+
 
 template<typename Solver, typename Rhs, typename Guess,typename Result>
 void solve_with_guess(IterativeSolverBase<Solver>& solver, const MatrixBase<Rhs>& b, const Guess& g, Result &x) {

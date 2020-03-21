@@ -6,8 +6,8 @@
 // Purpose:   Demonstrates how to solve a total
 //            variation problem using the Fusion API.
 
-#include <iostream>
-#include <vector>
+
+
 #include <random>
 
 #include "monty.h"

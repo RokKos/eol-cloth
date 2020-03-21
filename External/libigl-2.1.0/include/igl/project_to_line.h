@@ -8,7 +8,7 @@
 #ifndef IGL_PROJECT_TO_LINE_H
 #define IGL_PROJECT_TO_LINE_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

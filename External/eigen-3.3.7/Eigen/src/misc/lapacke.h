@@ -47,7 +47,7 @@
 extern "C" {
 #endif /* __cplusplus */
 
-#include <stdlib.h>
+
 
 #ifndef lapack_int
 #define lapack_int     int

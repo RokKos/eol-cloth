@@ -8,7 +8,7 @@
 #ifndef IGL_REMOVE_DUPLICATE_VERTICES_H
 #define IGL_REMOVE_DUPLICATE_VERTICES_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 namespace igl
 {
   // REMOVE_DUPLICATE_VERTICES Remove duplicate vertices upto a uniqueness

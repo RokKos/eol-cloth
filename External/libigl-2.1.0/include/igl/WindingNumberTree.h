@@ -8,8 +8,8 @@
 #ifndef IGL_WINDINGNUMBERTREE_H
 #define IGL_WINDINGNUMBERTREE_H
 #include <list>
-#include <map>
-#include <Eigen/Dense>
+
+
 #include "WindingNumberMethod.h"
 
 namespace igl
@@ -146,8 +146,8 @@ namespace igl
 #include <igl/PI.h>
 #include <igl/remove_duplicate_vertices.h>
 
-#include <iostream>
-#include <limits>
+
+
 
 //template <typename Point, typename DerivedV, typename DerivedF>
 //WindingNumberMethod WindingNumberTree<Point,DerivedV,DerivedF>::method = EXACT_WINDING_NUMBER_METHOD;

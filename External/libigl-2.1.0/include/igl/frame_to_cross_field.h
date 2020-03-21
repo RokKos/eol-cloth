@@ -9,7 +9,7 @@
 #define IGL_FRAME_TO_CROSS_FIELD_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
+
 
 namespace igl
 {

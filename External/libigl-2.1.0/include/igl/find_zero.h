@@ -1,8 +1,8 @@
 #ifndef IGL_FIND_ZERO_H
 #define IGL_FIND_ZERO_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 namespace igl
 {
   // Find the first zero (whether implicit or explicitly stored) in the

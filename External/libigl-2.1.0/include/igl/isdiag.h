@@ -8,7 +8,7 @@
 #ifndef IGL_ISDIAG_H
 #define IGL_ISDIAG_H
 #include "igl_inline.h"
-#include <Eigen/Sparse>
+
 namespace igl
 {
   // Determine if a given matrix is diagonal: all non-zeros lie on the

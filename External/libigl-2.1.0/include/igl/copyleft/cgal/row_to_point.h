@@ -8,7 +8,7 @@
 #ifndef IGL_COPYLEFT_CGAL_ROW_TO_POINT_H
 #define IGL_COPYLEFT_CGAL_ROW_TO_POINT_H
 #include "../../igl_inline.h"
-#include <Eigen/Core>
+
 #include <CGAL/Point_2.h>
 namespace igl
 {

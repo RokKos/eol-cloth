@@ -12,7 +12,7 @@
 #include "../cotmatrix.h"
 #include "../massmatrix.h"
 #include "../mat_min.h"
-#include <Eigen/Sparse>
+
 
 bool igl::embree::bone_heat(
   const Eigen::MatrixXd & V,

@@ -8,7 +8,7 @@
 
 #include "rotation_matrix_from_directions.h"
 #include <Eigen/Geometry>
-#include <iostream>
+
 
 template <typename Scalar>
 IGL_INLINE Eigen::Matrix<Scalar, 3, 3> igl::rotation_matrix_from_directions(

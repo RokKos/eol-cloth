@@ -10,8 +10,8 @@
 
 #include <igl/igl_inline.h>
 #include <igl/PI.h>
-#include <Eigen/Dense>
-#include <vector>
+
+
 
 namespace igl
 {

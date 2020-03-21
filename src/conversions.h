@@ -2,11 +2,6 @@
 #ifndef __CONVERSIONS__
 #define __CONVERSIONS__
 
-#include "external\ArcSim\vectors.hpp"
-
-#define EIGEN_DONT_ALIGN_STATICALLY
-#include <Eigen\Core>
-
 // These conversions translate ArcSim vectors to Eigen vectors
 
 // Eigen 2 vec

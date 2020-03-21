@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "cumprod.h"
 #include <numeric>
-#include <iostream>
+
 
 template <typename DerivedX, typename DerivedY>
 IGL_INLINE void igl::cumprod(

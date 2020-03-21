@@ -5,10 +5,10 @@
 //
 
 #include "GLSL.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <cassert>
-#include <cstring>
+
+
+
+
 
 using namespace std;
 

@@ -10,7 +10,7 @@
 #define IGL_EXACT_GEODESIC_H
 
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl 
 {

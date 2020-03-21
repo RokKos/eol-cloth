@@ -8,8 +8,8 @@
 #ifndef IGL_COPYLEFT_TETGEN_MESH_WITH_SKELETON_H
 #define IGL_COPYLEFT_TETGEN_MESH_WITH_SKELETON_H
 #include "../../igl_inline.h"
-#include <Eigen/Dense>
-#include <string>
+
+
 
 namespace igl
 {

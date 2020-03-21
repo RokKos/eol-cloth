@@ -3,7 +3,7 @@
 #include <glm/gtc/vec1.hpp>
 #include <glm/ext/vector_relational.hpp>
 #include <glm/vec2.hpp>
-#include <vector>
+
 
 static glm::vec1 g1;
 static glm::vec1 g2(1);

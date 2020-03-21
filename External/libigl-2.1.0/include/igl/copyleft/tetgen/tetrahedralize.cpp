@@ -15,8 +15,8 @@
 #include "../../boundary_facets.h"
 
 // STL includes
-#include <cassert>
-#include <iostream>
+
+
 
 
 IGL_INLINE int igl::copyleft::tetgen::tetrahedralize(

@@ -1,7 +1,7 @@
 #define EIGEN_USE_SYCL
 
 #include <SYCL/sycl.hpp>
-#include <iostream>
+
 
 #include "tensor_benchmarks.h"
 

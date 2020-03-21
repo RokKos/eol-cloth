@@ -8,9 +8,9 @@
 #ifndef IGL_DECIMATE_H
 #define IGL_DECIMATE_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
-#include <set>
+
+
+
 namespace igl
 {
   // Assumes (V,F) is a manifold mesh (possibly with boundary) Collapses edges

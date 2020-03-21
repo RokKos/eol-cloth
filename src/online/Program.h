@@ -2,8 +2,8 @@
 #ifndef __Program__
 #define __Program__
 
-#include <map>
-#include <string>
+
+
 
 #define GLEW_STATIC
 #include <GL/glew.h>

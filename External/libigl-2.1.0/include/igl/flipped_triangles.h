@@ -9,7 +9,7 @@
 #define IGL_FLIPPED_TRIANGLES_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
+
 namespace igl
 {
   // Finds the ids of the flipped triangles of the mesh V,F in the UV mapping uv

@@ -8,8 +8,8 @@
 #ifndef IGL_INTRINSIC_DELAUNAY_COTMATRIX_H
 #define IGL_INTRINSIC_DELAUNAY_COTMATRIX_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 namespace igl
 {
   // INTRINSIC_DELAUNAY_COTMATRIX Computes the discrete cotangent Laplacian of a

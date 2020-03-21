@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "random_dir.h"
 #include <igl/PI.h>
-#include <cmath>
+
 
 IGL_INLINE Eigen::Vector3d igl::random_dir()
 {

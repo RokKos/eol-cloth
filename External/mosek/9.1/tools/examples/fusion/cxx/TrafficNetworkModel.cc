@@ -18,9 +18,9 @@
 //            Given a fixed inflow we now wish to find the
 //            configuration that minimizes the average travel time.
 
-#include <string>
-#include <iostream>
-#include <iomanip>
+
+
+
 #include "fusion.h"
 
 using namespace mosek::fusion;

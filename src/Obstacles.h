@@ -3,10 +3,10 @@
 #define __Obstacles__
 
 #define EIGEN_DONT_ALIGN_STATICALLY
-#include <Eigen/Dense>
 
-#include <vector>
-#include <memory>
+
+
+
 
 #include "BrenderManager.h"
 

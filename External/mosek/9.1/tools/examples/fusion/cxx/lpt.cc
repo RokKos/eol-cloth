@@ -7,9 +7,9 @@
 //           scheduling problem using the Fusion API.
 
 
-#include <iostream>
+
 #include <random>
-#include <sstream>
+
 
 #include "fusion.h"
 

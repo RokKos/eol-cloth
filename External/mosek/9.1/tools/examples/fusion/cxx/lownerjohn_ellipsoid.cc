@@ -12,12 +12,12 @@
     [2] "MOSEK modeling manual", 2013
 */
 
-#include <string>
-#include <iostream>
-#include <iomanip>
-#include <cmath>
+
+
+
+
 #include "fusion.h"
-#include <cassert>
+
 
 using namespace mosek::fusion;
 using namespace monty;

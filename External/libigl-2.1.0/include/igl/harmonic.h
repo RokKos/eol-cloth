@@ -8,8 +8,8 @@
 #ifndef IGL_HARMONIC_H
 #define IGL_HARMONIC_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 namespace igl
 {
   // Compute k-harmonic weight functions "coordinates".

@@ -10,9 +10,9 @@
 
 #include "igl_inline.h"
 
-#include <Eigen/Core>
-#include <Eigen/Sparse>
-#include <string>
+
+
+
 
 namespace igl
 {

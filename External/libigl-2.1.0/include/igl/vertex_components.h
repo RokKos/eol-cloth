@@ -8,8 +8,8 @@
 #ifndef IGL_COMPONENTS_H
 #define IGL_COMPONENTS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 namespace igl
 {
   // Compute connected components of a graph represented by an adjacency

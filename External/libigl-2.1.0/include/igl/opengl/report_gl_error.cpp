@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "report_gl_error.h"
 #include "../verbose.h"
-#include <cstdio>
+
 
 IGL_INLINE GLenum igl::opengl::report_gl_error(const std::string id)
 {

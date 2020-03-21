@@ -1,8 +1,8 @@
 #ifndef IGL_COPYLEFT_CGAL_FAST_WINDING_NUMBER
 #define IGL_COPYLEFT_CGAL_FAST_WINDING_NUMBER
 #include "../../igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 namespace igl
 {
   namespace copyleft

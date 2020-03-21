@@ -8,7 +8,7 @@
 #ifndef IGL_UNPROJECT_RAY_H
 #define IGL_UNPROJECT_RAY_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Construct a ray (source point + direction vector) given a screen space

@@ -10,8 +10,8 @@
 
 #include "igl_inline.h"
 #include "SolverStatus.h"
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 
 namespace igl
 {

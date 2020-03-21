@@ -9,8 +9,8 @@
 #define IGL_UPSAMPLE_H
 #include "igl_inline.h"
 
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 
 // History:
 //  changed templates from generic matrices to PlainObjectBase Alec May 7, 2011

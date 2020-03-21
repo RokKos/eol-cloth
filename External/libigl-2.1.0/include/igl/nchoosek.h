@@ -10,9 +10,9 @@
 #define IGL_NCHOOSEK
 #include "igl_inline.h"
 #include "deprecated.h"
-#include <vector>
 
-#include <Eigen/Core>
+
+
 
 namespace igl 
 {

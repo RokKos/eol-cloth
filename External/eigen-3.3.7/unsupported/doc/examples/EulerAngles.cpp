@@ -1,5 +1,5 @@
 #include <unsupported/Eigen/EulerAngles>
-#include <iostream>
+
 
 using namespace Eigen;
 

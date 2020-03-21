@@ -20,7 +20,7 @@
 #define ACTION_LU_DECOMP
 #include "utilities.h"
 #include "STL_interface.hh"
-#include <string>
+
 #include "init/init_function.hh"
 #include "init/init_vector.hh"
 #include "init/init_matrix.hh"

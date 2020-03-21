@@ -10,7 +10,7 @@
 #include "verbose.h"
 #include "repdiag.h"
 #include "cat.h"
-#include <iostream>
+
 
 IGL_INLINE void igl::arap_rhs(
   const Eigen::MatrixXd & V, 

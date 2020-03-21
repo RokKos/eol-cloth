@@ -8,7 +8,7 @@
 #ifndef IGL_INTERNAL_ANGLES_H
 #define IGL_INTERNAL_ANGLES_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Compute internal angles for a triangle mesh

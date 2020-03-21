@@ -9,7 +9,7 @@
 
 #include "main.h"
 
-#include <Eigen/Core>
+
 #include <Eigen/Geometry>
 
 #include <Eigen/LU> // required for MatrixBase::determinant

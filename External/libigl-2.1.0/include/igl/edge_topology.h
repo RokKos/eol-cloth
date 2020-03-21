@@ -10,8 +10,8 @@
 
 #include "igl_inline.h"
 
-#include <Eigen/Core>
-#include <vector>
+
+
 
 namespace igl 
 {

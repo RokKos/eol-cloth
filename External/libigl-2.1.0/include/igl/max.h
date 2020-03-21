@@ -1,8 +1,8 @@
 #ifndef IGL_MAX_H
 #define IGL_MAX_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 namespace igl
 {
   // Inputs:

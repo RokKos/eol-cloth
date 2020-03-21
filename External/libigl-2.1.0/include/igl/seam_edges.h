@@ -8,7 +8,7 @@
 #ifndef IGL_SEAM_EDGES_H
 #define IGL_SEAM_EDGES_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Finds all UV-space boundaries of a mesh.

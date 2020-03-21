@@ -8,7 +8,7 @@
 #ifndef IGL_FIT_ROTATIONS_H
 #define IGL_FIT_ROTATIONS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

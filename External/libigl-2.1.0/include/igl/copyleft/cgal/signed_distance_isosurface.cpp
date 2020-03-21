@@ -25,7 +25,7 @@
 #include <CGAL/AABB_tree.h>
 #include <CGAL/AABB_traits.h>
 #include <CGAL/AABB_triangle_primitive.h>
-#include <vector>
+
 
 IGL_INLINE bool igl::copyleft::cgal::signed_distance_isosurface(
   const Eigen::MatrixXd & IV,

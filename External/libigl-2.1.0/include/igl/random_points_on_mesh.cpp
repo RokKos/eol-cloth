@@ -9,8 +9,8 @@
 #include "doublearea.h"
 #include "cumsum.h"
 #include "histc.h"
-#include <iostream>
-#include <cassert>
+
+
 
 template <typename DerivedV, typename DerivedF, typename DerivedB, typename DerivedFI>
 IGL_INLINE void igl::random_points_on_mesh(

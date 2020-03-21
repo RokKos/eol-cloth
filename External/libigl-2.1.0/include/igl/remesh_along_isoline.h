@@ -9,8 +9,8 @@
 #define IGL_REMESH_ALONG_ISOLINE_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 
 namespace igl 
 {

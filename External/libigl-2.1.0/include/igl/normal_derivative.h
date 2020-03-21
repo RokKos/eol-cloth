@@ -9,8 +9,8 @@
 #define IGL_NORMAL_DERIVATIVE_H
 #include "igl_inline.h"
 
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 namespace igl 
 {
   // NORMAL_DERIVATIVE Computes the directional derivative **normal** to

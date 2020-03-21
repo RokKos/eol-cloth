@@ -8,7 +8,7 @@
 #ifndef IGL_SWEPT_VOLUME_BOUNDING_BOX_H
 #define IGL_SWEPT_VOLUME_BOUNDING_BOX_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 #include <Eigen/Geometry>
 #include <functional>
 namespace igl

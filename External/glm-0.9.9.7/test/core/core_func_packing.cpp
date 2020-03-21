@@ -2,7 +2,7 @@
 #include <glm/gtc/epsilon.hpp>
 #include <glm/vector_relational.hpp>
 #include <glm/packing.hpp>
-#include <vector>
+
 
 int test_packUnorm2x16()
 {

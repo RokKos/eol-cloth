@@ -2,8 +2,8 @@
 #ifndef __genSet__
 #define __getSet__
 
-#include <string>
-#include <iostream>
+
+
 
 class genSet
 {

@@ -18,7 +18,7 @@
               many matrix variables of the same dimension.
 */
 
-#include <iostream>
+
 #include <random>
 #include "fusion.h"
 

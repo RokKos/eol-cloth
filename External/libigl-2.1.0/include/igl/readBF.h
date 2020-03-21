@@ -8,8 +8,8 @@
 #ifndef IGL_READBF_H
 #define IGL_READBF_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <string>
+
+
 namespace igl
 {
   // Read a bones forest from a file, returns a list of bone roots

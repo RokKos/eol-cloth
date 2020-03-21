@@ -1,7 +1,7 @@
 ﻿#include "string_to_mesh_boolean_type.h"
-#include <algorithm>
-#include <cassert>
-#include <vector>
+
+
+
 
 IGL_INLINE bool igl::copyleft::cgal::string_to_mesh_boolean_type( 
   const std::string & s,

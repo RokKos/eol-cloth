@@ -15,13 +15,9 @@
  */
 #include "benchmark.h"
 #include <regex.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <string>
 #include <inttypes.h>
 #include <time.h>
-#include <map>
+
 
 static int64_t g_flops_processed;
 static int64_t g_benchmark_total_time_ns;

@@ -8,8 +8,8 @@
 #ifndef IGL_EDGE_EXISTS_NEAR_H
 #define IGL_EDGE_EXISTS_NEAR_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 namespace igl
 {
   // Does edge (a,b) exist in the edges of all faces incident on

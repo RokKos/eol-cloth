@@ -9,10 +9,10 @@
 #include "marching_tets.h"
 
 #include <unordered_map>
-#include <vector>
-#include <utility>
-#include <cstdint>
-#include <iostream>
+
+
+
+
 
 template <typename DerivedTV,
           typename DerivedTT,

@@ -3,7 +3,7 @@
 #include "../voxel_grid.h"
 #include "../signed_distance.h"
 #include "../flood_fill.h"
-#include <cassert>
+
 
 template <
   typename DerivedV,

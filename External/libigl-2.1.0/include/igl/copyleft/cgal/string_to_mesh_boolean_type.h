@@ -10,7 +10,7 @@
 
 #include "../../igl_inline.h"
 #include "../../MeshBooleanType.h"
-#include <string>
+
 
 namespace igl
 {

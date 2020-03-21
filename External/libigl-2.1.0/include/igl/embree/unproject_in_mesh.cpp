@@ -9,7 +9,7 @@
 #include "EmbreeIntersector.h"
 #include "../unproject_ray.h"
 #include "../unproject_in_mesh.h"
-#include <vector>
+
 
 template <typename Derivedobj>
 IGL_INLINE int igl::embree::unproject_in_mesh(

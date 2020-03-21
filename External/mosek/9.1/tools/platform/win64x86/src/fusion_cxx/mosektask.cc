@@ -2,7 +2,7 @@
 #include "mosektask.h"
 #include "monty_iterator.h"
 
-#include <iostream>
+
 #define MSK(name,...) if (MSK_RES_OK != MSK_ ## name(task,__VA_ARGS__)) throw MosekException(task)
 
 

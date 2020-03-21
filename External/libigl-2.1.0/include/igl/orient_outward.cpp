@@ -9,7 +9,7 @@
 #include "per_face_normals.h"
 #include "barycenter.h"
 #include "doublearea.h"
-#include <iostream>
+
 
 template <
   typename DerivedV, 

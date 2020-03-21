@@ -8,8 +8,8 @@
 #ifndef IGL_XML_WRITEDAE_H
 #define IGL_XML_WRITEDAE_H
 #include "../igl_inline.h"
-#include <string>
-#include <Eigen/Core>
+
+
 namespace igl
 {
   namespace xml

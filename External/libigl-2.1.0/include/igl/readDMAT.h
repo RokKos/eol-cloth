@@ -19,8 +19,8 @@
 //   corresponds to a .dmat file containing:
 //   3 2
 //   1 4 2 5 3 6
-#include <string>
-#include <vector>
+
+
 #ifndef IGL_NO_EIGEN
 #  include <Eigen/Core>
 #endif

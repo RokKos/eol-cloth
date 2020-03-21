@@ -15,7 +15,7 @@
 #endif
 
 #include <Eigen/Geometry>
-#include <Eigen/Core>
+
 #include "PI.h"
 
 #define IGL_CAMERA_MIN_ANGLE 5.0
@@ -146,9 +146,9 @@ namespace igl
 // Implementation
 #include "PI.h"
 #include "EPS.h"
-#include <cmath>
-#include <iostream>
-#include <cassert>
+
+
+
 
 inline igl::Camera::Camera():
   m_angle(45.0),m_aspect(1),m_near(1e-2),m_far(100),m_at_dist(1),

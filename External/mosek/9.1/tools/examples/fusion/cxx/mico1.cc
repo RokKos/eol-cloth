@@ -10,8 +10,8 @@
 //              subject to  x >= e^y + 3.8
 //                          x, y - integer
 //
-#include <iostream>
-#include <iomanip>
+
+
 #include "fusion.h"
 
 using namespace mosek::fusion;

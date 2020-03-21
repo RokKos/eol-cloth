@@ -20,15 +20,15 @@
 // DYLD_LIBRARY_PATH = /Applications/MATLAB_R2011a.app/bin/maci64/
 // PATH = /opt/local/bin:/opt/local/sbin:/Applications/MATLAB_R2011a.app/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/texbin:/usr/X11/bin
 
-#include <Eigen/Core>
-#include <Eigen/Sparse>
-#include <string>
+
+
+
 
 #include <complex>
-#include <cassert>
-#include <map>
-#include <string>
-#include <vector>
+
+
+
+
 
 #include <engine.h>  // Matlab engine header
 

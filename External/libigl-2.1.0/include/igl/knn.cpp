@@ -1,7 +1,7 @@
 #include "knn.h"
 #include "parallel_for.h"
 
-#include <cmath>
+
 #include <queue>
 
 namespace igl {

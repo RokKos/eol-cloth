@@ -1,7 +1,7 @@
 // A simple quickref for Eigen. Add anything that's missing.
 // Main author: Keir Mierle
 
-#include <Eigen/Dense>
+
 
 Matrix<double, 3, 3> A;               // Fixed rows and cols. Same as Matrix3d.
 Matrix<double, 3, Dynamic> B;         // Fixed rows, dynamic cols.

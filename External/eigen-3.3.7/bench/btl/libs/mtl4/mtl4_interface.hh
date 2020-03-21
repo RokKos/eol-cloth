@@ -21,7 +21,7 @@
 #include <boost/numeric/mtl/mtl.hpp>
 #include <boost/numeric/mtl/utility/range_generator.hpp>
 // #include <boost/numeric/mtl/operation/cholesky.hpp>
-#include <vector>
+
 
 using namespace mtl;
 

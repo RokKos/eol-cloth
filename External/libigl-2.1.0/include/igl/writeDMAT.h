@@ -9,9 +9,9 @@
 #define IGL_WRITEDMAT_H
 #include "igl_inline.h"
 // See writeDMAT.h for a description of the .dmat file type
-#include <Eigen/Core>
-#include <string>
-#include <vector>
+
+
+
 namespace igl
 {
   // Write a matrix using ascii dmat file type

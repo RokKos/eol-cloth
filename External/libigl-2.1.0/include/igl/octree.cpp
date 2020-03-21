@@ -1,5 +1,5 @@
 #include "octree.h"
-#include <vector>
+
 #include <queue>
 
 namespace igl {

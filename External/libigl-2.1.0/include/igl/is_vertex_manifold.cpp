@@ -9,11 +9,11 @@
 #include "triangle_triangle_adjacency.h"
 #include "vertex_triangle_adjacency.h"
 #include "unique.h"
-#include <vector>
-#include <cassert>
-#include <map>
+
+
+
 #include <queue>
-#include <iostream>
+
 
 template <typename DerivedF,typename DerivedB>
 IGL_INLINE bool igl::is_vertex_manifold(

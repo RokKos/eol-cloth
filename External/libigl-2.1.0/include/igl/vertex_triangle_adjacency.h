@@ -9,8 +9,8 @@
 #define IGL_VERTEX_TRIANGLE_ADJACENCY_H
 #include "igl_inline.h"
 
-#include <Eigen/Dense>
-#include <vector>
+
+
 
 namespace igl
 {

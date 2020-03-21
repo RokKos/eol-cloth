@@ -8,7 +8,7 @@
 #ifndef IGL_BOUNDING_BOX_H
 #define IGL_BOUNDING_BOX_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Build a triangle mesh of the bounding box of a given list of vertices

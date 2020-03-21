@@ -14,7 +14,7 @@
 #endif
 
 #include "main.h"
-#include <Eigen/Dense>
+
 
 template<typename MatrixType>
 void dontalign(const MatrixType& m)

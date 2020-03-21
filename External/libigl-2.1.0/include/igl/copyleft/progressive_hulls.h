@@ -8,7 +8,7 @@
 #ifndef IGL_COPYLEFT_PROGRESSIVE_HULLS_H
 #define IGL_COPYLEFT_PROGRESSIVE_HULLS_H
 #include "../igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

@@ -3,7 +3,7 @@
 #define _MatrixStack_H_
 
 #include <stack>
-#include <memory>
+
 #include <glm/fwd.hpp>
 
 class MatrixStack

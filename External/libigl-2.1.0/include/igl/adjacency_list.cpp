@@ -8,7 +8,7 @@
 #include "adjacency_list.h"
 
 #include "verbose.h"
-#include <algorithm>
+
 
 template <typename Index, typename IndexVector>
 IGL_INLINE void igl::adjacency_list(

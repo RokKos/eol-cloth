@@ -7,9 +7,9 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "slice_cached.h"
 
-#include <iostream>
-#include <vector>
-#include <utility>
+
+
+
 #include "slice.h"
 
 template <typename TX, typename TY, typename DerivedI>

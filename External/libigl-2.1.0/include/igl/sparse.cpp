@@ -7,8 +7,8 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "sparse.h"
 
-#include <iostream>
-#include <vector>
+
+
 
 template <class IndexVector, class ValueVector, typename T>
 IGL_INLINE void igl::sparse(

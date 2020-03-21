@@ -9,11 +9,11 @@
 
 #include "verbose.h"
 #include "list_to_matrix.h"
-#include <Eigen/Core>
 
-#include <iostream>
-#include <fstream>
-#include <cstdio>
+
+
+
+
 
 template <typename Scalar, typename Index>
 IGL_INLINE bool igl::writeMESH(

@@ -8,8 +8,8 @@
 #include "next_filename.h"
 #include "STR.h"
 #include "file_exists.h"
-#include <cmath>
-#include <iomanip>
+
+
 
 bool igl::next_filename(
   const std::string & prefix, 

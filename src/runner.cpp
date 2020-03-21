@@ -22,10 +22,10 @@
 
 #endif // EOL_ONLINE
 
-#include <Eigen\Core>
 
-#include <memory>
-#include <iostream>
+
+
+
 
 #include "parseParams.h";
 #include "genSet.h";

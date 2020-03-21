@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "stdin_to_temp.h"
 
-#include <iostream>
+
 
 IGL_INLINE bool igl::stdin_to_temp(FILE ** temp_file)
 {

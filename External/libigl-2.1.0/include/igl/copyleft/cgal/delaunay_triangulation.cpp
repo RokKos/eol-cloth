@@ -28,7 +28,7 @@ IGL_INLINE void igl::copyleft::cgal::delaunay_triangulation(
 //#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 //#include <CGAL/Delaunay_triangulation_2.h>
 //#include <CGAL/Triangulation_vertex_base_with_info_2.h>
-//#include <vector>
+//
 //  const auto delaunay = 
 //    [&](const Eigen::MatrixXd & V,Eigen::MatrixXi & F)
 //  {

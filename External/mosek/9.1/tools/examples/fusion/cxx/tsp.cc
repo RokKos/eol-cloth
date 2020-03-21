@@ -6,9 +6,9 @@
 //  Purpose: Demonstrates a simple technique to the TSP
 //           usign the Fusion API.
 //
-#include <iostream>
+
 #include <list>
-#include <vector>
+
 
 #include "fusion.h"
 

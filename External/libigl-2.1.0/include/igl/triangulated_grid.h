@@ -8,7 +8,7 @@
 #ifndef IGL_TRIANGULATEGRID_H
 #define IGL_TRIANGULATEGRID_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Create a regular grid of elements (only 2D supported, currently)

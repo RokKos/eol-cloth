@@ -21,7 +21,7 @@
 #define ACTION_ATA_PRODUCT
 #include "utilities.h"
 #include "STL_interface.hh"
-#include <string>
+
 #include "init/init_function.hh"
 #include "init/init_vector.hh"
 #include "init/init_matrix.hh"

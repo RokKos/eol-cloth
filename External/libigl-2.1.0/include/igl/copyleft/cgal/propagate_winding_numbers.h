@@ -9,8 +9,8 @@
 #ifndef IGL_COPYLEFT_CGAL_PROPAGATE_WINDING_NUMBERS_H
 #define IGL_COPYLEFT_CGAL_PROPAGATE_WINDING_NUMBERS_H
 #include "../../igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 
 // The following methods compute the winding number on each side of each facet
 // or patch of a 3D mesh.  The input mesh is valid if it splits the ambient

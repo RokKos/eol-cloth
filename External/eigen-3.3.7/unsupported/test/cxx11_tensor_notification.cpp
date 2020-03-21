@@ -9,7 +9,7 @@
 
 #define EIGEN_USE_THREADS
 
-#include <stdlib.h>
+
 #include "main.h"
 #include <Eigen/CXX11/Tensor>
 

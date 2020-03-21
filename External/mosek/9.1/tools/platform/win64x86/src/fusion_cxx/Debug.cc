@@ -1,5 +1,5 @@
 #include "fusion_p.h"
-#include <string>
+
 #include "monty.h"
 
 //#include "mosektask_p.h"

@@ -1,7 +1,7 @@
 /// @ref gtx_string_cast
 
 #include <cstdarg>
-#include <cstdio>
+
 
 namespace glm{
 namespace detail

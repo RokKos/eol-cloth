@@ -24,17 +24,12 @@ IS". REGENTS HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT,
 UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 */
 
-#include "util.hpp"
+
 #include "io.hpp"
-#include "mesh.hpp"
-#include <algorithm>
+
 #include <cstdarg>
-#include <cstdio>
-#include <iomanip>
-#include <limits>
-#include <map>
 #include <signal.h>
-#include <sstream>
+
 using namespace std;
 
 void Stats::add(double x) {

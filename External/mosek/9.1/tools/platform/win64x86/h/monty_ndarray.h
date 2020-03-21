@@ -2,10 +2,10 @@
 #ifndef _MONTY_NDARRAY_H_
 #define _MONTY_NDARRAY_H_
 
-#include <algorithm>
-#include <memory>
-#include <vector>
-#include <iostream>
+
+
+
+
 #include "monty_shape.h"
 #include "monty_base.h"
 

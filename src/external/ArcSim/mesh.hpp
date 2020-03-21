@@ -28,10 +28,10 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #define MESH_HPP
 
 #include "transformation.hpp"
-#include "vectors.hpp"
-#include <utility>
-#include <vector>
-#include <memory>
+
+
+
+
 
 struct Serialize;
 

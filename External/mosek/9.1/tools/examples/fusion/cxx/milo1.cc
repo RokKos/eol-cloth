@@ -6,8 +6,8 @@
 //    Purpose:  Demonstrates how to solve a small mixed
 //              integer linear optimization problem.
 //
-#include <iostream>
-#include <iomanip>
+
+
 #include "fusion.h"
 
 using namespace mosek::fusion;

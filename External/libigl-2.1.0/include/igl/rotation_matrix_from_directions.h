@@ -9,7 +9,7 @@
 #define IGL_ROTATION_MATRIX_FROM_DIRECTIONS_H
 #include "igl_inline.h"
 
-#include <Eigen/Core>
+
 
 namespace igl 
 {

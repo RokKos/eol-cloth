@@ -8,7 +8,7 @@
 #ifndef IGL_ISMEMBER_H
 #define IGL_ISMEMBER_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Determine if elements of A exist in elements of B

@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #ifndef IGL_POLAR_SVD3X3_H
 #define IGL_POLAR_SVD3X3_H
-#include <Eigen/Core>
+
 #include "igl_inline.h"
 namespace igl
 {

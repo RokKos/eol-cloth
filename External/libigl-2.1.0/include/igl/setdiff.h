@@ -8,7 +8,7 @@
 #ifndef IGL_SETDIFF_H
 #define IGL_SETDIFF_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Set difference of elements of matrices

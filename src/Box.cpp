@@ -1,4 +1,4 @@
-#include <iostream>
+
 
 #ifdef EOLC_ONLINE
 #define GLEW_STATIC

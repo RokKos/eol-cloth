@@ -10,7 +10,7 @@
 #ifndef EIGEN_CXX11META_H
 #define EIGEN_CXX11META_H
 
-#include <vector>
+
 #include "EmulateArray.h"
 
 // Emulate the cxx11 functionality that we need if the compiler doesn't support it.

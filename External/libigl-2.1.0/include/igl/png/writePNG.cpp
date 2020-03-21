@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "writePNG.h"
 #include <igl_stb_image.h>
-#include <vector>
+
 
 IGL_INLINE bool igl::png::writePNG(
   const Eigen::Matrix<unsigned char,Eigen::Dynamic,Eigen::Dynamic>& R,

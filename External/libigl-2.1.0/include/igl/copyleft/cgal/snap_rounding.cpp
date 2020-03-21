@@ -14,7 +14,7 @@
 #include <CGAL/Point_2.h>
 #include <CGAL/Vector_2.h>
 #include <CGAL/Exact_predicates_exact_constructions_kernel.h>
-#include <algorithm>
+
 
 template <
   typename DerivedV, 

@@ -1,8 +1,8 @@
 #include "UtilEOL.h"
 
-#include "external\ArcSim\geometry.hpp"
 
-#include <iostream>
+
+
 
 #include <Eigen\SVD>
 #include <unsupported/Eigen/MatrixFunctions>

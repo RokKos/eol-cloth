@@ -18,17 +18,17 @@
 #include "../igl_inline.h"
 
 
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 #include <tinyxml2.h>
 
 #include <type_traits>
 #include <functional>
-#include <iostream>
-#include <vector>
-#include <set>
-#include <map>
-#include <memory>
+
+
+
+
+
 
 //#define SERIALIZE_XML(x) igl::xml::serialize_xml(x,#x,doc,element);
 //#define DESERIALIZE_XML(x) igl::xml::deserialize_xml(x,#x,,doc,element);

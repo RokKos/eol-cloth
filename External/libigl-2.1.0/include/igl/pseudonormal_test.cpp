@@ -9,7 +9,7 @@
 #include "barycentric_coordinates.h"
 #include "doublearea.h"
 #include "project_to_line_segment.h"
-#include <cassert>
+
 template <
   typename DerivedV,
   typename DerivedF,

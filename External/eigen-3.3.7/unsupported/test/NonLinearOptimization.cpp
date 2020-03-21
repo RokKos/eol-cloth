@@ -3,7 +3,7 @@
 //
 // Copyright (C) 2009 Thomas Capricelli <orzel@freehackers.org>
 
-#include <stdio.h>
+
 
 #include "main.h"
 #include <unsupported/Eigen/NonLinearOptimization>

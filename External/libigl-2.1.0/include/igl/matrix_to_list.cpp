@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "matrix_to_list.h"
 
-#include <Eigen/Dense>
+
 
 template <typename DerivedM>
 IGL_INLINE void igl::matrix_to_list(

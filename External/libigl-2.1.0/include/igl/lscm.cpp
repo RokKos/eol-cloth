@@ -11,7 +11,7 @@
 #include "cotmatrix.h"
 #include "repdiag.h"
 #include "min_quad_with_fixed.h"
-#include <iostream>
+
 
 IGL_INLINE bool igl::lscm(
   const Eigen::MatrixXd& V,

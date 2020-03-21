@@ -9,8 +9,8 @@
 #define IGL_IS_IRREGULAR_VERTEX_H
 #include "igl_inline.h"
 
-#include <Eigen/Core>
-#include <vector>
+
+
 
 namespace igl
 {

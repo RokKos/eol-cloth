@@ -13,16 +13,16 @@
 // Compiled into a single file by Zhongshi Jiang
 
 #include <igl/PI.h>
-#include <algorithm>
-#include <cassert>
-#include <cmath>
+
+
+
 #include <cstddef>
-#include <ctime>
-#include <fstream>
-#include <iostream>
-#include <set>
-#include <vector>
-#include <memory>
+
+
+
+
+
+
 namespace igl{
 namespace geodesic{
 

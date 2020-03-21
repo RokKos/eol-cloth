@@ -8,7 +8,7 @@
 #ifndef IGL_INTERSECT_H
 #define IGL_INTERSECT_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Determine the intersect between two sets of coefficients using ==

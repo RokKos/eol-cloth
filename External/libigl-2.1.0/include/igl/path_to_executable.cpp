@@ -12,7 +12,7 @@
 #if defined(_WIN32)
 #  include <windows.h>
 #endif
-#include <stdint.h>
+
 IGL_INLINE std::string igl::path_to_executable()
 {
   // http://pastebin.com/ffzzxPzi

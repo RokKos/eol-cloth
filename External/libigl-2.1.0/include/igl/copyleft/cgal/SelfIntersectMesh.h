@@ -12,10 +12,10 @@
 #include "RemeshSelfIntersectionsParam.h"
 #include "../../unique.h"
 
-#include <Eigen/Dense>
+
 #include <list>
-#include <map>
-#include <vector>
+
+
 #include <thread>
 #include <mutex>
 
@@ -222,10 +222,10 @@ namespace igl
 
 
 #include <functional>
-#include <algorithm>
+
 #include <exception>
-#include <cassert>
-#include <iostream>
+
+
 
 // References:
 // http://minregret.googlecode.com/svn/trunk/skyline/src/extern/CGAL-3.3.1/examples/Polyhedron/polyhedron_self_intersection.cpp

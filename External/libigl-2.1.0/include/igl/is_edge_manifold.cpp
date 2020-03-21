@@ -9,8 +9,8 @@
 #include "oriented_facets.h"
 #include "unique_simplices.h"
 
-#include <algorithm>
-#include <vector>
+
+
 
 template <
   typename DerivedF,

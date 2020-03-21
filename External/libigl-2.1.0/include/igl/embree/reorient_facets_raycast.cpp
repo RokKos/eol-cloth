@@ -11,10 +11,10 @@
 #include "../random_dir.h"
 #include "../bfs_orient.h"
 #include "EmbreeIntersector.h"
-#include <iostream>
+
 #include <random>
-#include <ctime>
-#include <limits>
+
+
 
 template <
   typename DerivedV,

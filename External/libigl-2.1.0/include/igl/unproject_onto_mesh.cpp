@@ -9,7 +9,7 @@
 #include "unproject.h"
 #include "unproject_ray.h"
 #include "ray_mesh_intersect.h"
-#include <vector>
+
 
 template < typename DerivedV, typename DerivedF, typename Derivedbc>
 IGL_INLINE bool igl::unproject_onto_mesh(

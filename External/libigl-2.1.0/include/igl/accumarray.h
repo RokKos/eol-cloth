@@ -8,7 +8,7 @@
 #ifndef ACCUMARRY_H
 #define ACCUMARRY_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // ACCUMARRY Like Matlab's accumarray. Accumulate values in V using subscripts

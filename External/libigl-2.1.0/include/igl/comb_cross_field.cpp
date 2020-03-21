@@ -8,7 +8,7 @@
 
 #include "comb_cross_field.h"
 
-#include <vector>
+
 #include <deque>
 #include <Eigen/Geometry>
 #include "per_face_normals.h"

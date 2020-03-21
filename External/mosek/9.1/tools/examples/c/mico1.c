@@ -11,7 +11,7 @@
                            x, y - integer
 */
 
-#include <stdio.h>
+
 #include "mosek.h" /* Include the MOSEK definition file. */
 
 static void MSKAPI printstr(void *handle,

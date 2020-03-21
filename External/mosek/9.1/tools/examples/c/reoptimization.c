@@ -7,7 +7,7 @@
               optimization problem using the MOSEK API
               and modify and re-optimize the problem.
  */
-#include <stdio.h>
+
 
 #define DEBUG 1    /* Set to zero to turn debugging off. */
 

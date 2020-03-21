@@ -19,7 +19,7 @@
   * - \ref IterativeLinearSolvers_Module
   *
     \code
-    #include <Eigen/Sparse>
+    
     \endcode
   */
 

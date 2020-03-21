@@ -10,9 +10,9 @@
 
 #include "Hit.h"
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 #include <Eigen/Geometry>
-#include <vector>
+
 namespace igl
 {
   // Implementation of semi-general purpose axis-aligned bounding box hierarchy.

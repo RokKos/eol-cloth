@@ -1,10 +1,8 @@
 
-#include <Eigen/Sparse>
+
 #include <bench/BenchTimer.h>
-#include <set>
 
 using namespace std;
-using namespace Eigen;
 using namespace Eigen;
 
 #ifndef SIZE

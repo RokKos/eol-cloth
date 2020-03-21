@@ -10,7 +10,7 @@
 #include "lexicographic_triangulation.h"
 #include "sortrows.h"
 
-#include <vector>
+
 #include <list>
 
 template<

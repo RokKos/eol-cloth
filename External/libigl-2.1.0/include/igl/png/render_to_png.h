@@ -9,7 +9,7 @@
 #define IGL_PNG_RENDER_TO_PNG_H
 #include <igl/igl_inline.h>
 
-#include <string>
+
 namespace igl
 {
   namespace png

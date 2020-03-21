@@ -2,7 +2,7 @@
 #define _MONTY_RC_H_
 
 #include <stddef.h>
-#include <iostream>
+
 
 namespace monty
 {

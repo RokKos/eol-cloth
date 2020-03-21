@@ -10,7 +10,7 @@
 #define IGL_COPYLEFT_CGAL_REMESH_INTERSECTIONS_H
 
 #include "../../igl_inline.h"
-#include <Eigen/Dense>
+
 #include "CGAL_includes.hpp"
 
 namespace igl

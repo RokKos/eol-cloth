@@ -8,7 +8,7 @@
 #ifndef IGL_NORMALIZE_ROW_LENGTHS_H
 #define IGL_NORMALIZE_ROW_LENGTHS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 
 // History:
 // March 24, 2012: Alec changed function name from normalize_rows to

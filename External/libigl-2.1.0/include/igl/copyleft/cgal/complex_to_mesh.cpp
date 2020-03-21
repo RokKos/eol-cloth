@@ -12,7 +12,7 @@
 
 #include <CGAL/Surface_mesh_default_triangulation_3.h>
 #include <CGAL/Delaunay_triangulation_cell_base_with_circumcenter_3.h>
-#include <set>
+
 #include <stack>
 
 template <typename Tr, typename DerivedV, typename DerivedF>

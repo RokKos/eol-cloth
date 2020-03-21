@@ -7,9 +7,9 @@
 #include <glm/vec2.hpp>
 #include <glm/vec3.hpp>
 #include <glm/vec4.hpp>
-#include <cstdio>
-#include <ctime>
-#include <vector>
+
+
+
 
 static glm::vec4 g1;
 static glm::vec4 g2(1);

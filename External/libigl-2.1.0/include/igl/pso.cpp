@@ -1,8 +1,8 @@
 #include "pso.h"
-#include <cassert>
+
 #include <Eigen/StdVector>
-#include <vector>
-#include <iostream>
+
+
 
 template <
   typename Scalar, 

@@ -12,7 +12,7 @@
 #include "../../opengl2/gl.h"
 // See license in tga.cpp
 /* tga.h - interface for TrueVision (TGA) image file loader */
-#include <stdio.h>
+
 #ifdef _WIN32
 #include <windows.h>
 #endif

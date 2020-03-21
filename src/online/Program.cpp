@@ -1,7 +1,7 @@
 #include "Program.h"
 
-#include <iostream>
-#include <cassert>
+
+
 
 #include "GLSL.h"
 

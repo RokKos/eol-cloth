@@ -9,7 +9,7 @@
 #ifndef IGL_COPYLEFT_CGAL_OUTER_FACET_H
 #define IGL_COPYLEFT_CGAL_OUTER_FACET_H
 #include "../../igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

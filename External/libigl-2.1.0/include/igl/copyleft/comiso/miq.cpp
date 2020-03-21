@@ -37,9 +37,9 @@
 #include "../../rotate_vectors.h"
 
 #ifndef NDEBUG
-#include <fstream>
+
 #endif
-#include <iostream>
+
 #include "../../matlab_format.h"
 
 #define DEBUGPRINT 0

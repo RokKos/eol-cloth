@@ -8,10 +8,10 @@
 #ifndef IGL_COPYLEFT_CGAL_SUBDIVIDE_SEGMENTS_H
 #define IGL_COPYLEFT_CGAL_SUBDIVIDE_SEGMENTS_H
 #include "../../igl_inline.h"
-#include <Eigen/Core>
+
 #include <CGAL/Segment_2.h>
 #include <CGAL/Point_2.h>
-#include <vector>
+
 namespace igl
 {
   namespace copyleft

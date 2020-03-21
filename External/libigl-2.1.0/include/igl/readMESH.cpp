@@ -233,7 +233,7 @@ IGL_INLINE bool igl::readMESH(
   return true;
 }
 
-#include <Eigen/Core>
+
 #include "list_to_matrix.h"
 
 

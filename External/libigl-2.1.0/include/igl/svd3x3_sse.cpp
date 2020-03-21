@@ -8,8 +8,8 @@
 #ifdef __SSE__
 #include "svd3x3_sse.h"
 
-#include <cmath>
-#include <algorithm>
+
+
 
 #undef USE_SCALAR_IMPLEMENTATION
 #define USE_SSE_IMPLEMENTATION

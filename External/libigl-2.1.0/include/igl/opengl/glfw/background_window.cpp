@@ -1,6 +1,6 @@
 #include "background_window.h"
 
-#include <iostream>
+
 
 IGL_INLINE bool igl::opengl::glfw::background_window(GLFWwindow* & window)
 {

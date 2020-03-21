@@ -4,8 +4,8 @@
 
 #include "QuadProg.h"
 
-#include <memory>
-#include <map>
+
+
 #include <mosek.h>
 
 struct MosekVarBounds;

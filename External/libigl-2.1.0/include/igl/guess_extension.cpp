@@ -1,6 +1,6 @@
 #include "guess_extension.h"
 
-#include <string.h>
+
 
 #include "is_stl.h"
 #include "ply.h"

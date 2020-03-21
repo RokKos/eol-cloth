@@ -8,7 +8,7 @@
 #ifndef IGL_PSEUDONORMAL_TEST_H
 #define IGL_PSEUDONORMAL_TEST_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Given a mesh (V,F), a query point q, and a point on (V,F) c, determine

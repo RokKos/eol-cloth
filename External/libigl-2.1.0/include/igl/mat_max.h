@@ -8,7 +8,7 @@
 #ifndef IGL_MAT_MAX_H
 #define IGL_MAT_MAX_H
 #include "igl_inline.h"
-#include <Eigen/Dense>
+
 
 namespace igl
 {

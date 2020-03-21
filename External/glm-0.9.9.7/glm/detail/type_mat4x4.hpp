@@ -4,7 +4,7 @@
 #pragma once
 
 #include "type_vec4.hpp"
-#include <limits>
+
 #include <cstddef>
 
 namespace glm

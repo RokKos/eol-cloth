@@ -10,8 +10,8 @@
 #include "vertex_triangle_adjacency.h"
 #include "parallel_for.h"
 #include "unique_edge_map.h"
-#include <algorithm>
-#include <iostream>
+
+
 
 // Extract the face adjacencies
 template <typename DerivedF, typename TTT_type, typename DerivedTT>

@@ -8,8 +8,8 @@
 #include <glm/vec2.hpp>
 #include <glm/vec3.hpp>
 #include <glm/vec4.hpp>
-#include <ctime>
-#include <vector>
+
+
 
 static int test_vec4_ctor()
 {

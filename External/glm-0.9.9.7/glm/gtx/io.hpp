@@ -33,7 +33,7 @@
 
 #include <iosfwd>  // std::basic_ostream<> (fwd)
 #include <locale>  // std::locale, std::locale::facet, std::locale::id
-#include <utility> // std::pair<>
+ // std::pair<>
 
 namespace glm
 {

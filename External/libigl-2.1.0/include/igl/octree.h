@@ -9,8 +9,8 @@
 #ifndef IGL_OCTREE
 #define IGL_OCTREE
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 
 
 

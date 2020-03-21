@@ -9,8 +9,8 @@
 #include "project_to_line_segment.h"
 #include "barycentric_coordinates.h"
 #include <Eigen/Geometry>
-#include <limits>
-#include <cassert>
+
+
 
 
 

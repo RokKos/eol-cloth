@@ -3,7 +3,7 @@
 #include "../swept_volume_signed_distance.h"
 #include "../voxel_grid.h"
 #include "marching_cubes.h"
-#include <iostream>
+
 
 IGL_INLINE void igl::copyleft::swept_volume(
   const Eigen::MatrixXd & V,

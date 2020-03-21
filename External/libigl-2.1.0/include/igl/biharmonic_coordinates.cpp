@@ -14,7 +14,7 @@
 #include "crouzeix_raviart_cotmatrix.h"
 #include "normal_derivative.h"
 #include "on_boundary.h"
-#include <Eigen/Sparse>
+
 
 template <
   typename DerivedV,

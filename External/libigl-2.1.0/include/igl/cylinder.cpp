@@ -7,8 +7,8 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "cylinder.h"
 #include "PI.h"
-#include <cassert>
-#include <cmath>
+
+
 
 template <typename DerivedV, typename DerivedF>
 IGL_INLINE void igl::cylinder(

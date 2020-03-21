@@ -6,7 +6,7 @@
   Description :  Implements a basic portfolio optimization model.
 */
 
-#include <stdio.h>
+
 #include "mosek.h"
 
 #define MOSEKCALL(_r,_call)  if ( (_r)==MSK_RES_OK ) (_r) = (_call)

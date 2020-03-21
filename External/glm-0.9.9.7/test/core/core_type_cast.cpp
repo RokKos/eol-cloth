@@ -1,8 +1,8 @@
 #include <glm/gtc/constants.hpp>
 #include <glm/ext/vector_relational.hpp>
 #include <glm/glm.hpp>
-#include <algorithm>
-#include <vector>
+
+
 #include <iterator>
 
 struct my_vec2

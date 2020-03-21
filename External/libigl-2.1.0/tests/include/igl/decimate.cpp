@@ -5,7 +5,7 @@
 #include <igl/normalize_row_lengths.h>
 #include <igl/slice.h>
 #include <igl/matlab_format.h>
-#include <iostream>
+
 
 // class decimate : public ::testing::TestWithParam<std::string> {};
 

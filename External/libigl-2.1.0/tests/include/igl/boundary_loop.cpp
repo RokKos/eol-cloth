@@ -1,8 +1,8 @@
 #include <test_common.h>
 #include <igl/boundary_loop.h>
-#include <vector>
-#include <algorithm>
-#include <iostream>
+
+
+
 
 TEST_CASE("boundary_loop: cube", "[igl]")
 {

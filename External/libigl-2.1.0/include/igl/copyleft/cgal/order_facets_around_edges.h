@@ -8,9 +8,9 @@
 #ifndef IGL_COPYLEFT_CGAL_ORDER_FACETS_AROUND_EDGES_H
 #define IGL_COPYLEFT_CGAL_ORDER_FACETS_AROUND_EDGES_H
 #include "../../igl_inline.h"
-#include <Eigen/Core>
+
 #include <CGAL/Exact_predicates_exact_constructions_kernel.h>
-#include <vector>
+
 
 namespace igl
 {

@@ -8,7 +8,7 @@
 #ifndef IGL_PER_EDGE_NORMALS_H
 #define IGL_PER_EDGE_NORMALS_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   enum PerEdgeNormalsWeightingType

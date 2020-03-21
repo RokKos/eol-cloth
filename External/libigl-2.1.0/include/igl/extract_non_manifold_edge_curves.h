@@ -9,8 +9,8 @@
 #define IGL_NON_MANIFOLD_EDGE_CURVES
 
 #include "igl_inline.h"
-#include <Eigen/Dense>
-#include <vector>
+
+
 
 namespace igl {
     // Extract non-manifold curves from a given mesh.

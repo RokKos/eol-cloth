@@ -10,10 +10,10 @@
 #ifndef EIGEN_SPLINE_FITTING_H
 #define EIGEN_SPLINE_FITTING_H
 
-#include <algorithm>
+
 #include <functional>
 #include <numeric>
-#include <vector>
+
 
 #include "SplineFwd.h"
 

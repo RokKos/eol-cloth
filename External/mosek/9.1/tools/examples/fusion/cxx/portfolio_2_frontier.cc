@@ -7,10 +7,10 @@
                  Determines points on the efficient frontier.
 */
 
-#include <iostream>
-#include <fstream>
-#include <iomanip>
-#include <string>
+
+
+
+
 #include "monty.h"
 #include "fusion.h"
 

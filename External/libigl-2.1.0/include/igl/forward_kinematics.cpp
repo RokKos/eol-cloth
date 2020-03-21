@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "forward_kinematics.h"
 #include <functional>
-#include <iostream>
+
 
 IGL_INLINE void igl::forward_kinematics(
   const Eigen::MatrixXd & C,

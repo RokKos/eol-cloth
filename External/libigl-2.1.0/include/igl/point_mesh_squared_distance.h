@@ -8,8 +8,8 @@
 #ifndef IGL_POINT_MESH_SQUARED_DISTANCE_H
 #define IGL_POINT_MESH_SQUARED_DISTANCE_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 
 namespace igl
 {

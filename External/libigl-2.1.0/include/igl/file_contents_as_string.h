@@ -9,7 +9,7 @@
 #define IGL_FILE_CONTENTS_AS_STRING_H
 #include "igl_inline.h"
 
-#include <string>
+
 namespace igl
 {
   // Read a files contents as plain text into a given string

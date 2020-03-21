@@ -19,7 +19,7 @@
 #define GMM_INTERFACE_HH
 
 #include <gmm/gmm.h>
-#include <vector>
+
 
 using namespace gmm;
 

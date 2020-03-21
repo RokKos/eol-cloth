@@ -11,7 +11,7 @@
 #include <igl/triangle_triangle_adjacency.h>
 #include <igl/edge_topology.h>
 
-#include <vector>
+
 #include <deque>
 
 

@@ -275,17 +275,17 @@
 #include <cerrno>
 #endif
 #include <cstddef>
-#include <cstdlib>
-#include <cmath>
-#include <cassert>
+
+
+
 #include <functional>
 #include <iosfwd>
-#include <cstring>
-#include <string>
-#include <limits>
+
+
+
 #include <climits> // for CHAR_BIT
 // for min/max:
-#include <algorithm>
+
 
 // for std::is_nothrow_move_assignable
 #ifdef EIGEN_INCLUDE_TYPE_TRAITS
@@ -294,7 +294,7 @@
 
 // for outputting debug info
 #ifdef EIGEN_DEBUG_ASSIGN
-#include <iostream>
+
 #endif
 
 // required for __cpuid, needs to be included after cmath
@@ -356,7 +356,7 @@ using std::ptrdiff_t;
   * and much more...
   *
   * \code
-  * #include <Eigen/Core>
+  * 
   * \endcode
   */
 

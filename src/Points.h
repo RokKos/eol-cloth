@@ -2,10 +2,10 @@
 #ifndef __Points__
 #define __Points__
 
-#include <memory>
+
 
 #define EIGEN_DONT_ALIGN_STATICALLY
-#include <Eigen/Dense>
+
 
 #ifdef EOLC_ONLINE
 class MatrixStack;

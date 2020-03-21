@@ -1,6 +1,6 @@
 #include <test_common.h>
 #include <igl/predicates/predicates.h>
-#include <limits>
+
 #include <igl/triangle/triangulate.h>
 
 TEST_CASE("predicates", "[igl][predicates]") {

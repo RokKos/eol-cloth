@@ -19,7 +19,7 @@
 // 
 #ifndef _STATIC_SIZE_GENERATOR_HH
 #define _STATIC_SIZE_GENERATOR_HH
-#include <vector>
+
 
 using namespace std;
 

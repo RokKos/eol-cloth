@@ -7,7 +7,7 @@
 #include <glm/gtc/vec1.hpp>
 #include <glm/ext/matrix_relational.hpp>
 #include <glm/ext/vector_relational.hpp>
-#include <cstring>
+
 
 static int test_vec_memcpy()
 {

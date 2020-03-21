@@ -1,6 +1,6 @@
 #include "peel_winding_number_layers.h"
 
-#include <cassert>
+
 
 #include "propagate_winding_numbers.h"
 

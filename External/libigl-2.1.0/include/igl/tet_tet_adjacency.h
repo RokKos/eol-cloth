@@ -9,7 +9,7 @@
 #ifndef IGL_TET_TET_ADJACENCY_H
 #define IGL_TET_TET_ADJACENCY_H
 
-#include <Eigen/Core>
+
 
 #include <igl/igl_inline.h>
 

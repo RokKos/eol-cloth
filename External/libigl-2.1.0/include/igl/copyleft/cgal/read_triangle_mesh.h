@@ -9,7 +9,7 @@
 #define IGL_COPYLEFT_CGAL_READ_TRIANGLE_MESH_H
 #include "../../igl_inline.h"
 
-#include <Eigen/Core>
+
 namespace igl
 {
   namespace copyleft

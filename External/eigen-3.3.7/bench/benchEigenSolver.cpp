@@ -9,9 +9,9 @@
 //  -DTRIES=10
 //  -DSCALAR=double
 
-#include <iostream>
 
-#include <Eigen/Core>
+
+
 #include <Eigen/QR>
 #include <bench/BenchUtil.h>
 using namespace Eigen;

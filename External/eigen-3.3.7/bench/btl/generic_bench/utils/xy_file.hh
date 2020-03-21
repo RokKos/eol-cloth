@@ -19,10 +19,10 @@
 // 
 #ifndef XY_FILE_HH
 #define XY_FILE_HH
-#include <fstream>
-#include <iostream>
-#include <string>
-#include <vector>
+
+
+
+
 using namespace std;
 
 bool read_xy_file(const std::string & filename, std::vector<int> & tab_sizes,

@@ -6,7 +6,7 @@
 // v. 2.0. If a copy of the MPL was not distributed with this file, You can 
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "gl_type_size.h"
-#include <cassert>
+
 
 IGL_INLINE int igl::opengl::gl_type_size(const GLenum type)
 {

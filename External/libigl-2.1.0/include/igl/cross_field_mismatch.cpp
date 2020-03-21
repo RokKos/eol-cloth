@@ -8,8 +8,8 @@
 
 #include "cross_field_mismatch.h"
 
-#include <cmath>
-#include <vector>
+
+
 #include <deque>
 #include <igl/comb_cross_field.h>
 #include <igl/per_face_normals.h>

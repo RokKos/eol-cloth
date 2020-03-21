@@ -8,7 +8,7 @@
 #ifndef IGL_EMBREE_BONE_HEAT_H
 #define IGL_EMBREE_BONE_HEAT_H
 #include "../igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

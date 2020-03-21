@@ -1,6 +1,6 @@
 /// @ref gtx_float_normalize
 
-#include <limits>
+
 
 namespace glm
 {

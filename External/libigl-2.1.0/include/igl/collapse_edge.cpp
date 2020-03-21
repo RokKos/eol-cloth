@@ -8,7 +8,7 @@
 #include "collapse_edge.h"
 #include "circulation.h"
 #include "edge_collapse_is_valid.h"
-#include <vector>
+
 
 IGL_INLINE bool igl::collapse_edge(
   const int e,

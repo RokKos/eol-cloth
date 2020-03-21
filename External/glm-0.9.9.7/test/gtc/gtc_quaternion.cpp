@@ -5,7 +5,7 @@
 #include <glm/ext/vector_relational.hpp>
 #include <glm/ext/scalar_relational.hpp>
 #include <glm/glm.hpp>
-#include <vector>
+
 
 int test_quat_angle()
 {

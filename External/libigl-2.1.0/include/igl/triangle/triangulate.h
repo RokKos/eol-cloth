@@ -9,8 +9,8 @@
 #ifndef IGL_TRIANGLE_TRIANGULATE_H
 #define IGL_TRIANGLE_TRIANGULATE_H
 #include "../igl_inline.h"
-#include <string>
-#include <Eigen/Core>
+
+
 
 namespace igl
 {

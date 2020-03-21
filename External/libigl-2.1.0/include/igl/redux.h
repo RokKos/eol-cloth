@@ -1,7 +1,7 @@
 #ifndef IGL_REDUX_H
 #define IGL_REDUX_H
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+
+
 namespace igl
 {
   // REDUX Perform reductions on the rows or columns of a SparseMatrix. This is

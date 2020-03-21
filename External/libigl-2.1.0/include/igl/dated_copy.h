@@ -11,7 +11,7 @@
 #ifndef IGL_DATED_COPY_H
 #define IGL_DATED_COPY_H
 #include "igl_inline.h"
-#include <string>
+
 namespace igl
 {
   // Copy the given file to a new file with the same basename in `dir`

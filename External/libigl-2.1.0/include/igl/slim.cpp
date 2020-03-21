@@ -26,10 +26,10 @@
 #include "flip_avoiding_line_search.h"
 #include "mapping_energy_with_jacobians.h"
 
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+
+
+
+
 
 #include <Eigen/IterativeLinearSolvers>
 #include <Eigen/SparseCholesky>

@@ -7,11 +7,11 @@
              for problems solved with the interior-point optimizers.
 */
 
-#include <iostream>
+
 #include <random>
-#include <sstream>
-#include <vector>
-#include <utility>
+
+
+
 #include "fusion.h"
 using namespace mosek::fusion;
 using namespace monty;

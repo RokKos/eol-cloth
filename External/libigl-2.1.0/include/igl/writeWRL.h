@@ -8,8 +8,8 @@
 #ifndef IGL_WRITE_WRL_H
 #define IGL_WRITE_WRL_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <string>
+
+
 namespace igl
 {
   // Write mesh to a .wrl file

@@ -12,7 +12,7 @@
 
 #include <igl/igl_inline.h>
 #include <Eigen/Geometry>
-#include <Eigen/Core>
+
 
 namespace igl
 {

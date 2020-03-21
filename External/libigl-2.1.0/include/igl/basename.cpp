@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "basename.h"
 
-#include <algorithm>
+
 
 IGL_INLINE std::string igl::basename(const std::string & path)
 {

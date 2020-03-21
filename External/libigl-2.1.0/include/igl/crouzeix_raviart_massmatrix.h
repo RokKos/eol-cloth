@@ -7,8 +7,8 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #ifndef CROUZEIX_RAVIART_MASSMATRIX_H
 #define CROUZEIX_RAVIART_MASSMATRIX_H
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+
+
 
 namespace igl
 {

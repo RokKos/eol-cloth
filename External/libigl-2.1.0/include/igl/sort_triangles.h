@@ -9,7 +9,7 @@
 #define IGL_SORT_TRIANGLES_H
 
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 
 namespace igl
 {

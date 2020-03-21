@@ -1,8 +1,8 @@
 // g++ -fopenmp -I .. -O3 -DNDEBUG -finline-limit=1000 benchmarkX.cpp -o b && time ./b
 
-#include <iostream>
 
-#include <Eigen/Core>
+
+
 
 using namespace std;
 using namespace Eigen;

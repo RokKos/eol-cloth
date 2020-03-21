@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "transpose_blocks.h"
 
-#include <cassert>
+
 
 template <typename T>
 IGL_INLINE void igl::transpose_blocks(

@@ -7,9 +7,9 @@
 #include <glm/gtc/epsilon.hpp>
 #include <glm/gtx/string_cast.hpp>
 #include <glm/gtx/euler_angles.hpp>
-#include <cstdio>
-#include <vector>
-#include <utility>
+
+
+
 
 namespace test_eulerAngleX
 {

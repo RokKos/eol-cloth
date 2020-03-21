@@ -8,8 +8,8 @@
 #ifndef IGL_PIECEWISE_CONSTANT_WINDING_NUMBER_H
 #define IGL_PIECEWISE_CONSTANT_WINDING_NUMBER_H
 #include "igl_inline.h"
-#include <Eigen/Core>
-#include <vector>
+
+
 namespace igl
 {
   // PIECEWISE_CONSTANT_WINDING_NUMBER Determine if a given mesh induces a

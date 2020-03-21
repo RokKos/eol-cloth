@@ -12,8 +12,8 @@
 #include <Eigen/CXX11/Tensor>
 #include <Eigen/CXX11/TensorSymmetry>
 
-#include <map>
-#include <set>
+
+
 
 using Eigen::Tensor;
 using Eigen::SGroup;

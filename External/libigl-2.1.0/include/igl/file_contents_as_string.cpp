@@ -7,9 +7,9 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "file_contents_as_string.h"
 
-#include <fstream>
-#include <cstdio>
-#include <cassert>
+
+
+
 
 IGL_INLINE bool igl::file_contents_as_string(
   const std::string file_name,

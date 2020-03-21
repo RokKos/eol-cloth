@@ -9,7 +9,7 @@
 // with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 #define EIGEN_USE_THREADS
-#include <cstdlib>
+
 #include "main.h"
 #include <Eigen/CXX11/ThreadPool>
 

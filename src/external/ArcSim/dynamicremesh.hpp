@@ -27,7 +27,7 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #ifndef DYNAMICREMESH_HPP
 #define DYNAMICREMESH_HPP
 
-#include <map>
+
 #include "../../Cloth.h"
 //#include "nearobs.hpp"
 

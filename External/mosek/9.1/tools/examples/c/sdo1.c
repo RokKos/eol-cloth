@@ -13,7 +13,7 @@
                  (x0,x1,x2) \in Q,  X \in PSD
 */
 
-#include <stdio.h>
+
 
 #include "mosek.h"    /* Include the MOSEK definition file.  */
 

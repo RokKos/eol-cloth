@@ -35,7 +35,7 @@ static void clobber() {
   asm volatile("" : : : "memory");
 }
 
-#include <Eigen/Core>
+
 
 namespace Eigen
 {

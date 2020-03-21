@@ -8,7 +8,7 @@
 #ifndef IGL_QUAD_PLANARITY_H
 #define IGL_QUAD_PLANARITY_H
 #include "igl_inline.h"
-#include <Eigen/Core>
+
 namespace igl
 {
   // Compute planarity of the faces of a quad mesh

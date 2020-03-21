@@ -9,9 +9,9 @@
 #define IGL_EMBREE_LINE_MESH_INTERSECTION_H
 #include <igl/igl_inline.h>
 
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
-#include <vector>
+
+
+
 
 namespace igl 
 {

@@ -9,8 +9,8 @@
 #define IGL_OPENGL_CREATE_SHADER_PROGRAM_H
 #include "../igl_inline.h"
 #include "gl.h"
-#include <string>
-#include <map>
+
+
 
 namespace igl
 {

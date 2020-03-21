@@ -8,7 +8,7 @@
 #include "slice_mask.h"
 #include "slice.h"
 #include "find.h"
-#include <cassert>
+
 
 template <typename DerivedX,typename DerivedY>
 IGL_INLINE void igl::slice_mask(

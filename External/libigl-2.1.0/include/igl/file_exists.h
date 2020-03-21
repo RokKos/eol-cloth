@@ -8,7 +8,7 @@
 #ifndef IGL_FILE_EXISTS_H
 #define IGL_FILE_EXISTS_H
 #include "igl_inline.h"
-#include <string>
+
 namespace igl
 {
   // Check if a file or directory exists like PHP's file_exists function:

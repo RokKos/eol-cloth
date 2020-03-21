@@ -24,12 +24,11 @@ IS". REGENTS HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT,
 UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 */
 
-#include "mesh.hpp"
 #include "../../Cloth.h"
-#include "geometry.hpp"
-#include "util.hpp"
+
+
 #include <assert.h>
-#include <cstdlib>
+
 using namespace std;
 
 int uuid_src = 0;

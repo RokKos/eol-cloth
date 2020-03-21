@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 #include "randperm.h"
 #include "colon.h"
-#include <algorithm>
+
 
 template <typename DerivedI, typename URBG>
 IGL_INLINE void igl::randperm(

@@ -14,10 +14,10 @@
 #include "accumarray.h"
 #include "slice_mask.h"
 
-#include <Eigen/Core>
 
-#include <map>
-#include <iostream>
+
+
+
 
 template <
   typename DerivedT, 

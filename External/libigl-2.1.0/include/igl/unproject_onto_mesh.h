@@ -9,7 +9,7 @@
 #define IGL_UNPROJECT_ONTO_MESH
 #include "igl_inline.h"
 #include "Hit.h"
-#include <Eigen/Core>
+
 #include <functional>
 
 namespace igl

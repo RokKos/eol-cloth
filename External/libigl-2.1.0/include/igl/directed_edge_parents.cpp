@@ -10,7 +10,7 @@
 #include "slice.h"
 #include "colon.h"
 #include "setdiff.h"
-#include <algorithm>
+
 
 template <typename DerivedE, typename DerivedP>
 IGL_INLINE void igl::directed_edge_parents(

@@ -12,7 +12,7 @@
 #include <glm/mat4x2.hpp>
 #include <glm/mat4x3.hpp>
 #include <glm/mat4x4.hpp>
-#include <vector>
+
 
 static int test_operators()
 {

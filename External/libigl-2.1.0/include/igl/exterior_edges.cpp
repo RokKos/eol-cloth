@@ -10,10 +10,10 @@
 #include "sort.h"
 #include "unique_rows.h"
 
-#include <cassert>
+
 #include <unordered_map>
-#include <utility>
-#include <iostream>
+
+
 
 //template <typename T> inline int sgn(T val) {
 //      return (T(0) < val) - (val < T(0));

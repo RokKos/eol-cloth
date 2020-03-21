@@ -3,7 +3,7 @@
 
 #define EIGEN_SUPERLU_SUPPORT
 #define EIGEN_UMFPACK_SUPPORT
-#include <Eigen/Sparse>
+
 
 #define NOGMM
 #define NOMTL

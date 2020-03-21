@@ -8,7 +8,7 @@
              and handle the solver result and the problem
              solution.
 */
-#include <stdio.h>
+
 #include "mosek.h"
 
 /* This function prints log output from MOSEK to the terminal. */

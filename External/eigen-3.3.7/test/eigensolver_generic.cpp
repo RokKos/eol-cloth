@@ -9,7 +9,7 @@
 // with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 #include "main.h"
-#include <limits>
+
 #include <Eigen/Eigenvalues>
 
 template<typename MatrixType> void eigensolver(const MatrixType& m)

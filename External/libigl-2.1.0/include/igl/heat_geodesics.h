@@ -9,8 +9,8 @@
 #define IGL_HEAT_GEODESICS_H
 #include "igl_inline.h"
 #include "min_quad_with_fixed.h"
-#include <Eigen/Sparse>
-#include <Eigen/Sparse>
+
+
 namespace igl
 {
   template <typename Scalar>

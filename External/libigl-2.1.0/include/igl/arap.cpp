@@ -19,8 +19,8 @@
 #include "repdiag.h"
 #include "columnize.h"
 #include "fit_rotations.h"
-#include <cassert>
-#include <iostream>
+
+
 
 template <
   typename DerivedV,

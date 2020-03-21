@@ -1,7 +1,7 @@
 #include <test_common.h>
 #include <igl/cat.h>
 
-#include <vector>
+
 
 TEST_CASE("cat: rows", "[igl]")
 {

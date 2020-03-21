@@ -9,7 +9,7 @@
 #define IGL_FILE_DIALOG_OPEN_H
 #include "igl_inline.h"
 
-#include <string>
+
 
 namespace igl
 {

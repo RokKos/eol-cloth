@@ -8,7 +8,7 @@
 #include "mesh_to_cgal_triangle_list.h"
 #include "assign.h"
 
-#include <cassert>
+
 
 template <
   typename DerivedV,

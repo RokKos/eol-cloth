@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 
 #include "tan_half_angle.h"
-#include <cmath>
+
 template < typename Scalar>
 IGL_INLINE Scalar igl::tan_half_angle(
   const Scalar & a,

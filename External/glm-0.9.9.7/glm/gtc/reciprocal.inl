@@ -1,7 +1,7 @@
 /// @ref gtc_reciprocal
 
 #include "../trigonometric.hpp"
-#include <limits>
+
 
 namespace glm
 {
