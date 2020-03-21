@@ -10,7 +10,7 @@
 //                https://gpkit.readthedocs.io/en/latest/examples.html//maximizing-the-volume-of-a-box
 //
 #include <stdio.h>
-#include <math.h>
+
 #include "mosek.h"
 
 /* This function prints log output from MOSEK to the terminal. */

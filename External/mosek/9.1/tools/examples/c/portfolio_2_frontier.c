@@ -6,7 +6,7 @@
   Description :  Implements a basic portfolio optimization model.
                  Determines points on the efficient frontier.
  */
-#include <math.h>
+
 #include <stdio.h>
 
 #include "mosek.h"

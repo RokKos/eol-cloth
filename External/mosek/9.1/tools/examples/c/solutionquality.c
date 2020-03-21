@@ -6,7 +6,7 @@
   Purpose: To demonstrate how to examine the quality of a solution.
 */
 
-#include <math.h>
+
 #include "mosek.h"
 
 static double dmin(double x,

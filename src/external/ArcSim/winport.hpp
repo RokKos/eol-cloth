@@ -39,7 +39,7 @@
 
 #define _USE_MATH_DEFINES // just to have M_PI
 #include <cmath>
-#include <math.h>
+
 #include <algorithm>
 
 #include <windows.h>

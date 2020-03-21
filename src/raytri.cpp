@@ -4,7 +4,7 @@
 /* http://www.acm.org/jgt/                          */
 /* by Tomas Moller, May 2000                        */
 
-#include <math.h>
+
 
 #define EPSILON 1e-6
 #define CROSS(dest,v1,v2) \

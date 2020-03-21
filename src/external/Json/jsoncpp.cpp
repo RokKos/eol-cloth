@@ -2484,7 +2484,7 @@ ValueIterator& ValueIterator::operator=(const SelfType& other) {
 #include <json/value.h>
 #include <json/writer.h>
 #endif // if !defined(JSON_IS_AMALGAMATION)
-#include <math.h>
+
 #include <sstream>
 #include <utility>
 #include <cstring>
@@ -4178,7 +4178,7 @@ Value& Path::make(Value& root) const {
 #endif
 #elif defined(_AIX)
 #if !defined(isfinite)
-#include <math.h>
+
 #define isfinite finite
 #endif
 #elif defined(__hpux)
@@ -4187,7 +4187,7 @@ Value& Path::make(Value& root) const {
 #define isfinite(x) ((sizeof(x) == sizeof(float) ? \
                      _Isfinitef(x) : _IsFinite(x)))
 #else
-#include <math.h>
+
 #define isfinite finite
 #endif
 #endif

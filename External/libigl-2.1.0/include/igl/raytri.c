@@ -13,7 +13,7 @@
 #ifndef IGL_RAY_TRI_C
 #define IGL_RAY_TRI_C
 
-#include <math.h>
+
 
 #define IGL_RAY_TRI_EPSILON 0.000001
 #define IGL_RAY_TRI_CROSS(dest,v1,v2) \

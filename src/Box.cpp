@@ -14,8 +14,6 @@
 #include "online/MatrixStack.h"
 #endif // EOLC_ONLINE
 
-#include <math.h>
-
 #include "Box.h"
 #include "Shape.h"
 #include "Rigid.h"

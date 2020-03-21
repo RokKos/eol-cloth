@@ -5,7 +5,7 @@
 
   Description :  Implements a basic portfolio optimization model.
 */
-#include <math.h>
+
 #include <stdio.h>
 #include "mosek.h"
 

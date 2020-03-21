@@ -32,7 +32,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
-#include <math.h>
+
 
 
 static void outputHandleGeometry(void* data,

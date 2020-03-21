@@ -10,7 +10,7 @@
 #ifndef EIGEN_SPECIALFUNCTIONS_MODULE
 #define EIGEN_SPECIALFUNCTIONS_MODULE
 
-#include <math.h>
+
 
 #include "../../Eigen/Core"
 

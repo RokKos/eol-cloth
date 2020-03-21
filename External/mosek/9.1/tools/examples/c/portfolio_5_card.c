@@ -6,7 +6,7 @@
   Description :  Implements a basic portfolio optimization model
                  with cardinality constraints on number of assets traded.
  */
-#include <math.h>
+
 #include <stdio.h>
 
 #include "mosek.h"

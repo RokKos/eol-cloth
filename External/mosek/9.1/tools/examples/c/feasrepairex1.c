@@ -8,7 +8,7 @@
              repair an infeasible problem.
 */
 
-#include <math.h>
+
 #include <stdio.h>
 
 #include "mosek.h"

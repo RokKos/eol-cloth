@@ -29,7 +29,7 @@
 #include "internal.h"
 
 #include <unistd.h>
-#include <math.h>
+
 
 static void makeContextCurrentNSGL(_GLFWwindow* window)
 {

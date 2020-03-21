@@ -164,7 +164,7 @@ STBIWDEF int stbi_write_hdr_to_func(stbi_write_func *func, void *context, int w,
 #include <stdarg.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
+
 
 #if defined(STBIW_MALLOC) && defined(STBIW_FREE) && (defined(STBIW_REALLOC) || defined(STBIW_REALLOC_SIZED))
 // ok

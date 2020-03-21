@@ -6,7 +6,7 @@
   Description :  Implements a basic portfolio optimization model
                  with transaction costs of order x^(3/2).
  */
-#include <math.h>
+
 #include <stdio.h>
 
 #include "mosek.h"

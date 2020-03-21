@@ -30,7 +30,7 @@
 #include "internal.h"
 
 #include <stdio.h>
-#include <math.h>
+
 
 #define _GLFW_TYPE_AXIS     0
 #define _GLFW_TYPE_SLIDER   1

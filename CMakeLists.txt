@@ -1,6 +1,10 @@
 # Author: Shinjiro Sueda
 # Edited: Nick Weidner
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+# Edited: Rok Kos
+CMAKE_MINIMUM_REQUIRED(VERSION 3.15)
+
+set (CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/CMake")
+include(cotire)
 
 # Name of the project
 PROJECT(eol-cloth)
@@ -17,7 +21,6 @@ SET(ONLINE ON) # "Build with online rendering supported"
 SET(MOSEK ON) # "Build with Mosek support"
 SET(GUROBI OFF) # "Build with Gurobi support"
 SET(IGL ON) # "Build with libIGL support"
-
 
 # LIBRARY PATHS
 # These paths are machine specific
@@ -96,6 +99,9 @@ SET(IGL ON) # "Build with libIGL support"
 
 # Set the executable.
 ADD_EXECUTABLE(${CMAKE_PROJECT_NAME} ${SOURCES} ${HEADERS} ${GLSL} ${ARCSIMC} ${ARCSIMH} ${JSONC} ${JSONH} ${ONLINEC} ${ONLINEH} ${MOSEKC} ${MOSEKH} ${GUROBIC} ${GUROBIH})
+
+set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "${CMAKE_SOURCE_DIR}/src/pch.h")
+cotire(${CMAKE_PROJECT_NAME})
 
 # Get the EIGEN environment variable. Since EIGEN is a header-only library, we
 # just need to add it to the include directory.

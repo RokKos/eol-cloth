@@ -7,7 +7,7 @@
                  with fixed setup costs and transaction costs
                  as a mixed-integer problem.
  */
-#include <math.h>
+
 #include <stdio.h>
 
 #include "mosek.h"

@@ -1,6 +1,6 @@
 #include "Rigid.h"
 #define _USE_MATH_DEFINES
-#include <math.h>
+
 #include <iostream>
 
 #define EIGEN_DONT_ALIGN_STATICALLY
