@@ -39,380 +39,398 @@ include rules.ninja
 build cmake_object_order_depends_target_eol-cloth: phony || cmake_object_order_depends_target_glfw
 
 build CMakeFiles\eol-cloth.dir\src\Box.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\Box.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\BrenderManager.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\BrenderManager.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\Cloth.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\Cloth.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\Collisions.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\Collisions.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\ComputeBending.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\ComputeBending.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\ComputeInertial.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\ComputeInertial.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\ComputeMembrane.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\ComputeMembrane.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\Constraints.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\Constraints.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\Forces.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\Forces.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\GeneralizedSolver.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\GeneralizedSolver.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\Obstacles.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\Obstacles.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\Points.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\Points.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\Preprocessor.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\Preprocessor.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\Rigid.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\Rigid.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\Scene.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\Scene.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\Shape.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\Shape.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\UtilEOL.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\UtilEOL.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\boxTriCollision.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\boxTriCollision.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\conversions.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\conversions.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\main.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\main.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\matlabOutputs.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\matlabOutputs.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\parseParams.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\parseParams.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\raytri.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\raytri.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\remeshExtension.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\remeshExtension.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\runner.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\runner.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\external\ArcSim\dynamicremesh.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\external\ArcSim\dynamicremesh.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\external\ArcSim
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\external\ArcSim\geometry.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\external\ArcSim\geometry.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\external\ArcSim
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\external\ArcSim\io.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\external\ArcSim\io.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\external\ArcSim
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\external\ArcSim\magic.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\external\ArcSim\magic.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\external\ArcSim
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\external\ArcSim\mesh.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\external\ArcSim\mesh.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\external\ArcSim
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\external\ArcSim\referenceshape.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\external\ArcSim\referenceshape.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\external\ArcSim
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\external\ArcSim\remesh.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\external\ArcSim\remesh.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\external\ArcSim
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\external\ArcSim\subset.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\external\ArcSim\subset.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\external\ArcSim
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\external\ArcSim\tensormax.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\external\ArcSim\tensormax.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\external\ArcSim
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\external\ArcSim\transformation.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\external\ArcSim\transformation.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\external\ArcSim
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\external\ArcSim\util.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\external\ArcSim\util.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\external\ArcSim
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\external\ArcSim\vectors.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\external\ArcSim\vectors.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\external\ArcSim
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\external\Json\jsoncpp.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\external\Json\jsoncpp.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\external\Json
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\online\Camera.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\online\Camera.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\online
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\online\GLSL.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\online\GLSL.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\online
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\online\MatrixStack.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\online\MatrixStack.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\online
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
 build CMakeFiles\eol-cloth.dir\src\online\Program.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\online\Program.cpp || cmake_object_order_depends_target_eol-cloth
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\online
+  TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
+  TARGET_PDB = eol-cloth.pdb
+
+build CMakeFiles\eol-cloth.dir\src\external\SolverWrappers\Mosek\QuadProgMosek.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\external\SolverWrappers\Mosek\QuadProgMosek.cpp || cmake_object_order_depends_target_eol-cloth
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
+  OBJECT_DIR = CMakeFiles\eol-cloth.dir
+  OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\external\SolverWrappers\Mosek
+  TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
+  TARGET_PDB = eol-cloth.pdb
+
+build CMakeFiles\eol-cloth.dir\src\external\SolverWrappers\Gurobi\Gurobi.cpp.obj: CXX_COMPILER__eol-cloth ..\..\..\src\external\SolverWrappers\Gurobi\Gurobi.cpp || cmake_object_order_depends_target_eol-cloth
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glew-2.1.0\include -I..\..\..\External\mosek\9.1\tools\platform\win64x86\h -I..\..\..\External\gurobi\win64\include
+  OBJECT_DIR = CMakeFiles\eol-cloth.dir
+  OBJECT_FILE_DIR = CMakeFiles\eol-cloth.dir\src\external\SolverWrappers\Gurobi
   TARGET_COMPILE_PDB = CMakeFiles\eol-cloth.dir\
   TARGET_PDB = eol-cloth.pdb
 
@@ -424,10 +442,10 @@ build CMakeFiles\eol-cloth.dir\src\online\Program.cpp.obj: CXX_COMPILER__eol-clo
 #############################################
 # Link the executable eol-cloth.exe
 
-build eol-cloth.exe: CXX_EXECUTABLE_LINKER__eol-cloth CMakeFiles\eol-cloth.dir\src\Box.cpp.obj CMakeFiles\eol-cloth.dir\src\BrenderManager.cpp.obj CMakeFiles\eol-cloth.dir\src\Cloth.cpp.obj CMakeFiles\eol-cloth.dir\src\Collisions.cpp.obj CMakeFiles\eol-cloth.dir\src\ComputeBending.cpp.obj CMakeFiles\eol-cloth.dir\src\ComputeInertial.cpp.obj CMakeFiles\eol-cloth.dir\src\ComputeMembrane.cpp.obj CMakeFiles\eol-cloth.dir\src\Constraints.cpp.obj CMakeFiles\eol-cloth.dir\src\Forces.cpp.obj CMakeFiles\eol-cloth.dir\src\GeneralizedSolver.cpp.obj CMakeFiles\eol-cloth.dir\src\Obstacles.cpp.obj CMakeFiles\eol-cloth.dir\src\Points.cpp.obj CMakeFiles\eol-cloth.dir\src\Preprocessor.cpp.obj CMakeFiles\eol-cloth.dir\src\Rigid.cpp.obj CMakeFiles\eol-cloth.dir\src\Scene.cpp.obj CMakeFiles\eol-cloth.dir\src\Shape.cpp.obj CMakeFiles\eol-cloth.dir\src\UtilEOL.cpp.obj CMakeFiles\eol-cloth.dir\src\boxTriCollision.cpp.obj CMakeFiles\eol-cloth.dir\src\conversions.cpp.obj CMakeFiles\eol-cloth.dir\src\main.cpp.obj CMakeFiles\eol-cloth.dir\src\matlabOutputs.cpp.obj CMakeFiles\eol-cloth.dir\src\parseParams.cpp.obj CMakeFiles\eol-cloth.dir\src\raytri.cpp.obj CMakeFiles\eol-cloth.dir\src\remeshExtension.cpp.obj CMakeFiles\eol-cloth.dir\src\runner.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\dynamicremesh.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\geometry.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\io.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\magic.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\mesh.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\referenceshape.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\remesh.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\subset.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\tensormax.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\transformation.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\util.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\vectors.cpp.obj CMakeFiles\eol-cloth.dir\src\external\Json\jsoncpp.cpp.obj CMakeFiles\eol-cloth.dir\src\online\Camera.cpp.obj CMakeFiles\eol-cloth.dir\src\online\GLSL.cpp.obj CMakeFiles\eol-cloth.dir\src\online\MatrixStack.cpp.obj CMakeFiles\eol-cloth.dir\src\online\Program.cpp.obj | ..\..\..\External\glfw-3.3.2\debug\src\glfw3.lib ..\..\..\External\glew-2.1.0\lib\Release\x64\glew32s.lib || ..\..\..\External\glfw-3.3.2\debug\src\glfw3.lib
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4996 /MDd /Zi /Ob0 /Od /RTC1
+build eol-cloth.exe: CXX_EXECUTABLE_LINKER__eol-cloth CMakeFiles\eol-cloth.dir\src\Box.cpp.obj CMakeFiles\eol-cloth.dir\src\BrenderManager.cpp.obj CMakeFiles\eol-cloth.dir\src\Cloth.cpp.obj CMakeFiles\eol-cloth.dir\src\Collisions.cpp.obj CMakeFiles\eol-cloth.dir\src\ComputeBending.cpp.obj CMakeFiles\eol-cloth.dir\src\ComputeInertial.cpp.obj CMakeFiles\eol-cloth.dir\src\ComputeMembrane.cpp.obj CMakeFiles\eol-cloth.dir\src\Constraints.cpp.obj CMakeFiles\eol-cloth.dir\src\Forces.cpp.obj CMakeFiles\eol-cloth.dir\src\GeneralizedSolver.cpp.obj CMakeFiles\eol-cloth.dir\src\Obstacles.cpp.obj CMakeFiles\eol-cloth.dir\src\Points.cpp.obj CMakeFiles\eol-cloth.dir\src\Preprocessor.cpp.obj CMakeFiles\eol-cloth.dir\src\Rigid.cpp.obj CMakeFiles\eol-cloth.dir\src\Scene.cpp.obj CMakeFiles\eol-cloth.dir\src\Shape.cpp.obj CMakeFiles\eol-cloth.dir\src\UtilEOL.cpp.obj CMakeFiles\eol-cloth.dir\src\boxTriCollision.cpp.obj CMakeFiles\eol-cloth.dir\src\conversions.cpp.obj CMakeFiles\eol-cloth.dir\src\main.cpp.obj CMakeFiles\eol-cloth.dir\src\matlabOutputs.cpp.obj CMakeFiles\eol-cloth.dir\src\parseParams.cpp.obj CMakeFiles\eol-cloth.dir\src\raytri.cpp.obj CMakeFiles\eol-cloth.dir\src\remeshExtension.cpp.obj CMakeFiles\eol-cloth.dir\src\runner.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\dynamicremesh.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\geometry.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\io.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\magic.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\mesh.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\referenceshape.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\remesh.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\subset.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\tensormax.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\transformation.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\util.cpp.obj CMakeFiles\eol-cloth.dir\src\external\ArcSim\vectors.cpp.obj CMakeFiles\eol-cloth.dir\src\external\Json\jsoncpp.cpp.obj CMakeFiles\eol-cloth.dir\src\online\Camera.cpp.obj CMakeFiles\eol-cloth.dir\src\online\GLSL.cpp.obj CMakeFiles\eol-cloth.dir\src\online\MatrixStack.cpp.obj CMakeFiles\eol-cloth.dir\src\online\Program.cpp.obj CMakeFiles\eol-cloth.dir\src\external\SolverWrappers\Mosek\QuadProgMosek.cpp.obj CMakeFiles\eol-cloth.dir\src\external\SolverWrappers\Gurobi\Gurobi.cpp.obj | ..\..\..\External\glfw-3.3.2\debug\src\glfw3.lib ..\..\..\External\glew-2.1.0\lib\Release\x64\glew32s.lib ..\..\..\External\mosek\9.1\tools\platform\win64x86\bin\mosek64_9_1.lib ..\..\..\External\gurobi\win64\lib\gurobi90.lib ..\..\..\External\gurobi\win64\lib\gurobi_c++mdd2019.lib || ..\..\..\External\glfw-3.3.2\debug\src\glfw3.lib
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++17 /wd4996 /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = ..\..\..\External\glfw-3.3.2\debug\src\glfw3.lib ..\..\..\External\glew-2.1.0\lib\Release\x64\glew32s.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_LIBRARIES = ..\..\..\External\glfw-3.3.2\debug\src\glfw3.lib ..\..\..\External\glew-2.1.0\lib\Release\x64\glew32s.lib ..\..\..\External\mosek\9.1\tools\platform\win64x86\bin\mosek64_9_1.lib ..\..\..\External\gurobi\win64\lib\gurobi90.lib ..\..\..\External\gurobi\win64\lib\gurobi_c++mdd2019.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = CMakeFiles\eol-cloth.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -587,7 +605,7 @@ build ..\..\..\External\glfw-3.3.2\debug\src\rebuild_cache: phony ..\..\..\Exter
 build cmake_object_order_depends_target_glfw: phony || ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir
 
 build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\context.c.obj: C_COMPILER__glfw ..\..\..\External\glfw-3.3.2\src\context.c || cmake_object_order_depends_target_glfw
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
   FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glfw-3.3.2\src -I..\..\..\External\glfw-3.3.2\debug\src
   OBJECT_DIR = ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir
@@ -596,7 +614,7 @@ build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\context.c.obj: 
   TARGET_PDB = ..\..\..\External\glfw-3.3.2\debug\src\glfw3.pdb
 
 build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\init.c.obj: C_COMPILER__glfw ..\..\..\External\glfw-3.3.2\src\init.c || cmake_object_order_depends_target_glfw
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
   FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glfw-3.3.2\src -I..\..\..\External\glfw-3.3.2\debug\src
   OBJECT_DIR = ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir
@@ -605,7 +623,7 @@ build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\init.c.obj: C_C
   TARGET_PDB = ..\..\..\External\glfw-3.3.2\debug\src\glfw3.pdb
 
 build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\input.c.obj: C_COMPILER__glfw ..\..\..\External\glfw-3.3.2\src\input.c || cmake_object_order_depends_target_glfw
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
   FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glfw-3.3.2\src -I..\..\..\External\glfw-3.3.2\debug\src
   OBJECT_DIR = ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir
@@ -614,7 +632,7 @@ build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\input.c.obj: C_
   TARGET_PDB = ..\..\..\External\glfw-3.3.2\debug\src\glfw3.pdb
 
 build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\monitor.c.obj: C_COMPILER__glfw ..\..\..\External\glfw-3.3.2\src\monitor.c || cmake_object_order_depends_target_glfw
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
   FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glfw-3.3.2\src -I..\..\..\External\glfw-3.3.2\debug\src
   OBJECT_DIR = ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir
@@ -623,7 +641,7 @@ build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\monitor.c.obj: 
   TARGET_PDB = ..\..\..\External\glfw-3.3.2\debug\src\glfw3.pdb
 
 build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\vulkan.c.obj: C_COMPILER__glfw ..\..\..\External\glfw-3.3.2\src\vulkan.c || cmake_object_order_depends_target_glfw
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
   FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glfw-3.3.2\src -I..\..\..\External\glfw-3.3.2\debug\src
   OBJECT_DIR = ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir
@@ -632,7 +650,7 @@ build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\vulkan.c.obj: C
   TARGET_PDB = ..\..\..\External\glfw-3.3.2\debug\src\glfw3.pdb
 
 build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\window.c.obj: C_COMPILER__glfw ..\..\..\External\glfw-3.3.2\src\window.c || cmake_object_order_depends_target_glfw
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
   FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glfw-3.3.2\src -I..\..\..\External\glfw-3.3.2\debug\src
   OBJECT_DIR = ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir
@@ -641,7 +659,7 @@ build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\window.c.obj: C
   TARGET_PDB = ..\..\..\External\glfw-3.3.2\debug\src\glfw3.pdb
 
 build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\win32_init.c.obj: C_COMPILER__glfw ..\..\..\External\glfw-3.3.2\src\win32_init.c || cmake_object_order_depends_target_glfw
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
   FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glfw-3.3.2\src -I..\..\..\External\glfw-3.3.2\debug\src
   OBJECT_DIR = ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir
@@ -650,7 +668,7 @@ build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\win32_init.c.ob
   TARGET_PDB = ..\..\..\External\glfw-3.3.2\debug\src\glfw3.pdb
 
 build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\win32_joystick.c.obj: C_COMPILER__glfw ..\..\..\External\glfw-3.3.2\src\win32_joystick.c || cmake_object_order_depends_target_glfw
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
   FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glfw-3.3.2\src -I..\..\..\External\glfw-3.3.2\debug\src
   OBJECT_DIR = ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir
@@ -659,7 +677,7 @@ build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\win32_joystick.
   TARGET_PDB = ..\..\..\External\glfw-3.3.2\debug\src\glfw3.pdb
 
 build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\win32_monitor.c.obj: C_COMPILER__glfw ..\..\..\External\glfw-3.3.2\src\win32_monitor.c || cmake_object_order_depends_target_glfw
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
   FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glfw-3.3.2\src -I..\..\..\External\glfw-3.3.2\debug\src
   OBJECT_DIR = ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir
@@ -668,7 +686,7 @@ build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\win32_monitor.c
   TARGET_PDB = ..\..\..\External\glfw-3.3.2\debug\src\glfw3.pdb
 
 build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\win32_time.c.obj: C_COMPILER__glfw ..\..\..\External\glfw-3.3.2\src\win32_time.c || cmake_object_order_depends_target_glfw
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
   FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glfw-3.3.2\src -I..\..\..\External\glfw-3.3.2\debug\src
   OBJECT_DIR = ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir
@@ -677,7 +695,7 @@ build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\win32_time.c.ob
   TARGET_PDB = ..\..\..\External\glfw-3.3.2\debug\src\glfw3.pdb
 
 build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\win32_thread.c.obj: C_COMPILER__glfw ..\..\..\External\glfw-3.3.2\src\win32_thread.c || cmake_object_order_depends_target_glfw
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
   FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glfw-3.3.2\src -I..\..\..\External\glfw-3.3.2\debug\src
   OBJECT_DIR = ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir
@@ -686,7 +704,7 @@ build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\win32_thread.c.
   TARGET_PDB = ..\..\..\External\glfw-3.3.2\debug\src\glfw3.pdb
 
 build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\win32_window.c.obj: C_COMPILER__glfw ..\..\..\External\glfw-3.3.2\src\win32_window.c || cmake_object_order_depends_target_glfw
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
   FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glfw-3.3.2\src -I..\..\..\External\glfw-3.3.2\debug\src
   OBJECT_DIR = ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir
@@ -695,7 +713,7 @@ build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\win32_window.c.
   TARGET_PDB = ..\..\..\External\glfw-3.3.2\debug\src\glfw3.pdb
 
 build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\wgl_context.c.obj: C_COMPILER__glfw ..\..\..\External\glfw-3.3.2\src\wgl_context.c || cmake_object_order_depends_target_glfw
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
   FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glfw-3.3.2\src -I..\..\..\External\glfw-3.3.2\debug\src
   OBJECT_DIR = ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir
@@ -704,7 +722,7 @@ build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\wgl_context.c.o
   TARGET_PDB = ..\..\..\External\glfw-3.3.2\debug\src\glfw3.pdb
 
 build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\egl_context.c.obj: C_COMPILER__glfw ..\..\..\External\glfw-3.3.2\src\egl_context.c || cmake_object_order_depends_target_glfw
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
   FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glfw-3.3.2\src -I..\..\..\External\glfw-3.3.2\debug\src
   OBJECT_DIR = ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir
@@ -713,7 +731,7 @@ build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\egl_context.c.o
   TARGET_PDB = ..\..\..\External\glfw-3.3.2\debug\src\glfw3.pdb
 
 build ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir\osmesa_context.c.obj: C_COMPILER__glfw ..\..\..\External\glfw-3.3.2\src\osmesa_context.c || cmake_object_order_depends_target_glfw
-  DEFINES = -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES
+  DEFINES = -DEOLC_GUROBI -DEOLC_IGL -DEOLC_MOSEK -DEOLC_ONLINE -D_CRT_NO_VA_START_VALIDATION -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE -D_USE_MATH_DEFINES -DkMosekLicensePath=\"C:/Dev/EOL/External/mosek/mosek.lic\"
   FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\External\eigen-3.3.7 -I..\..\..\External\glm-0.9.9.7 -I..\..\..\External\glfw-3.3.2\include -I..\..\..\External\glfw-3.3.2\src -I..\..\..\External\glfw-3.3.2\debug\src
   OBJECT_DIR = ..\..\..\External\glfw-3.3.2\debug\src\CMakeFiles\glfw.dir
@@ -831,14 +849,14 @@ default all
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ..\..\..\CMakeLists.txt ..\..\..\External\glfw-3.3.2\CMakeLists.txt ..\..\..\External\glfw-3.3.2\cmake_uninstall.cmake.in ..\..\..\External\glfw-3.3.2\src\CMakeLists.txt ..\..\..\External\glfw-3.3.2\src\glfw3.pc.in ..\..\..\External\glfw-3.3.2\src\glfw3Config.cmake.in ..\..\..\External\glfw-3.3.2\src\glfw_config.h.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDependentOption.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckIncludeFile.c.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckIncludeFile.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckLibraryExists.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindThreads.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\GNUInstallDirs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles\3.15.19101501-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.15.19101501-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.15.19101501-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.15.19101501-MSVC_2\CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ..\..\..\CMakeLists.txt ..\..\..\External\glfw-3.3.2\CMakeLists.txt ..\..\..\External\glfw-3.3.2\cmake_uninstall.cmake.in ..\..\..\External\glfw-3.3.2\src\CMakeLists.txt ..\..\..\External\glfw-3.3.2\src\glfw3.pc.in ..\..\..\External\glfw-3.3.2\src\glfw3Config.cmake.in ..\..\..\External\glfw-3.3.2\src\glfw_config.h.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDependentOption.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckIncludeFile.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckLibraryExists.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindThreads.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\GNUInstallDirs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles\3.15.19101501-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.15.19101501-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.15.19101501-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.15.19101501-MSVC_2\CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ..\..\..\CMakeLists.txt ..\..\..\External\glfw-3.3.2\CMakeLists.txt ..\..\..\External\glfw-3.3.2\cmake_uninstall.cmake.in ..\..\..\External\glfw-3.3.2\src\CMakeLists.txt ..\..\..\External\glfw-3.3.2\src\glfw3.pc.in ..\..\..\External\glfw-3.3.2\src\glfw3Config.cmake.in ..\..\..\External\glfw-3.3.2\src\glfw_config.h.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDependentOption.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckIncludeFile.c.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckIncludeFile.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckLibraryExists.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindThreads.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\GNUInstallDirs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles\3.15.19101501-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.15.19101501-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.15.19101501-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.15.19101501-MSVC_2\CMakeSystem.cmake: phony
+build ..\..\..\CMakeLists.txt ..\..\..\External\glfw-3.3.2\CMakeLists.txt ..\..\..\External\glfw-3.3.2\cmake_uninstall.cmake.in ..\..\..\External\glfw-3.3.2\src\CMakeLists.txt ..\..\..\External\glfw-3.3.2\src\glfw3.pc.in ..\..\..\External\glfw-3.3.2\src\glfw3Config.cmake.in ..\..\..\External\glfw-3.3.2\src\glfw_config.h.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeDependentOption.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckIncludeFile.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\CheckLibraryExists.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindThreads.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\GNUInstallDirs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles\3.15.19101501-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.15.19101501-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.15.19101501-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.15.19101501-MSVC_2\CMakeSystem.cmake: phony
 
 
 #############################################

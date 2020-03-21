@@ -3,9 +3,9 @@
 {
 	
 	"online": true,
-	"exportObjs": false,
+	"exportObjs": true,
 	"exportTimings": false,
-	"RESOURCE_DIR": "D:/Git/eol-cloth/resources",
-	"OUTPUT_DIR": "D:/Git/eol-cloth/build/objs"
+	"RESOURCE_DIR": "C:/Dev/EOL/resources",
+	"OUTPUT_DIR": "C:/Dev/EOL/build/objs"
 	
 }

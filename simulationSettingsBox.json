@@ -3,7 +3,7 @@
 {
 	// Use either "mosek" or "gurobi". Make sure you've compiiled with the specified solver enabled
 	// This can be left undefined in which case Eigen solvers will be used, but simulations must be collision free
-	"solver": "gurobi",
+	"solver": "mosek",
 
 	"timestep": 0.5e-2, // Defaults to 0.5e-2
 	

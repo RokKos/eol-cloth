@@ -11,12 +11,12 @@ PROJECT(eol-cloth)
 
 # COMPILER OPTIONS
 
-OPTION(ONLINE "Build with online rendering supported" ON)
+SET(ONLINE ON) # "Build with online rendering supported"
 
 # Include support for one or multiple solvers
-OPTION(MOSEK "Build with Mosek support" OFF)
-OPTION(GUROBI "Build with Gurobi support" OFF)
-OPTION(IGL "Build with libIGL support" OFF) # Not used in the current version
+SET(MOSEK ON) # "Build with Mosek support"
+SET(GUROBI ON) # "Build with Gurobi support"
+SET(IGL ON) # "Build with libIGL support"
 
 
 # LIBRARY PATHS
@@ -33,22 +33,22 @@ OPTION(IGL "Build with libIGL support" OFF) # Not used in the current version
  ENDIF()
  
  IF(${MOSEK}) 
-	 SET(DEF_DIR_MOSEK "C:\\Program Files\\Mosek\\8\\tools\\platform\\win64x86") # Location of /h and /bin
-	 SET(DEF_BINARY_MOSEK "mosek64_8_1.lib") # Platform specific
-	 ADD_DEFINITIONS(-DkMosekLicensePath="C:/Users/weid691/mosek/mosek.lic") # Path to license file
+	 SET(DEF_DIR_MOSEK "C:\\Dev\\EOL\\External\\mosek\\9.1\\tools\\platform\\win64x86") # Location of /h and /bin
+	 SET(DEF_BINARY_MOSEK "mosek64_9_1.lib") # Platform specific
+	 ADD_DEFINITIONS(-DkMosekLicensePath="C:/Dev/EOL/External/mosek/mosek.lic") # Path to license file
 	 ADD_DEFINITIONS(-DEOLC_MOSEK)
  ENDIF()
  
  IF(${GUROBI})
-	 SET(DEF_DIR_GUROBI "C:\\gurobi752\\win64")
-	 SET(DEF_BINARY_GUROBI "gurobi75.lib") # Platform specific
-	 SET(DEF_BINARY_GUROBI_RELEASE "gurobi_c++md2017.lib") # Platform specific
-	 SET(DEF_BINARY_GUROBI_DEBUG "gurobi_c++mdd2017.lib") # Platform specific
+	 SET(DEF_DIR_GUROBI "C:\\Dev\\EOL\\External\\gurobi\\win64")
+	 SET(DEF_BINARY_GUROBI "gurobi90.lib") # Platform specific
+	 SET(DEF_BINARY_GUROBI_RELEASE "gurobi_c++md2019.lib") # Platform specific
+	 SET(DEF_BINARY_GUROBI_DEBUG "gurobi_c++mdd2019.lib") # Platform specific
 	 ADD_DEFINITIONS(-DEOLC_GUROBI)
  ENDIF()
  
  IF(${IGL})
-	 SET(DEF_DIR_IGL "C:\\c++\\libigl-1.2.1\\include") # Does not build static lib
+	 SET(DEF_DIR_IGL "C:\\Dev\\EOL\\External\\libigl-2.1.0\\include") # Does not build static lib
 	 ADD_DEFINITIONS(-DEOLC_IGL)
  ENDIF()
  
@@ -260,7 +260,7 @@ IF(WIN32)
   # -Wall produces way too many warnings.
   # -pedantic is not supported.
   # Disable warning 4996.
-  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd4996")
+  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 /wd4996")
   IF(${ONLINE})
 	TARGET_LINK_LIBRARIES(${CMAKE_PROJECT_NAME} opengl32.lib)
   ELSE()
@@ -268,7 +268,7 @@ IF(WIN32)
   ENDIF()
 ELSE()
   # Enable all pedantic warnings.
-  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -pedantic")
+  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -Wall -pedantic")
   IF(${ONLINE})
 	  IF(APPLE)
 		# Add required frameworks for GLFW.
