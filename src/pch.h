@@ -13,6 +13,9 @@
 #include <set>
 #include <utility>
 
+// Defined in CMake
+//#define _USE_MATH_DEFINES  // just to have M_PI
+
 // C Libraries
 #include <math.h>
 #include <stdlib.h>

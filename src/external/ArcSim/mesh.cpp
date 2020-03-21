@@ -301,7 +301,7 @@ void Mesh::add(Vert *vert) {
 	verts.push_back(vert);
 	vert->node = NULL;
 	vert->adjf.clear();
-	vert->index = verts.size() - 1;
+	vert->index = static_cast<int>(verts.size()) - 1;
 }
 
 void Mesh::remove(Vert* vert) {
@@ -315,7 +315,7 @@ void Mesh::remove(Vert* vert) {
 
 void Mesh::add(Node *node) {
 	nodes.push_back(node);
-	node->index = nodes.size() - 1;
+    node->index = static_cast<int>(nodes.size()) - 1;
 	node->adje.clear();
 	for (size_t v = 0; v < node->verts.size(); v++) {
 		node->verts[v]->node = node;
@@ -335,7 +335,7 @@ void Mesh::remove(Node* node) {
 void Mesh::add(Edge *edge) {
 	edges.push_back(edge);
 	edge->adjf[0] = edge->adjf[1] = NULL;
-	edge->index = edges.size() - 1;
+    edge->index = static_cast<int>(edges.size()) - 1;
 	include(edge, edge->n[0]->adje);
 	include(edge, edge->n[1]->adje);
 }
@@ -363,7 +363,7 @@ void add_edges_if_needed(Mesh &mesh, const Face *face) {
 
 void Mesh::add(Face *face) {
 	faces.push_back(face);
-	face->index = faces.size() - 1;
+    face->index = static_cast<int>(faces.size()) - 1;
 	// adjacency
 	add_edges_if_needed(*this, face);
 	for (int i = 0; i < 3; i++) {
@@ -390,12 +390,12 @@ void Mesh::remove(Face* face) {
 
 void set_indices(Mesh &mesh) {
 	for (size_t v = 0; v < mesh.verts.size(); v++)
-		mesh.verts[v]->index = v;
+        mesh.verts[v]->index = static_cast<int>(v);
 	for (size_t f = 0; f < mesh.faces.size(); f++)
-		mesh.faces[f]->index = f;
+        mesh.faces[f]->index = static_cast<int>(f);
 	int eoli = 0; // Added by Nick to index EoL nodes
 	for (size_t n = 0; n < mesh.nodes.size(); n++) {
-		mesh.nodes[n]->index = n;
+        mesh.nodes[n]->index = static_cast<int>(n);
 		// Reset EoL indices as well
 		if (mesh.nodes[n]->EoL) {
 			mesh.nodes[n]->EoL_index = eoli;
@@ -407,7 +407,7 @@ void set_indices(Mesh &mesh) {
 	}
 	mesh.EoL_Count = eoli; // Update the number of EoL nodes in a mesh
 	for (size_t e = 0; e < mesh.edges.size(); e++)
-		mesh.edges[e]->index = e;
+		mesh.edges[e]->index = static_cast<int>(e);
 }
 
 void set_indices(vector<Mesh*>& meshes) {
@@ -444,14 +444,14 @@ void mark_nodes_to_preserve(Mesh &mesh) {
 // Need to check if nodes ever have more than one vert assigned
 void reindex_nodes(vector<Node*>& nodes) {
 	for (size_t i = 0; i<nodes.size(); i++) {
-		nodes[i]->index = i;
-		nodes[i]->verts[0]->index = i;
+		nodes[i]->index = static_cast<int>(i);
+		nodes[i]->verts[0]->index = static_cast<int>(i);
 	}
 }
 
 void activate_nodes(vector<Node*>& nodes) {
 	for (size_t i = 0; i<nodes.size(); i++) {
-		nodes[i]->index = i;
+		nodes[i]->index = static_cast<int>(i);
 		nodes[i]->flag |= Node::FlagActive;
 	}
 }

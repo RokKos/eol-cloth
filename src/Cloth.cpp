@@ -537,7 +537,7 @@ void Cloth::exportBrender(vector< shared_ptr< ofstream > > outfiles) const
 
 	for (int i = 0; i < mesh.nodes.size(); i++) {
 		char vert[50];
-		sprintf(vert, "v %f %f %f\n", mesh.nodes[i]->verts[0]->u[0], mesh.nodes[i]->verts[0]->u[1], 0);
+		sprintf(vert, "v %f %f %d\n", mesh.nodes[i]->verts[0]->u[0], mesh.nodes[i]->verts[0]->u[1], 0);
 		outfile << vert;
 	}
 	//texture coordinates

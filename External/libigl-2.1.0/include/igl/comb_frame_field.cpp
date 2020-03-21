@@ -7,7 +7,7 @@
 // obtain one at http://mozilla.org/MPL/2.0/.
 
 #ifdef WIN32
-  #define _USE_MATH_DEFINES
+  
 #endif
 
 

@@ -1,4 +1,4 @@
-#define _USE_MATH_DEFINES
+
 
 
 
@@ -914,9 +914,7 @@ namespace btc
 					continue;
 				}
 				// Where does the line intersect the box?
-				double u2c, u2d, unused1, unused2;
-				//int i2c = intersect_triangle3_inc(x2a.data(), dx2.data(), x1a.data(), x1b.data(), x1c.data(), &u2c, &unused1, &unused2);
-				//int i2d = intersect_triangle3_inc(x2a.data(), dx2.data(), x1b.data(), x1a.data(), x1d.data(), &u2d, &unused1, &unused2);
+				double u2c, u2d;
 				int i2c = intersect_square(x2a, dx2, x1a, x1b, x1c, u2c);
 				int i2d = intersect_square(x2a, dx2, x1b, x1a, x1d, u2d);
 				// Are these ray collisions line segment collisions?

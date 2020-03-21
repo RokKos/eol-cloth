@@ -72,7 +72,7 @@ void nodeBasedF(const Mesh& mesh, VectorXd& f, vector<T>& M_, const Vector3d& gr
 		}
 
 		if (node->EoL) {
-			int nindexX = mesh.nodes.size() * 3 + node->EoL_index * 2;
+			int nindexX = static_cast<int>(mesh.nodes.size()) * 3 + node->EoL_index * 2;
 
 			MatrixXd F = deform_grad_v(vert);
 
@@ -373,9 +373,9 @@ void faceBasedF(const Mesh& mesh, VectorXd& f, vector<T>& MDK_, vector<T>& M_, c
 		int aindex = face->v[0]->node->index * 3;
 		int bindex = face->v[1]->node->index * 3;
 		int cindex = face->v[2]->node->index * 3;
-		int aindexX = mesh.nodes.size() * 3 + face->v[0]->node->EoL_index * 2;
-		int bindexX = mesh.nodes.size() * 3 + face->v[1]->node->EoL_index * 2;
-		int cindexX = mesh.nodes.size() * 3 + face->v[2]->node->EoL_index * 2;
+		int aindexX = static_cast<int>(mesh.nodes.size()) * 3 + face->v[0]->node->EoL_index * 2;
+		int bindexX = static_cast<int>(mesh.nodes.size()) * 3 + face->v[1]->node->EoL_index * 2;
+		int cindexX = static_cast<int>(mesh.nodes.size()) * 3 + face->v[2]->node->EoL_index * 2;
 
 		double fm[9], Km[81];
 		double fi[9], Mi[81];
@@ -723,10 +723,10 @@ void edgeBasedF(const Mesh& mesh, const Material& mat, VectorXd& f, vector<T>& M
 		int bindex = n1->index * 3;
 		int cindex = n2->index * 3;
 		int dindex = n3->index * 3;
-		int aindexX = mesh.nodes.size() * 3 + n0->EoL_index * 2;
-		int bindexX = mesh.nodes.size() * 3 + n1->EoL_index * 2;
-		int cindexX = mesh.nodes.size() * 3 + n2->EoL_index * 2;
-		int dindexX = mesh.nodes.size() * 3 + n3->EoL_index * 2;
+        int aindexX = static_cast<int>(mesh.nodes.size()) * 3 + n0->EoL_index * 2;
+		int bindexX = static_cast<int>(mesh.nodes.size()) * 3 + n1->EoL_index * 2;
+		int cindexX = static_cast<int>(mesh.nodes.size()) * 3 + n2->EoL_index * 2;
+		int dindexX = static_cast<int>(mesh.nodes.size()) * 3 + n3->EoL_index * 2;
 
 		double Wb[1], fb[12], Kb[144];
 

@@ -29,10 +29,6 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 
 #include "transformation.hpp"
 
-
-
-
-
 struct Serialize;
 
 // material space (not fused at seams)
