@@ -15,7 +15,7 @@ SET(ONLINE ON) # "Build with online rendering supported"
 
 # Include support for one or multiple solvers
 SET(MOSEK ON) # "Build with Mosek support"
-SET(GUROBI ON) # "Build with Gurobi support"
+SET(GUROBI OFF) # "Build with Gurobi support"
 SET(IGL ON) # "Build with libIGL support"
 
 
