@@ -119,3 +119,7 @@
 20	13121	606494008	CMakeFiles/eol-cloth.dir/src/Forces.cpp.obj	f6771659ffce871f
 824	17451	606494013	CMakeFiles/eol-cloth.dir/src/UtilEOL.cpp.obj	fa023fc323422a1b
 17452	18688	606494014	eol-cloth.exe	a30709abb3617c9a
+5	940	606497427	CMakeFiles/eol-cloth.dir/src/BrenderManager.cpp.obj	8967160ad315ff50
+940	1858	606497428	eol-cloth.exe	a30709abb3617c9a
+4	668	606497449	CMakeFiles/eol-cloth.dir/src/BrenderManager.cpp.obj	8967160ad315ff50
+668	1528	606497450	eol-cloth.exe	a30709abb3617c9a

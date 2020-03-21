@@ -46,11 +46,11 @@ void BrenderManager::exportBrender(double time)
 
 			//if object has not been given name
 			if (names[i].compare("") == 0) {
-				sprintf(filename, "%s/%06d_Object%d.obj", EXPORT_DIR.c_str(), frame, objNum);
+				sprintf(filename, "%s/Object%d_%06d.obj", EXPORT_DIR.c_str(), objNum, frame);
 			}
 			//if object has been given specific name
 			else {
-				sprintf(filename, "%s/%06d_%s.obj", EXPORT_DIR.c_str(), frame, names[i].c_str());
+				sprintf(filename, "%s/%s_%06d.obj", EXPORT_DIR.c_str(), names[i].c_str(), frame);
 			}
 			//open file
 			outfile->open(filename);
