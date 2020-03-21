@@ -27,24 +27,24 @@ SET(IGL ON) # "Build with libIGL support"
 # These paths are machine specific
 # These paths are examples
 
- SET(DEF_DIR_EIGEN "C:\\Dev\\EOL\\External\\eigen-3.3.7")
+ SET(DEF_DIR_EIGEN "${CMAKE_SOURCE_DIR}/External/eigen-3.3.7")
  
  IF(${ONLINE})
-	 SET(DEF_DIR_GLM "C:\\Dev\\EOL\\External\\glm-0.9.9.7")
-	 SET(DEF_DIR_GLFW "C:\\Dev\\EOL\\External\\glfw-3.3.2")
-	 SET(DEF_DIR_GLEW "C:\\Dev\\EOL\\External\\glew-2.1.0")
+	 SET(DEF_DIR_GLM "${CMAKE_SOURCE_DIR}/External/glm-0.9.9.7")
+	 SET(DEF_DIR_GLFW "${CMAKE_SOURCE_DIR}/External/glfw-3.3.2")
+	 SET(DEF_DIR_GLEW "${CMAKE_SOURCE_DIR}/External/glew-2.1.0")
 	 ADD_DEFINITIONS(-DEOLC_ONLINE)
  ENDIF()
  
  IF(${MOSEK}) 
-	 SET(DEF_DIR_MOSEK "C:\\Dev\\EOL\\External\\mosek\\9.1\\tools\\platform\\win64x86") # Location of /h and /bin
+	 SET(DEF_DIR_MOSEK "${CMAKE_SOURCE_DIR}/External/mosek\\9.1\\tools\\platform\\win64x86") # Location of /h and /bin
 	 SET(DEF_BINARY_MOSEK "mosek64_9_1.lib") # Platform specific
-	 ADD_DEFINITIONS(-DkMosekLicensePath="C:/Dev/EOL/External/mosek/mosek.lic") # Path to license file
+	 ADD_DEFINITIONS(-DkMosekLicensePath="${CMAKE_SOURCE_DIR}/External/mosek/mosek.lic") # Path to license file
 	 ADD_DEFINITIONS(-DEOLC_MOSEK)
  ENDIF()
  
  IF(${GUROBI})
-	 SET(DEF_DIR_GUROBI "C:\\Dev\\EOL\\External\\gurobi\\win64")
+	 SET(DEF_DIR_GUROBI "${CMAKE_SOURCE_DIR}/External/gurobi/win64")
 	 SET(DEF_BINARY_GUROBI "gurobi90.lib") # Platform specific
 	 SET(DEF_BINARY_GUROBI_RELEASE "gurobi_c++md2019.lib") # Platform specific
 	 SET(DEF_BINARY_GUROBI_DEBUG "gurobi_c++mdd2019.lib") # Platform specific
@@ -52,7 +52,7 @@ SET(IGL ON) # "Build with libIGL support"
  ENDIF()
  
  IF(${IGL})
-	 SET(DEF_DIR_IGL "C:\\Dev\\EOL\\External\\libigl-2.1.0\\include") # Does not build static lib
+	 SET(DEF_DIR_IGL "${CMAKE_SOURCE_DIR}/External/libigl-2.1.0/include") # Does not build static lib
 	 ADD_DEFINITIONS(-DEOLC_IGL)
  ENDIF()
  
