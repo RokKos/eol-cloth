@@ -28,7 +28,7 @@
 
 #include "internal.h"
 
-#include <assert.h>
+
 #include <errno.h>
 #include <limits.h>
 #include <linux/input.h>

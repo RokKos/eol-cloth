@@ -31,7 +31,7 @@
 
 #include <string.h>
 #include <stdlib.h>
-#include <assert.h>
+
 
 #ifndef GLXBadProfileARB
  #define GLXBadProfileARB 13

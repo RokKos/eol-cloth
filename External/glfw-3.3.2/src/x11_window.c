@@ -39,7 +39,7 @@
 #include <stdlib.h>
 #include <limits.h>
 #include <errno.h>
-#include <assert.h>
+
 
 // Action for EWMH client messages
 #define _NET_WM_STATE_REMOVE        0

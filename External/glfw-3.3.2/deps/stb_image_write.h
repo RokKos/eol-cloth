@@ -191,7 +191,7 @@ STBIWDEF int stbi_write_hdr_to_func(stbi_write_func *func, void *context, int w,
 
 
 #ifndef STBIW_ASSERT
-#include <assert.h>
+
 #define STBIW_ASSERT(x) assert(x)
 #endif
 

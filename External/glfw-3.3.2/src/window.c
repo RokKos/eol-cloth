@@ -30,7 +30,7 @@
 
 #include "internal.h"
 
-#include <assert.h>
+
 #include <string.h>
 #include <stdlib.h>
 #include <float.h>

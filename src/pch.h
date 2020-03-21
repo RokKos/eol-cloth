@@ -22,6 +22,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
+#include <assert.h>
 
 // C libraries converted into C++
 #include <cstdio>

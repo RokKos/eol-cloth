@@ -45,7 +45,7 @@
 
 
 
-#include <assert.h>
+
 
 static char error[256];
 static unsigned int _verbose = 0;

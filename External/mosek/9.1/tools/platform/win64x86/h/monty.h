@@ -14,7 +14,7 @@
 
 
 #include <stddef.h>
-#include <assert.h>
+
 #include <cstddef>
 #include <stdexcept>
 

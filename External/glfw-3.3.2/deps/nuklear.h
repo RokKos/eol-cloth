@@ -5629,7 +5629,7 @@ template<typename T> struct nk_alignof{struct Big {T x; char c;}; enum {
 #include <stdio.h> /* fopen, fclose,... */
 #endif
 #ifndef NK_ASSERT
-#include <assert.h>
+
 #define NK_ASSERT(expr) assert(expr)
 #endif
 
