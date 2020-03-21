@@ -3,10 +3,6 @@
 #define __Points__
 
 
-
-#define EIGEN_DONT_ALIGN_STATICALLY
-
-
 #ifdef EOLC_ONLINE
 class MatrixStack;
 class Program;

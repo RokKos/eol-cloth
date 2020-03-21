@@ -4,7 +4,7 @@
 
 
 
-#define EIGEN_DONT_ALIGN_STATICALLY
+
 
 
 // Throughout this code, `1` refers to the box and `2` refers to the cloth.

@@ -8,7 +8,7 @@
 
 
 
-#define EIGEN_DONT_ALIGN_STATICALLY
+
 
 
 #include <Eigen/StdVector>

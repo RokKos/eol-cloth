@@ -4,7 +4,7 @@
 
 
 
-#define EIGEN_DONT_ALIGN_STATICALLY
+
 
 
 Eigen::MatrixXd deform_grad(const Face *f);

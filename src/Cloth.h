@@ -2,8 +2,6 @@
 #ifndef __Cloth__
 #define __Cloth__
 
-#define EIGEN_DONT_ALIGN_STATICALLY
-
 
 #include "Brenderable.h"
 

@@ -2,7 +2,7 @@
 #ifndef __Obstacles__
 #define __Obstacles__
 
-#define EIGEN_DONT_ALIGN_STATICALLY
+
 
 
 

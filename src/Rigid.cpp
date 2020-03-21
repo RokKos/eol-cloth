@@ -3,7 +3,7 @@
 
 
 
-#define EIGEN_DONT_ALIGN_STATICALLY
+
 #define EIGEN_NO_STATIC_ASSERT
 using namespace Eigen;
 

@@ -6,7 +6,7 @@
 
 
 
-#define EIGEN_DONT_ALIGN_STATICALLY
+
 
 
 #include "boxTriCollision.h"

@@ -2,7 +2,7 @@
 #ifndef _RIGID_H_
 #define _RIGID_H_
 
-#define EIGEN_DONT_ALIGN_STATICALLY
+
 
 
 
