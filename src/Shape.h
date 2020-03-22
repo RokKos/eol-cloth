@@ -2,46 +2,42 @@
 #ifndef _SHAPE_H_
 #define _SHAPE_H_
 
-
-
-
-
-
-
 #ifdef EOLC_ONLINE
-class Program;
+#include "online/Program.h"
 #endif
 
-/**
- * A shape defined by a list of triangles
- * - posBuf should be of length 3*ntris
- * - norBuf should be of length 3*ntris (if normals are available)
- * - texBuf should be of length 2*ntris (if texture coords are available)
- * posBufID, norBufID, and texBufID are OpenGL buffer identifiers.
- */
-class Shape
-{
-public:
-	EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+namespace EOL {
+	/**
+	 * A shape defined by a list of triangles
+	 * - posBuf should be of length 3*ntris
+	 * - norBuf should be of length 3*ntris (if normals are available)
+	 * - texBuf should be of length 2*ntris (if texture coords are available)
+	 * posBufID, norBufID, and texBufID are OpenGL buffer identifiers.
+	 */
+	class Shape
+	{
+	public:
+		EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 
-	Shape();
-	virtual ~Shape();
-	void loadMesh(const std::string &meshName);
-	void exportBrender(const Eigen::Matrix4d& E, std::ofstream& outfile) const;
+		Shape();
+		virtual ~Shape();
+		void loadMesh(const std::string& meshName);
+		void exportBrender(const Eigen::Matrix4d& E, std::ofstream& outfile) const;
 
 #ifdef EOLC_ONLINE
-	void init();
-	void draw(const std::shared_ptr<Program> prog) const;
+		void init();
+		void draw(const std::shared_ptr<Rendering::Program> prog) const;
 #endif // EOLC_ONLINE
 
-	
-private:
-	std::vector<float> posBuf;
-	std::vector<float> norBuf;
-	std::vector<float> texBuf;
-	unsigned posBufID;
-	unsigned norBufID;
-	unsigned texBufID;
-};
+
+	private:
+		std::vector<float> posBuf;
+		std::vector<float> norBuf;
+		std::vector<float> texBuf;
+		unsigned posBufID;
+		unsigned norBufID;
+		unsigned texBufID;
+	};
+}
 
 #endif

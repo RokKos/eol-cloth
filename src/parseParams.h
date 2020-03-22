@@ -5,10 +5,11 @@
 #include "genSet.h"
 #include "Scene.h"
 
+namespace EOL {
 
+	void load_genset(const std::shared_ptr<genSet> genset, const std::string& JSON_FILE);
+	void load_simset(std::shared_ptr<Scene> scene, const std::string& JSON_FILE);
 
-void load_genset(const std::shared_ptr<genSet> genset, const std::string &JSON_FILE);
-
-void load_simset(std::shared_ptr<Scene> scene, const std::string &JSON_FILE);
+}
 
 #endif

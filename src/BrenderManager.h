@@ -6,35 +6,34 @@
 
 #pragma once
 
-
-
-
 #include <ostream>
+#include "Brenderable.h"
 
-class Brenderable;
+namespace EOL {
 
-class BrenderManager
-{
-private:
-	static bool instanceFlag;
-	static BrenderManager *manager;
-	int frame;
-	std::string EXPORT_DIR;
-	std::vector<std::shared_ptr<Brenderable> > brenderables;
-	BrenderManager()
+	class BrenderManager
 	{
-		//private constructor
-		EXPORT_DIR = ".";
-		frame = 0;
-	}
-public:
-	static BrenderManager* getInstance();
-	void setExportDir(std::string export_dir);
-	int getFrame() const;
-	void exportBrender(double time = 0.0);
-	void add(std::shared_ptr<Brenderable> brenderable);
-	~BrenderManager()
-	{
-		instanceFlag = false;
-	}
-};
+	private:
+		static bool instanceFlag;
+		static BrenderManager* manager;
+		int frame;
+		std::string EXPORT_DIR;
+		std::vector<std::shared_ptr<Brenderable> > brenderables;
+		BrenderManager()
+		{
+			//private constructor
+			EXPORT_DIR = ".";
+			frame = 0;
+		}
+	public:
+		static BrenderManager* getInstance();
+		void setExportDir(std::string export_dir);
+		int getFrame() const;
+		void exportBrender(double time = 0.0);
+		void add(std::shared_ptr<Brenderable> brenderable);
+		~BrenderManager()
+		{
+			instanceFlag = false;
+		}
+	};
+}

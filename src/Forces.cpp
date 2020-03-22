@@ -21,9 +21,10 @@
 #include "ComputeMembrane.h"
 
 
-
 using namespace std;
 using namespace Eigen;
+
+namespace EOL {
 
 typedef Eigen::Triplet<double> T;
 
@@ -1035,8 +1036,8 @@ void Forces::fill(const ARCSim::Mesh& mesh, const Material& mat,
 
 #ifdef EOLC_ONLINE
 
-void Forces::drawSimple(const ARCSim::Mesh& mesh, shared_ptr<MatrixStack> MV,
-                        const shared_ptr<Program> prog) const {
+void Forces::drawSimple(const ARCSim::Mesh& mesh, shared_ptr<Rendering::MatrixStack> MV,
+                        const shared_ptr<Rendering::Program> prog) const {
   if (f.size() == 0) return;
 
   for (int n = 0; n < mesh.nodes.size(); n++) {
@@ -1060,6 +1061,8 @@ void Forces::drawSimple(const ARCSim::Mesh& mesh, shared_ptr<MatrixStack> MV,
 			glEnd();
 		}
 	}
+}
+
 }
 
 #endif

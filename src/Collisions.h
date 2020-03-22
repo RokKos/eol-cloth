@@ -5,9 +5,11 @@
 #include "boxTriCollision.h"
 #include "Obstacles.h"
 
-void CD(const ARCSim::Mesh& mesh, const std::shared_ptr<Obstacles> obs, std::vector<std::shared_ptr<btc::Collision> > &cls);
+namespace EOL {
 
-void CD2(const ARCSim::Mesh& mesh, const std::shared_ptr<Obstacles> obs,
-         std::vector<std::shared_ptr<btc::Collision> >& cls);
+    void CD(const ARCSim::Mesh& mesh, const std::shared_ptr<Obstacles> obs, std::vector<std::shared_ptr<btc::Collision> >& cls);
 
+    void CD2(const ARCSim::Mesh& mesh, const std::shared_ptr<Obstacles> obs,
+        std::vector<std::shared_ptr<btc::Collision> >& cls);
+}
 #endif

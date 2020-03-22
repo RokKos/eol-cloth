@@ -39,10 +39,6 @@ THE SOFTWARE.
 #ifndef TINY_OBJ_LOADER_H_
 #define TINY_OBJ_LOADER_H_
 
-
-
-
-
 namespace tinyobj {
 
 // https://en.wikipedia.org/wiki/Wavefront_.obj_file says ...
@@ -335,11 +331,6 @@ void LoadMtl(std::map<std::string, int> *material_map,
 #include <cctype>
 
 #include <cstddef>
-
-
-
-
-
 
 
 namespace tinyobj {

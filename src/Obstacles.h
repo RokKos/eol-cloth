@@ -2,52 +2,47 @@
 #ifndef __Obstacles__
 #define __Obstacles__
 
-
-
-
-
-
-
 #include "BrenderManager.h"
 
-class Points;
-class Box;
-class Shape;
+#include "Points.h"
+#include "Box.h"
+#include "Shape.h"
 
 #ifdef EOLC_ONLINE
-class MatrixStack;
-class Program;
+#include "online/MatrixStack.h"
+#include "online/Program.h"
 #endif // EOLC_ONLINE
 
-class Obstacles
-{
-public:
-	EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+namespace EOL {
 
-	Obstacles();
-	virtual ~Obstacles() {};
+	class Obstacles
+	{
+	public:
+		EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 
-	int num_boxes;
-	double cdthreshold;
-	std::shared_ptr<Points> points;
-	std::vector<std::shared_ptr<Box> > boxes;
-	std::vector<std::shared_ptr<Shape> > shapes;
+		Obstacles();
+		virtual ~Obstacles() {};
 
-	void load(const std::string &RESOURCE_DIR);
-	void step(double h);
+		int num_boxes;
+		double cdthreshold;
+		std::shared_ptr<Points> points;
+		std::vector<std::shared_ptr<Box> > boxes;
+		std::vector<std::shared_ptr<Shape> > shapes;
 
-	void addExport(BrenderManager *brender);
+		void load(const std::string& RESOURCE_DIR);
+		void step(double h);
+
+		void addExport(BrenderManager* brender);
 
 #ifdef EOLC_ONLINE
-	void draw(std::shared_ptr<MatrixStack> MV, const std::shared_ptr<Program> p) const;
-	void drawSimple(std::shared_ptr<MatrixStack> MV, const std::shared_ptr<Program> p) const;
-	void init();
+		void draw(std::shared_ptr<Rendering::MatrixStack> MV, const std::shared_ptr<Rendering::Program> p) const;
+		void drawSimple(std::shared_ptr<Rendering::MatrixStack> MV, const std::shared_ptr<Rendering::Program> p) const;
+		void init();
 #endif // EOLC_ONLINE
 
+	private:
 
-
-private:
-
-};
+	};
+}
 
 #endif

@@ -4,47 +4,51 @@
 
 #include <Eigen/StdVector>
 
+
+
 #ifdef EOLC_ONLINE
-class MatrixStack;
-class Program;
+#include "online/MatrixStack.h"
+#include "online/Program.h"
 #endif // EOLC_ONLINE
 
-//class Mesh;
-class Obstacles;
-class FixedList;
+#include "Obstacles.h"
+#include "FixedList.h"
 
-class Constraints
-{
-public:
-	EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+namespace EOL {
+
+	class Constraints
+	{
+	public:
+		EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 
 		Constraints();
-	virtual ~Constraints() {};
+		virtual ~Constraints() {};
 
-	bool hasFixed;
-	bool hasCollisions;
+		bool hasFixed;
+		bool hasCollisions;
 
-	Eigen::SparseMatrix<double> Aeq;
-	Eigen::SparseMatrix<double> Aineq;
+		Eigen::SparseMatrix<double> Aeq;
+		Eigen::SparseMatrix<double> Aineq;
 
-	std::vector<Eigen::Vector3d, Eigen::aligned_allocator<Eigen::Vector3d> > drawAineq;
-	std::vector<Eigen::Vector3d, Eigen::aligned_allocator<Eigen::Vector3d> > drawAeq;
+		std::vector<Eigen::Vector3d, Eigen::aligned_allocator<Eigen::Vector3d> > drawAineq;
+		std::vector<Eigen::Vector3d, Eigen::aligned_allocator<Eigen::Vector3d> > drawAeq;
 
-	Eigen::VectorXd beq;
-	Eigen::VectorXd bineq;
+		Eigen::VectorXd beq;
+		Eigen::VectorXd bineq;
 
-	Eigen::MatrixXd constraintTable;
+		Eigen::MatrixXd constraintTable;
 
-	void init(const std::shared_ptr<Obstacles> obs);
-	void updateTable(const std::shared_ptr<Obstacles> obs);
-    void fill(const ARCSim::Mesh& mesh,
-                const std::shared_ptr<Obstacles> obs,
-                const std::shared_ptr<FixedList> fs, double h,
-                const bool& online);
+		void init(const std::shared_ptr<Obstacles> obs);
+		void updateTable(const std::shared_ptr<Obstacles> obs);
+		void fill(const ARCSim::Mesh& mesh,
+		const std::shared_ptr<Obstacles> obs,
+		const std::shared_ptr<FixedList> fs, double h,
+		const bool& online);
 
 #ifdef EOLC_ONLINE
-	void drawSimple(std::shared_ptr<MatrixStack> MV, const std::shared_ptr<Program> p) const;
+		void drawSimple(std::shared_ptr<Rendering::MatrixStack> MV, const std::shared_ptr<Rendering::Program> p) const;
 #endif // EOLC_ONLINE
-};
+	};
+}
 
 #endif

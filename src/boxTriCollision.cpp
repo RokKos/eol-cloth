@@ -1,13 +1,11 @@
-
-
-
+#include "boxTriCollision.h"
 
 #include <random>
 
-#include "boxTriCollision.h"
-
 using namespace std;
 using namespace Eigen;
+
+namespace EOL {
 
 #ifdef MATLAB_MEX_FILE
 #include "mex.h"
@@ -1221,4 +1219,5 @@ namespace btc
 		return;
 	}
 
-}	
+}
+}
