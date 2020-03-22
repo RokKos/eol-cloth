@@ -27,6 +27,12 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #ifndef UTIL_HPP
 #define UTIL_HPP
 
+#include "GeometryPrimitives/Vert.h"
+#include "GeometryPrimitives/Node.h"
+#include "GeometryPrimitives/Edge.h"
+#include "GeometryPrimitives/Face.h"
+#include "GeometryPrimitives/Mesh.h"
+
  // aa: win
 
 #define EPSILON		1e-7f

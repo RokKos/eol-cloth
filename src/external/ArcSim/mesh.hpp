@@ -29,172 +29,21 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 
 #include "transformation.hpp"
 
+// material space (not fused at seams)
+#include "GeometryPrimitives/Vert.h"
+#include "GeometryPrimitives/Face.h"
+
+// world space (fused)
+#include "GeometryPrimitives/Node.h"
+#include "GeometryPrimitives/Edge.h"
+#include "GeometryPrimitives/Mesh.h"
+#include "GeometryPrimitives/Plane.h"
+
 namespace ARCSim {
 
 struct Serialize;
 
-// material space (not fused at seams)
-struct Vert;
-struct Face;
-// world space (fused)
-struct Node;
-struct Edge;
-struct Material;
-struct ReferenceShape;
-class Cloth;
-struct Mesh;
-
-struct Plane {
-	Plane() {}
-	Plane(const Vec3& x0, const Vec3& n) : x0(x0), n(n) {}
-	Vec3 x0, n;
-};
-
 extern int uuid_src;
-
-struct Vert {
-	Vec3 u; // material space
-	// NICK
-	Vec3 v; // material velocity
-	Node *node; // world space
-				// topological data
-	std::vector<Face*> adjf; // adjacent faces
-	int index; // position in mesh.verts
-			   // derived material-space data that only changes with remeshing
-			   // remeshing data
-	Mat3x3 sizing;
-	// constructors
-	Vert() : node(0), index(-1) {}
-	explicit Vert(const Vec3 &u, const Vec3 &v) :
-		u(u), v(v) {}
-
-	//void serializer(Serialize& s);
-};
-
-struct Node {
-	enum NodeFlags {
-		FlagNone = 0, FlagActive = 1, FlagMayBreak = 2,
-		FlagResolveUni = 4, FlagResolveMax = 8
-	};
-	enum NodeEOLState {
-		IsLAG = 0,
-		NewEOL = 1, NewEOLFromSplit = 2, IsEOL = 3, WasEOL = 4
-	};
-
-	int uuid;
-
-	Mesh* mesh;
-
-	bool EoL;
-	int EoL_index;
-	int EoL_state;
-	int cornerID;
-	std::vector<int> cdEdges;
-
-	int label;
-	int flag;
-	std::vector<Vert*> verts;
-	Vec3 y; // plastic embedding
-	Vec3 x, x0, v; // position, old (collision-free) position, velocity
-	bool preserve; // don't remove this node
-				   // topological data
-	int index; // position in mesh.nodes
-	std::vector<Edge*> adje; // adjacent edges
-							 // derived world-space data that changes every frame
-	Vec3 n; // local normal, approximate
-			// derived material-space data that only changes with remeshing
-	double a, m; // area, mass
-	Mat3x3 curvature; // filtered curvature for bending fracture
-					  // pop filter data
-	Vec3 acceleration;
-	Node() : uuid(uuid_src++), label(0), flag(0), preserve(false), index(-1), a(0), m(0) {}
-	explicit Node(const Vec3 &y, const Vec3 &x, const Vec3 &v, int label, int flag,
-		bool preserve) :
-		EoL(false), EoL_index(-1), EoL_state(0), cornerID(-1), // EoL specifics
-		uuid(uuid_src++), mesh(0), label(label), flag(flag), y(y), x(x), x0(x), v(v), preserve(preserve),
-		curvature(0) {}
-
-	inline bool active() const { return flag & FlagActive; }
-
-	//void serializer(Serialize& s);
-};
-
-struct Edge {
-	Node *n[2]; // nodes
-	int preserve;
-	// topological data
-	Face *adjf[2]; // adjacent faces
-	int index; // position in mesh.edges
-			   // plasticity data
-	double theta_ideal, damage; // rest dihedral angle, damage parameter
-								// constructors
-	Edge() : index(-1), theta_ideal(0), damage(0) { n[0] = n[1] = 0; adjf[0] = adjf[1] = 0; }
-	explicit Edge(Node *node0, Node *node1, double theta_ideal, int preserve) :
-		preserve(preserve), theta_ideal(theta_ideal), damage(0) {
-		n[0] = node0;
-		n[1] = node1;
-	}
-
-	//void serializer(Serialize& s);
-};
-
-struct Face {
-	Vert* v[3]; // verts
-	Material* material;
-	int flag;
-	// topological data
-	Edge *adje[3]; // adjacent edges
-	int index; // position in mesh.faces
-			   // derived world-space data that changes every frame
-	Vec3 n; // local normal, exact
-			// derived material-space data that only changes with remeshing
-	double a, m; // area, mass
-	Mat3x3 Dm, invDm; // finite element matrix
-					  // plasticity data
-	Mat3x3 Sp_bend; // plastic bending strain
-	Mat3x3 Sp_str; // plastic stretching
-	Mat3x3 sigma;
-	double damage; // accumulated norm of S_plastic/S_yield
-				   // constructors
-	Face() : material(0), flag(0), index(-1), a(0), m(0), damage(0) {
-		for (int i = 0; i<3; i++) { v[i] = 0; adje[i] = 0; }
-	}
-	explicit Face(Vert *vert0, Vert *vert1, Vert *vert2, const Mat3x3& ps,
-		const Mat3x3& pb, Material* mat, double damage) :
-		material(mat), flag(0), a(0), m(0), Sp_bend(pb), Sp_str(ps), sigma(0), damage(damage) {
-		v[0] = vert0;
-		v[1] = vert1;
-		v[2] = vert2;
-	}
-
-	//void serializer(Serialize& s);
-};
-
-struct Mesh {
-	ReferenceShape *ref;
-	std::shared_ptr<Cloth> parent;
-	//CollisionProxy* proxy;
-
-	int EoL_Count;
-
-	std::vector<Vert*> verts;
-	std::vector<Node*> nodes;
-	std::vector<Edge*> edges;
-	std::vector<Face*> faces;
-	// These do *not* assume ownership, so no deletion on removal
-	void add(Vert *vert);
-	void add(Node *node);
-	void add(Edge *edge);
-	void add(Face *face);
-	void remove(Vert *vert);
-	void remove(Node *node);
-	void remove(Edge *edge);
-	void remove(Face *face);
-
-	Mesh() : ref(0), parent(0), EoL_Count(0) {};
-
-	//void serializer(Serialize& s);
-};
 
 template <typename Prim> inline const std::vector<Prim*> &get(const Mesh &mesh);
 template <typename Prim> inline int count_elements(const std::vector<Mesh*>& meshes);

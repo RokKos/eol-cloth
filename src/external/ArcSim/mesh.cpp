@@ -25,6 +25,7 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 */
 
 #include "../../Cloth.h"
+#include "mesh.hpp"
 
 using namespace std;
 

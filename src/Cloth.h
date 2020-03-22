@@ -3,6 +3,7 @@
 #define __Cloth__
 
 #include "TypeDefinitions.h"
+#include "external/ArcSim/GeometryPrimitives/Mesh.h"
 #include "Brenderable.h"
 
 #include "Constraints.h"

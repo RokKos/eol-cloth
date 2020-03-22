@@ -4,7 +4,7 @@
 
 #include <Eigen/StdVector>
 
-
+#include "external/ArcSim/GeometryPrimitives/Mesh.h"
 
 #ifdef EOLC_ONLINE
 #include "online/MatrixStack.h"

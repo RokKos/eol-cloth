@@ -26,6 +26,8 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 
 using namespace std;
 
+#include "mesh.hpp"
+
 namespace ARCSim {
 
 double signed_vf_distance(const Vec3 &x,

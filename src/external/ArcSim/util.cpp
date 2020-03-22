@@ -26,6 +26,7 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 
 
 #include "io.hpp"
+#include "mesh.hpp"
 
 #include <cstdarg>
 #include <signal.h>

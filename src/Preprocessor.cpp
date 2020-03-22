@@ -5,6 +5,7 @@
 #include "UtilEOL.h"
 
 #include "external/ArcSim/subset.hpp"
+#include "external/ArcSim/mesh.hpp"
 
 using namespace std;
 using namespace Eigen;

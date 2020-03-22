@@ -5,6 +5,7 @@
 #include <Eigen/StdVector>
 
 #include "TypeDefinitions.h"
+#include "external/ArcSim/GeometryPrimitives/Mesh.h"
 
 #ifdef EOLC_ONLINE
 #include "online/MatrixStack.h"

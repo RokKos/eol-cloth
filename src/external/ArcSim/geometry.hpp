@@ -27,6 +27,13 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #ifndef GEOMETRY_HPP
 #define GEOMETRY_HPP
 
+#include "GeometryPrimitives/Vert.h"
+#include "GeometryPrimitives/Node.h"
+#include "GeometryPrimitives/Edge.h"
+#include "GeometryPrimitives/Face.h"
+#include "GeometryPrimitives/Mesh.h"
+#include "GeometryPrimitives/Plane.h"
+
 namespace ARCSim {
 
 double signed_vf_distance(const Vec3 &x,

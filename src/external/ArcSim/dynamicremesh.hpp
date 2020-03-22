@@ -28,18 +28,17 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #define DYNAMICREMESH_HPP
 
 
-#include "../../Cloth.h"
+#include "../../TypeDefinitions.h"
+#include "subset.hpp"
 
 namespace ARCSim {
-
-class MeshSubset;
 
 void static_remesh(Mesh& mesh);
 
 void dynamic_remesh(Mesh& mesh);
 void dynamic_remesh(MeshSubset& subset, const std::map<Node*, Plane> &planes);
 
-Mat3x3 compute_face_sizing(Remeshing& remeshing, const Face *face,
+Mat3x3 compute_face_sizing(EOL::Remeshing& remeshing, const Face *face,
 	const std::map<Node*, Plane> &planes, bool debug = false);
 
 }  // namespace ARCSim
