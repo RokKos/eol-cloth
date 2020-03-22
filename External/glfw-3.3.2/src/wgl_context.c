@@ -31,7 +31,7 @@
 
 #include <stdlib.h>
 #include <malloc.h>
-
+#include <assert.h>
 
 // Return the value corresponding to the specified attribute
 //
