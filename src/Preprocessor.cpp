@@ -6,6 +6,7 @@
 
 #include "external/ArcSim/subset.hpp"
 #include "external/ArcSim/mesh.hpp"
+#include "external/ArcSim/dynamicremesh.hpp"  // TODO(Rok Kos): Fix this import
 
 using namespace std;
 using namespace Eigen;
@@ -14,8 +15,6 @@ namespace EOL {
 
     double thresh = 0.025; // TODO:: Move
     double boundary = 0.025; // TODO:: Move;
-
-    ARCSim::Vert* adjacent_vert(const ARCSim::Node* node, const ARCSim::Vert* vert);
 
     double linepoint(const ARCSim::Vec3& A, const ARCSim::Vec3& B, const ARCSim::Vec3& P)
     {
@@ -716,10 +715,6 @@ namespace EOL {
         }
         return bad_edges.size() == 0 + exclude;
     }
-
-    void flip_edges(ARCSim::MeshSubset* subset, vector<ARCSim::Face*>& active_faces,
-        vector<ARCSim::Edge*>* update_edges,
-        vector<ARCSim::Face*>* update_faces);
 
     // TODO:: Does conformal stalling occur with EOL?
     void cleanup(ARCSim::Mesh& mesh) {

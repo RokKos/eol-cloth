@@ -17,7 +17,7 @@
 #include "Rigid.h"
 #include "Collisions.h"
 #include "conversions.h"
-//
+#include "external/ArcSim/mesh.hpp"
 
 using namespace std;
 using namespace Eigen;

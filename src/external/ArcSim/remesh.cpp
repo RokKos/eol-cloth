@@ -25,13 +25,12 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 */
 
 #include "remesh.hpp"
-#include "../../Cloth.h"
 #include "blockvectors.hpp"
 #include "magic.hpp"
 #include "referenceshape.hpp"
+#include "mesh.hpp"
 
-
-
+#include "../../Managers/ClothManager.h"
 
 using namespace std;
 
@@ -430,8 +429,8 @@ RemeshOp collapse_edge(Edge* edge, int i) {
 				// degenerate test
 				bool enforce = false;
 				double asp_old = aspect(face), asp_new = aspect(new_face);
-				if (asp_new < mesh.parent->remeshing.aspect_min / 4 &&
-					asp_old >= mesh.parent->remeshing.aspect_min / 4 && !enforce) {
+				if (asp_new < EOL::ClothManager::GetClothParent(mesh)->remeshing.aspect_min / 4 &&
+					asp_old >= EOL::ClothManager::GetClothParent(mesh)->remeshing.aspect_min / 4 && !enforce) {
 					op.cancel();
 					return RemeshOp();
 				}

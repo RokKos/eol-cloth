@@ -37,20 +37,20 @@ namespace EOL {
 		void drawSimple(std::shared_ptr<Rendering::MatrixStack> MV, const std::shared_ptr<Rendering::Program> p) const;
 #endif // EOLC_ONLINE
 
-		double h;
 
+
+	public:
 		Eigen::Vector3d grav;
+		std::shared_ptr<GeneralizedSolver> GS;
+		std::shared_ptr<Cloth> cloth;
+		std::shared_ptr<Obstacles> obs;
+		std::vector<std::shared_ptr<btc::Collision> > cls;
 
+		double h;
 		bool EOLon;
 		bool REMESHon;
 
 		int part;
-
-		std::shared_ptr<GeneralizedSolver> GS;
-
-		std::shared_ptr<Cloth> cloth;
-		std::shared_ptr<Obstacles> obs;
-		std::vector<std::shared_ptr<btc::Collision> > cls;
 
 	private:
 

@@ -20,6 +20,7 @@
 #include "ComputeInertial.h"
 #include "ComputeMembrane.h"
 
+#include "external/ArcSim/mesh.hpp"
 
 using namespace std;
 using namespace Eigen;

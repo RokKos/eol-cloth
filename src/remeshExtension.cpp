@@ -1,5 +1,6 @@
 #include "remeshExtension.h"
-#include "external\ArcSim\blockvectors.hpp"
+#include "external/ArcSim/blockvectors.hpp"
+#include "external/ArcSim/mesh.hpp"
 
 namespace EOL {
 

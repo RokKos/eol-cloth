@@ -12,6 +12,8 @@
 #include "Shape.h"
 #include "GeneralizedSolver.h"
 
+#include "Managers/ClothManager.h"
+
 #include <omp.h>
 
 using namespace std;
@@ -258,7 +260,7 @@ namespace EOL {
 		parse(p10, json["corner3"], dp10);
 		parse(p11, json["corner4"], dp11);
 		cloth->build(res, p00, p01, p10, p11);
-		cloth->mesh.parent = cloth;
+		ClothManager::AddCloth(cloth);
 		cloth->mesh.ref = new ARCSim::ReferenceLinear(cloth->mesh);
 	}
 

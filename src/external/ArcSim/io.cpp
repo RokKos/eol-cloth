@@ -25,6 +25,7 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 */
 
 #include "io.hpp"
+#include "mesh.hpp"
 #include <cfloat>
 
 using namespace std;

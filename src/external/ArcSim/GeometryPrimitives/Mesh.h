@@ -30,7 +30,14 @@ namespace ARCSim {
 
 		Mesh() : ref(0), EoL_Count(0) {};
 
-		//void serializer(Serialize& s);
+		bool operator==(const Mesh& other) const {
+			return ref == other.ref &&
+				EoL_Count == other.EoL_Count &&
+				verts == other.verts &&
+				nodes == other.nodes &&
+				edges == other.edges &&
+				faces == other.faces;
+		}
 	};
 }
 

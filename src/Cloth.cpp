@@ -1,5 +1,6 @@
 #include "Cloth.h"
 
+#include "external/ArcSim/mesh.hpp"
 #include "UtilEOL.h"
 #include "conversions.h"
 #include "external/ArcSim/io.hpp"

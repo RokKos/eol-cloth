@@ -41,5 +41,8 @@ void dynamic_remesh(MeshSubset& subset, const std::map<Node*, Plane> &planes);
 Mat3x3 compute_face_sizing(EOL::Remeshing& remeshing, const Face *face,
 	const std::map<Node*, Plane> &planes, bool debug = false);
 
+Vert* adjacent_vert(const Node* node, const Vert* vert);
+void flip_edges(MeshSubset* subset, std::vector<Face*>& active_faces, std::vector<Edge*>* update_edges, std::vector<Face*>* update_faces);
+
 }  // namespace ARCSim
 #endif

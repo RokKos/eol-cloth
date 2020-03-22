@@ -29,6 +29,9 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #include "remesh.hpp"
 #include "tensormax.hpp"
 #include "subset.hpp"
+#include "mesh.hpp"
+
+#include "../../Managers/ClothManager.h"
 
 using namespace std;
 
@@ -40,10 +43,6 @@ void create_vert_sizing(vector<ARCSim::Vert *> &verts);
 
 // The algorithm
 
-void flip_edges(MeshSubset *subset, vector<ARCSim::Face *> &active_faces,
-                vector<ARCSim::Edge *> *update_edges,
-                vector<ARCSim::Face *> *update_faces);
-
 bool split_worst_edge(MeshSubset *subset, const vector<ARCSim::Edge *> &edges);
 
 bool improve_some_face(MeshSubset *subset, vector<ARCSim::Face *> &active);
@@ -53,7 +52,7 @@ void delete_spaced_out(ARCSim::Mesh &mesh);
 void static_remesh(ARCSim::Mesh &mesh) {
   for (size_t i = 0; i < mesh.verts.size(); i++) {
     mesh.verts[i]->sizing =
-        Mat3x3(1.f / ARCSim::sq(mesh.parent->remeshing.size_min));
+        Mat3x3(1.f / ARCSim::sq(EOL::ClothManager::GetClothParent(mesh)->remeshing.size_min));
   }
   while (split_worst_edge(0, mesh.edges))
     ;
@@ -244,7 +243,7 @@ Mat3x3 compute_face_sizing(EOL::Remeshing& remeshing, const ARCSim::Face* face) 
 }
 
 void create_vert_sizing(vector<ARCSim::Vert*>& verts) {
-    EOL::Remeshing& remeshing = verts[0]->node->mesh->parent->remeshing;
+    EOL::Remeshing& remeshing = EOL::ClothManager::GetClothParent(*verts[0]->node->mesh)->remeshing;
     map<ARCSim::Face*, Mat3x3> face_sizing;
     for (size_t i = 0; i < verts.size(); i++) {
         Mat3x3 sizing(0);
@@ -391,8 +390,6 @@ bool should_flip(const ARCSim::Edge* edge) {
 
 vector<ARCSim::Edge*> find_bad_edges(const vector<ARCSim::Edge*>& edges);
 
-ARCSim::Vert* adjacent_vert(const ARCSim::Node* node, const ARCSim::Vert* vert);
-
 bool split_worst_edge(MeshSubset* subset, const vector<ARCSim::Edge*>& edges) {
     vector<ARCSim::Edge*> bad_edges = find_bad_edges(edges);
     for (size_t e = 0; e < bad_edges.size(); e++) {
@@ -486,7 +483,7 @@ ARCSim::RemeshOp try_edge_collapse(ARCSim::Edge* edge, int which) {
         (is_seam_or_boundary(node0) && !is_seam_or_boundary(edge)) ||
         (has_labeled_edges(node0) && !edge->preserve))
         return ARCSim::RemeshOp();
-    if (!can_collapse(node0->mesh->parent->remeshing, edge, which))
+    if (!can_collapse(EOL::ClothManager::GetClothParent(*node0->mesh)->remeshing, edge, which))
         return ARCSim::RemeshOp();
     ARCSim::RemeshOp op = collapse_edge(edge, which);
     if (op.empty()) return op;

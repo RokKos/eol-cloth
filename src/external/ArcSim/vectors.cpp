@@ -442,7 +442,7 @@ template<> SVD<3, 2> singular_value_decomposition<3, 2>(const Mat<3, 2> &A) {
 template <int n> Mat<n, n> get_positive(const Mat<n, n> &A) {
 	Eig<n> eig = eigen_decomposition(A);
 	for (int i = 0; i < n; i++)
-		eig.l[i] = max(eig.l[i], 0.);
+		eig.l[i] = std::max(eig.l[i], 0.);
 	return eig.Q*diag(eig.l)*eig.Q.t();
 }
 template Mat2x2 get_positive<2>(const Mat2x2&);
