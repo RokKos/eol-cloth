@@ -39,7 +39,7 @@
 #define snprintf _snprintf
 
 namespace ARCSim {
-    inline double sqrt(int n) { return sqrt(double(n)); }
+    inline double sqrt(int n) { return std::sqrt(double(n)); }
 
     template <class T>
     inline T log2(const T& number) {
