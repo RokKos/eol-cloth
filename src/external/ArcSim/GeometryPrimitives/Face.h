@@ -1,7 +1,7 @@
 #ifndef FACE_H
 #define FACE_H
 
-#include "../../TypeDefinitions.h"
+#include "../../../TypeDefinitions.h"
 #include "../vectors.hpp"
 #include "Vert.h"
 

@@ -41,5 +41,5 @@
 
 //ARCSim includes
 #include "external/ArcSim/vectors.hpp"
-#include "external/ArcSim/util.hpp"
+#include "external/ArcSim/Utils/util.hpp"
 #include "external/ArcSim/geometry.hpp"

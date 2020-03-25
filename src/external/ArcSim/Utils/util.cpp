@@ -170,4 +170,38 @@ void segfault() {
 	raise(SIGSEGV);
 }
 
+template <typename T1, typename T2> void Mesh::check(const T1* p1, const T2* p2,
+	const vector<T2*>& v2) {
+	if (p2 && find((T2*)p2, v2) == -1) {
+		cout << p1 << "'s adjacent " << p2 << " is not accounted for" << endl;
+		abort();
+	}
+}
+template <typename T1, typename T2> void Mesh::not_null(const T1* p1, const T2* p2) {
+	if (!p2) {
+		cout << "adjacent to " << p1 << " is null " << p2 << endl;
+		abort();
+	}
+}
+template <typename T1, typename T2> void Mesh::not_any_null
+(const T1* p1, T2* const* p2, int n) {
+	bool any_null = false;
+	for (int i = 0; i < n; i++) if (!p2[i]) any_null = true;
+	if (any_null) {
+		cout << "adjacent to " << p1 << " one of these is null" << endl;
+		for (int i = 0; i < n; i++) cout << p2[i] << endl;
+		abort();
+	}
+}
+template <typename T1, typename T2> void Mesh::not_all_null
+(const T1* p1, T2* const* p2, int n) {
+	bool all_null = true;
+	for (int i = 0; i < n; i++) if (p2[i]) all_null = false;
+	if (all_null) {
+		cout << "adjacent to " << p1 << " all of these are null" << endl;
+		for (int i = 0; i < n; i++) cout << p2[i] << endl;
+		abort();
+	}
+}
+
 }  // namespace ARCSim
