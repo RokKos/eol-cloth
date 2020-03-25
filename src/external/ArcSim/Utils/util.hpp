@@ -27,11 +27,11 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #ifndef UTIL_HPP
 #define UTIL_HPP
 
-#include "GeometryPrimitives/Vert.h"
-#include "GeometryPrimitives/Node.h"
-#include "GeometryPrimitives/Edge.h"
-#include "GeometryPrimitives/Face.h"
-#include "GeometryPrimitives/Mesh.h"
+#include "../GeometryPrimitives/Vert.h"
+#include "../GeometryPrimitives/Node.h"
+#include "../GeometryPrimitives/Edge.h"
+#include "../GeometryPrimitives/Face.h"
+#include "../GeometryPrimitives/Mesh.h"
 
  // aa: win
 
@@ -218,6 +218,12 @@ std::ostream &operator<< (std::ostream &out, const std::vector<T> &v) {
 #define REPORT(x) std::cout << #x << " = " << (x) << std::endl
 
 #define REPORT_ARRAY(x,n) std::cout << #x << "[" << #n << "] = " << vector<double>(&(x)[0], &(x)[n]) << std::endl
+
+template <typename T1, typename T2> void check(const T1* p1, const T2* p2, const std::vector<T2*>& v2);
+template <typename T1, typename T2> void not_null(const T1* p1, const T2* p2);
+template <typename T1, typename T2> void not_any_null(const T1* p1, T2* const* p2, int n);
+template <typename T1, typename T2> void not_all_null(const T1* p1, T2* const* p2, int n);
+
 
 }  // namespace ARCSim
 
