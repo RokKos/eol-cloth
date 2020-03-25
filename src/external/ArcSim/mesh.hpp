@@ -50,11 +50,8 @@ template <typename Prim> inline int count_elements(const std::vector<Mesh*>& mes
 
 void connect(Vert *vert, Node *node); // assign vertex to node
 
-bool check_that_pointers_are_sane(const Mesh &mesh);
-bool check_that_contents_are_sane(const Mesh &mesh);
 
-void compute_ms_data(Mesh &mesh); // call after mesh topology changes
-void compute_ws_data(Mesh &mesh); // call after vert positions change
+
 void compute_ms_data(std::vector<Face*>& face);
 void compute_ms_data(std::vector<Node*>& node);
 void compute_ws_data(std::vector<Face*>& face);
@@ -79,7 +76,7 @@ inline Edge *next_edge_cw(const Edge* edge, Node* center);
 inline Face *next_face_ccw(const Edge* edge, Node* center);
 inline Face *next_face_cw(const Edge* edge, Node* center);
 
-void set_indices(Mesh &mesh);
+
 void set_indices(std::vector<Mesh*> &meshes);
 void mark_nodes_to_preserve(Mesh &mesh);
 
@@ -203,11 +200,6 @@ inline Vert *edge_opp_vert(const Edge *edge, int side) {
 			return face->v[j>0 ? j - 1 : j + 2];
 	return NULL;
 }
-
-template <> inline const std::vector<Vert*> &get(const Mesh &mesh) { return mesh.verts; }
-template <> inline const std::vector<Node*> &get(const Mesh &mesh) { return mesh.nodes; }
-template <> inline const std::vector<Edge*> &get(const Mesh &mesh) { return mesh.edges; }
-template <> inline const std::vector<Face*> &get(const Mesh &mesh) { return mesh.faces; }
 
 template <typename Prim> inline int count_elements(const std::vector<Mesh*>& meshes) {
 	int num = 0;

@@ -8,16 +8,30 @@
 #include "../referenceshape.hpp"
 
 namespace ARCSim {
+	
+	class Mesh {
+	public:
+		Mesh() : ref(0), EoL_Count(0) {};
 
-	struct Mesh {
-		ReferenceShape* ref;
+		bool operator==(const Mesh& other) const {
+			return check_that_pointers_are_sane(other);
+		}
 
-		int EoL_Count;
+		inline const std::vector<Vert*>& GetVert() const { return verts; }
+		inline const std::vector<Node*>& GetNodes() const { return nodes; }
+		inline const std::vector<Edge*>& GetEdges() const { return edges; }
+		inline const std::vector<Face*>& GetFaces() const { return faces; }
 
-		std::vector<Vert*> verts;
-		std::vector<Node*> nodes;
-		std::vector<Edge*> edges;
-		std::vector<Face*> faces;
+		void compute_ms_data(); // call after mesh topology changes
+		void compute_ws_data(); // call after vert positions change
+
+		void set_indices();
+		void update_x0();
+
+	private:
+		bool check_that_pointers_are_sane(const Mesh& mesh) const;
+		bool check_that_contents_are_sane(const Mesh& mesh) const;
+
 		// These do *not* assume ownership, so no deletion on removal
 		void add(Vert* vert);
 		void add(Node* node);
@@ -28,16 +42,16 @@ namespace ARCSim {
 		void remove(Edge* edge);
 		void remove(Face* face);
 
-		Mesh() : ref(0), EoL_Count(0) {};
+	private:
 
-		bool operator==(const Mesh& other) const {
-			return ref == other.ref &&
-				EoL_Count == other.EoL_Count &&
-				verts == other.verts &&
-				nodes == other.nodes &&
-				edges == other.edges &&
-				faces == other.faces;
-		}
+		ReferenceShape* ref;
+
+		int EoL_Count;
+
+		std::vector<Vert*> verts;
+		std::vector<Node*> nodes;
+		std::vector<Edge*> edges;
+		std::vector<Face*> faces;
 	};
 }
 
