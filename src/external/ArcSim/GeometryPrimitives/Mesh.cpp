@@ -64,83 +64,83 @@ namespace ARCSim {
 		return true;
 	}
 
-	void Mesh::add(Vert* vert) {
+	void Mesh::add(Vert vert) {
 		verts.push_back(vert);
-		vert->node = NULL;
-		vert->adjf.clear();
-		vert->index = static_cast<int>(verts.size()) - 1;
+		vert.node = NULL;
+		vert.adjf.clear();
+		vert.index = static_cast<int>(verts.size()) - 1;
 	}
 
-	void Mesh::remove(Vert* vert) {
-		if (!vert->adjf.empty()) {
+	void Mesh::remove(Vert vert) {
+		if (!vert.adjf.empty()) {
 			cout << "Error: can't delete vert " << vert << " as it still has "
-				<< vert->adjf.size() << " faces attached to it." << endl;
+				<< vert.adjf.size() << " faces attached to it." << endl;
 			return;
 		}
 		exclude(vert, verts);
 	}
 
-	void Mesh::add(Node* node) {
+	void Mesh::add(Node node) {
 		nodes.push_back(node);
-		node->index = static_cast<int>(nodes.size()) - 1;
-		node->adje.clear();
-		for (size_t v = 0; v < node->verts.size(); v++) {
-			node->verts[v]->node = node;
+		node.index = static_cast<int>(nodes.size()) - 1;
+		node.adje.clear();
+		for (size_t v = 0; v < node.verts.size(); v++) {
+			node.verts[v]->node = node;
 		}
-		node->mesh = this;
+		node.mesh = this;  // TODO(Rok Kos): Remove this references
 	}
 
-	void Mesh::remove(Node* node) {
-		if (!node->adje.empty()) {
+	void Mesh::remove(Node node) {
+		if (!node.adje.empty()) {
 			cout << "Error: can't delete node " << node << " as it still has "
-				<< node->adje.size() << " edges attached to it." << endl;
+				<< node.adje.size() << " edges attached to it." << endl;
 			return;
 		}
 		exclude(node, nodes);
 	}
 
-	void Mesh::add(Edge* edge) {
+	void Mesh::add(Edge edge) {
 		edges.push_back(edge);
-		edge->adjf[0] = edge->adjf[1] = NULL;
-		edge->index = static_cast<int>(edges.size()) - 1;
-		include(edge, edge->n[0]->adje);
-		include(edge, edge->n[1]->adje);
+		edge.adjf[0] = edge.adjf[1] = NULL;
+		edge.index = static_cast<int>(edges.size()) - 1;
+		include(edge, edge.n[0]->adje);
+		include(edge, edge.n[1]->adje);
 	}
 
-	void Mesh::remove(Edge* edge) {
-		if (edge->adjf[0] || edge->adjf[1]) {
+	void Mesh::remove(Edge edge) {
+		if (edge.adjf[0] || edge.adjf[1]) {
 			cout << "Error: can't delete edge " << edge
-				<< " as it still has a face (" << edge->adjf[0] << "|" << edge->adjf[1]
+				<< " as it still has a face (" << edge.adjf[0] << "|" << edge.adjf[1]
 				<< ") attached to it." << endl;
 			return;
 		}
 		exclude(edge, edges);
-		exclude(edge, edge->n[0]->adje);
-		exclude(edge, edge->n[1]->adje);
+		exclude(edge, edge.n[0]->adje);
+		exclude(edge, edge.n[1]->adje);
 	}
 
-	void Mesh::add(Face* face) {
+	void Mesh::add(Face face) {
 		faces.push_back(face);
-		face->index = static_cast<int>(faces.size()) - 1;
+		face.index = static_cast<int>(faces.size()) - 1;
 		// adjacency
 		add_edges_if_needed(*this, face);
 		for (int i = 0; i < 3; i++) {
-			Vert* v0 = face->v[NEXT(i)], * v1 = face->v[PREV(i)];
+			Vert* v0 = face.v[NEXT(i)], * v1 = face.v[PREV(i)];
 			include(face, v0->adjf);
 			Edge* e = get_edge(v0->node, v1->node);
-			face->adje[i] = e;
+			face.adje[i] = e;
 			int side = e->n[0] == v0->node ? 0 : 1;
 			e->adjf[side] = face;
 		}
 	}
 
-	void Mesh::remove(Face* face) {
+	void Mesh::remove(Face face) {
 		exclude(face, faces);
 		// adjacency
 		for (int i = 0; i < 3; i++) {
-			Vert* v0 = face->v[NEXT(i)];
+			Vert* v0 = face.v[NEXT(i)];
 			exclude(face, v0->adjf);
-			Edge* e = face->adje[i];
+			Edge* e = face.adje[i];
 			int side = e->n[0] == v0->node ? 0 : 1;
 			e->adjf[side] = NULL;
 		}
@@ -159,85 +159,85 @@ namespace ARCSim {
 
 	void Mesh::set_indices() {
 		for (size_t v = 0; v < verts.size(); v++) {
-			verts[v]->index = static_cast<int>(v);
+			verts[v].index = static_cast<int>(v);
 		}
 			
 		for (size_t f = 0; f < faces.size(); f++) {
-			faces[f]->index = static_cast<int>(f);
+			faces[f].index = static_cast<int>(f);
 		}
 
 		int eoli = 0; // Added by Nick to index EoL nodes
 		for (size_t n = 0; n < nodes.size(); n++) {
-			nodes[n]->index = static_cast<int>(n);
+			nodes[n].index = static_cast<int>(n);
 			// Reset EoL indices as well
-			if (nodes[n]->EoL) {
-				nodes[n]->EoL_index = eoli;
+			if (nodes[n].EoL) {
+				nodes[n].EoL_index = eoli;
 				eoli++;
 			}
 			else {
-				nodes[n]->EoL_index = -1;
+				nodes[n].EoL_index = -1;
 			}
 		}
 		
 		EoL_Count = eoli; // Update the number of EoL nodes in a mesh
 		for (size_t e = 0; e < edges.size(); e++) {
-			edges[e]->index = static_cast<int>(e);
+			edges[e].index = static_cast<int>(e);
 		}
 	}
 
 	void Mesh::update_x0() {
 		for (int n = 0; n < (int)nodes.size(); n++) {
-			nodes[n]->x0 = nodes[n]->x;
+			nodes[n].x0 = nodes[n].x;
 		}
 	}
 
 	void Mesh::compute_ms_data_faces() {
 		for (size_t n = 0; n < faces.size(); n++)
-			faces[n]->compute_ms_data();
+			faces[n].compute_ms_data();
 		compute_ws_data_faces();
 	}
 
 	void Mesh::compute_ms_data_nodes() {
 		for (size_t n = 0; n < nodes.size(); n++)
-			nodes[n]->compute_ms_data();
+			nodes[n].compute_ms_data();
 		compute_ws_data_nodes();
 	}
 
 	void Mesh::compute_ws_data_faces() {
 		for (size_t n = 0; n < faces.size(); n++)
-			faces[n]->compute_ws_data();
+			faces[n].compute_ws_data();
 	}
 
 	void Mesh::compute_ws_data_nodes() {
 		for (size_t n = 0; n < nodes.size(); n++)
-			nodes[n]->compute_ws_data();
+			nodes[n].compute_ws_data();
 	}
 
 	// ADDED BY NICK
 	// Need to check if nodes ever have more than one vert assigned
 	void Mesh::reindex_nodes() {
 		for (size_t i = 0; i < nodes.size(); i++) {
-			nodes[i]->index = static_cast<int>(i);
-			nodes[i]->verts[0]->index = static_cast<int>(i);
+			nodes[i].index = static_cast<int>(i);
+			nodes[i].verts[0]->index = static_cast<int>(i);
 		}
 	}
 
 	void Mesh::activate_nodes() {
 		for (size_t i = 0; i < nodes.size(); i++) {
-			nodes[i]->index = static_cast<int>(i);
-			nodes[i]->flag |= Node::FlagActive;
+			nodes[i].index = static_cast<int>(i);
+			nodes[i].flag |= Node::FlagActive;
 		}
 	}
 
 	void Mesh::deactivate_nodes() {
 		for (size_t i = 0; i < nodes.size(); i++)
-			nodes[i]->flag &= ~Node::FlagActive;
+			nodes[i].flag &= ~Node::FlagActive;
 
 	}
 
 	void Mesh::mark_nodes_to_preserve()	{
 		for (int n = 0; n < (int)mesh.nodes.size(); n++) {
-			Node* node = mesh.nodes[n];
+			Node node = mesh.nodes[n];
 			if (is_seam_or_boundary(node) || node->label)
 				node->preserve = true;
 		}
@@ -263,7 +263,7 @@ namespace ARCSim {
 
 	void apply_transformation(const Transformation& tr) {
 		for (int n = 0; n < (int)nodes.size(); n++)
-			nodes[n]->x = tr.apply(nodes[n]->x);
+			nodes[n].x = tr.apply(nodes[n].x);
 		compute_ws_data();
 	}
 }
