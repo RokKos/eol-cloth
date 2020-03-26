@@ -21,6 +21,7 @@ namespace ARCSim {
 		inline const std::vector<Node*>& GetNodes() const { return nodes; }
 		inline const std::vector<Edge*>& GetEdges() const { return edges; }
 		inline const std::vector<Face*>& GetFaces() const { return faces; }
+		int GetEolCount() const { return EoL_Count; }
 
 		void compute_ms_data(); // call after mesh topology changes
 		void compute_ws_data(); // call after vert positions change
@@ -41,9 +42,24 @@ namespace ARCSim {
 		void remove(Node* node);
 		void remove(Edge* edge);
 		void remove(Face* face);
+		// Compute material space data (Rok)
+		void compute_ms_data_faces();
+		void compute_ms_data_nodes();
+		// Compute world space data (Rok)
+		void compute_ws_data_faces();
+		void compute_ws_data_nodes();
+
+
+		// ADDED BY NICK
+		void reindex_nodes();
+		void activate_nodes();
+		void deactivate_nodes();
+		void mark_nodes_to_preserve();
+
+		void add_edges_if_needed(const Face* face);
+		void apply_transformation(const Transformation& tr);
 
 	private:
-
 		ReferenceShape* ref;
 
 		int EoL_Count;

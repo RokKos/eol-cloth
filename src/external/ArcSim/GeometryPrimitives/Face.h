@@ -11,7 +11,12 @@ namespace ARCSim {
 
 namespace ARCSim {
 
-	struct Face {
+	class Face {
+	public:
+		void compute_ws_data();
+		void compute_ms_data();
+
+	public:
 		Vert* v[3]; // verts
 		EOL::Material* material;
 		int flag;

@@ -119,14 +119,41 @@ namespace ARCSim {
 		exclude(edge, edge->n[1]->adje);
 	}
 
+	void Mesh::add(Face* face) {
+		faces.push_back(face);
+		face->index = static_cast<int>(faces.size()) - 1;
+		// adjacency
+		add_edges_if_needed(*this, face);
+		for (int i = 0; i < 3; i++) {
+			Vert* v0 = face->v[NEXT(i)], * v1 = face->v[PREV(i)];
+			include(face, v0->adjf);
+			Edge* e = get_edge(v0->node, v1->node);
+			face->adje[i] = e;
+			int side = e->n[0] == v0->node ? 0 : 1;
+			e->adjf[side] = face;
+		}
+	}
+
+	void Mesh::remove(Face* face) {
+		exclude(face, faces);
+		// adjacency
+		for (int i = 0; i < 3; i++) {
+			Vert* v0 = face->v[NEXT(i)];
+			exclude(face, v0->adjf);
+			Edge* e = face->adje[i];
+			int side = e->n[0] == v0->node ? 0 : 1;
+			e->adjf[side] = NULL;
+		}
+	}
+
 	void Mesh::compute_ms_data() {
-		compute_ms_data(faces);
-		compute_ms_data(nodes);
+		compute_ms_data_faces();
+		compute_ms_data_nodes();
 	}
 
 	void Mesh::compute_ws_data() {
-		compute_ws_data(faces);
-		compute_ws_data(nodes);
+		compute_ws_data_faces();
+		compute_ws_data_nodes(nodes);
 	}
 
 
@@ -162,5 +189,81 @@ namespace ARCSim {
 		for (int n = 0; n < (int)nodes.size(); n++) {
 			nodes[n]->x0 = nodes[n]->x;
 		}
+	}
+
+	void Mesh::compute_ms_data_faces() {
+		for (size_t n = 0; n < faces.size(); n++)
+			faces[n]->compute_ms_data();
+		compute_ws_data_faces();
+	}
+
+	void Mesh::compute_ms_data_nodes() {
+		for (size_t n = 0; n < nodes.size(); n++)
+			nodes[n]->compute_ms_data();
+		compute_ws_data_nodes();
+	}
+
+	void Mesh::compute_ws_data_faces() {
+		for (size_t n = 0; n < faces.size(); n++)
+			faces[n]->compute_ws_data();
+	}
+
+	void Mesh::compute_ws_data_nodes() {
+		for (size_t n = 0; n < nodes.size(); n++)
+			nodes[n]->compute_ws_data();
+	}
+
+	// ADDED BY NICK
+	// Need to check if nodes ever have more than one vert assigned
+	void Mesh::reindex_nodes() {
+		for (size_t i = 0; i < nodes.size(); i++) {
+			nodes[i]->index = static_cast<int>(i);
+			nodes[i]->verts[0]->index = static_cast<int>(i);
+		}
+	}
+
+	void Mesh::activate_nodes() {
+		for (size_t i = 0; i < nodes.size(); i++) {
+			nodes[i]->index = static_cast<int>(i);
+			nodes[i]->flag |= Node::FlagActive;
+		}
+	}
+
+	void Mesh::deactivate_nodes() {
+		for (size_t i = 0; i < nodes.size(); i++)
+			nodes[i]->flag &= ~Node::FlagActive;
+
+	}
+
+	void Mesh::mark_nodes_to_preserve()	{
+		for (int n = 0; n < (int)mesh.nodes.size(); n++) {
+			Node* node = mesh.nodes[n];
+			if (is_seam_or_boundary(node) || node->label)
+				node->preserve = true;
+		}
+		/*for (int e = 0; e < mesh.edges.size(); e++) {
+		Edge *edge = mesh.edges[e];
+		if (edge->label) {
+		edge->n[0]->preserve = true;
+		edge->n[1]->preserve = true;
+		}
+		}*/
+	
+	}
+
+
+	void Mesh::add_edges_if_needed(const Face* face) {
+		for (int i = 0; i < 3; i++) {
+			Node* n0 = face->v[i]->node, * n1 = face->v[NEXT(i)]->node;
+			if (get_edge(n0, n1) == NULL) {
+				add(new Edge(n0, n1, 0, 0));
+			}
+		}
+	}
+
+	void apply_transformation(const Transformation& tr) {
+		for (int n = 0; n < (int)nodes.size(); n++)
+			nodes[n]->x = tr.apply(nodes[n]->x);
+		compute_ws_data();
 	}
 }

@@ -50,15 +50,6 @@ template <typename Prim> inline int count_elements(const std::vector<Mesh*>& mes
 
 void connect(Vert *vert, Node *node); // assign vertex to node
 
-
-
-void compute_ms_data(std::vector<Face*>& face);
-void compute_ms_data(std::vector<Node*>& node);
-void compute_ws_data(std::vector<Face*>& face);
-void compute_ws_data(std::vector<Node*>& node);
-void compute_ms_data(Face* face);
-void compute_ms_data(Node* node);
-
 // NICK
 //double calc_edge_weight(Node* n);
 
@@ -78,7 +69,6 @@ inline Face *next_face_cw(const Edge* edge, Node* center);
 
 
 void set_indices(std::vector<Mesh*> &meshes);
-void mark_nodes_to_preserve(Mesh &mesh);
 
 inline Vec3 derivative(double a0, double a1, double a2, double az, const Face *face);
 inline Mat3x3 derivative(const Vec3& w0, const Vec3& w1,
@@ -88,16 +78,10 @@ void apply_transformation_onto(const Mesh& start_state, Mesh& onto,
 	const Transformation& tr);
 void apply_transformation(Mesh& mesh, const Transformation& tr);
 
-void update_x0(Mesh &mesh);
-
 Mesh deep_copy(Mesh &mesh);
 void delete_mesh(Mesh &mesh);
 
-// ADDED BY NICK
-void reindex_nodes(std::vector<Node*>& nodes);
 
-void activate_nodes(std::vector<Node*>& nodes);
-void deactivate_nodes(std::vector<Node*>& nodes);
 
 //
 // IMPLEMENTATION OF INLINE FUNCTIONS

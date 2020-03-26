@@ -11,7 +11,8 @@ namespace ARCSim {
 
 namespace ARCSim {
 
-	struct Node {
+	class Node {
+	public:
 		enum NodeFlags {
 			FlagNone = 0, FlagActive = 1, FlagMayBreak = 2,
 			FlagResolveUni = 4, FlagResolveMax = 8
@@ -21,6 +22,11 @@ namespace ARCSim {
 			NewEOL = 1, NewEOLFromSplit = 2, IsEOL = 3, WasEOL = 4
 		};
 
+		
+		void compute_ws_data();
+		void compute_ms_data();
+
+	public:
 		//int uuid;
 
 		Mesh* mesh;
