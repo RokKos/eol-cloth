@@ -1,6 +1,10 @@
 # Author: Shinjiro Sueda
 # Edited: Nick Weidner
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+# Edited: Rok Kos
+CMAKE_MINIMUM_REQUIRED(VERSION 3.15)
+
+set (CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/CMake")
+include(cotire)
 
 # Name of the project
 PROJECT(eol-cloth)
