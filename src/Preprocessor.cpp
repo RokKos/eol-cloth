@@ -715,6 +715,7 @@ void cleanup(Mesh& mesh)
 		// If a bad edge exists, but is unsafe to collapse, try in the next iteration where it may become safe, or another operation may take care of it
 		while(!allclear) {
 			allclear = true;
+			// TODO(Rok Kos): check why this while loop cycles
 			while (collapse_nonconformal(mesh, allclear));
 			markPreserve(mesh); // Can be removed if the conformal pass doesn't loop over edges and check for preserve status
 			while (collapse_conformal(mesh, allclear));
