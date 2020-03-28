@@ -3,6 +3,8 @@
 using namespace std;
 using namespace Eigen;
 
+#include "external/ArcSim/GeometryPrimitives/Node.h"
+
 namespace EOL {
 
 	// This gets the job done for now
@@ -126,22 +128,27 @@ namespace EOL {
 
 	void mesh2m(const ARCSim::Mesh& mesh, const string& file_name,
 		const bool& overwrite) {
-		MatrixXd x_X(mesh.nodes.size(), 5);
-		MatrixXi faces2(3, mesh.faces.size());
-		VectorXi isEOL(mesh.nodes.size());
-		for (int i = 0; i < mesh.nodes.size(); i++) {
 
-			if (mesh.nodes[i]->EoL) isEOL(i) = 1;
+		auto nodes = mesh.GetNodes();
+		MatrixXd x_X(nodes.size(), 5);
+		MatrixXi faces2(3, mesh.GetFaces().size());
+		VectorXi isEOL(nodes.size());
+
+		for (int i = 0; i < nodes.size(); i++) {
+			ARCSim::Node node = nodes[i];
+
+			if (node.EoL) isEOL(i) = 1;
 			else isEOL(i) = 0;
-			x_X(i, 0) = mesh.nodes[i]->x[0];
-			x_X(i, 1) = mesh.nodes[i]->x[1];
-			x_X(i, 2) = mesh.nodes[i]->x[2];
-			x_X(i, 3) = mesh.nodes[i]->verts[0]->u[0];
-			x_X(i, 4) = mesh.nodes[i]->verts[0]->u[1];
+			x_X(i, 0) = node.x[0];
+			x_X(i, 1) = node.x[1];
+			x_X(i, 2) = node.x[2];
+			x_X(i, 3) = node.verts[0]->u[0];
+			x_X(i, 4) = node.verts[0]->u[1];
 		}
 
-		for (int i = 0; i < mesh.faces.size(); i++) {
-			faces2.col(i) = Vector3i(mesh.faces[i]->v[0]->node->index, mesh.faces[i]->v[1]->node->index, mesh.faces[i]->v[2]->node->index);
+		auto faces = mesh.GetFaces();
+		for (int i = 0; i < faces.size(); i++) {
+			faces2.col(i) = Vector3i(faces[i].v[0]->node->index, faces[i].v[1]->node->index, faces[i].v[2]->node->index);
 		}
 
 		mat_to_file(x_X, "x_X", file_name, overwrite);

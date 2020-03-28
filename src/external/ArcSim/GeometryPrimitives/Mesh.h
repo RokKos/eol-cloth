@@ -18,10 +18,13 @@ namespace ARCSim {
 			return check_that_pointers_are_sane(other);
 		}
 
-		inline const std::vector<Vert>& GetVert() const { return verts; }
+		inline const std::vector<Vert>& GetVerts() const { return verts; }
 		inline const std::vector<Node>& GetNodes() const { return nodes; }
 		inline const std::vector<Edge>& GetEdges() const { return edges; }
 		inline const std::vector<Face>& GetFaces() const { return faces; }
+
+		std::vector<Node>& GetNodesToModify() { return nodes; }
+		std::vector<Edge>& GetEdgesToModify() { return edges; }
 
 		int GetEolCount() const { return EoL_Count; }
 

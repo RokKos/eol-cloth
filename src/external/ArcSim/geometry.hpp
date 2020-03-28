@@ -78,13 +78,13 @@ template <Space s> Mat3x3 curvature(const Face *face);
 template <Space s> Mat2x2 projected_curvature(const Face *face, const Mat2x3& base);
 
 inline double area(const Vec3& u0, const Vec3& u1, const Vec3& u2) { return 0.5*norm(cross(u1 - u0, u2 - u0)); }
-inline double area(const Face* face) { return area(face->v[0]->u, face->v[1]->u, face->v[2]->u); }
+inline double area(const Face face) { return area(face.v[0]->u, face.v[1]->u, face.v[2]->u); }
 double aspect(const Vec3& u0, const Vec3& u1, const Vec3& u2);
 inline double aspect(const Face* face) { return aspect(face->v[0]->u, face->v[1]->u, face->v[2]->u); }
 double get_angle(const Vec3& u, const Vec3& v);
 
 // Nick
-inline double edge_length(const Edge* edge) { return sqrt(pow(edge->n[0]->verts[0]->u[0] - edge->n[1]->verts[0]->u[0], 2) + pow(edge->n[0]->verts[0]->u[1] - edge->n[1]->verts[0]->u[1], 2)); }
+inline double edge_length(const Edge& edge) { return sqrt(pow(edge.n[0]->verts[0]->u[0] - edge.n[1]->verts[0]->u[0], 2) + pow(edge.n[0]->verts[0]->u[1] - edge.n[1]->verts[0]->u[1], 2)); }
 inline double edge_length3D(const Edge* edge) { return sqrt(pow(edge->n[0]->x[0] - edge->n[1]->x[0], 2) + pow(edge->n[0]->x[1] - edge->n[1]->x[1], 2) + pow(edge->n[0]->x[2] - edge->n[1]->x[2], 2)); }
 
 template <Space s> Plane plane_fit(const Mesh& mesh);

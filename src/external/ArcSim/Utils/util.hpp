@@ -190,7 +190,7 @@ Vec<n, T> vec_max(const Vec<n, T> &u, const Vec<n, T> &v) {
 // Mesh utilities
 
 bool is_seam_or_boundary(const Vert *v);
-bool is_seam_or_boundary(const Node *n);
+bool is_seam_or_boundary(const Node& n);
 bool is_seam_or_boundary(const Edge *e);
 bool is_seam_or_boundary(const Face *f);
 bool is_seam(const Edge* e);

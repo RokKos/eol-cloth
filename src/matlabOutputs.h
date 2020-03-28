@@ -2,6 +2,8 @@
 #ifndef __matlabOutputs__
 #define __matlabOutputs__
 
+#include "external/ArcSim/GeometryPrimitives/Mesh.h"
+
 namespace EOL {
 
     void mat_s2s_file(const Eigen::SparseMatrix<double>& mat, const std::string& var_name, const std::string& file_name, const bool& overwrite);

@@ -165,12 +165,12 @@ inline Edge *get_edge(const Node *n0, const Node *n1) {
 	return NULL;
 }
 
-inline Vert *edge_vert(const Edge *edge, int side, int i) {
-	Face *face = (Face*)edge->adjf[side];
+inline Vert *edge_vert(const Edge& edge, int side, int i) {
+	Face *face = (Face*)edge.adjf[side];
 	if (!face)
 		return NULL;
 	for (int j = 0; j < 3; j++)
-		if (face->v[j]->node == edge->n[i])
+		if (face->v[j]->node == edge.n[i])
 			return face->v[j];
 	return NULL;
 }

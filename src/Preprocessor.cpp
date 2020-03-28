@@ -40,9 +40,10 @@ namespace EOL {
     }
 
     void markWasEOL(ARCSim::Mesh& mesh) {
-        for (int n = 0; n < mesh.nodes.size(); n++) {
-            if (mesh.nodes[n]->EoL) {
-                mesh.nodes[n]->EoL_state = ARCSim::Node::WasEOL;
+        auto nodes = mesh.GetNodesToModify();
+        for (int n = 0; n < nodes.size(); n++) {
+            if (nodes[n].EoL) {
+                nodes[n].EoL_state = ARCSim::Node::WasEOL;
             }
         }
     }
@@ -83,11 +84,11 @@ namespace EOL {
         return false;
     }
 
-    bool inBoundary(const MatrixXd& bounds, const ARCSim::Node* node, const double& brange) {
+    bool inBoundary(const MatrixXd& bounds, const ARCSim::Node& node, const double& brange) {
         // If this node is in a boundary, we want to check if its connected prserved edges are perpendicular within a range to the border edge
-        if (!node->EoL) return false; // We are only checking for EoL points
+        if (!node.EoL) return false; // We are only checking for EoL points
         int b1, b2, corner = 0, preserved = 0;
-        ARCSim::Vert* vert = node->verts[0];
+        ARCSim::Vert* vert = node.verts[0];
         for (b1 = 0; b1 < bounds.cols(); b1++) {
             if (b1 == bounds.cols() - 1) {
                 b2 = 0;
@@ -96,15 +97,15 @@ namespace EOL {
                 b2 = b1 + 1;
             }
             if (linePointDist(bounds.block<3, 1>(0, b1), bounds.block<3, 1>(0, b2), v2e(vert->u)) < brange) {
-                if (node->cornerID >= 0) {
+                if (node.cornerID >= 0) {
                     return true; // This is an EoL corner and should 
                 }
                 corner++;
                 if (corner > 1) {
                     return true; // This point is in a boundary corner and should not be EOL
                 }
-                for (int e = 0; e < node->adje.size(); e++) {
-                    ARCSim::Edge* edge = node->adje[e];
+                for (int e = 0; e < node.adje.size(); e++) {
+                    ARCSim::Edge* edge = node.adje[e];
                     if (edge->preserve) {
                         preserved++;
                         Vector3d A = bounds.block<3, 1>(0, b1);
@@ -130,33 +131,34 @@ namespace EOL {
 
     void addGeometry(ARCSim::Mesh& mesh, const MatrixXd& boundaries, const vector<shared_ptr<btc::Collision> > cls)
     {
+        auto nodes = mesh.GetNodesToModify();
         for (int i = 0; i < cls.size(); i++) {
             // EOL nodes will be detected here
             // If they aren't found then the EOL node has been lifted off and we need to take note
             if (cls[i]->count1 == 3 && cls[i]->count2 == 1) {
-                ARCSim::Node* node = mesh.nodes[cls[i]->verts2(0)];
-                if (node->EoL) {
-                    node->EoL_state = ARCSim::Node::IsEOL;
+                ARCSim::Node& node = nodes[cls[i]->verts2(0)];
+                if (node.EoL) {
+                    node.EoL_state = ARCSim::Node::IsEOL;
                 }
             }
             else if (cls[i]->count1 == 1 && cls[i]->count2 == 3) {
-                if ((mesh.nodes[cls[i]->verts2(0)]->EoL && mesh.nodes[cls[i]->verts2(0)]->cornerID == cls[i]->verts1(0)) ||
-                    (mesh.nodes[cls[i]->verts2(1)]->EoL && mesh.nodes[cls[i]->verts2(1)]->cornerID == cls[i]->verts1(0)) ||
-                    (mesh.nodes[cls[i]->verts2(2)]->EoL && mesh.nodes[cls[i]->verts2(2)]->cornerID == cls[i]->verts1(0))) continue;
+                if ((nodes[cls[i]->verts2(0)].EoL && nodes[cls[i]->verts2(0)].cornerID == cls[i]->verts1(0)) ||
+                    (nodes[cls[i]->verts2(1)].EoL && nodes[cls[i]->verts2(1)].cornerID == cls[i]->verts1(0)) ||
+                    (nodes[cls[i]->verts2(2)].EoL && nodes[cls[i]->verts2(2)].cornerID == cls[i]->verts1(0))) continue;
 
                 // We don't add new points throughout this loop so this is safe
-                ARCSim::Vert* v0 = mesh.verts[cls[i]->verts2(0)],
-                    * v1 = mesh.verts[cls[i]->verts2(1)],
-                    * v2 = mesh.verts[cls[i]->verts2(2)];
+                ARCSim::Vert v0 = mesh.GetVerts()[cls[i]->verts2(0)],
+                     v1 = mesh.GetVerts()[cls[i]->verts2(1)],
+                     v2 = mesh.GetVerts()[cls[i]->verts2(2)];
                 //ARCSim::Face *f0 = mesh.faces[cls[i]->tri2];
 
                 // TODO:: This may be overkill if the CD weights match the mesh barycoords
-                double xX = cls[i]->weights2(0) * v0->u[0] +
-                    cls[i]->weights2(1) * v1->u[0] +
-                    cls[i]->weights2(2) * v2->u[0];
-                double yX = cls[i]->weights2(0) * v0->u[1] +
-                    cls[i]->weights2(1) * v1->u[1] +
-                    cls[i]->weights2(2) * v2->u[1];
+                double xX = cls[i]->weights2(0) * v0.u[0] +
+                    cls[i]->weights2(1) * v1.u[0] +
+                    cls[i]->weights2(2) * v2.u[0];
+                double yX = cls[i]->weights2(0) * v0.u[1] +
+                    cls[i]->weights2(1) * v1.u[1] +
+                    cls[i]->weights2(2) * v2.u[1];
 
                 // Boundary
                 if (inBoundaryQ(boundaries, Vector3d(xX, yX, 0.0),
@@ -212,18 +214,18 @@ namespace EOL {
                     for (size_t v = 0; v < op.added_verts.size(); v++) {
                         ARCSim::Vert* vertnew = op.added_verts[v];
                         vertnew->sizing =
-                            (v0->sizing + v1->sizing + v2->sizing) / 3.0;
+                            (v0.sizing + v1.sizing + v2.sizing) / 3.0;
                     }
                     op.done();
                 }
 
-                ARCSim::Node* n = mesh.nodes.back();
-                n->EoL = true;
-                n->EoL_state = ARCSim::Node::NewEOL;
-                n->preserve = true;
-                n->cornerID = cls[i]->verts1(0);
-                n->cdEdges = cls[i]->edge1;
-                n->x = e2v(
+                ARCSim::Node& n = nodes.back();
+                n.EoL = true;
+                n.EoL_state = ARCSim::Node::NewEOL;
+                n.preserve = true;
+                n.cornerID = cls[i]->verts1(0);
+                n.cdEdges = cls[i]->edge1;
+                n.x = e2v(
                     cls[i]->pos1_);  // We want to offset the node
                                      // slightly inside the obect so it
                                      // gets detected by the CD until it
@@ -231,23 +233,23 @@ namespace EOL {
             }
             if (cls[i]->count1 == 2 && cls[i]->count2 == 2) {
                 // TODO:: Is this enough of a check?
-                if (mesh.nodes[cls[i]->verts2(0)]->EoL ||
-                    mesh.nodes[cls[i]->verts2(1)]->EoL)
+                if (nodes[cls[i]->verts2(0)].EoL ||
+                    nodes[cls[i]->verts2(1)].EoL)
                     continue;
 
                 // The verts won't change since we only ever add verts
-                ARCSim::Edge* e0 = get_edge(mesh.nodes[cls[i]->verts2(0)],
-                    mesh.nodes[cls[i]->verts2(1)]);
+                ARCSim::Edge* e0 = get_edge(&nodes[cls[i]->verts2(0)],
+                    &nodes[cls[i]->verts2(1)]);
                 double d;
 
                 // We'll need this info for the boundary
-                ARCSim::Vert* v0 = mesh.verts[cls[i]->verts2(0)],
-                    * v1 = mesh.verts[cls[i]->verts2(1)];
+                ARCSim::Vert v0 = mesh.GetVerts()[cls[i]->verts2(0)],
+                     v1 = mesh.GetVerts()[cls[i]->verts2(1)];
 
-                double xX = cls[i]->weights2(0) * v0->u[0] +
-                    cls[i]->weights2(1) * v1->u[0];
-                double yX = cls[i]->weights2(0) * v0->u[1] +
-                    cls[i]->weights2(1) * v1->u[1];
+                double xX = cls[i]->weights2(0) * v0.u[0] +
+                    cls[i]->weights2(1) * v1.u[0];
+                double yX = cls[i]->weights2(0) * v0.u[1] +
+                    cls[i]->weights2(1) * v1.u[1];
 
                 ARCSim::Face* f0 = get_enclosing_face(mesh, ARCSim::Vec2(xX, yX));
 
@@ -305,11 +307,11 @@ namespace EOL {
                 }
                 op.done();
 
-                ARCSim::Node* n = mesh.nodes.back();
-                n->EoL = true;
-                n->EoL_state = ARCSim::Node::NewEOL;
-                n->cdEdges = cls[i]->edge1;
-                n->x = e2v(
+                ARCSim::Node& n = nodes.back();
+                n.EoL = true;
+                n.EoL_state = ARCSim::Node::NewEOL;
+                n.cdEdges = cls[i]->edge1;
+                n.x = e2v(
                     cls[i]
                     ->pos1_);  // We want to offset the node slightly
                                // inside the obect so it gets detected by
@@ -320,30 +322,32 @@ namespace EOL {
 
     void revertWasEOL(ARCSim::Mesh& mesh, const MatrixXd& bounds) {
         // If something is still marked as WasEOL then it has lifted off
-        for (int n = 0; n < mesh.nodes.size(); n++) {
-            ARCSim::Node* node = mesh.nodes[n];
-            if (node->EoL_state == ARCSim::Node::WasEOL) {
-                node->EoL = false;
-                node->preserve = false;
-                node->cornerID = -1;
-                node->cdEdges.clear();
+        auto nodes = mesh.GetNodesToModify();
+        for (int n = 0; n < nodes.size(); n++) {
+            ARCSim::Node& node = nodes[n];
+            if (node.EoL_state == ARCSim::Node::WasEOL) {
+                node.EoL = false;
+                node.preserve = false;
+                node.cornerID = -1;
+                node.cdEdges.clear();
             }
             // Boundary
             if (inBoundary(bounds, node, boundary)) {
-                node->EoL_state == ARCSim::Node::WasEOL;
-                node->EoL = false;
-                node->preserve = false;
-                node->cornerID = -1;
-                node->cdEdges.clear();
+                node.EoL_state == ARCSim::Node::WasEOL;
+                node.EoL = false;
+                node.preserve = false;
+                node.cornerID = -1;
+                node.cdEdges.clear();
             }
         }
     }
 
     void markPreserve(ARCSim::Mesh& mesh) {
-        for (int i = 0; i < mesh.edges.size(); i++) {
-            ARCSim::Edge* e = mesh.edges[i];
-            e->preserve = false;
-            ARCSim::Node* n0 = e->n[0], * n1 = e->n[1];
+        auto edges = mesh.GetEdgesToModify();
+        for (int i = 0; i < edges.size(); i++) {
+            ARCSim::Edge& e = edges[i];
+            e.preserve = false;
+            ARCSim::Node* n0 = e.n[0], * n1 = e.n[1];
             if (n0->EoL && n1->EoL) {
                 // We never connect corners together
                 // TODO:: Is this correct assumption?
@@ -375,13 +379,13 @@ namespace EOL {
 
                 // If two EoL nodes share an edge AND they share a cdEdge ID
                 // then the connected edge corresponds to object geometry and is preserved
-                if (match) e->preserve = true;
+                if (match) e.preserve = true;
             }
         }
     }
 
     double edge_metric(const ARCSim::Vert* vert0, const ARCSim::Vert* vert1);
-    bool can_collapseForced(const ARCSim::Edge* edge, int i) {
+    bool can_collapseForced(const ARCSim::Edge& edge, int i) {
         for (int s = 0; s < 2; s++) {
             const ARCSim::Vert* vert0 = edge_vert(edge, s, i),
                 * vert1 = edge_vert(edge, s, 1 - i);
@@ -435,14 +439,15 @@ namespace EOL {
     }
 
     bool collapse_conformal(ARCSim::Mesh& mesh, bool& allclear) {
-        for (int i = 0; i < mesh.edges.size(); i++) {
-            ARCSim::Edge* e = mesh.edges[i];
-            if (e->preserve) {
+        auto edges = mesh.GetEdgesToModify();
+        for (int i = 0; i < edges.size(); i++) {
+            ARCSim::Edge& e = edges[i];
+            if (e.preserve) {
                 if (edge_length(e) < (2.0 * thresh)) {
                     allclear = false;
                     ARCSim::RemeshOp op;
-                    ARCSim::Node* n0 = e->n[0], * n1 = e->n[1];
-                    if (is_seam_or_boundary(n1) || n1->cornerID >= 0) {
+                    ARCSim::Node* n0 = e.n[0], * n1 = e.n[1];
+                    if (is_seam_or_boundary(*n1) || n1->cornerID >= 0) {
                         if (!can_collapseForced(e, 0)) continue;
                         op = collapse_edgeForced(e, 0);
                         if (op.empty()) continue;
@@ -450,7 +455,7 @@ namespace EOL {
                         op.done();
                         return true;
                     }
-                    else if (is_seam_or_boundary(n0) || n0->cornerID >= 0) {
+                    else if (is_seam_or_boundary(*n0) || n0->cornerID >= 0) {
                         if (!can_collapseForced(e, 1)) continue;
                         op = collapse_edgeForced(e, 1);
                         if (op.empty()) continue;
@@ -495,31 +500,32 @@ namespace EOL {
     }
 
     bool collapse_nonconformal(ARCSim::Mesh& mesh, bool& allclear) {
-        for (int i = 0; i < mesh.nodes.size(); i++) {
-            ARCSim::Node* n = mesh.nodes[i];
-            if (n->EoL) {
-                ARCSim::Vert* v = n->verts[0];
+        auto nodes = mesh.GetNodes();
+        for (int i = 0; i < nodes.size(); i++) {
+            ARCSim::Node n = nodes[i];
+            if (n.EoL) {
+                ARCSim::Vert* v = n.verts[0];
                 for (int f = 0; f < v->adjf.size(); f++) {
                     for (int e = 0; e < 3; e++) {
-                        ARCSim::Edge* e0 = v->adjf[f]->adje[e];
-                        if (!e0->preserve && edge_length(e0) < thresh) {
-                            ARCSim::Node* n0 = e0->n[0], * n1 = e0->n[1];
+                        ARCSim::Edge e0 = *v->adjf[f]->adje[e];
+                        if (!e0.preserve && edge_length(e0) < thresh) {
+                            ARCSim::Node* n0 = e0.n[0], * n1 = e0.n[1];
                             if (n0->EoL && n1->EoL) continue;
                             // if (n0->preserve || n1->preserve) continue; // Don't mess with
                             // preserved points which are different from EoL points
                             // Don't deal with edges between boundary and inside
-                            if (!((is_seam_or_boundary(n0) && is_seam_or_boundary(n1)) ||
-                                (!is_seam_or_boundary(n0) && !is_seam_or_boundary(n1))))
+                            if (!((is_seam_or_boundary(*n0) && is_seam_or_boundary(*n1)) ||
+                                (!is_seam_or_boundary(*n0) && !is_seam_or_boundary(*n1))))
                                 continue;
                             // These two loops should help fix some rare special cases, but may
                             // cause problems??
                             bool worst = true;
                             for (int ee = 0; ee < n0->adje.size(); ee++) {
-                                ARCSim::Edge* e1 = n0->adje[ee];
+                                ARCSim::Edge e1 = *n0->adje[ee];
                                 if (edge_length(e1) < edge_length(e0)) worst = false;
                             }
                             for (int ee = 0; ee < n1->adje.size(); ee++) {
-                                ARCSim::Edge* e1 = n1->adje[ee];
+                                ARCSim::Edge e1 = *n1->adje[ee];
                                 if (edge_length(e1) < edge_length(e0)) worst = false;
                             }
                             if (!worst) continue;
@@ -618,8 +624,8 @@ namespace EOL {
         }
         return NULL;
     }
-
-    double face_altitude(ARCSim::Edge* edge, ARCSim::Face* face) {
+    // TODO(Rok Kos): Create private definition in header file
+    double face_altitude(ARCSim::Edge edge, ARCSim::Face* face) {
         return (2 * area(face)) / edge_length(edge);
     }
 

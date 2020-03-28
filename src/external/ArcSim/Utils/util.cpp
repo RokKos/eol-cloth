@@ -134,9 +134,9 @@ bool is_seam_or_boundary(const Vert *v) {
 	return is_seam_or_boundary(v->node);
 }
 
-bool is_seam_or_boundary(const Node *n) {
-	for (int e = 0; e < (int)n->adje.size(); e++)
-		if (is_seam_or_boundary(n->adje[e]))
+bool is_seam_or_boundary(const Node& n) {
+	for (int e = 0; e < (int)n.adje.size(); e++)
+		if (is_seam_or_boundary(n.adje[e]))
 			return true;
 	return false;
 }

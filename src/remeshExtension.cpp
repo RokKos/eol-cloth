@@ -67,16 +67,16 @@ namespace EOL {
         return op;
     }
 
-    ARCSim::RemeshOp collapse_edgeForced(ARCSim::Edge* edge, int i) {
+    ARCSim::RemeshOp collapse_edgeForced(const ARCSim::Edge& edge, int i) {
         /*if (is_seam_or_boundary(edge)) {
         Annotation::add(edge);
         cout << "collapse" << endl;
         cout << edge->n[i]->preserve << endl;
         wait_key();
         }*/
-        ARCSim::Mesh& mesh = *edge->n[0]->mesh;
+        ARCSim::Mesh& mesh = *edge.n[0]->mesh;
         ARCSim::RemeshOp op;
-        ARCSim::Node* node0 = edge->n[i], * node1 = edge->n[1 - i];
+        ARCSim::Node* node0 = edge.n[i], * node1 = edge.n[1 - i];
         op.removed_nodes.push_back(node0);
         for (size_t e = 0; e < node0->adje.size(); e++) {
             ARCSim::Edge* edge1 = node0->adje[e];
