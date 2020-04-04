@@ -5,8 +5,10 @@
 #include "conversions.h"
 #include "UtilEOL.h"
 
-#include "external\ArcSim\geometry.hpp"
-#include "external\ArcSim\subset.hpp"
+#include "external/ArcSim/geometry.hpp"
+#include "external/ArcSim/subset.hpp"
+
+#include "Core/Log.h"
 
 #include <stdlib.h>
 
@@ -765,43 +767,43 @@ void preprocessPart(Mesh& mesh, const MatrixXd &boundaries, const vector<shared_
 		markWasEOL(mesh);
 		addGeometry(mesh, boundaries, cls);
 		revertWasEOL(mesh, boundaries);
-		cout << "Add Geometry" << endl;
+		LOG_TRACE("Add Geometry");
 	}
 	else if (part == 2) {
 		markPreserve(mesh);
-		cout << "Mark preserve" << endl;
+		LOG_TRACE("Mark preserve");
 		//part = 6;
 	}
 	else if (part == 3) {
 		vector<Face*> active_faces = mesh.faces;
 		flip_edges(0, active_faces, 0, 0);
 		markPreserve(mesh);
-		cout << "Flipped edges" << endl;
+		LOG_TRACE("Flipped edges");
 	}
 	else if (part == 4) {
 		a = true;
 		while (collapse_nonconformal(mesh,a));
 		markPreserve(mesh);
-		cout << "Collapse nonfornformal" << endl;
+		LOG_TRACE("Collapse nonfornformal");
 	}
 	else if (part == 5) {
 		while (collapse_conformal(mesh,a));
 		if (!a) part = 3;
-		cout << "Collapse conformal" << endl;
+		LOG_TRACE("Collapse conformal");
 	}
 	else if (part == 6) {
 		bool allclear = split_illconditioned_faces(mesh);
 		if (!allclear) {
 			part = 3;
-			cout << "Split ill-conditioned, not good" << endl;
+			LOG_TRACE("Split ill-conditioned, not good");
 		}
 		else {
 			markPreserve(mesh);
-			cout << "Split ill-conditioned, all good" << endl;
+			LOG_TRACE("Split ill-conditioned, all good");
 		}
 	}
 	else if (part == 7) {
 		compute_ws_data(mesh);
-		cout << "Compute ws data" << endl;
+		LOG_TRACE("Compute ws data");
 	}
 }

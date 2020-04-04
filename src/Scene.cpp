@@ -15,8 +15,8 @@
 #include "online\Program.h"
 #endif // EOLC_ONLINE
 
+#include "Core/Log.h"
 
-using namespace std;
 using namespace Eigen;
 
 Scene::Scene() : 
@@ -25,17 +25,17 @@ Scene::Scene() :
 	grav(Vector3d(0.0,0.0,-9.8)),
 	part(0)
 {
-	cloth = make_shared<Cloth>();
-	obs = make_shared<Obstacles>();
-	GS = make_shared<GeneralizedSolver>();
+	cloth = std::make_shared<Cloth>();
+	obs = std::make_shared<Obstacles>();
+	GS = std::make_shared<GeneralizedSolver>();
 }
 
-void Scene::load(const string &RESOURCE_DIR)
+void Scene::load(const std::string &RESOURCE_DIR)
 {
 	obs->load(RESOURCE_DIR);
 }
 
-void Scene::init(const bool& online, const bool& exportObjs, const string& OUTPUT_DIR)
+void Scene::init(const bool& online, const bool& exportObjs, const std::string& OUTPUT_DIR)
 {
 #ifdef EOLC_ONLINE
 	if (online) {
@@ -64,17 +64,17 @@ void printstate(Mesh& mesh)
 {
 	for (int n = 0; n < mesh.nodes.size(); n++) {
 		if (mesh.nodes[n]->EoL) {
-			cout << mesh.nodes[n]->EoL_state << endl;
+			LOG_TRACE(mesh.nodes[n]->EoL_state);
 		}
 	}
 }
 
 void Scene::step(const bool& online, const bool& exportObjs)
 {
-	cout << "Sim time: " << t << endl;
+	LOG_TRACE("Sim time: '{0}'", t);
 
 	if (part != 0) {
-		cout << "Please finish the partial step before making a full step" << endl;
+		LOG_WARN("Please finish the partial step before making a full step");
 		return;
 	}
 	cloth->updateFix(t);
@@ -82,7 +82,7 @@ void Scene::step(const bool& online, const bool& exportObjs)
 		cloth->updatePreviousMesh();
 		CD(cloth->mesh, obs, cls);
 		preprocess(cloth->mesh, cloth->boundaries, cls);
-		//cout << "pre" << endl;
+		//std::cout << "pre" << std::endl;
 	}
 	if (REMESHon) {
 		dynamic_remesh(cloth->mesh);
@@ -93,7 +93,7 @@ void Scene::step(const bool& online, const bool& exportObjs)
 	cls.clear();
 	//mesh2m(cloth->mesh, "mesh.m", true);
 	if (exportObjs) brender->exportBrender(t);
-	//cout << "step" << endl;
+	//std::cout << "step" << std::endl;
 	t += h;
 }
 
@@ -103,7 +103,7 @@ void Scene::partialStep()
 		cloth->updatePreviousMesh();
 		cloth->updateFix(t);
 		CD(cloth->mesh, obs, cls);
-		cout << "CD" << endl;
+		LOG_INFO("CD");
 	}
 	else if (part >= 1 && part < 8) {
 		preprocessPart(cloth->mesh, cloth->boundaries, cls, part);
@@ -119,7 +119,7 @@ void Scene::partialStep()
 	else if (part == 9) {
 		cloth->step(GS, obs, grav, h, REMESHon, true);
 		obs->step(h);
-		cout << "Finished step" << endl;
+		LOG_INFO("Finished step");
 		cls.clear();
 		part = -1;
 	}

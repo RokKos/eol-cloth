@@ -31,6 +31,8 @@
 #include "genSet.h";
 #include "Scene.h"
 
+#include "Core/Core.h"
+
 using namespace std;
 using namespace Eigen;
 
@@ -152,8 +154,8 @@ bool init_online(const string &SIMSET_FILE)
 	}
 
 	glGetError(); // A bug in glewInit() causes an error that we can safely ignore.
-	cout << "OpenGL version: " << glGetString(GL_VERSION) << endl;
-	cout << "GLSL version: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << endl;
+	LOG_INFO("OpenGL version: {0}", glGetString(GL_VERSION));
+	LOG_INFO("GLSL version: {0}", glGetString(GL_SHADING_LANGUAGE_VERSION));
 	// Set vsync.
 	glfwSwapInterval(1);
 	// Set keyboard callback.
@@ -294,7 +296,7 @@ void start_running(const string &GENSET_FILE, const string &SIMSET_FILE)
 		init_online(SIMSET_FILE);
 		run_online();
 #else
-		cout << "ERROR: Attempting to run in online mode without building the online libraries." << endl;
+		LOG_ERROR("ERROR: Attempting to run in online mode without building the online libraries.");
 #endif // EOL_ONLINE
 	}
 	else {

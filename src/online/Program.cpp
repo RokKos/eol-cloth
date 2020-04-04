@@ -4,6 +4,7 @@
 #include <cassert>
 
 #include "GLSL.h"
+#include "../Core/Log.h"
 
 using namespace std;
 
@@ -47,7 +48,7 @@ bool Program::init()
 	if(!rc) {
 		if(isVerbose()) {
 			GLSL::printShaderInfoLog(VS);
-			cout << "Error compiling vertex shader " << vShaderName << endl;
+			LOG_ERROR("Error compiling vertex shader {0}", vShaderName);
 		}
 		return false;
 	}
@@ -58,7 +59,7 @@ bool Program::init()
 	if(!rc) {
 		if(isVerbose()) {
 			GLSL::printShaderInfoLog(FS);
-			cout << "Error compiling fragment shader " << fShaderName << endl;
+			LOG_ERROR("Error compiling fragment shader {0}", fShaderName);
 		}
 		return false;
 	}
@@ -72,7 +73,7 @@ bool Program::init()
 	if(!rc) {
 		if(isVerbose()) {
 			GLSL::printProgramInfoLog(pid);
-			cout << "Error linking shaders " << vShaderName << " and " << fShaderName << endl;
+			LOG_ERROR("Error linking shaders {0} and {1}",vShaderName, fShaderName);
 		}
 		return false;
 	}
@@ -106,7 +107,7 @@ GLint Program::getAttribute(const string &name) const
 	map<string,GLint>::const_iterator attribute = attributes.find(name.c_str());
 	if(attribute == attributes.end()) {
 		if(isVerbose()) {
-			cout << name << " is not an attribute variable" << endl;
+			LOG_WARN("{0} is not an attribute variable", name);
 		}
 		return -1;
 	}
@@ -118,7 +119,7 @@ GLint Program::getUniform(const string &name) const
 	map<string,GLint>::const_iterator uniform = uniforms.find(name.c_str());
 	if(uniform == uniforms.end()) {
 		if(isVerbose()) {
-			cout << name << " is not a uniform variable" << endl;
+			LOG_WARN("{0} is not an uniform variable", name);
 		}
 		return -1;
 	}

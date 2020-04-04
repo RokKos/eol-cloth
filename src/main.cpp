@@ -12,17 +12,17 @@
 #include "conversions.h"
 
 #include "runner.h"
+#include "Core/Log.h"
 
 using namespace std;
 using namespace Eigen;
 
 int main(int argc, char **argv)
 {
+	Core::Log::Init();
+
 	if (argc < 3) {
-		cout << "Usage: " << endl;
-		cout << "	" << argv[0] << "<general setting> <simulation settings>" << endl;
-		cout << "where the settings arguments are json file" << endl;
-		cout << endl << "Refer to the examples and json templates for further details" << endl;
+		LOG_WARN("\nUsage:\n	{0} <general setting> <simulation settings>\n where the settings arguments are json file\n Refer to the examples and json templates for further details", argv[0]);
 		return 0;
 	}
 

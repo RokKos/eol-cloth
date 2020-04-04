@@ -418,29 +418,29 @@ string printSimBool(bool b) {
 
 void printSimSet(shared_ptr<Scene> scene)
 {
-	cout << "Simulation settings" << endl;
-	cout << "	Timestep: " << scene->h << endl;
-	cout << "	REMESH: " << printSimBool(scene->REMESHon) << endl;
-	cout << "	EOL: " << printSimBool(scene->EOLon) << endl;
-	cout << "	Cloth:" << endl;
-	cout << "		cloth_obj: " << "" << endl;
-	cout << "		Material: " << endl;
-	cout << "			density: " << scene->cloth->material.density << endl;
-	cout << "			youngs: " << scene->cloth->material.e << endl;
-	cout << "			poissons: " << scene->cloth->material.nu << endl;
-	cout << "			stiffness: " << scene->cloth->material.beta << endl;
-	cout << "			damping: [" << scene->cloth->material.dampingA << ", " << scene->cloth->material.dampingA << "]" << endl;
-	cout << "		Remeshing: " << endl;
-	cout << "			refine_angle: " << scene->cloth->remeshing.refine_angle << endl;
-	cout << "			refine_compression: " << scene->cloth->remeshing.refine_compression << endl;
-	cout << "			refine_velocity: " << scene->cloth->remeshing.refine_velocity << endl;
-	cout << "			size: [" << scene->cloth->remeshing.size_min << ", " << scene->cloth->remeshing.size_max << "]" << endl;
-	cout << "			aspect_min: " << scene->cloth->remeshing.aspect_min << endl;
-	cout << "	Obstacles:" << endl;
-	cout << "		threshold: " << scene->obs->cdthreshold << endl;
-	//cout << "		points_file: " << "" << endl;
-	cout << "		total_points: " << scene->obs->points->num_points << endl;
-	//cout << "		box_file: " << "" << endl;
-	cout << "		total_boxes" << scene->obs->num_boxes << endl;
+	LOG_INFO("Simulation settings");
+	LOG_INFO("	Timestep: {0}", scene->h);
+	LOG_INFO("	REMESH: {0}", printSimBool(scene->REMESHon));
+	LOG_INFO("	EOL: {0}", printSimBool(scene->EOLon));
+	LOG_INFO("	Cloth:");
+	LOG_INFO("		cloth_obj: {0}", "");
+	LOG_INFO("		Material: ");
+	LOG_INFO("			density: {0}", scene->cloth->material.density);
+	LOG_INFO("			youngs: {0}", scene->cloth->material.e);
+	LOG_INFO("			poissons: {0}", scene->cloth->material.nu);
+	LOG_INFO("			stiffness: {0}", scene->cloth->material.beta);
+	LOG_INFO("			damping: [{0}, {1}]", scene->cloth->material.dampingA, scene->cloth->material.dampingA);
+	LOG_INFO("		Remeshing: ");
+	LOG_INFO("			refine_angle: {0}", scene->cloth->remeshing.refine_angle);
+	LOG_INFO("			refine_compression: {0}", scene->cloth->remeshing.refine_compression);
+	LOG_INFO("			refine_velocity: {0}", scene->cloth->remeshing.refine_velocity);
+	LOG_INFO("			size: [{0}, {1}]", scene->cloth->remeshing.size_min, scene->cloth->remeshing.size_max);
+	LOG_INFO("			aspect_min: {0}", scene->cloth->remeshing.aspect_min);
+	LOG_INFO("	Obstacles:");
+	LOG_INFO("		threshold: {0}",scene->obs->cdthreshold);
+	//LOG_INFO("		points_file: {0}","");
+	LOG_INFO("		total_points: {0}",scene->obs->points->num_points);
+	//LOG_INFO("		box_file: {0}","");
+	LOG_INFO("		total_boxes{0}",scene->obs->num_boxes);
 
 }

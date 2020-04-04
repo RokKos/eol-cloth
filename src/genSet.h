@@ -3,7 +3,7 @@
 #define __getSet__
 
 #include <string>
-#include <iostream>
+#include "Core/Log.h"
 
 class genSet
 {
@@ -19,12 +19,12 @@ public:
 	std::string OUTPUT_DIR;
 
 	void printGenSet() {
-		std::cout << "General settings" << std::endl;
-		std::cout << "	online: " << printGenBool(online) << std::endl;
-		std::cout << "	exportObjs: " << printGenBool(exportObjs) << std::endl;
-		std::cout << "	exportTimings: " << printGenBool(exportTimings) << std::endl;
-		std::cout << "	RESOURCE_DIR: " << RESOURCE_DIR << std::endl;
-		std::cout << "	OUTPUT_DIR: " << OUTPUT_DIR << std::endl;
+		LOG_INFO("General settings");
+		LOG_INFO("	online: {0}", printGenBool(online));
+		LOG_INFO("	exportObjs: {0}", printGenBool(exportObjs));
+		LOG_INFO("	exportTimings: {0}", printGenBool(exportTimings));
+		LOG_INFO("	RESOURCE_DIR: {0}", RESOURCE_DIR);
+		LOG_INFO("	OUTPUT_DIR: {0}", OUTPUT_DIR);
 	}
 
 private:
