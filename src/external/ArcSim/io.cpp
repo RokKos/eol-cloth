@@ -31,8 +31,10 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #include <cfloat>
 #include <fstream>
 #include <sstream>
-using namespace std;
 
+#include "../../Core/Log.h"
+
+using namespace std;
 
 const int FILE_VERSION = 1;
 
@@ -91,7 +93,7 @@ void load_obj(Mesh &mesh, const string &filename) {
 	delete_mesh(mesh);
 	fstream file(filename.c_str(), ios::in);
 	if (!file) {
-		cout << "Error: failed to open file " << filename << endl;
+		LOG_ERROR("Error: failed to open file {0}", filename);
 		return;
 	}
 	while (file) {
@@ -193,7 +195,7 @@ void load_cloth_obj(Mesh &mesh, const string &filename) {
 	delete_mesh(mesh);
 	fstream file(filename.c_str(), ios::in);
 	if (!file) {
-		cout << "Error: failed to open file " << filename << endl;
+		LOG_ERROR("Error: failed to open file {0}", filename);
 		return;
 	}
 	while (file) {
