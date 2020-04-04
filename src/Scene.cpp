@@ -15,6 +15,7 @@
 #include "online\Program.h"
 #endif // EOLC_ONLINE
 
+#include "Core/Log.h"
 
 using namespace std;
 using namespace Eigen;
@@ -71,7 +72,7 @@ void printstate(Mesh& mesh)
 
 void Scene::step(const bool& online, const bool& exportObjs)
 {
-	cout << "Sim time: " << t << endl;
+	LOG_TRACE("Sim time: '{0}'", t); //cout << "Sim time: " << t << endl;
 
 	if (part != 0) {
 		cout << "Please finish the partial step before making a full step" << endl;
