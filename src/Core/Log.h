@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Core.h"
+#include <memory>
 
 #include <spdlog/spdlog.h>
 #include <spdlog/fmt/ostr.h>
@@ -12,9 +12,9 @@ namespace Core {
 	public:
 		static void Init();
 
-		inline static Ref<spdlog::logger>& GetLogger() { return s_Logger; }
+		inline static std::shared_ptr<spdlog::logger>& GetLogger() { return s_Logger; }
 	private:
-		static Ref<spdlog::logger> s_Logger;
+		static std::shared_ptr<spdlog::logger> s_Logger;
 	};
 
 }

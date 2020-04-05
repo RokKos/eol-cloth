@@ -2,6 +2,9 @@
 
 #include "runner.h"
 #include "Core/Log.h"
+#include "Core/Application.h"
+
+//extern Core::Application* Core::CreateApplication();
 
 int main(int argc, char **argv)
 {
@@ -14,6 +17,10 @@ int main(int argc, char **argv)
 
 	srand(time(NULL));
     
+	//auto app = new Core::Application(); // Core::CreateApplication();
+	//app->Run();
+	//delete app;
+
 	start_running(argv[1], argv[2]);
 
     return 0;
