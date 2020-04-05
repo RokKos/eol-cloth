@@ -240,7 +240,7 @@ void load_cloth_obj(Mesh &mesh, const string &filename) {
 static double angle(const Vec3 &x0, const Vec3 &x1, const Vec3 &x2) {
 	Vec3 e1 = normalize(x1 - x0);
 	Vec3 e2 = normalize(x2 - x0);
-	return acos(clamp(dot(e1, e2), -1., 1.));
+	return acos(ARCSim::clamp(dot(e1, e2), -1., 1.));
 }
 
 vector<Face*> triangulateARC(const vector<Vert*> &verts) {

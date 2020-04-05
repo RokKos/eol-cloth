@@ -289,7 +289,10 @@ IF(WIN32)
   # -Wall produces way too many warnings.
   # -pedantic is not supported.
   # Disable warning 4996.
-  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 /wd4996")
+  set(CMAKE_CXX_STANDARD 17)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
+  set(CMAKE_CXX_EXTENSIONS OFF)
+  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++17 /wd4996")
   IF(${ONLINE})
 	TARGET_LINK_LIBRARIES(${CMAKE_PROJECT_NAME} opengl32.lib)
   ELSE()

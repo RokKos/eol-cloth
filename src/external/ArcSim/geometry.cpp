@@ -108,7 +108,7 @@ double signed_ee_distance(const Vec3 &x0, const Vec3 &x1,
 bool set_unsigned_ve_distance(const Vec3 &x, const Vec3 &y0, const Vec3 &y1,
 	double *_d, Vec3 *_n,
 	double *_wx, double *_wy0, double *_wy1) {
-	double t = clamp(dot(x - y0, y1 - y0) / dot(y1 - y0, y1 - y0), 0., 1.);
+	double t = ARCSim::clamp(dot(x - y0, y1 - y0) / dot(y1 - y0, y1 - y0), 0., 1.);
 	Vec3 y = y0 + t*(y1 - y0);
 	double d = norm(x - y);
 	if (d < *_d) {
@@ -390,7 +390,7 @@ double aspect(const Vec3& u0, const Vec3& u1, const Vec3& u2) {
 }
 
 double get_angle(const Vec3& u, const Vec3& v) {
-	return acos(clamp(dot(normalize(u), normalize(v)), -1.0, 1.0));
+	return acos(ARCSim::clamp(dot(normalize(u), normalize(v)), -1.0, 1.0));
 }
 
 // Planes

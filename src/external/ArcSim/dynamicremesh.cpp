@@ -99,7 +99,7 @@ void dynamic_remesh(Mesh& mesh) {
 // Sizing
 
 double angle(const Vec3 &n1, const Vec3 &n2) {
-	return acos(clamp(dot(n1, n2), -1., 1.));
+	return acos(ARCSim::clamp(dot(n1, n2), -1., 1.));
 }
 
 template <int n> Mat<n, n> sqrt(const Mat<n, n> &A) {
@@ -226,7 +226,7 @@ Mat3x3 compute_face_sizing(Remeshing& remeshing, const Face *face) {
 
 	Eig<2> eig = eigen_decomposition(s);
 	for (int i = 0; i < 2; i++) {
-		eig.l[i] = clamp(eig.l[i],
+		eig.l[i] = ARCSim::clamp(eig.l[i],
 			1.f / sq(remeshing.size_max),
 			1.f / sq(remeshing.size_min));
 	}
