@@ -58,6 +58,7 @@ SET(IGL ON) # "Build with libIGL support"
 # Additional defines
  ADD_DEFINITIONS(-D_USE_MATH_DEFINES)
  ADD_DEFINITIONS(-D_CRT_NO_VA_START_VALIDATION)
+ ADD_DEFINITIONS(-DPLATFORM_WINDOWS)  # Comment this out if you are on other platforms
 
 #-----------------------------------------------
 # END USER SETTINGS, DON'T TOUCH BELOW
@@ -75,6 +76,8 @@ SET(IGL ON) # "Build with libIGL support"
  FILE(GLOB JSONH "src/external/Json/*.hpp" "src/external/Json/*.h")
 FILE(GLOB_RECURSE COREC "src/Core/*.cpp" "src/Core/*.c")
 FILE(GLOB_RECURSE COREH "src/Core/*.hpp" "src/Core/*.h")
+FILE(GLOB_RECURSE PLATFORMC "src/Platform/*.cpp" "src/Platform/*.c")
+FILE(GLOB_RECURSE PLATFORMH "src/Platform/*.hpp" "src/Platform/*.h")
  IF(${ONLINE})
 	FILE(GLOB ONLINEC "src/online/*.cpp" "src/online/*.c")
 	FILE(GLOB ONLINEH "src/online/*.hpp" "src/online/*.h")
@@ -100,7 +103,7 @@ FILE(GLOB_RECURSE COREH "src/Core/*.hpp" "src/Core/*.h")
 # SOURCE_GROUP(External FILES ${EXTERNAL})
 
 # Set the executable.
-ADD_EXECUTABLE(${CMAKE_PROJECT_NAME} ${SOURCES} ${HEADERS} ${GLSL} ${ARCSIMC} ${ARCSIMH} ${JSONC} ${JSONH} ${ONLINEC} ${ONLINEH} ${MOSEKC} ${MOSEKH} ${GUROBIC} ${GUROBIH} ${COREC} ${COREH})
+ADD_EXECUTABLE(${CMAKE_PROJECT_NAME} ${SOURCES} ${HEADERS} ${GLSL} ${ARCSIMC} ${ARCSIMH} ${JSONC} ${JSONH} ${ONLINEC} ${ONLINEH} ${MOSEKC} ${MOSEKH} ${GUROBIC} ${GUROBIH} ${COREC} ${COREH} ${PLATFORMC} ${PLATFORMH} ${EOLC} ${EOLH})
 
 # Get the EIGEN environment variable. Since EIGEN is a header-only library, we
 # just need to add it to the include directory.
