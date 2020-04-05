@@ -27,6 +27,7 @@ SET(IGL ON) # "Build with libIGL support"
 
  SET(DEF_DIR_EIGEN "${CMAKE_SOURCE_DIR}/External/eigen-3.3.7")
  SET(DEF_DIR_SPDLOG "${CMAKE_SOURCE_DIR}/External/spdlog/include")
+ SET(DEF_DIR_IMGUI "${CMAKE_SOURCE_DIR}/External/imgui")
 
  IF(${ONLINE})
 	 SET(DEF_DIR_GLM "${CMAKE_SOURCE_DIR}/External/glm-0.9.9.7")
@@ -58,6 +59,7 @@ SET(IGL ON) # "Build with libIGL support"
 # Additional defines
  ADD_DEFINITIONS(-D_USE_MATH_DEFINES)
  ADD_DEFINITIONS(-D_CRT_NO_VA_START_VALIDATION)
+ ADD_DEFINITIONS(-DPLATFORM_WINDOWS)  # Comment this out if you are on other platforms
 
 #-----------------------------------------------
 # END USER SETTINGS, DON'T TOUCH BELOW
@@ -73,8 +75,13 @@ SET(IGL ON) # "Build with libIGL support"
  FILE(GLOB ARCSIMH "src/external/ArcSim/*.hpp" "src/external/ArcSim/*.h")
  FILE(GLOB JSONC "src/external/Json/*.cpp" "src/external/Json/*.c")
  FILE(GLOB JSONH "src/external/Json/*.hpp" "src/external/Json/*.h")
-FILE(GLOB COREC "src/Core/*.cpp" "src/Core/*.c")
-FILE(GLOB COREH "src/Core/*.hpp" "src/Core/*.h")
+FILE(GLOB_RECURSE COREC "src/Core/*.cpp" "src/Core/*.c")
+FILE(GLOB_RECURSE COREH "src/Core/*.hpp" "src/Core/*.h")
+FILE(GLOB_RECURSE PLATFORMC "src/Platform/*.cpp" "src/Platform/*.c")
+FILE(GLOB_RECURSE PLATFORMH "src/Platform/*.hpp" "src/Platform/*.h")
+FILE(GLOB_RECURSE EOLC "src/EOL/*.cpp" "src/EOL/*.c")
+FILE(GLOB_RECURSE EOLH "src/EOL/*.hpp" "src/EOL/*.h")
+
  IF(${ONLINE})
 	FILE(GLOB ONLINEC "src/online/*.cpp" "src/online/*.c")
 	FILE(GLOB ONLINEH "src/online/*.hpp" "src/online/*.h")
@@ -100,7 +107,7 @@ FILE(GLOB COREH "src/Core/*.hpp" "src/Core/*.h")
 # SOURCE_GROUP(External FILES ${EXTERNAL})
 
 # Set the executable.
-ADD_EXECUTABLE(${CMAKE_PROJECT_NAME} ${SOURCES} ${HEADERS} ${GLSL} ${ARCSIMC} ${ARCSIMH} ${JSONC} ${JSONH} ${ONLINEC} ${ONLINEH} ${MOSEKC} ${MOSEKH} ${GUROBIC} ${GUROBIH} ${COREC} ${COREH})
+ADD_EXECUTABLE(${CMAKE_PROJECT_NAME} ${SOURCES} ${HEADERS} ${GLSL} ${ARCSIMC} ${ARCSIMH} ${JSONC} ${JSONH} ${ONLINEC} ${ONLINEH} ${MOSEKC} ${MOSEKH} ${GUROBIC} ${GUROBIH} ${COREC} ${COREH} ${PLATFORMC} ${PLATFORMH} ${EOLC} ${EOLH})
 
 # Get the EIGEN environment variable. Since EIGEN is a header-only library, we
 # just need to add it to the include directory.
@@ -143,6 +150,51 @@ IF(NOT SPDLOG_INCLUDE_DIR)
   ENDIF()
 ENDIF()
 INCLUDE_DIRECTORIES(${SPDLOG_INCLUDE_DIR})
+
+# Get the SPDLOG environment variable. Since SPDLOG is a header-only library, we
+# just need to add it to the include directory.
+SET(IMGUI_INCLUDE_DIR "$ENV{IMGUI_INCLUDE_DIR}")
+IF(NOT IMGUI_INCLUDE_DIR)
+  # The environment variable was not set
+  SET(ERR_MSG "Please point the environment variable IMGUI_INCLUDE_DIR to the root directory of your SPDLOG installation.")
+  IF(WIN32)
+    # On Windows, try the default location
+    MESSAGE(STATUS "Looking for IMGUI in ${DEF_DIR_IMGUI}")
+    IF(IS_DIRECTORY ${DEF_DIR_IMGUI})
+      MESSAGE(STATUS "Found!")
+      SET(IMGUI_INCLUDE_DIR ${DEF_DIR_IMGUI})
+    ELSE()
+      MESSAGE(FATAL_ERROR ${ERR_MSG})
+    ENDIF()
+  ELSE()
+    MESSAGE(FATAL_ERROR ${ERR_MSG})
+  ENDIF()
+ENDIF()
+INCLUDE_DIRECTORIES(${IMGUI_INCLUDE_DIR})
+ADD_DEFINITIONS(-DIMGUI_IMPL_OPENGL_LOADER_GLEW)
+
+SET(IMGUIC  "${DEF_DIR_IMGUI}/imgui.cpp"
+			"${DEF_DIR_IMGUI}/imgui_demo.cpp"
+			"${DEF_DIR_IMGUI}/imgui_draw.cpp"
+			"${DEF_DIR_IMGUI}/imgui_widgets.cpp"
+			"${DEF_DIR_IMGUI}/examples/imgui_impl_glfw.cpp"
+			"${DEF_DIR_IMGUI}/examples/imgui_impl_opengl3.cpp")
+SET(IMGUIH  "${DEF_DIR_IMGUI}/imgui.h"
+			"${DEF_DIR_IMGUI}/imconfig.h"
+			"${DEF_DIR_IMGUI}/imgui_internal.h"
+			"${DEF_DIR_IMGUI}/imstb_rectpack.h"
+			"${DEF_DIR_IMGUI}/imstb_textedit.h"
+			"${DEF_DIR_IMGUI}/imstb_truetype.h"
+			"${DEF_DIR_IMGUI}/examples/imgui_impl_glfw.h"
+			"${DEF_DIR_IMGUI}/examples/imgui_impl_opengl3.h")
+
+add_library(IMGUI
+    STATIC
+        ${IMGUIC}
+        ${IMGUIH}
+)
+TARGET_LINK_LIBRARIES(${CMAKE_PROJECT_NAME} IMGUI)
+
 
 IF(${ONLINE})
 	# Get the GLM environment variable. Since GLM is a header-only library, we
@@ -286,7 +338,10 @@ IF(WIN32)
   # -Wall produces way too many warnings.
   # -pedantic is not supported.
   # Disable warning 4996.
-  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 /wd4996")
+  set(CMAKE_CXX_STANDARD 17)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
+  set(CMAKE_CXX_EXTENSIONS OFF)
+  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++17 /wd4996")
   IF(${ONLINE})
 	TARGET_LINK_LIBRARIES(${CMAKE_PROJECT_NAME} opengl32.lib)
   ELSE()

@@ -1,21 +1,10 @@
-#include <iostream>
 #include <time.h>
-
-#ifdef EOLC_MOSEK
-#include "external\SolverWrappers\Mosek\QuadProgMosek.h"
-#endif
-
-#ifdef EOLC_GUROBI
-#include "external\SolverWrappers\Gurobi\Gurobi.h"
-#endif
-
-#include "conversions.h"
 
 #include "runner.h"
 #include "Core/Log.h"
+#include "Core/Application.h"
 
-using namespace std;
-using namespace Eigen;
+//extern Core::Application* Core::CreateApplication();
 
 int main(int argc, char **argv)
 {
@@ -28,6 +17,10 @@ int main(int argc, char **argv)
 
 	srand(time(NULL));
     
+	//auto app = new Core::Application(); // Core::CreateApplication();
+	//app->Run();
+	//delete app;
+
 	start_running(argv[1], argv[2]);
 
     return 0;
