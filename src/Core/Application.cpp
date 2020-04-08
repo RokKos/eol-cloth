@@ -29,14 +29,14 @@ namespace Core {
 
 	void Application::PushLayer(Layer* layer)
 	{
-		LOG_TRACE("Pushing Layer: %s", layer->GetName());
+		LOG_TRACE("Pushing Layer: {0}", layer->GetName());
 		m_LayerStack.PushLayer(layer);
 		layer->OnAttach();
 	}
 
 	void Application::PushOverlay(Layer* layer)
 	{
-
+		LOG_TRACE("Pushing Overlay: {0}", layer->GetName());
 		m_LayerStack.PushOverlay(layer);
 		layer->OnAttach();
 	}

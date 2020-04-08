@@ -14,8 +14,8 @@ namespace Core {
 		Layer(const std::string& name = "Layer");
 		virtual ~Layer() = default;
 
-		virtual void OnAttach() {}
-		virtual void OnDetach() {}
+		virtual void OnAttach();
+		virtual void OnDetach();
 		virtual void OnUpdate(TimeStep ts) {}
 		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& event) {}

@@ -7,4 +7,14 @@ namespace Core {
 	{
 	}
 
+	void Layer::OnAttach()
+	{
+		LOG_INFO("OnAttach::Attaching layer: {0}", m_DebugName);
+	}
+
+	void Layer::OnDetach()
+	{
+		LOG_INFO("OnDetach::Deattaching layer: {0}", m_DebugName);
+	}
+
 }

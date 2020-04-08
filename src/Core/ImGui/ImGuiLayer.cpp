@@ -18,6 +18,8 @@ namespace Core {
 
 	void ImGuiLayer::OnAttach()
 	{
+		Layer::OnAttach();
+
 		// Setup Dear ImGui context
 		IMGUI_CHECKVERSION();
 		ImGui::CreateContext();
@@ -51,6 +53,8 @@ namespace Core {
 
 	void ImGuiLayer::OnDetach()
 	{
+		Layer::OnDetach();
+
 		ImGui_ImplOpenGL3_Shutdown();
 		ImGui_ImplGlfw_Shutdown();
 		ImGui::DestroyContext();
