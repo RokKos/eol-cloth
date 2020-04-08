@@ -1,7 +1,9 @@
 #include "EOLLayer.h"
 
-#include <imgui.h>
 #include "../Core/Renderer/RenderCommand.h"
+
+#include <imgui.h>
+#include <glm/gtc/type_ptr.hpp>
 
 namespace EOL {
 	EOLLayer::EOLLayer()
@@ -23,7 +25,9 @@ namespace EOL {
 	{
 		Core::Layer::OnUpdate(ts);
 
-		Core::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
+		prev_time_step_ = ts;
+
+		Core::RenderCommand::SetClearColor(bg_color_);
 		Core::RenderCommand::Clear();
 	}
 
@@ -32,8 +36,10 @@ namespace EOL {
 		Core::Layer::OnImGuiRender();
 
 		ImGui::Begin("Settings");
-		float col[3];
-		ImGui::ColorEdit3("Square Color", col);
+		ImGui::ColorEdit4("BG Color", glm::value_ptr(bg_color_));
+
+		ImGui::Text("This is some useful text. %f", prev_time_step_.GetSeconds());
+
 		ImGui::End();
 	}
 
