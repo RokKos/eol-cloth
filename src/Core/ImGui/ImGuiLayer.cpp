@@ -65,11 +65,6 @@ namespace Core {
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
-
-		ImGui::Begin("Settings");
-		float col[3];
-		ImGui::ColorEdit3("Square Color", col);
-		ImGui::End();
 	}
 
 	void ImGuiLayer::End()

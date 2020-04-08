@@ -1,5 +1,8 @@
 #include "EOLLayer.h"
 
+#include <imgui.h>
+#include "../Core/Renderer/RenderCommand.h"
+
 namespace EOL {
 	EOLLayer::EOLLayer()
 		: Core::Layer("EOLLayer")
@@ -19,11 +22,19 @@ namespace EOL {
 	void EOLLayer::OnUpdate(Core::TimeStep ts)
 	{
 		Core::Layer::OnUpdate(ts);
+
+		Core::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
+		Core::RenderCommand::Clear();
 	}
 
 	void EOLLayer::OnImGuiRender()
 	{
 		Core::Layer::OnImGuiRender();
+
+		ImGui::Begin("Settings");
+		float col[3];
+		ImGui::ColorEdit3("Square Color", col);
+		ImGui::End();
 	}
 
 	void EOLLayer::OnEvent(Core::Event& e)
