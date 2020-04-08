@@ -29,7 +29,7 @@ namespace Core {
 
 	void Application::PushLayer(Layer* layer)
 	{
-
+		LOG_TRACE("Pushing Layer: %s", layer->GetName());
 		m_LayerStack.PushLayer(layer);
 		layer->OnAttach();
 	}

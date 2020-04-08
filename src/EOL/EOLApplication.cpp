@@ -18,9 +18,12 @@ namespace EOL {
 		}
 	};
 
-	//::Core::Application* ::Core::CreateApplication()
-	//{
-	//	return new EOLApplication();
-	//}
+	
 
+}
+
+namespace Core {
+	Application* CreateApplication() {
+		return new EOL::EOLApplication();
+	}
 }
