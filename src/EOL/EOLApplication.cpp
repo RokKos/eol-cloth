@@ -1,26 +1,24 @@
-//#include "../main.cpp"
+#include "EOLApplication.h"
 
-#include "EOLLayer.h"
-#include "../Core/Application.h"
+#include "../parseParams.h"
 
 namespace EOL {
 
-	class EOLApplication : public Core::Application
+	void EOLApplication::OnStart(std::string general_settings_file_path, std::string simulation_settings_file_path)
 	{
-	public:
-		EOLApplication()
-		{
-			PushLayer(new EOLLayer());
-		}
+		Application::OnStart();
+		general_settings_file_path = general_settings_file_path;
+		simulation_settings_file_path = simulation_settings_file_path;
 
-		~EOLApplication()
-		{
-		}
-	};
+		general_setting_ = Core::CreateRef<GeneralSettings>();
+		load_genset(general_setting_, general_settings_file_path);
+	}
 
-	//::Core::Application* ::Core::CreateApplication()
-	//{
-	//	return new EOLApplication();
-	//}
+}
 
+
+namespace Core {
+	Application* CreateApplication() {
+		return new EOL::EOLApplication();
+	}
 }

@@ -28,7 +28,7 @@
 #include <iostream>
 
 #include "parseParams.h";
-#include "genSet.h";
+#include "EOL/Settings/GeneralSettings.h"
 #include "Scene.h"
 
 #include "Core/Core.h"
@@ -36,7 +36,7 @@
 using namespace std;
 using namespace Eigen;
 
-shared_ptr<genSet> gs;
+shared_ptr<EOL::GeneralSettings> gs;
 shared_ptr<Scene> scene;
 
 #ifdef EOLC_ONLINE
@@ -53,7 +53,7 @@ void init_offline(const string &SIMSET_FILE)
 {
 	scene = make_shared<Scene>();
 	scene->load(gs->RESOURCE_DIR);
-	load_simset(scene, SIMSET_FILE);
+	EOL::load_simset(scene, SIMSET_FILE);
 	scene->init(gs->online, gs->exportObjs, gs->OUTPUT_DIR);
 }
 
@@ -202,7 +202,7 @@ bool init_online(const string &SIMSET_FILE)
 
 	scene = make_shared<Scene>();
 	scene->load(gs->RESOURCE_DIR);
-	load_simset(scene, SIMSET_FILE);
+	EOL::load_simset(scene, SIMSET_FILE);
 	scene->init(gs->online, gs->exportObjs, gs->OUTPUT_DIR);
 
 	// If there were any OpenGL errors, this will print something.
@@ -288,8 +288,8 @@ void run_online()
 
 void start_running(const string &GENSET_FILE, const string &SIMSET_FILE)
 {
-	gs = make_shared<genSet>();
-	load_genset(gs, GENSET_FILE);
+	gs = make_shared<EOL::GeneralSettings>();
+	EOL::load_genset(gs, GENSET_FILE);
 
 	if (gs->online) {
 #ifdef EOLC_ONLINE

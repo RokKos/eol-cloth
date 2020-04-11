@@ -3,6 +3,7 @@
 #include "Log.h"
 #include "Input.h"
 #include "TimeStep.h"
+#include "Renderer/Renderer.h"
 
 #include <glfw/glfw3.h>
 
@@ -18,25 +19,32 @@ namespace Core {
 		m_Window = Window::Create();
 		m_Window->SetEventCallback(BIND_EVENT_FN(Application::OnEvent));
 
+		Renderer::Init();
+
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverlay(m_ImGuiLayer);
 	}
 
 	Application::~Application()
 	{
+		Renderer::Shutdown();
+	}
 
+	void Application::OnStart()
+	{
+		LOG_TRACE("Application::OnStart");
 	}
 
 	void Application::PushLayer(Layer* layer)
 	{
-
+		LOG_TRACE("Pushing Layer: {0}", layer->GetName());
 		m_LayerStack.PushLayer(layer);
 		layer->OnAttach();
 	}
 
 	void Application::PushOverlay(Layer* layer)
 	{
-
+		LOG_TRACE("Pushing Overlay: {0}", layer->GetName());
 		m_LayerStack.PushOverlay(layer);
 		layer->OnAttach();
 	}
@@ -47,6 +55,7 @@ namespace Core {
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
 		dispatcher.Dispatch<WindowResizeEvent>(BIND_EVENT_FN(Application::OnWindowResize));
+		dispatcher.Dispatch<KeyPressedEvent>(BIND_EVENT_FN(Application::OnKeyPressedEvent));
 
 		for (auto it = m_LayerStack.rbegin(); it != m_LayerStack.rend(); ++it)
 		{
@@ -101,6 +110,16 @@ namespace Core {
 		}
 
 		m_Minimized = false;
+
+		return false;
+	}
+
+	bool Application::OnKeyPressedEvent(KeyPressedEvent& e)
+	{
+		if (e.GetKeyCode() == KeyCode::Escape) {
+			m_Running = false;
+			return true;
+		}
 
 		return false;
 	}

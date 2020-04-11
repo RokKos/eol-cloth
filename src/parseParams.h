@@ -1,14 +1,14 @@
 #pragma once
-#ifndef __parseParams__
-#define __parseParams__
 
-#include "genSet.h"
+#include "Core/Core.h"
+#include "EOL/Settings/GeneralSettings.h"
 #include "Scene.h"
 #include <string>
-#include <memory>
 
-void load_genset(const std::shared_ptr<genSet> genset, const std::string &JSON_FILE);
+namespace EOL {
 
-void load_simset(std::shared_ptr<Scene> scene, const std::string &JSON_FILE);
+	void load_genset(const Core::Ref<GeneralSettings> general_settings, const std::string& JSON_FILE);
 
-#endif
+	void load_simset(std::shared_ptr<Scene> scene, const std::string& JSON_FILE);
+
+}
