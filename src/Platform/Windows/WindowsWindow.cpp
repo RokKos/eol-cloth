@@ -49,6 +49,10 @@ namespace Platform {
 			}
 
 			m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
+			if (!m_Window) {
+				glfwTerminate();
+				return;
+			}
 			++s_GLFWWindowCount;
 		}
 

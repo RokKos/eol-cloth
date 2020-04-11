@@ -21,6 +21,9 @@ namespace Platform {
 		{
 			LOG_WARN("Warning: Failed to initialize GLEW");
 		}
+
+		LOG_INFO("OpenGL version: {0}", glGetString(GL_VERSION));
+		LOG_INFO("GLSL version: {0}", glGetString(GL_SHADING_LANGUAGE_VERSION));
 	}
 
 	void OpenGLContext::SwapBuffers()
