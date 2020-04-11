@@ -32,6 +32,7 @@ namespace Core {
 		void Run();
 		bool OnWindowClose(WindowCloseEvent& e);
 		bool OnWindowResize(WindowResizeEvent& e);
+		bool OnKeyPressedEvent(KeyPressedEvent& e);
 	private:
 		Scope<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;  // TODO(Rok Kos): Move this to smart pointer if possible

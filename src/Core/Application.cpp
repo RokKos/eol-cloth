@@ -55,6 +55,7 @@ namespace Core {
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
 		dispatcher.Dispatch<WindowResizeEvent>(BIND_EVENT_FN(Application::OnWindowResize));
+		dispatcher.Dispatch<KeyPressedEvent>(BIND_EVENT_FN(Application::OnKeyPressedEvent));
 
 		for (auto it = m_LayerStack.rbegin(); it != m_LayerStack.rend(); ++it)
 		{
@@ -109,6 +110,16 @@ namespace Core {
 		}
 
 		m_Minimized = false;
+
+		return false;
+	}
+
+	bool Application::OnKeyPressedEvent(KeyPressedEvent& e)
+	{
+		if (e.GetKeyCode() == KeyCode::Escape) {
+			m_Running = false;
+			return true;
+		}
 
 		return false;
 	}
