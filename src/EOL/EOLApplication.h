@@ -10,16 +10,12 @@ namespace EOL {
 	class EOLApplication : public Core::Application
 	{
 	public:
-		EOLApplication()
-		{
-			PushLayer(new EOLLayer());
-		}
+		EOLApplication(std::string general_settings_file_path, std::string simulation_settings_file_path);
 
 		~EOLApplication()
 		{
 		}
 		
-		void OnStart(std::string general_settings_file_path, std::string simulation_settings_file_path);
 
 		const std::string& GetGeneralSettingFilePath() const {
 			return general_settings_file_path_;
@@ -28,6 +24,8 @@ namespace EOL {
 		const std::string& GetSimulationSettingFilePath() const {
 			return simulation_settings_file_path_;
 		}
+
+		const Core::Ref<GeneralSettings>& GetGeneralSettings() const { return general_setting_; }
 
 	private:
 		std::string general_settings_file_path_;

@@ -30,11 +30,6 @@ namespace Core {
 		Renderer::Shutdown();
 	}
 
-	void Application::OnStart()
-	{
-		LOG_TRACE("Application::OnStart");
-	}
-
 	void Application::PushLayer(Layer* layer)
 	{
 		LOG_TRACE("Pushing Layer: {0}", layer->GetName());

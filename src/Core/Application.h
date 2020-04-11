@@ -8,6 +8,7 @@
 #include "Events/ApplicationEvent.h"
 
 #include "ImGui/ImGuiLayer.h"
+#include <string>
 
 int main(int argc, char** argv);
 
@@ -18,7 +19,6 @@ namespace Core {
 	public:
 		Application();
 		virtual ~Application();
-		virtual void OnStart();
 
 		void OnEvent(Event& e);
 
@@ -46,6 +46,6 @@ namespace Core {
 	};
 
 	// To be defined in CLIENT
-	Application* CreateApplication();
+	Application* CreateApplication(std::string general_settings_file_path, std::string simulation_settings_file_path);
 
 }
