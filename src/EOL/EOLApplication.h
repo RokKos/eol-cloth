@@ -39,9 +39,3 @@ namespace EOL {
 
 
 }
-
-//namespace Core {
-//	Application* CreateApplication() {
-//		return new EOL::EOLApplication();
-//	}
-//}
