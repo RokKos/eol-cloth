@@ -2,9 +2,10 @@
 
 #include "runner.h"
 #include "Core/Log.h"
-#include "Core/Application.h"
+//#include "Core/Application.h"
+#include "EOL/EOLApplication.h"
 
-extern Core::Application* Core::CreateApplication();
+//extern Core::Application* Core::CreateApplication();
 
 int main(int argc, char **argv)
 {
@@ -17,7 +18,8 @@ int main(int argc, char **argv)
 
 	srand(time(NULL));
     
-	auto app = Core::CreateApplication();
+	EOL::EOLApplication* app = new EOL::EOLApplication();  // TODO(Rok Kos): Check for proper way to use Core::CreateApplication()
+	app->OnStart(argv[1], argv[2]);
 	app->Run();
 	delete app;
 
