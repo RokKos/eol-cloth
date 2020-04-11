@@ -1,6 +1,8 @@
 #include "EOLLayer.h"
 
 #include "../Core/Renderer/RenderCommand.h"
+#include "../Core/Core.h"
+
 
 #include <imgui.h>
 #include <glm/gtc/type_ptr.hpp>
@@ -19,6 +21,7 @@ namespace EOL {
 	void EOLLayer::OnDetach()
 	{
 		Core::Layer::OnDetach();
+
 	}
 
 	void EOLLayer::OnUpdate(Core::TimeStep ts)

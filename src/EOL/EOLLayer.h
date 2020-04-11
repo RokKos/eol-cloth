@@ -3,6 +3,8 @@
 #include "../Core/Layer/Layer.h"
 #include "../Core/TimeStep.h"
 
+#include "Settings/GeneralSettings.h"
+
 #include <glm/glm.hpp>
 
 namespace EOL {

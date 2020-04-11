@@ -18,6 +18,7 @@ namespace Core {
 	public:
 		Application();
 		virtual ~Application();
+		virtual void OnStart();
 
 		void OnEvent(Event& e);
 
