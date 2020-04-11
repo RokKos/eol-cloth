@@ -89,7 +89,10 @@ namespace EOL {
 	{
 		if (Core::Input::IsMouseButtonPressed(Core::MouseCode::Button1)) {
 			//camera->mouseMoved(xmouse, ymouse);
+			return true;
 		}
+
+		return false;
 	}
 
 	bool EOLLayer::OnMouseButtonPressedEvent(Core::MouseButtonPressedEvent& e)
@@ -100,15 +103,20 @@ namespace EOL {
 
 			if (Core::Input::IsKeyPressed(Core::KeyCode::LeftShift) || Core::Input::IsKeyPressed(Core::KeyCode::RightShift)) {
 				//Camera->mouseClicked(mouse_x, mouse_y, Camera::TRANSLATE);
+				return true;
 			}
 			else if (Core::Input::IsKeyPressed(Core::KeyCode::LeftControl) || Core::Input::IsKeyPressed(Core::KeyCode::RightControl)) {
 				//Camera->mouseClicked(mouse_x, mouse_y, Camera::TRANSLATE);
+				return true;
 			} 
 			else if (Core::Input::IsKeyPressed(Core::KeyCode::LeftAlt) || Core::Input::IsKeyPressed(Core::KeyCode::RightAlt)) {
 				//Camera->mouseClicked(mouse_x, mouse_y, Camera::TRANSLATE);
+				return true;
 			}
 			
 		}
+
+		return false;
 		
 	}
 
