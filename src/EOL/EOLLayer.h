@@ -4,6 +4,7 @@
 #include "../Core/TimeStep.h"
 #include "../Core/Events/KeyEvent.h"
 #include "../Core/Events/MouseEvent.h"
+#include "../Core/Renderer/Shader.h"
 
 #include "Settings/GeneralSettings.h"
 
@@ -14,7 +15,7 @@ namespace EOL {
 	class EOLLayer : public Core::Layer
 	{
 	public:
-		EOLLayer();
+		EOLLayer(Core::Ref<GeneralSettings> general_setting);
 		virtual ~EOLLayer() = default;
 
 		virtual void OnAttach() override;
@@ -33,5 +34,6 @@ namespace EOL {
 	private:
 		Core::TimeStep prev_time_step_;
 		glm::vec4 bg_color_ = { 0.1f, 0.1f, 0.1f, 1 };
+		Core::ShaderLibrary shader_library_;
 	};
 }

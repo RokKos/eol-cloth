@@ -8,9 +8,11 @@
 #include <glm/gtc/type_ptr.hpp>
 
 namespace EOL {
-	EOLLayer::EOLLayer()
+	EOLLayer::EOLLayer(Core::Ref<GeneralSettings> general_setting)
 		: Core::Layer("EOLLayer")
 	{
+		auto phongShader = shader_library_.Load(general_setting->RESOURCE_DIR +"Phong.glsl");
+		auto simpleShader = shader_library_.Load(general_setting->RESOURCE_DIR + "Simple.glsl");
 	}
 
 	void EOLLayer::OnAttach()
