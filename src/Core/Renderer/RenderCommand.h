@@ -27,10 +27,10 @@ namespace Core {
 			s_RendererAPI->Clear();
 		}
 
-		//static void DrawIndexed(const Ref<VertexArray>& vertexArray, uint32_t count = 0)
-		//{
-		//	s_RendererAPI->DrawIndexed(vertexArray, count);
-		//}
+		static void DrawIndexed(const Ref<VertexArray>& vertexArray, uint32_t count = 0)
+		{
+			s_RendererAPI->DrawIndexed(vertexArray, count);
+		}
 	private:
 		static Scope<RendererAPI> s_RendererAPI;
 	};
