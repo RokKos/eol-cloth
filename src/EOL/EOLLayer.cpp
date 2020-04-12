@@ -1,5 +1,6 @@
 #include "EOLLayer.h"
 
+#include "../Core/Renderer/Renderer.h"
 #include "../Core/Renderer/RenderCommand.h"
 #include "../Core/Core.h"
 #include "../Core/Input.h"
@@ -13,6 +14,30 @@ namespace EOL {
 	{
 		auto phongShader = shader_library_.Load(general_setting->RESOURCE_DIR +"Phong.glsl");
 		auto simpleShader = shader_library_.Load(general_setting->RESOURCE_DIR + "Simple.glsl");
+		auto triangle_test_shader = shader_library_.Load(general_setting->RESOURCE_DIR + "TriangleTest.glsl");
+
+		// Test out new VertexArrays and stuff
+		vertex_array_ = Core::VertexArray::Create();
+
+		float vertices[3 * 3] = {
+			-0.5f, -0.5f, 0.0f,
+			 0.5f, -0.5f, 0.0f,
+			 0.0f,  0.5f, 0.0f
+		};
+
+		auto vertex_buffer = Core::VertexBuffer::Create(vertices, sizeof(vertices));
+		Core::BufferLayout layout = {
+		{ Core::ShaderDataType::Float3, "a_Position" },
+		};
+
+		vertex_buffer->SetLayout(layout);
+		vertex_array_->AddVertexBuffer(vertex_buffer);
+
+		uint32_t indices[3] = { 0, 1, 2 };
+		Core::Ref<Core::IndexBuffer> index_buffer = Core::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t));
+		vertex_array_->SetIndexBuffer(index_buffer);
+
+		
 	}
 
 	void EOLLayer::OnAttach()
@@ -34,6 +59,8 @@ namespace EOL {
 
 		Core::RenderCommand::SetClearColor(bg_color_);
 		Core::RenderCommand::Clear();
+
+		Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_);
 	}
 
 	void EOLLayer::OnImGuiRender()
