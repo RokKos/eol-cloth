@@ -10,7 +10,7 @@
 
 namespace EOL {
 	EOLLayer::EOLLayer(Core::Ref<GeneralSettings> general_setting)
-		: Core::Layer("EOLLayer")
+		: Core::Layer("EOLLayer"), perspective_camera_controller_()
 	{
 		auto phongShader = shader_library_.Load(general_setting->RESOURCE_DIR +"Phong.glsl");
 		auto simpleShader = shader_library_.Load(general_setting->RESOURCE_DIR + "Simple.glsl");
@@ -70,8 +70,15 @@ namespace EOL {
 		ImGui::Begin("Settings");
 		ImGui::ColorEdit4("BG Color", glm::value_ptr(bg_color_));
 
-		ImGui::Text("This is some useful text. %f", prev_time_step_.GetSeconds());
+		ImGui::Text("Delta time: %f", prev_time_step_.GetSeconds());
 
+		ImGui::End();
+
+		float camera_speed = perspective_camera_controller_.GetCameraSpeed();
+		ImGui::Begin("Camera Controls");
+		ImGui::InputFloat("Camera speed", &camera_speed);
+		perspective_camera_controller_.SetCameraSpeed(camera_speed);
+		
 		ImGui::End();
 	}
 

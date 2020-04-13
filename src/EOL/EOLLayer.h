@@ -6,6 +6,7 @@
 #include "../Core/Events/MouseEvent.h"
 #include "../Core/Renderer/Shader.h"
 #include "../Core/Renderer/Buffers/VertexArray.h"
+#include "../Core/Controllers/Renderer/Camera/PerspectiveCameraController.h"
 
 #include "Settings/GeneralSettings.h"
 
@@ -37,6 +38,8 @@ namespace EOL {
 		glm::vec4 bg_color_ = { 0.1f, 0.1f, 0.1f, 1 };
 		
 		Core::ShaderLibrary shader_library_;
+		
+		Core::PerspectiveCameraController perspective_camera_controller_;
 
 		Core::Ref<Core::VertexArray> vertex_array_;
 	};
