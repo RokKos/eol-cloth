@@ -37,6 +37,47 @@ namespace EOL {
 		Core::Ref<Core::IndexBuffer> index_buffer = Core::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t));
 		vertex_array_->SetIndexBuffer(index_buffer);
 
+
+		// BOX ------
+		vertex_array_box_ = Core::VertexArray::Create();
+
+
+		float vertices_box[3 * 8] = {
+1.000000 ,1.000000 ,-1.000000,
+1.000000 ,-1.000000 ,-1.000000,
+1.000000 ,1.000000 ,1.000000,
+1.000000 ,-1.000000 ,1.000000,
+-1.000000 ,1.000000 ,-1.000000,
+-1.000000 ,-1.000000 ,-1.000000,
+-1.000000 ,1.000000 ,1.000000,
+-1.000000 ,-1.000000 ,1.000000,
+		};
+
+		auto vertex_buffer_box = Core::VertexBuffer::Create(vertices_box, sizeof(vertices_box));
+		Core::BufferLayout layout_box = {
+		{ Core::ShaderDataType::Float3, "a_Position" },
+		};
+
+		vertex_buffer_box->SetLayout(layout_box);
+		vertex_array_box_->AddVertexBuffer(vertex_buffer_box);
+
+		uint32_t indices_box[3 * 12] = {
+			1, 3, 4,
+			1, 4, 2,
+			5, 3, 1,
+			5, 1, 2,
+			2, 4, 8,
+			2, 8, 6,
+			3, 8, 4,
+			3, 7, 8,
+			7, 6, 8,
+			5, 2, 6,
+			5, 7, 3,
+			7, 5, 6,			
+		};
+		Core::Ref<Core::IndexBuffer> index_buffer_box = Core::IndexBuffer::Create(indices_box, sizeof(indices_box) / sizeof(uint32_t));
+		vertex_array_box_->SetIndexBuffer(index_buffer_box);
+
 		
 	}
 
@@ -63,7 +104,8 @@ namespace EOL {
 		Core::RenderCommand::SetClearColor(bg_color_);
 		Core::RenderCommand::Clear();
 
-		Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_);
+		//Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_);
+		Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_box_);
 		
 		Core::Renderer::EndScene();
 	}
@@ -79,10 +121,21 @@ namespace EOL {
 
 		ImGui::End();
 
-		float camera_speed = perspective_camera_controller_.GetCameraSpeed();
+		
 		ImGui::Begin("Camera Controls");
-		ImGui::InputFloat("Camera speed", &camera_speed);
-		perspective_camera_controller_.SetCameraSpeed(camera_speed);
+		
+		float camera_movement_speed = perspective_camera_controller_.GetCameraMovementSpeed();
+		ImGui::InputFloat("Camera movement speed", &camera_movement_speed);
+		perspective_camera_controller_.SetCameraMovementSpeed(camera_movement_speed);
+
+		float camera_rotation_speed = perspective_camera_controller_.GetCameraRotationSpeed();
+		ImGui::InputFloat("Camera rotation speed", &camera_rotation_speed);
+		perspective_camera_controller_.SetCameraRotationSpeed(camera_rotation_speed);
+
+		ImGui::Text("Yaw: %f", perspective_camera_controller_.GetYaw());
+		ImGui::Text("Pitch: %f", perspective_camera_controller_.GetPitch());
+		auto camera_front = perspective_camera_controller_.GetCamerFront();
+		ImGui::Text("Camera front x: %f y: %f z: %f", camera_front.x, camera_front.y, camera_front.z);
 		
 		ImGui::End();
 	}

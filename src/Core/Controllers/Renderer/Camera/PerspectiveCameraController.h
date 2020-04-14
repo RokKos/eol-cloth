@@ -23,9 +23,16 @@ namespace Core {
 		float GetZoomLevel() const { return zoom_level_; }
 		void SetZoomLevel(float level) { zoom_level_ = level; }
 
-		float GetCameraSpeed() const { return camera_speed_; }
-		void SetCameraSpeed(float camera_speed) { camera_speed_ = camera_speed; }
+		float GetCameraMovementSpeed() const { return camera_movement_speed_; }
+		void SetCameraMovementSpeed(float camera_speed) { camera_movement_speed_ = camera_speed; }
+
+		float GetCameraRotationSpeed() const { return camera_rotation_speed_; }
+		void SetCameraRotationSpeed(float camera_speed) { camera_rotation_speed_ = camera_speed; }
 		
+
+		float GetYaw() const { return yaw_; }
+		float GetPitch() const { return pitch_; }
+		const glm::vec3& GetCamerFront() const { return camera_front_; }
 
 	private:
 		bool OnMouseMove(MouseMovedEvent& e);
@@ -38,7 +45,12 @@ namespace Core {
 		glm::vec3 camera_up_ = {0.0f, 1.0f, 0.0f};
 
 		float zoom_level_ = 1.0f;
-		float camera_speed_ = 1.0f;
+		float camera_movement_speed_ = 1.0f;
+		float camera_rotation_speed_ = 1.0f;
+
+		glm::vec2 prev_mouse_pos_;
+		float yaw_ = -90.0f;
+		float pitch_ = 0.0f;
 	};
 
 }
