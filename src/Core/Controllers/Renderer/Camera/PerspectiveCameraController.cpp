@@ -24,19 +24,21 @@ namespace Core {
 
 		if (Input::IsKeyPressed(KeyCode::A))
 		{
-			camera_pos -= glm::normalize(glm::cross(camera_front_, camera_up_)) * camera_speed_;
+			camera_pos -= glm::normalize(glm::cross(camera_front_, camera_up_)) * camera_speed_ * ts.GetSeconds();
 		}
 		else if (Input::IsKeyPressed(KeyCode::D)) {
-			camera_pos += glm::normalize(glm::cross(camera_front_, camera_up_)) * camera_speed_;
+			camera_pos += glm::normalize(glm::cross(camera_front_, camera_up_)) * camera_speed_ * ts.GetSeconds();
 		}
 
 		if (Input::IsKeyPressed(KeyCode::W))
 		{
-			camera_pos += camera_speed_ * camera_front_;
+			camera_pos += camera_speed_ * camera_front_ * ts.GetSeconds();
 		}
 		else if (Input::IsKeyPressed(KeyCode::S)) {
-			camera_pos -= camera_speed_ * camera_front_;
+			camera_pos -= camera_speed_ * camera_front_ * ts.GetSeconds();
 		}
+
+		camera_.SetPosition(camera_pos);
 	}
 
 	void PerspectiveCameraController::OnEvent(Event& e)

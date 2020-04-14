@@ -15,7 +15,7 @@ namespace Core {
 
 	PerspectiveCamera::PerspectiveCamera(float aspect_ratio, float field_of_view, float near_clipping_plane, float far_clipping_plane) :
 		aspect_ratio_(aspect_ratio), field_of_view_(field_of_view), near_clipping_plane_(near_clipping_plane), far_clipping_plane_(far_clipping_plane),
-		Camera(glm::perspective(field_of_view_, aspect_ratio_, near_clipping_plane_, far_clipping_plane_), glm::mat4(1.0f))
+		Camera(glm::perspective(field_of_view, aspect_ratio, near_clipping_plane, far_clipping_plane), glm::mat4(1.0f))
 	{
 	}
 

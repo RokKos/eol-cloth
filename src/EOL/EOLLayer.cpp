@@ -54,6 +54,9 @@ namespace EOL {
 	void EOLLayer::OnUpdate(Core::TimeStep ts)
 	{
 		Core::Layer::OnUpdate(ts);
+		perspective_camera_controller_.OnUpdate(ts);
+
+		Core::Renderer::BeginScene(perspective_camera_controller_.GetCamera());
 
 		prev_time_step_ = ts;
 
@@ -61,6 +64,8 @@ namespace EOL {
 		Core::RenderCommand::Clear();
 
 		Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_);
+		
+		Core::Renderer::EndScene();
 	}
 
 	void EOLLayer::OnImGuiRender()

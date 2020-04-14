@@ -37,7 +37,7 @@ namespace Core {
 		glm::mat4 view_matrix_;
 		glm::mat4 view_projection_matrix_;
 
-		glm::vec3 position_ = { 0.0f, 0.0f, 0.0f };
-		glm::vec3 rotation_ = { 0.0f, 0.0f, 0.0f };
+		glm::vec3 position_ = { 0.1f, 0.1f, -1.0f };
+		glm::vec3 rotation_ = { 0.0f, 0.0f, 0.5f };
 	};
 }
