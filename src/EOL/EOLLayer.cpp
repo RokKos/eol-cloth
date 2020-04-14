@@ -95,6 +95,7 @@ namespace EOL {
 		dispatcher.Dispatch<Core::MouseMovedEvent>(BIND_EVENT_FN(EOLLayer::OnMouseMovedEvent));
 		dispatcher.Dispatch<Core::MouseButtonPressedEvent>(BIND_EVENT_FN(EOLLayer::OnMouseButtonPressedEvent));
 
+		perspective_camera_controller_.OnEvent(e);
 		Core::Layer::OnEvent(e);
 	}
 
