@@ -24,18 +24,18 @@ namespace Core {
 
 		if (Input::IsKeyPressed(KeyCode::A))
 		{
-			camera_pos -= glm::normalize(glm::cross(camera_front_, camera_up_)) * camera_movement_speed_ * ts.GetSeconds();
+			camera_pos -= glm::normalize(glm::cross(camera_.GetRotation(), camera_up_)) * camera_movement_speed_ * ts.GetSeconds();
 		}
 		else if (Input::IsKeyPressed(KeyCode::D)) {
-			camera_pos += glm::normalize(glm::cross(camera_front_, camera_up_)) * camera_movement_speed_ * ts.GetSeconds();
+			camera_pos += glm::normalize(glm::cross(camera_.GetRotation(), camera_up_)) * camera_movement_speed_ * ts.GetSeconds();
 		}
 
 		if (Input::IsKeyPressed(KeyCode::W))
 		{
-			camera_pos += camera_movement_speed_ * camera_front_ * ts.GetSeconds();
+			camera_pos += camera_movement_speed_ * camera_.GetRotation() * ts.GetSeconds();
 		}
 		else if (Input::IsKeyPressed(KeyCode::S)) {
-			camera_pos -= camera_movement_speed_ * camera_front_ * ts.GetSeconds();
+			camera_pos -= camera_movement_speed_ * camera_.GetRotation() * ts.GetSeconds();
 		}
 
 		camera_.SetPosition(camera_pos);
@@ -67,8 +67,7 @@ namespace Core {
 			direction.x = cos(glm::radians(yaw_)) * cos(glm::radians(pitch_));
 			direction.y = sin(glm::radians(pitch_));
 			direction.z = sin(glm::radians(yaw_)) * cos(glm::radians(pitch_));
-			camera_front_ = glm::normalize(direction);
-			camera_.SetRotation(camera_front_);
+			camera_.SetRotation(glm::normalize(direction));
 		}
 
 		return false;
@@ -77,7 +76,7 @@ namespace Core {
 	bool PerspectiveCameraController::OnMouseScrolled(MouseScrolledEvent& e)
 	{
 		zoom_level_ -= e.GetYOffset() * 0.25f;
-		zoom_level_ = std::max(zoom_level_, 0.25f);  // TODO(Rok Kos): Do this more genericly and expose parameter
+		zoom_level_ = std::max(std::min(zoom_level_, 45.0f), 1.0f);
 		camera_.SetFieldOfView(zoom_level_);
 		return false;
 	}

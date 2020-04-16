@@ -44,7 +44,7 @@ namespace EOL {
 		// BOX ------
 		vertex_array_box_ = Core::VertexArray::Create();
 
-		auto model_data = Core::ModelLoader::LoadModel(general_setting->RESOURCE_DIR + "bunny.obj");
+		auto model_data = Core::ModelLoader::LoadModel(general_setting->RESOURCE_DIR + "plane.obj");
 
 		auto vertex_buffer_box = Core::VertexBuffer::Create(model_data.vertices.data(), model_data.vertices.size() * sizeof(glm::vec3));
 		Core::BufferLayout layout_box = {
@@ -82,6 +82,8 @@ namespace EOL {
 
 		Core::RenderCommand::SetClearColor(bg_color_);
 		Core::RenderCommand::Clear();
+
+		// Load Models on themand
 
 		//Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_);
 		Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_box_);
@@ -128,8 +130,6 @@ namespace EOL {
 		Core::EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<Core::KeyPressedEvent>(BIND_EVENT_FN(EOLLayer::OnKeyPressedEvent));
 		dispatcher.Dispatch<Core::KeyTypedEvent>(BIND_EVENT_FN(EOLLayer::OnKeyTypedEvent));
-		dispatcher.Dispatch<Core::MouseMovedEvent>(BIND_EVENT_FN(EOLLayer::OnMouseMovedEvent));
-		dispatcher.Dispatch<Core::MouseButtonPressedEvent>(BIND_EVENT_FN(EOLLayer::OnMouseButtonPressedEvent));
 
 		perspective_camera_controller_.OnEvent(e);
 		Core::Layer::OnEvent(e);
@@ -161,41 +161,6 @@ namespace EOL {
 		}
 
 		return false;
-	}
-
-	bool EOLLayer::OnMouseMovedEvent(Core::MouseMovedEvent& e)
-	{
-		if (Core::Input::IsMouseButtonPressed(Core::MouseCode::Button1)) {
-			//camera->mouseMoved(xmouse, ymouse);
-			return true;
-		}
-
-		return false;
-	}
-
-	bool EOLLayer::OnMouseButtonPressedEvent(Core::MouseButtonPressedEvent& e)
-	{
-		if (e.GetMouseButton() == Core::MouseCode::Button1) {
-			double mouse_x = Core::Input::GetMouseX();
-			double mouse_y = Core::Input::GetMouseY();
-
-			if (Core::Input::IsKeyPressed(Core::KeyCode::LeftShift) || Core::Input::IsKeyPressed(Core::KeyCode::RightShift)) {
-				//Camera->mouseClicked(mouse_x, mouse_y, Camera::TRANSLATE);
-				return true;
-			}
-			else if (Core::Input::IsKeyPressed(Core::KeyCode::LeftControl) || Core::Input::IsKeyPressed(Core::KeyCode::RightControl)) {
-				//Camera->mouseClicked(mouse_x, mouse_y, Camera::TRANSLATE);
-				return true;
-			} 
-			else if (Core::Input::IsKeyPressed(Core::KeyCode::LeftAlt) || Core::Input::IsKeyPressed(Core::KeyCode::RightAlt)) {
-				//Camera->mouseClicked(mouse_x, mouse_y, Camera::TRANSLATE);
-				return true;
-			}
-			
-		}
-
-		return false;
-		
 	}
 
 }

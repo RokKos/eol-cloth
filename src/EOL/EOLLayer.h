@@ -30,8 +30,6 @@ namespace EOL {
 	private:
 		bool OnKeyPressedEvent(Core::KeyPressedEvent& e);
 		bool OnKeyTypedEvent(Core::KeyTypedEvent& e);
-		bool OnMouseMovedEvent(Core::MouseMovedEvent& e);
-		bool OnMouseButtonPressedEvent(Core::MouseButtonPressedEvent& e);
 
 	private:
 		Core::Ref<GeneralSettings> general_setting_;

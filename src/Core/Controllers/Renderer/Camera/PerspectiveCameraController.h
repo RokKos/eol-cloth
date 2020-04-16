@@ -32,7 +32,7 @@ namespace Core {
 
 		float GetYaw() const { return yaw_; }
 		float GetPitch() const { return pitch_; }
-		const glm::vec3& GetCamerFront() const { return camera_front_; }
+		const glm::vec3& GetCamerFront() const { return camera_.GetRotation(); }
 
 	private:
 		bool OnMouseMove(MouseMovedEvent& e);
@@ -41,12 +41,11 @@ namespace Core {
 	private:
 		PerspectiveCamera camera_;
 
-		glm::vec3 camera_front_ = {0.0, 0.0, 5.0f};
 		glm::vec3 camera_up_ = {0.0f, 1.0f, 0.0f};
 
 		float zoom_level_ = 1.0f;
 		float camera_movement_speed_ = 1.0f;
-		float camera_rotation_speed_ = 1.0f;
+		float camera_rotation_speed_ = 0.1f;
 
 		glm::vec2 prev_mouse_pos_;
 		float yaw_ = -90.0f;
