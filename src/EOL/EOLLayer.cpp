@@ -21,10 +21,10 @@ namespace EOL {
 		// Test out new VertexArrays and stuff
 		vertex_array_ = Core::VertexArray::Create();
 
-		float vertices[3 * 3] = {
-			-0.5f, -0.5f, 0.0f,
-			 0.5f, -0.5f, 0.0f,
-			 0.0f,  0.5f, 0.0f
+		glm::vec3 vertices[3] = {
+			glm::vec3{-0.5f, -0.5f, 0.0f},
+			glm::vec3{ 0.5f, -0.5f, 0.0f},
+			glm::vec3{0.0f,  0.5f, 0.0f}
 		};
 
 		auto vertex_buffer = Core::VertexBuffer::Create(vertices, sizeof(vertices));
@@ -45,18 +45,7 @@ namespace EOL {
 
 		auto model_data = Core::ModelLoader::LoadModel(general_setting->RESOURCE_DIR + "box.obj");
 
-		float vertices_box[3 * 8] = {
-1.000000 ,1.000000 ,-1.000000,
-1.000000 ,-1.000000 ,-1.000000,
-1.000000 ,1.000000 ,1.000000,
-1.000000 ,-1.000000 ,1.000000,
--1.000000 ,1.000000 ,-1.000000,
--1.000000 ,-1.000000 ,-1.000000,
--1.000000 ,1.000000 ,1.000000,
--1.000000 ,-1.000000 ,1.000000,
-		};
-
-		auto vertex_buffer_box = Core::VertexBuffer::Create(vertices_box, sizeof(vertices_box));
+		auto vertex_buffer_box = Core::VertexBuffer::Create(model_data.vertices.data(), model_data.vertices.size() * sizeof(glm::vec3));
 		Core::BufferLayout layout_box = {
 		{ Core::ShaderDataType::Float3, "a_Position" },
 		};
@@ -64,21 +53,7 @@ namespace EOL {
 		vertex_buffer_box->SetLayout(layout_box);
 		vertex_array_box_->AddVertexBuffer(vertex_buffer_box);
 
-		uint32_t indices_box[3 * 12] = {
-			1, 3, 4,
-			1, 4, 2,
-			5, 3, 1,
-			5, 1, 2,
-			2, 4, 8,
-			2, 8, 6,
-			3, 8, 4,
-			3, 7, 8,
-			7, 6, 8,
-			5, 2, 6,
-			5, 7, 3,
-			7, 5, 6,			
-		};
-		Core::Ref<Core::IndexBuffer> index_buffer_box = Core::IndexBuffer::Create(indices_box, sizeof(indices_box) / sizeof(uint32_t));
+		Core::Ref<Core::IndexBuffer> index_buffer_box = Core::IndexBuffer::Create(model_data.indices.data(), model_data.indices.size());
 		vertex_array_box_->SetIndexBuffer(index_buffer_box);
 
 		

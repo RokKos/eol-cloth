@@ -16,7 +16,7 @@ namespace Core {
 		return nullptr;
 	}
 
-	Ref<VertexBuffer> VertexBuffer::Create(float* vertices, uint32_t size)
+	Ref<VertexBuffer> VertexBuffer::Create(glm::vec3* vertices, uint32_t size)
 	{
 		switch (Renderer::GetAPI())
 		{
