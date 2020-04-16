@@ -8,6 +8,8 @@
 #include <imgui.h>
 #include <glm/gtc/type_ptr.hpp>
 
+#include "../Core/Tools/ModelLoader.h"
+
 namespace EOL {
 	EOLLayer::EOLLayer(Core::Ref<GeneralSettings> general_setting)
 		: Core::Layer("EOLLayer"), perspective_camera_controller_()
@@ -41,6 +43,7 @@ namespace EOL {
 		// BOX ------
 		vertex_array_box_ = Core::VertexArray::Create();
 
+		auto model_data = Core::ModelLoader::LoadModel(general_setting->RESOURCE_DIR + "box.obj");
 
 		float vertices_box[3 * 8] = {
 1.000000 ,1.000000 ,-1.000000,

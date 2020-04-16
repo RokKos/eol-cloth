@@ -42,5 +42,6 @@ namespace EOL {
 		Core::PerspectiveCameraController perspective_camera_controller_;
 
 		Core::Ref<Core::VertexArray> vertex_array_;
+		Core::Ref<Core::VertexArray> vertex_array_box_;
 	};
 }
