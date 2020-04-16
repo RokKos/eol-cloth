@@ -14,6 +14,7 @@ namespace EOL {
 	EOLLayer::EOLLayer(Core::Ref<GeneralSettings> general_setting)
 		: Core::Layer("EOLLayer"), perspective_camera_controller_()
 	{
+		general_setting_ = general_setting;
 		auto phongShader = shader_library_.Load(general_setting->RESOURCE_DIR +"Phong.glsl");
 		auto simpleShader = shader_library_.Load(general_setting->RESOURCE_DIR + "Simple.glsl");
 		auto triangle_test_shader = shader_library_.Load(general_setting->RESOURCE_DIR + "TriangleTest.glsl");
@@ -43,7 +44,7 @@ namespace EOL {
 		// BOX ------
 		vertex_array_box_ = Core::VertexArray::Create();
 
-		auto model_data = Core::ModelLoader::LoadModel(general_setting->RESOURCE_DIR + "box.obj");
+		auto model_data = Core::ModelLoader::LoadModel(general_setting->RESOURCE_DIR + "bunny.obj");
 
 		auto vertex_buffer_box = Core::VertexBuffer::Create(model_data.vertices.data(), model_data.vertices.size() * sizeof(glm::vec3));
 		Core::BufferLayout layout_box = {
@@ -92,30 +93,34 @@ namespace EOL {
 	{
 		Core::Layer::OnImGuiRender();
 
-		ImGui::Begin("Settings");
-		ImGui::ColorEdit4("BG Color", glm::value_ptr(bg_color_));
+		ImGui::Begin("Debug Controlls");
+		if (ImGui::TreeNode("Misc")) {
+			ImGui::ColorEdit4("BG Color", glm::value_ptr(bg_color_));
+			ImGui::Text("Delta time: %f", prev_time_step_.GetSeconds());
 
-		ImGui::Text("Delta time: %f", prev_time_step_.GetSeconds());
+			ImGui::TreePop();
+		}
 
+	
+		if (ImGui::TreeNode("Camera Controls")) {
+
+			float camera_movement_speed = perspective_camera_controller_.GetCameraMovementSpeed();
+			ImGui::InputFloat("Camera movement speed", &camera_movement_speed);
+			perspective_camera_controller_.SetCameraMovementSpeed(camera_movement_speed);
+
+			float camera_rotation_speed = perspective_camera_controller_.GetCameraRotationSpeed();
+			ImGui::InputFloat("Camera rotation speed", &camera_rotation_speed);
+			perspective_camera_controller_.SetCameraRotationSpeed(camera_rotation_speed);
+
+			ImGui::Text("Yaw: %f", perspective_camera_controller_.GetYaw());
+			ImGui::Text("Pitch: %f", perspective_camera_controller_.GetPitch());
+			auto camera_front = perspective_camera_controller_.GetCamerFront();
+			ImGui::Text("Camera front x: %f y: %f z: %f", camera_front.x, camera_front.y, camera_front.z);
+			ImGui::TreePop();
+		}
+		
 		ImGui::End();
 
-		
-		ImGui::Begin("Camera Controls");
-		
-		float camera_movement_speed = perspective_camera_controller_.GetCameraMovementSpeed();
-		ImGui::InputFloat("Camera movement speed", &camera_movement_speed);
-		perspective_camera_controller_.SetCameraMovementSpeed(camera_movement_speed);
-
-		float camera_rotation_speed = perspective_camera_controller_.GetCameraRotationSpeed();
-		ImGui::InputFloat("Camera rotation speed", &camera_rotation_speed);
-		perspective_camera_controller_.SetCameraRotationSpeed(camera_rotation_speed);
-
-		ImGui::Text("Yaw: %f", perspective_camera_controller_.GetYaw());
-		ImGui::Text("Pitch: %f", perspective_camera_controller_.GetPitch());
-		auto camera_front = perspective_camera_controller_.GetCamerFront();
-		ImGui::Text("Camera front x: %f y: %f z: %f", camera_front.x, camera_front.y, camera_front.z);
-		
-		ImGui::End();
 	}
 
 	void EOLLayer::OnEvent(Core::Event& e)
