@@ -43,8 +43,8 @@ namespace EOL {
 
 		// BOX ------
 		vertex_array_box_ = Core::VertexArray::Create();
-
-		auto model_data = Core::ModelLoader::LoadModel(general_setting->RESOURCE_DIR + "plane.obj");
+		transform_box_ = Core::Transform(glm::vec3(2,0,3));
+		auto model_data = Core::ModelLoader::LoadModel(general_setting->RESOURCE_DIR + "bunny.obj");
 
 		auto vertex_buffer_box = Core::VertexBuffer::Create(model_data.vertices.data(), model_data.vertices.size() * sizeof(glm::vec3));
 		Core::BufferLayout layout_box = {
@@ -86,7 +86,8 @@ namespace EOL {
 		// Load Models on themand
 
 		//Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_);
-		Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_box_);
+		Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_box_, transform_box_.GetTransformMatrix());
+		//Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_box_);
 		
 		Core::Renderer::EndScene();
 	}
@@ -138,6 +139,32 @@ namespace EOL {
 	bool EOLLayer::OnKeyPressedEvent(Core::KeyPressedEvent& e)
 	{
 		LOG_INFO("EOL LAYER::OnKeyPressedEvent key pressed: {0}", e.GetKeyCode());
+		switch (e.GetKeyCode()) {
+		case Core::KeyCode::Up: {
+			glm::vec3 pos = transform_box_.GetPosition();
+			pos.y += 1.0 * prev_time_step_;
+			transform_box_.SetPosition(pos);
+			return true;
+		}
+		case Core::KeyCode::Down: {
+			glm::vec3 pos = transform_box_.GetPosition();
+			pos.y -= 1.0 * prev_time_step_;
+			transform_box_.SetPosition(pos);
+			return true;
+		}
+		case Core::KeyCode::Left: {
+			glm::vec3 pos = transform_box_.GetPosition();
+			pos.x -= 1.0 * prev_time_step_;
+			transform_box_.SetPosition(pos);
+			return true;
+		}
+		case Core::KeyCode::Right: {
+			glm::vec3 pos = transform_box_.GetPosition();
+			pos.x += 1.0 * prev_time_step_;
+			transform_box_.SetPosition(pos);
+			return true;
+		}
+		}
 		return false;
 	}
 
