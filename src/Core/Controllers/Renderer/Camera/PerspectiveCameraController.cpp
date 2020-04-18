@@ -51,17 +51,14 @@ namespace Core {
 
 	bool PerspectiveCameraController::OnMouseMove(MouseMovedEvent& e)
 	{
-		if (Input::IsMouseButtonPressed(MouseCode::Button1) || Input::IsMouseButtonPressed(MouseCode::Button0)) {
-			glm::vec2 mouse_pos = glm::vec2(e.GetX(), e.GetY());
+		glm::vec2 mouse_pos = glm::vec2(e.GetX(), e.GetY());
+
+		if (Input::IsMouseButtonPressed(MouseCode::Button1) || Input::IsMouseButtonPressed(MouseCode::Button0)) {	
 			glm::vec2 offset = mouse_pos - prev_mouse_pos_;
-
-			prev_mouse_pos_ = mouse_pos;
-
 			offset *= camera_rotation_speed_;
 
 			yaw_ += offset.x;
 			pitch_ = glm::clamp(pitch_ - offset.y, -89.9f, 89.9f);
-
 
 			glm::vec3 direction;
 			direction.x = cos(glm::radians(yaw_)) * cos(glm::radians(pitch_));
@@ -69,6 +66,8 @@ namespace Core {
 			direction.z = sin(glm::radians(yaw_)) * cos(glm::radians(pitch_));
 			camera_.SetRotation(glm::normalize(direction));
 		}
+
+		prev_mouse_pos_ = mouse_pos;
 
 		return false;
 	}
