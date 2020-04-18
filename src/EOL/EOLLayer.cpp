@@ -121,6 +121,38 @@ namespace EOL {
 			ImGui::Text("Camera front x: %f y: %f z: %f", camera_front.x, camera_front.y, camera_front.z);
 			ImGui::TreePop();
 		}
+
+		if (ImGui::TreeNode("Transform Controls")) {
+			// TODO(Rok Kos): Refac this
+			glm::vec3 t_pos = transform_box_.GetPosition();
+			float pos[3] = { t_pos.x, t_pos.y, t_pos.z };
+			ImGui::Text("Pos:"); ImGui::InputFloat3("a", &pos[0]);
+			t_pos.x = pos[0];
+			t_pos.y = pos[1];
+			t_pos.z = pos[2];
+			transform_box_.SetPosition(t_pos);
+
+
+			glm::vec3 t_rot = transform_box_.GetRotation();
+			float rot[3] = { t_rot.x, t_rot.y, t_rot.z };
+			ImGui::Text("Rot:"); ImGui::InputFloat3("b", &rot[0]);
+			t_rot.x = rot[0];
+			t_rot.y = rot[1];
+			t_rot.z = rot[2];
+			transform_box_.SetRotation(t_rot);
+
+
+
+			glm::vec3 t_scale = transform_box_.GetScale();
+			float scl[3] = { t_scale.x, t_scale.y, t_scale.z };
+			ImGui::Text("Scale:"); ImGui::InputFloat3("c", &scl[0]);
+			t_scale.x = scl[0];
+			t_scale.y = scl[1];
+			t_scale.z = scl[2];
+			transform_box_.SetScale(t_scale);
+			
+			ImGui::TreePop();
+		}
 		
 		ImGui::End();
 

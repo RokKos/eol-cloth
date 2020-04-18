@@ -38,7 +38,7 @@ namespace Core {
 		transformation_matrix = glm::rotate(transformation_matrix, glm::radians(rotation_.y), glm::vec3(0.0f, 1.0f, 0.0f));
 		transformation_matrix = glm::rotate(transformation_matrix, glm::radians(rotation_.x), glm::vec3(1.0f, 0.0f, 0.0f));
 		
-		transformation_matrix = glm::scale(transformation_matrix, glm::vec3(0.5, 0.5, 0.5));
+		transformation_matrix = glm::scale(transformation_matrix, scale_);
 
 		matrix_ = transformation_matrix;
 	}
