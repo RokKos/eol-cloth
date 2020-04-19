@@ -19,30 +19,8 @@ namespace EOL {
 		auto simpleShader = shader_library_.Load(general_setting->RESOURCE_DIR + "Simple.glsl");
 		auto triangle_test_shader = shader_library_.Load(general_setting->RESOURCE_DIR + "TriangleTest.glsl");
 
-		// Test out new VertexArrays and stuff
-		vertex_array_ = Core::VertexArray::Create();
-
-		glm::vec3 vertices[3] = {
-			glm::vec3{-0.5f, -0.5f, 0.0f},
-			glm::vec3{ 0.5f, -0.5f, 0.0f},
-			glm::vec3{0.0f,  0.5f, 0.0f}
-		};
-
-		auto vertex_buffer = Core::VertexBuffer::Create(vertices, sizeof(vertices));
-		Core::BufferLayout layout = {
-		{ Core::ShaderDataType::Float3, "a_Position" },
-		};
-
-		vertex_buffer->SetLayout(layout);
-		vertex_array_->AddVertexBuffer(vertex_buffer);
-
-		uint32_t indices[3] = { 0, 1, 2 };
-		Core::Ref<Core::IndexBuffer> index_buffer = Core::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t));
-		vertex_array_->SetIndexBuffer(index_buffer);
-
-
 		// BOX ------
-		vertex_array_box_ = Core::VertexArray::Create();
+		auto vertex_array_box = Core::VertexArray::Create();
 		Core::Ref<Core::Transform> transform_box = Core::CreateRef<Core::Transform>(glm::vec3(2, 0, 3));
 		auto model_data = Core::ModelLoader::LoadModel(general_setting->RESOURCE_DIR + "bunny.obj");
 
@@ -52,14 +30,14 @@ namespace EOL {
 		};
 
 		vertex_buffer_box->SetLayout(layout_box);
-		vertex_array_box_->AddVertexBuffer(vertex_buffer_box);
+		vertex_array_box->AddVertexBuffer(vertex_buffer_box);
 
 		Core::Ref<Core::IndexBuffer> index_buffer_box = Core::IndexBuffer::Create(model_data.indices.data(), model_data.indices.size());
-		vertex_array_box_->SetIndexBuffer(index_buffer_box);
+		vertex_array_box->SetIndexBuffer(index_buffer_box);
 
-		auto shape = Core::CreateRef<Core::Shape>(vertex_array_box_, transform_box, model_data, "Shape01");
-		auto shape2 = Core::CreateRef<Core::Shape>(vertex_array_box_, Core::CreateRef<Core::Transform>(glm::vec3(1, 1, 1)), model_data, "Shape02");
-		auto shape3 = Core::CreateRef<Core::Shape>(vertex_array_box_, Core::CreateRef<Core::Transform>(glm::vec3(0, 0, 0)), model_data, "Shape03");
+		auto shape = Core::CreateRef<Core::Shape>(vertex_array_box, transform_box, model_data, "Shape01");
+		auto shape2 = Core::CreateRef<Core::Shape>(vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(1, 1, 1)), model_data, "Shape02");
+		auto shape3 = Core::CreateRef<Core::Shape>(vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(0, 0, 0)), model_data, "Shape03");
 		scene_.AddShape(shape);
 		scene_.AddShape(shape2);
 		scene_.AddShape(shape3);
@@ -188,7 +166,7 @@ namespace EOL {
 	bool EOLLayer::OnKeyPressedEvent(Core::KeyPressedEvent& e)
 	{
 		LOG_INFO("EOL LAYER::OnKeyPressedEvent key pressed: {0}", e.GetKeyCode());
-		switch (e.GetKeyCode()) {
+		/*switch (e.GetKeyCode()) {
 		case Core::KeyCode::Up: {
 			glm::vec3 pos = transform_box_.GetPosition();
 			pos.y += 1.0 * prev_time_step_;
@@ -213,7 +191,7 @@ namespace EOL {
 			transform_box_.SetPosition(pos);
 			return true;
 		}
-		}
+		}*/
 		return false;
 	}
 

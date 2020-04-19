@@ -5,9 +5,7 @@
 #include "../Core/Events/KeyEvent.h"
 #include "../Core/Events/MouseEvent.h"
 #include "../Core/Renderer/Shader.h"
-#include "../Core/Renderer/Buffers/VertexArray.h"
 #include "../Core/Controllers/Renderer/Camera/PerspectiveCameraController.h"
-#include "../Core/Components/Transform.h"
 #include "../Core/Scene/Scene.h"
 
 #include "Settings/GeneralSettings.h"
@@ -41,11 +39,6 @@ namespace EOL {
 		Core::ShaderLibrary shader_library_;
 		
 		Core::PerspectiveCameraController perspective_camera_controller_;
-
-		Core::Ref<Core::VertexArray> vertex_array_;
-		Core::Ref<Core::VertexArray> vertex_array_box_;
-
-		Core::Transform transform_box_;
 
 		Core::Scene scene_;
 	};
