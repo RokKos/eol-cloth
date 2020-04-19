@@ -53,4 +53,11 @@ namespace Platform {
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	}
 
+	void OpenGLRendererAPI::DrawIndexed(const Core::Ref<Core::VertexArray>& vertexArray, uint32_t indexCount /*= 0*/)
+	{
+		uint32_t count = indexCount == 0 ? vertexArray->GetIndexBuffer()->GetCount() : indexCount;  // TODO(Rok Kos): Validate on more cases that this is correct fix
+		glDrawElements(GL_TRIANGLES, count, GL_UNSIGNED_INT, nullptr);
+		glBindTexture(GL_TEXTURE_2D, 0);
+	}
+
 }

@@ -28,6 +28,7 @@ SET(IGL ON) # "Build with libIGL support"
  SET(DEF_DIR_EIGEN "${CMAKE_SOURCE_DIR}/External/eigen-3.3.7")
  SET(DEF_DIR_SPDLOG "${CMAKE_SOURCE_DIR}/External/spdlog/include")
  SET(DEF_DIR_IMGUI "${CMAKE_SOURCE_DIR}/External/imgui")
+ SET(DEF_DIR_TINYOBJLOADER "${CMAKE_SOURCE_DIR}/External/tinyobjloader")
 
  IF(${ONLINE})
 	 SET(DEF_DIR_GLM "${CMAKE_SOURCE_DIR}/External/glm-0.9.9.7")
@@ -151,8 +152,7 @@ IF(NOT SPDLOG_INCLUDE_DIR)
 ENDIF()
 INCLUDE_DIRECTORIES(${SPDLOG_INCLUDE_DIR})
 
-# Get the SPDLOG environment variable. Since SPDLOG is a header-only library, we
-# just need to add it to the include directory.
+
 SET(IMGUI_INCLUDE_DIR "$ENV{IMGUI_INCLUDE_DIR}")
 IF(NOT IMGUI_INCLUDE_DIR)
   # The environment variable was not set
@@ -194,6 +194,29 @@ add_library(IMGUI
         ${IMGUIH}
 )
 TARGET_LINK_LIBRARIES(${CMAKE_PROJECT_NAME} IMGUI)
+
+
+
+# Get the TINYOBJLOADER environment variable. Since TINYOBJLOADER is a header-only library, we
+# just need to add it to the include directory.
+SET(TINYOBJLOADER_INCLUDE_DIR "$ENV{TINYOBJLOADER_INCLUDE_DIR}")
+IF(NOT TINYOBJLOADER_INCLUDE_DIR)
+  # The environment variable was not set
+  SET(ERR_MSG "Please point the environment variable TINYOBJLOADER_INCLUDE_DIR to the root directory of your TINYOBJLOADER installation.")
+  IF(WIN32)
+    # On Windows, try the default location
+    MESSAGE(STATUS "Looking for TINYOBJLOADER in ${DEF_DIR_TINYOBJLOADER}")
+    IF(IS_DIRECTORY ${DEF_DIR_TINYOBJLOADER})
+      MESSAGE(STATUS "Found!")
+      SET(TINYOBJLOADER_INCLUDE_DIR ${DEF_DIR_TINYOBJLOADER})
+    ELSE()
+      MESSAGE(FATAL_ERROR ${ERR_MSG})
+    ENDIF()
+  ELSE()
+    MESSAGE(FATAL_ERROR ${ERR_MSG})
+  ENDIF()
+ENDIF()
+INCLUDE_DIRECTORIES(${TINYOBJLOADER_INCLUDE_DIR})
 
 
 IF(${ONLINE})

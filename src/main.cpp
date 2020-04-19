@@ -5,7 +5,7 @@
 //#include "Core/Application.h"
 #include "EOL/EOLApplication.h"
 
-extern Core::Application* Core::CreateApplication();
+extern Core::Application* Core::CreateApplication(std::string general_settings_file_path, std::string simulation_settings_file_path);
 
 int main(int argc, char **argv)
 {
@@ -18,8 +18,7 @@ int main(int argc, char **argv)
 
 	srand(time(NULL));
     
-	auto app = static_cast<EOL::EOLApplication*>(Core::CreateApplication());// new EOL::EOLApplication();  // TODO(Rok Kos): Check for proper way to use Core::CreateApplication()
-	app->OnStart(argv[1], argv[2]);
+	auto app = static_cast<EOL::EOLApplication*>(Core::CreateApplication(argv[1], argv[2]));
 	app->Run();
 	delete app;
 

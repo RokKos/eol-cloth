@@ -28,10 +28,11 @@ void Shape::loadMesh(const string &meshName)
 	tinyobj::attrib_t attrib;
 	std::vector<tinyobj::shape_t> shapes;
 	std::vector<tinyobj::material_t> materials;
-	string errStr;
-	bool rc = tinyobj::LoadObj(&attrib, &shapes, &materials, &errStr, meshName.c_str());
+	string warn;
+	string err;
+	bool rc = tinyobj::LoadObj(&attrib, &shapes, &materials, &warn, &err, meshName.c_str());
 	if(!rc) {
-		cerr << errStr << endl;
+		cerr << err << endl;
 	} else {
 		// Some OBJ files have different indices for vertex positions, normals,
 		// and texture coordinates. For example, a cube corner vertex may have
