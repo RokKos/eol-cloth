@@ -15,6 +15,7 @@ namespace Core {
 
 		const Ref<VertexArray>& GetVertexArray() const { return vertex_array_; }
 		const Ref<Transform>& GetTransform() const { return transform_; }
+		const std::string& GetName() const { return name_; }
 
 	private:
 		std::string name_ = "shape";

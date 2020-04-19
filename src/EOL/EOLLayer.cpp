@@ -57,10 +57,12 @@ namespace EOL {
 		Core::Ref<Core::IndexBuffer> index_buffer_box = Core::IndexBuffer::Create(model_data.indices.data(), model_data.indices.size());
 		vertex_array_box_->SetIndexBuffer(index_buffer_box);
 
-		auto shape = Core::CreateRef <Core::Shape>(vertex_array_box_, transform_box, model_data, "Shape01");
+		auto shape = Core::CreateRef<Core::Shape>(vertex_array_box_, transform_box, model_data, "Shape01");
+		auto shape2 = Core::CreateRef<Core::Shape>(vertex_array_box_, Core::CreateRef<Core::Transform>(glm::vec3(1, 1, 1)), model_data, "Shape02");
+		auto shape3 = Core::CreateRef<Core::Shape>(vertex_array_box_, Core::CreateRef<Core::Transform>(glm::vec3(0, 0, 0)), model_data, "Shape03");
 		scene_.AddShape(shape);
-
-		
+		scene_.AddShape(shape2);
+		scene_.AddShape(shape3);
 	}
 
 	void EOLLayer::OnAttach()
@@ -92,10 +94,6 @@ namespace EOL {
 		{
 			Core::Renderer::Submit(shader_library_.Get("TriangleTest"), shape->GetVertexArray(), shape->GetTransform()->GetTransformMatrix());
 		}
-
-		//Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_);
-		//Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_box_, transform_box_.GetTransformMatrix());
-		Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_box_);
 		
 		Core::Renderer::EndScene();
 	}
@@ -130,34 +128,45 @@ namespace EOL {
 			ImGui::TreePop();
 		}
 
-		if (ImGui::TreeNode("Transform Controls")) {
-			// TODO(Rok Kos): Refac this
-			glm::vec3 t_pos = transform_box_.GetPosition();
-			float pos[3] = { t_pos.x, t_pos.y, t_pos.z };
-			ImGui::Text("Pos:"); ImGui::InputFloat3("a", &pos[0]);
-			t_pos.x = pos[0];
-			t_pos.y = pos[1];
-			t_pos.z = pos[2];
-			transform_box_.SetPosition(t_pos);
+		if (ImGui::TreeNode("Scene View")) {
+
+			for (auto shape : scene_.GetShapes())
+			{
+				if (ImGui::TreeNode(shape->GetName().c_str())) {
+					// TODO(Rok Kos): Refac this
+					auto shape_transform = shape->GetTransform();
+
+					glm::vec3 t_pos = shape_transform->GetPosition();
+					float pos[3] = { t_pos.x, t_pos.y, t_pos.z };
+					ImGui::Text("Pos:"); ImGui::InputFloat3("a", &pos[0]);
+					t_pos.x = pos[0];
+					t_pos.y = pos[1];
+					t_pos.z = pos[2];
+					shape_transform->SetPosition(t_pos);
 
 
-			glm::vec3 t_rot = transform_box_.GetRotation();
-			float rot[3] = { t_rot.x, t_rot.y, t_rot.z };
-			ImGui::Text("Rot:"); ImGui::InputFloat3("b", &rot[0]);
-			t_rot.x = rot[0];
-			t_rot.y = rot[1];
-			t_rot.z = rot[2];
-			transform_box_.SetRotation(t_rot);
+					glm::vec3 t_rot = shape_transform->GetRotation();
+					float rot[3] = { t_rot.x, t_rot.y, t_rot.z };
+					ImGui::Text("Rot:"); ImGui::InputFloat3("b", &rot[0]);
+					t_rot.x = rot[0];
+					t_rot.y = rot[1];
+					t_rot.z = rot[2];
+					shape_transform->SetRotation(t_rot);
 
 
 
-			glm::vec3 t_scale = transform_box_.GetScale();
-			float scl[3] = { t_scale.x, t_scale.y, t_scale.z };
-			ImGui::Text("Scale:"); ImGui::InputFloat3("c", &scl[0]);
-			t_scale.x = scl[0];
-			t_scale.y = scl[1];
-			t_scale.z = scl[2];
-			transform_box_.SetScale(t_scale);
+					glm::vec3 t_scale = shape_transform->GetScale();
+					float scl[3] = { t_scale.x, t_scale.y, t_scale.z };
+					ImGui::Text("Scale:"); ImGui::InputFloat3("c", &scl[0]);
+					t_scale.x = scl[0];
+					t_scale.y = scl[1];
+					t_scale.z = scl[2];
+					shape_transform->SetScale(t_scale);
+
+					ImGui::TreePop();
+				}
+			}
+			
 			
 			ImGui::TreePop();
 		}
