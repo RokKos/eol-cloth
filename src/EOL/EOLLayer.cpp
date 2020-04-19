@@ -43,7 +43,7 @@ namespace EOL {
 
 		// BOX ------
 		vertex_array_box_ = Core::VertexArray::Create();
-		transform_box_ = Core::Transform(glm::vec3(2,0,3));
+		Core::Ref<Core::Transform> transform_box = Core::CreateRef<Core::Transform>(glm::vec3(2, 0, 3));
 		auto model_data = Core::ModelLoader::LoadModel(general_setting->RESOURCE_DIR + "bunny.obj");
 
 		auto vertex_buffer_box = Core::VertexBuffer::Create(model_data.vertices.data(), model_data.vertices.size() * sizeof(glm::vec3));
@@ -56,6 +56,9 @@ namespace EOL {
 
 		Core::Ref<Core::IndexBuffer> index_buffer_box = Core::IndexBuffer::Create(model_data.indices.data(), model_data.indices.size());
 		vertex_array_box_->SetIndexBuffer(index_buffer_box);
+
+		auto shape = Core::CreateRef <Core::Shape>(vertex_array_box_, transform_box, model_data, "Shape01");
+		scene_.AddShape(shape);
 
 		
 	}
@@ -85,8 +88,13 @@ namespace EOL {
 
 		// Load Models on themand
 
+		for (auto shape : scene_.GetShapes())
+		{
+			Core::Renderer::Submit(shader_library_.Get("TriangleTest"), shape->GetVertexArray(), shape->GetTransform()->GetTransformMatrix());
+		}
+
 		//Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_);
-		Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_box_, transform_box_.GetTransformMatrix());
+		//Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_box_, transform_box_.GetTransformMatrix());
 		Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_box_);
 		
 		Core::Renderer::EndScene();

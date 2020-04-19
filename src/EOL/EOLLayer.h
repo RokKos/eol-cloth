@@ -8,6 +8,7 @@
 #include "../Core/Renderer/Buffers/VertexArray.h"
 #include "../Core/Controllers/Renderer/Camera/PerspectiveCameraController.h"
 #include "../Core/Components/Transform.h"
+#include "../Core/Scene/Scene.h"
 
 #include "Settings/GeneralSettings.h"
 
@@ -45,5 +46,7 @@ namespace EOL {
 		Core::Ref<Core::VertexArray> vertex_array_box_;
 
 		Core::Transform transform_box_;
+
+		Core::Scene scene_;
 	};
 }
