@@ -87,7 +87,7 @@ namespace EOL {
 
 		//Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_);
 		Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_box_, transform_box_.GetTransformMatrix());
-		//Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_box_);
+		Core::Renderer::Submit(shader_library_.Get("TriangleTest"), vertex_array_box_);
 		
 		Core::Renderer::EndScene();
 	}
