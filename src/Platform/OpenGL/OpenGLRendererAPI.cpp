@@ -60,4 +60,20 @@ namespace Platform {
 		glBindTexture(GL_TEXTURE_2D, 0);
 	}
 
+	void OpenGLRendererAPI::DrawPoints(const std::vector<Core::Ref<Core::Point>>& points)
+	{
+		glEnable(GL_POINT_SMOOTH);
+		// TODO(Rok Kos): Figure out how to get size and color for all points without having to do multiple glBegin and glEnd
+		glPointSize(10.0f);
+		glColor3f(1.0f, 0.0f, 0.0f);
+
+		glBegin(GL_POINTS);
+		for (auto point : points) {
+			glm::vec3 position = point->GetPosition();
+			glVertex3f(position.x, position.y, position.z);
+		}
+		glEnd();
+		glDisable(GL_POINT_SMOOTH);
+	}
+
 }

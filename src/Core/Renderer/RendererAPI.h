@@ -2,6 +2,7 @@
 
 #include "../Core.h"
 #include "Buffers/VertexArray.h"
+#include "../Primitives/Point.h"
 
 #include <glm/glm.hpp>
 
@@ -21,6 +22,7 @@ namespace Core {
 		virtual void Clear() = 0;
 
 		virtual void DrawIndexed(const Ref<VertexArray>& vertexArray, uint32_t indexCount = 0) = 0;
+		virtual void DrawPoints(const std::vector<Ref<Point>>& points) = 0;
 
 		inline static API GetAPI() { return s_API; }
 		static Scope<RendererAPI> Create();

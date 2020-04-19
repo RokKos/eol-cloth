@@ -41,6 +41,10 @@ namespace EOL {
 		scene_.AddShape(shape);
 		scene_.AddShape(shape2);
 		scene_.AddShape(shape3);
+
+		// GL ENABLE SMOOTH POINTS
+		scene_.AddPoint(Core::CreateRef<Core::Point>(10, glm::vec3(0, 0, 0), glm::vec3(1, 0, 0)));
+		scene_.AddPoint(Core::CreateRef<Core::Point>(100, glm::vec3(10, 2, 5), glm::vec3(0, 1, 0)));
 	}
 
 	void EOLLayer::OnAttach()
@@ -72,6 +76,8 @@ namespace EOL {
 		{
 			Core::Renderer::Submit(shader_library_.Get("TriangleTest"), shape->GetVertexArray(), shape->GetTransform()->GetTransformMatrix());
 		}
+
+		Core::Renderer::DrawPoints(scene_.GetPoints());
 		
 		Core::Renderer::EndScene();
 	}

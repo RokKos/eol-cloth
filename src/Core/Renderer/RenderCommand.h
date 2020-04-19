@@ -31,6 +31,11 @@ namespace Core {
 		{
 			s_RendererAPI->DrawIndexed(vertexArray, count);
 		}
+
+		static void DrawPoints(const std::vector<Ref<Point>>& points)
+		{
+			s_RendererAPI->DrawPoints(points);
+		}
 	private:
 		static Scope<RendererAPI> s_RendererAPI;
 	};

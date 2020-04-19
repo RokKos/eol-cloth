@@ -34,6 +34,7 @@ int BrenderManager::getFrame() const
 void BrenderManager::exportBrender(double time)
 {
 	int objNum = 1;
+	// TODO(Rok Kos): Multy threaded/core
 	for (auto brenderable : brenderables) {
 		vector<string> names = brenderable->getBrenderNames();
 		vector< shared_ptr< ofstream > > outfiles;

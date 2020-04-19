@@ -41,4 +41,9 @@ namespace Core {
 		RenderCommand::DrawIndexed(vertexArray);
 	}
 
+	void Renderer::DrawPoints(const std::vector<Ref<Point>>& points)
+	{
+		RenderCommand::DrawPoints(points);
+	}
+
 }
