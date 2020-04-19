@@ -8,13 +8,14 @@ namespace Core {
 	PerspectiveCameraController::PerspectiveCameraController() :
 		camera_(16.0f / 9.0f, 45.0f, 0.01f, 1000.0f), prev_mouse_pos_(600.0f, 400.0f)
 	{
-
+		SetCameraRotation();
 	}
 
 	PerspectiveCameraController::PerspectiveCameraController(float aspect_ratio, float field_of_view, float near_clipping_plane, float far_clipping_plane) :
 		camera_(aspect_ratio, field_of_view, near_clipping_plane, far_clipping_plane), prev_mouse_pos_(600.0f, 400.0f)
 	{
 
+		SetCameraRotation();
 	}
 
 	void PerspectiveCameraController::OnUpdate(TimeStep ts)
@@ -60,11 +61,7 @@ namespace Core {
 			yaw_ += offset.x;
 			pitch_ = glm::clamp(pitch_ - offset.y, -89.9f, 89.9f);
 
-			glm::vec3 direction;
-			direction.x = cos(glm::radians(yaw_)) * cos(glm::radians(pitch_));
-			direction.y = sin(glm::radians(pitch_));
-			direction.z = sin(glm::radians(yaw_)) * cos(glm::radians(pitch_));
-			camera_.SetRotation(glm::normalize(direction));
+			SetCameraRotation();
 		}
 
 		prev_mouse_pos_ = mouse_pos;
@@ -85,6 +82,15 @@ namespace Core {
 		auto aspect_ratio = (float)e.GetWidth() / (float)e.GetHeight();
 		camera_.SetAspectRatio(aspect_ratio);
 		return false;
+	}
+
+	void PerspectiveCameraController::SetCameraRotation()
+	{
+		glm::vec3 direction;
+		direction.x = cos(glm::radians(yaw_)) * cos(glm::radians(pitch_));
+		direction.y = sin(glm::radians(pitch_));
+		direction.z = sin(glm::radians(yaw_)) * cos(glm::radians(pitch_));
+		camera_.SetRotation(glm::normalize(direction));
 	}
 
 }
