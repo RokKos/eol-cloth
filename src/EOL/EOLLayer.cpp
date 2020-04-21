@@ -18,15 +18,17 @@ namespace EOL {
 		auto phongShader = shader_library_.Load(general_setting->RESOURCE_DIR +"Phong.glsl");
 		auto simpleShader = shader_library_.Load(general_setting->RESOURCE_DIR + "Simple.glsl");
 		auto triangle_test_shader = shader_library_.Load(general_setting->RESOURCE_DIR + "TriangleTest.glsl");
+		auto texture_shader = shader_library_.Load(general_setting->RESOURCE_DIR + "Texture.glsl");
 
 		// BOX ------
 		auto vertex_array_box = Core::VertexArray::Create();
 		Core::Ref<Core::Transform> transform_box = Core::CreateRef<Core::Transform>(glm::vec3(2, 0, 3));
-		auto model_data = Core::ModelLoader::LoadModel(general_setting->RESOURCE_DIR + "bunny.obj");
+		auto model_data = Core::ModelLoader::LoadModel(general_setting->RESOURCE_DIR + "gun.obj");
 
 		auto vertex_buffer_box = Core::VertexBuffer::Create(model_data.vertices.data(), model_data.vertices.size() * sizeof(glm::vec3));
 		Core::BufferLayout layout_box = {
 		{ Core::ShaderDataType::Float3, "a_Position" },
+		{ Core::ShaderDataType::Float2, "a_TexCoord" },
 		};
 
 		vertex_buffer_box->SetLayout(layout_box);
@@ -42,9 +44,15 @@ namespace EOL {
 		scene_.AddShape(shape2);
 		scene_.AddShape(shape3);
 
-		// GL ENABLE SMOOTH POINTS
+
 		scene_.AddPoint(Core::CreateRef<Core::Point>(10, glm::vec3(0, 0, 0), glm::vec3(1, 0, 0)));
 		scene_.AddPoint(Core::CreateRef<Core::Point>(100, glm::vec3(10, 2, 5), glm::vec3(0, 1, 0)));
+
+
+		uv_texture_ = Core::Texture2D::Create(general_setting->RESOURCE_DIR + "uv_texture.png");
+		gun_texture_ = Core::Texture2D::Create(general_setting->RESOURCE_DIR + "Cerberus_A.tga");
+		texture_shader->Bind();
+		texture_shader->SetInt("u_Texture", 0);
 	}
 
 	void EOLLayer::OnAttach()
@@ -72,9 +80,12 @@ namespace EOL {
 
 		// Load Models on themand
 
+		auto texture_shader = shader_library_.Get("Texture");
+		//uv_texture_->Bind();
 		for (auto shape : scene_.GetShapes())
 		{
-			Core::Renderer::Submit(shader_library_.Get("TriangleTest"), shape->GetVertexArray(), shape->GetTransform()->GetTransformMatrix());
+			gun_texture_->Bind();
+			Core::Renderer::Submit(texture_shader, shape->GetVertexArray(), shape->GetTransform()->GetTransformMatrix());
 		}
 
 		Core::Renderer::DrawPoints(scene_.GetPoints());
