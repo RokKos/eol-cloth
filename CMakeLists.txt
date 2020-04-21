@@ -29,6 +29,7 @@ SET(IGL ON) # "Build with libIGL support"
  SET(DEF_DIR_SPDLOG "${CMAKE_SOURCE_DIR}/External/spdlog/include")
  SET(DEF_DIR_IMGUI "${CMAKE_SOURCE_DIR}/External/imgui")
  SET(DEF_DIR_TINYOBJLOADER "${CMAKE_SOURCE_DIR}/External/tinyobjloader")
+ SET(DEF_DIR_STB "${CMAKE_SOURCE_DIR}/External/stb")
 
  IF(${ONLINE})
 	 SET(DEF_DIR_GLM "${CMAKE_SOURCE_DIR}/External/glm-0.9.9.7")
@@ -217,6 +218,27 @@ IF(NOT TINYOBJLOADER_INCLUDE_DIR)
   ENDIF()
 ENDIF()
 INCLUDE_DIRECTORIES(${TINYOBJLOADER_INCLUDE_DIR})
+
+# Get the TINYOBJLOADER environment variable. Since TINYOBJLOADER is a header-only library, we
+# just need to add it to the include directory.
+SET(STB_INCLUDE_DIR "$ENV{STB_INCLUDE_DIR}")
+IF(NOT STB_INCLUDE_DIR)
+  # The environment variable was not set
+  SET(ERR_MSG "Please point the environment variable STB_INCLUDE_DIR to the root directory of your stb installation.")
+  IF(WIN32)
+    # On Windows, try the default location
+    MESSAGE(STATUS "Looking for stb in ${DEF_DIR_STB}")
+    IF(IS_DIRECTORY ${DEF_DIR_STB})
+      MESSAGE(STATUS "Found!")
+      SET(STB_INCLUDE_DIR ${DEF_DIR_STB})
+    ELSE()
+      MESSAGE(FATAL_ERROR ${ERR_MSG})
+    ENDIF()
+  ELSE()
+    MESSAGE(FATAL_ERROR ${ERR_MSG})
+  ENDIF()
+ENDIF()
+INCLUDE_DIRECTORIES(${STB_INCLUDE_DIR})
 
 
 IF(${ONLINE})
