@@ -6,9 +6,6 @@
 
 #include <string>
 
-
-
-
 namespace Core {
 
 	class ModelLoader {

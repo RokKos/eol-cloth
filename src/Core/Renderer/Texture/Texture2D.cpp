@@ -1,30 +1,32 @@
-#include "VertexBuffer.h"
+#include "Texture2D.h"
 
 #include "../Renderer.h"
-#include "../../../Platform/OpenGL/Buffers/OpenGLVertexBuffer.h"
+#include "../../../Platform/OpenGL/Texture/OpenGLTexture2D.h"
 
 namespace Core {
-	Ref<VertexBuffer> VertexBuffer::Create(uint32_t size)
+
+	Ref<Texture2D> Texture2D::Create(uint32_t width, uint32_t height)
 	{
 		switch (Renderer::GetAPI())
 		{
 		case RendererAPI::API::None:    CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-		case RendererAPI::API::OpenGL:  return CreateRef<Platform::OpenGLVertexBuffer>(size);
+		case RendererAPI::API::OpenGL:  return CreateRef<Platform::OpenGLTexture2D>(width, height);
 		}
 
 		CORE_ASSERT(false, "Unknown RendererAPI!");
 		return nullptr;
 	}
 
-	Ref<VertexBuffer> VertexBuffer::Create(Vertex* vertices, uint32_t size)
+	Ref<Texture2D> Texture2D::Create(const std::string& path)
 	{
 		switch (Renderer::GetAPI())
 		{
 		case RendererAPI::API::None:    CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-		case RendererAPI::API::OpenGL:  return CreateRef<Platform::OpenGLVertexBuffer>(vertices, size);
+		case RendererAPI::API::OpenGL:  return CreateRef<Platform::OpenGLTexture2D>(path);
 		}
 
 		CORE_ASSERT(false, "Unknown RendererAPI!");
 		return nullptr;
 	}
+
 }
