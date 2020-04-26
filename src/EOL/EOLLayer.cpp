@@ -25,9 +25,10 @@ namespace EOL {
 		Core::Ref<Core::Transform> transform_box = Core::CreateRef<Core::Transform>(glm::vec3(2, 0, 3));
 		auto model_data = Core::ModelLoader::LoadModel(general_setting->RESOURCE_DIR + "gun.obj");
 
-		auto vertex_buffer_box = Core::VertexBuffer::Create(model_data.vertices.data(), model_data.vertices.size() * sizeof(glm::vec3));
+		auto vertex_buffer_box = Core::VertexBuffer::Create(model_data.vertices.data(), model_data.vertices.size() * sizeof(Core::Vertex));
 		Core::BufferLayout layout_box = {
 		{ Core::ShaderDataType::Float3, "a_Position" },
+		{ Core::ShaderDataType::Float3, "a_Normal" },
 		{ Core::ShaderDataType::Float2, "a_TexCoord" },
 		};
 

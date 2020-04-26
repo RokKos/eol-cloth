@@ -30,6 +30,7 @@ namespace Core {
 		std::unordered_map<Vertex, uint32_t> unique_vertices = {};
 
 		bool has_texture_cordinates = attrib.texcoords.size() > 0;
+		bool has_normals = attrib.normals.size() > 0;
 
 		for (const auto& shape : shapes) {
 			for (const auto& index : shape.mesh.indices) {
@@ -40,6 +41,14 @@ namespace Core {
 					attrib.vertices[3 * index.vertex_index + 2] 
 				};
 				
+				if (has_normals) {
+					vertex.normal = {
+						attrib.normals[3 * index.normal_index + 0],
+						attrib.normals[3 * index.normal_index + 1],
+						attrib.normals[3 * index.normal_index + 2],
+					};
+				}
+
 				if (has_texture_cordinates) {
 					vertex.tex_coord = {
 						attrib.texcoords[2 * index.texcoord_index + 0],
