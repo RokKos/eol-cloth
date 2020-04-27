@@ -2,6 +2,7 @@
 
 #include "RendererAPI.h"
 #include "Shader.h"
+#include "../Components/Material.h"
 #include "Buffers/VertexArray.h"
 #include "Cameras/Camera.h"
 
@@ -17,7 +18,7 @@ namespace Core {
 
 		static void BeginScene(Camera& camera);
 		static void EndScene();
-		static void Submit(const Ref<Shader>& shader, const Ref<VertexArray>& vertexArray, const glm::mat4& transform = glm::mat4(1.0f));
+		static void Submit(const Ref<Material>& material, const Ref<VertexArray>& vertexArray, const glm::mat4& transform = glm::mat4(1.0f));
 		static void DrawPoints(const std::vector<Ref<Point>>& points);
 
 

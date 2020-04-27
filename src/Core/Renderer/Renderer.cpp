@@ -31,11 +31,16 @@ namespace Core {
 
 	}
 
-	void Renderer::Submit(const Ref<Shader>& shader, const Ref<VertexArray>& vertexArray, const glm::mat4& transform)
+	void Renderer::Submit(const Ref<Material>& material, const Ref<VertexArray>& vertexArray, const glm::mat4& transform)
 	{
+		material->BindTextures();
+
+		Ref<Shader> shader = material->GetShader();
 		shader->Bind();
 		shader->SetMat4("u_ViewProjection", s_SceneData->ViewProjectionMatrix);
 		shader->SetMat4("u_Transform", transform);
+
+		material->BindLightData();
 
 		vertexArray->Bind();
 		RenderCommand::DrawIndexed(vertexArray);
