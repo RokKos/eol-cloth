@@ -39,8 +39,17 @@ namespace EOL {
 		generic_texture_shader->Bind();
 		generic_texture_shader->SetInt("u_Texture", 0);
 		auto gun_texture = Core::Texture2D::Create(general_setting->RESOURCE_DIR + "Textures/Cerberus_A.tga");
-		auto mat_generic_generic_texture = Core::CreateRef<Core::Material>(generic_texture_shader, Core::PhongLightingParameters(), "Generic_Texture_MAT");
-		mat_generic_generic_texture->SetTexture("Gun_Texture", gun_texture);
+		auto mat_generic_texture = Core::CreateRef<Core::Material>(generic_texture_shader, Core::PhongLightingParameters(), "Generic_Texture_MAT");
+		mat_generic_texture->SetTexture("Gun_Texture", gun_texture);
+
+		auto generic_lighting_shader = shader_library_.Load(general_setting->RESOURCE_DIR + "Shaders/GenericLighting.glsl");
+		auto phong_lighting_parameters = Core::PhongLightingParameters();
+		phong_lighting_parameters.diffuse_color_ = glm::vec3(0.8f, 0.0f, 0.0f);
+		phong_lighting_parameters.specular_color_ = glm::vec3(0.0f, 0.3f, 0.0f);
+		phong_lighting_parameters.specular_scatering_ = 32.0f;
+		phong_lighting_parameters.ambient_color_ = glm::vec3(0.0f, 0.0f, 1.0f);
+		phong_lighting_parameters.ambient_intensity_ = glm::vec3(0.5f, 0.5f, 0.5f);
+		auto mat_generic_lighting = Core::CreateRef<Core::Material>(generic_lighting_shader, phong_lighting_parameters, "Generic_Lighting_MAT");
 
 		// BOX ------
 		auto vertex_array_box = Core::VertexArray::Create();
@@ -63,16 +72,18 @@ namespace EOL {
 		auto shape = Core::CreateRef<Core::Shape>(mat_generic_color, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(0, 0, 0)), model_data, "Model");
 		auto shape2 = Core::CreateRef<Core::Shape>(mat_generic_normals, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(2, 0, 0)), model_data, "Model Normals");
 		auto shape3 = Core::CreateRef<Core::Shape>(mat_generic_uv_coordinates, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(4, 0, 0)), model_data, "Texture UVs");
-		auto shape4 = Core::CreateRef<Core::Shape>(mat_generic_generic_texture, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(6, 0, 0)), model_data, "Texture");
-		//auto shape5 = Core::CreateRef<Core::Shape>(vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(8, 0, 0)), model_data, "Lighting");
+		auto shape4 = Core::CreateRef<Core::Shape>(mat_generic_texture, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(6, 0, 0)), model_data, "Texture");
+		auto shape5 = Core::CreateRef<Core::Shape>(mat_generic_lighting, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(8, 0, 0)), model_data, "Lighting");
 		//auto shape6 = Core::CreateRef<Core::Shape>(vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(8, 0, 0)), model_data, "All Together");
 		scene_.AddShape(shape);
 		scene_.AddShape(shape2);
 		scene_.AddShape(shape3);
 		scene_.AddShape(shape4);
-		//scene_.AddShape(shape5);
+		scene_.AddShape(shape5);
 		//scene_.AddShape(shape6);
 
+
+		scene_.AddLightSource(Core::CreateRef<Core::LightSource>(Core::LightType::kDirectional, Core::CreateRef<Core::Transform>(glm::vec3(0, 0, 10)), glm::vec3(0.5f, 0.0f, 0.7f)));
 
 		scene_.AddPoint(Core::CreateRef<Core::Point>(10, glm::vec3(0, 0, 0), glm::vec3(1, 0, 0)));
 		scene_.AddPoint(Core::CreateRef<Core::Point>(100, glm::vec3(10, 2, 5), glm::vec3(0, 1, 0)));
@@ -95,7 +106,7 @@ namespace EOL {
 		Core::Layer::OnUpdate(ts);
 		perspective_camera_controller_.OnUpdate(ts);
 
-		Core::Renderer::BeginScene(perspective_camera_controller_.GetCamera());
+		Core::Renderer::BeginScene(perspective_camera_controller_.GetCamera(), scene_.GetLightSources());
 
 		prev_time_step_ = ts;
 
