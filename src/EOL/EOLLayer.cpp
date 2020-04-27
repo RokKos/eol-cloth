@@ -4,6 +4,8 @@
 #include "../Core/Renderer/RenderCommand.h"
 #include "../Core/Core.h"
 #include "../Core/Input.h"
+#include "../Core/Components/Material.h"
+#include "../Core/Primitives/PhongLightingParamaters.h"
 
 #include <imgui.h>
 #include <glm/gtc/type_ptr.hpp>
@@ -15,15 +17,34 @@ namespace EOL {
 		: Core::Layer("EOLLayer"), perspective_camera_controller_()
 	{
 		general_setting_ = general_setting;
-		auto phongShader = shader_library_.Load(general_setting->RESOURCE_DIR +"Phong.glsl");
-		auto simpleShader = shader_library_.Load(general_setting->RESOURCE_DIR + "Simple.glsl");
-		auto triangle_test_shader = shader_library_.Load(general_setting->RESOURCE_DIR + "TriangleTest.glsl");
-		auto texture_shader = shader_library_.Load(general_setting->RESOURCE_DIR + "Texture.glsl");
+
+		auto triangle_test_shader = shader_library_.Load(general_setting->RESOURCE_DIR + "Shaders/TriangleTest.glsl");
+		auto texture_shader = shader_library_.Load(general_setting->RESOURCE_DIR + "Shaders/Texture.glsl");
+
+
+		auto generic_color_shader = shader_library_.Load(general_setting->RESOURCE_DIR + "Shaders/GenericColor.glsl");
+		auto mat_generic_color = Core::CreateRef<Core::Material>(generic_color_shader, Core::PhongLightingParameters(), "Generic_Color_MAT");
+
+		auto generic_normals_shader = shader_library_.Load(general_setting->RESOURCE_DIR + "Shaders/GenericNormals.glsl");
+		auto mat_generic_normals = Core::CreateRef<Core::Material>(generic_normals_shader, Core::PhongLightingParameters(), "Generic_Normals_MAT");
+
+		auto generic_uv_coordinates_shader = shader_library_.Load(general_setting->RESOURCE_DIR + "Shaders/GenericUVCoordinates.glsl");
+		generic_uv_coordinates_shader->Bind();
+		generic_uv_coordinates_shader->SetInt("u_Texture", 0);
+		auto uv_texture = Core::Texture2D::Create(general_setting->RESOURCE_DIR + "Textures/uv_texture.png");
+		auto mat_generic_uv_coordinates = Core::CreateRef<Core::Material>(generic_uv_coordinates_shader, Core::PhongLightingParameters(), "Generic_UV_Coordinates_MAT");
+		mat_generic_uv_coordinates->SetTexture("UV_TEST_Texture", uv_texture);
+
+		auto generic_texture_shader = shader_library_.Load(general_setting->RESOURCE_DIR + "Shaders/GenericTexture.glsl");
+		generic_texture_shader->Bind();
+		generic_texture_shader->SetInt("u_Texture", 0);
+		auto gun_texture = Core::Texture2D::Create(general_setting->RESOURCE_DIR + "Textures/Cerberus_A.tga");
+		auto mat_generic_generic_texture = Core::CreateRef<Core::Material>(generic_texture_shader, Core::PhongLightingParameters(), "Generic_Texture_MAT");
+		mat_generic_generic_texture->SetTexture("Gun_Texture", gun_texture);
 
 		// BOX ------
 		auto vertex_array_box = Core::VertexArray::Create();
-		Core::Ref<Core::Transform> transform_box = Core::CreateRef<Core::Transform>(glm::vec3(2, 0, 3));
-		auto model_data = Core::ModelLoader::LoadModel(general_setting->RESOURCE_DIR + "gun.obj");
+		auto model_data = Core::ModelLoader::LoadModel(general_setting->RESOURCE_DIR + "Models/gun.obj");
 
 		auto vertex_buffer_box = Core::VertexBuffer::Create(model_data.vertices.data(), model_data.vertices.size() * sizeof(Core::Vertex));
 		Core::BufferLayout layout_box = {
@@ -38,22 +59,24 @@ namespace EOL {
 		Core::Ref<Core::IndexBuffer> index_buffer_box = Core::IndexBuffer::Create(model_data.indices.data(), model_data.indices.size());
 		vertex_array_box->SetIndexBuffer(index_buffer_box);
 
-		auto shape = Core::CreateRef<Core::Shape>(vertex_array_box, transform_box, model_data, "Shape01");
-		auto shape2 = Core::CreateRef<Core::Shape>(vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(1, 1, 1)), model_data, "Shape02");
-		auto shape3 = Core::CreateRef<Core::Shape>(vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(0, 0, 0)), model_data, "Shape03");
+		// TODO(Rok Kos): Read from JSON file
+		auto shape = Core::CreateRef<Core::Shape>(mat_generic_color, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(0, 0, 0)), model_data, "Model");
+		auto shape2 = Core::CreateRef<Core::Shape>(mat_generic_normals, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(2, 0, 0)), model_data, "Model Normals");
+		auto shape3 = Core::CreateRef<Core::Shape>(mat_generic_uv_coordinates, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(4, 0, 0)), model_data, "Texture UVs");
+		auto shape4 = Core::CreateRef<Core::Shape>(mat_generic_generic_texture, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(6, 0, 0)), model_data, "Texture");
+		//auto shape5 = Core::CreateRef<Core::Shape>(vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(8, 0, 0)), model_data, "Lighting");
+		//auto shape6 = Core::CreateRef<Core::Shape>(vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(8, 0, 0)), model_data, "All Together");
 		scene_.AddShape(shape);
 		scene_.AddShape(shape2);
 		scene_.AddShape(shape3);
+		scene_.AddShape(shape4);
+		//scene_.AddShape(shape5);
+		//scene_.AddShape(shape6);
 
 
 		scene_.AddPoint(Core::CreateRef<Core::Point>(10, glm::vec3(0, 0, 0), glm::vec3(1, 0, 0)));
 		scene_.AddPoint(Core::CreateRef<Core::Point>(100, glm::vec3(10, 2, 5), glm::vec3(0, 1, 0)));
 
-
-		uv_texture_ = Core::Texture2D::Create(general_setting->RESOURCE_DIR + "uv_texture.png");
-		gun_texture_ = Core::Texture2D::Create(general_setting->RESOURCE_DIR + "Cerberus_A.tga");
-		texture_shader->Bind();
-		texture_shader->SetInt("u_Texture", 0);
 	}
 
 	void EOLLayer::OnAttach()
@@ -81,12 +104,10 @@ namespace EOL {
 
 		// Load Models on themand
 
-		auto texture_shader = shader_library_.Get("Texture");
 		//uv_texture_->Bind();
 		for (auto shape : scene_.GetShapes())
 		{
-			gun_texture_->Bind();
-			Core::Renderer::Submit(texture_shader, shape->GetVertexArray(), shape->GetTransform()->GetTransformMatrix());
+			Core::Renderer::Submit(shape->GetMaterial(), shape->GetVertexArray(), shape->GetTransform()->GetTransformMatrix());
 		}
 
 		Core::Renderer::DrawPoints(scene_.GetPoints());
