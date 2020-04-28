@@ -45,13 +45,13 @@ void main()
 	vec3 Normal = normalize(v_Normal);
 	vec3 LightDirection = normalize(u_LightPosition - v_ModelPosition);
 	float diff = max(dot(Normal, LightDirection), 0.0);
-	light_color += u_LightColor * u_DiffuseColor * diff;
+	light_color += u_LightIntensity * u_LightColor * u_DiffuseColor * diff;
 
 	vec3 ViewDirection = normalize(u_CameraPosition - v_ModelPosition);
 	
 	vec3 ReflectionDirection = reflect(-LightDirection, Normal);  
 	float specular = pow(max(dot(ViewDirection, ReflectionDirection), 0.0f), u_SpecularScatering);
-	light_color += u_LightColor * u_SpecularColor * specular;
+	light_color += u_LightIntensity * u_LightColor * u_SpecularColor * specular;
 
 	color = vec4(light_color, 1.0f); 
 }
