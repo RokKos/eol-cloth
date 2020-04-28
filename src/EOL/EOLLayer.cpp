@@ -198,10 +198,28 @@ namespace EOL {
 					if (ImGui::TreeNode("Material")) {
 						auto shape_material = shape->GetMaterial();
 						ImGui::Text(shape_material->GetName().c_str());
+						auto lighting_data = shape_material->GetPhongLightingParameters();
+						
+						//float specular_scatering_;
+						//glm::vec3 ambient_color_;
+						//glm::vec3 ambient_intensity_;
+					
+
+						ImGui::ColorEdit3("Diffuse Color:", glm::value_ptr(lighting_data.diffuse_color_));
+						ImGui::ColorEdit3("Specular Color:", glm::value_ptr(lighting_data.specular_color_));
+						ImGui::ColorEdit3("Ambient Color:", glm::value_ptr(lighting_data.ambient_color_));
+
+						//float s_color[3] = { lighting_data.specular_color_.x , lighting_data.specular_color_.y, lighting_data.specular_color_.z };
+						//ImGui::Text("Specular Color:"); ImGui::InputFloat3("b", &s_color[0]);
+						//lighting_data.specular_color_.x = s_color[0];
+						//lighting_data.specular_color_.y = s_color[1];
+						//lighting_data.specular_color_.z = s_color[2];
+
 
 
 						
 
+						shape_material->SetPhongLightingParameters(lighting_data);
 
 						ImGui::TreePop();
 					}
