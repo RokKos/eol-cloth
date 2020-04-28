@@ -46,7 +46,7 @@ namespace Core {
 
 		glm::vec3 camera_up_ = {0.0f, 1.0f, 0.0f};
 
-		float zoom_level_ = 1.0f;
+		float zoom_level_ = 45.0f;
 		float camera_movement_speed_ = 1.0f;
 		float camera_rotation_speed_ = 0.1f;
 
