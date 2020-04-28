@@ -69,11 +69,11 @@ namespace EOL {
 		vertex_array_box->SetIndexBuffer(index_buffer_box);
 
 		// TODO(Rok Kos): Read from JSON file
-		auto shape = Core::CreateRef<Core::Shape>(mat_generic_color, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(0, 0, 0)), model_data, "Model");
-		auto shape2 = Core::CreateRef<Core::Shape>(mat_generic_normals, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(2, 0, 0)), model_data, "Model Normals");
-		auto shape3 = Core::CreateRef<Core::Shape>(mat_generic_uv_coordinates, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(4, 0, 0)), model_data, "Texture UVs");
-		auto shape4 = Core::CreateRef<Core::Shape>(mat_generic_texture, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(6, 0, 0)), model_data, "Texture");
-		auto shape5 = Core::CreateRef<Core::Shape>(mat_generic_lighting, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(8, 0, 0)), model_data, "Lighting");
+		auto shape = Core::CreateRef<Core::Shape>(mat_generic_color, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(0, 0, 0)), model_data, "Obj Model Test");
+		auto shape2 = Core::CreateRef<Core::Shape>(mat_generic_normals, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(2, 0, 0)), model_data, "Obj Model Normals Test");
+		auto shape3 = Core::CreateRef<Core::Shape>(mat_generic_uv_coordinates, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(4, 0, 0)), model_data, "Obj Texture UVs Test");
+		auto shape4 = Core::CreateRef<Core::Shape>(mat_generic_texture, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(6, 0, 0)), model_data, "Obj Texture Test");
+		auto shape5 = Core::CreateRef<Core::Shape>(mat_generic_lighting, vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(8, 0, 0)), model_data, "Obj Lighting Test");
 		//auto shape6 = Core::CreateRef<Core::Shape>(vertex_array_box, Core::CreateRef<Core::Transform>(glm::vec3(8, 0, 0)), model_data, "All Together");
 		scene_.AddShape(shape);
 		scene_.AddShape(shape2);
@@ -161,40 +161,108 @@ namespace EOL {
 			for (auto shape : scene_.GetShapes())
 			{
 				if (ImGui::TreeNode(shape->GetName().c_str())) {
-					// TODO(Rok Kos): Refac this
-					auto shape_transform = shape->GetTransform();
+					if (ImGui::TreeNode("Transform")) {
+						// TODO(Rok Kos): Refac this
+						auto shape_transform = shape->GetTransform();
 
-					glm::vec3 t_pos = shape_transform->GetPosition();
-					float pos[3] = { t_pos.x, t_pos.y, t_pos.z };
-					ImGui::Text("Pos:"); ImGui::InputFloat3("a", &pos[0]);
-					t_pos.x = pos[0];
-					t_pos.y = pos[1];
-					t_pos.z = pos[2];
-					shape_transform->SetPosition(t_pos);
-
-
-					glm::vec3 t_rot = shape_transform->GetRotation();
-					float rot[3] = { t_rot.x, t_rot.y, t_rot.z };
-					ImGui::Text("Rot:"); ImGui::InputFloat3("b", &rot[0]);
-					t_rot.x = rot[0];
-					t_rot.y = rot[1];
-					t_rot.z = rot[2];
-					shape_transform->SetRotation(t_rot);
+						glm::vec3 t_pos = shape_transform->GetPosition();
+						float pos[3] = { t_pos.x, t_pos.y, t_pos.z };
+						ImGui::Text("Pos:"); ImGui::InputFloat3("a", &pos[0]);
+						t_pos.x = pos[0];
+						t_pos.y = pos[1];
+						t_pos.z = pos[2];
+						shape_transform->SetPosition(t_pos);
 
 
+						glm::vec3 t_rot = shape_transform->GetRotation();
+						float rot[3] = { t_rot.x, t_rot.y, t_rot.z };
+						ImGui::Text("Rot:"); ImGui::InputFloat3("b", &rot[0]);
+						t_rot.x = rot[0];
+						t_rot.y = rot[1];
+						t_rot.z = rot[2];
+						shape_transform->SetRotation(t_rot);
 
-					glm::vec3 t_scale = shape_transform->GetScale();
-					float scl[3] = { t_scale.x, t_scale.y, t_scale.z };
-					ImGui::Text("Scale:"); ImGui::InputFloat3("c", &scl[0]);
-					t_scale.x = scl[0];
-					t_scale.y = scl[1];
-					t_scale.z = scl[2];
-					shape_transform->SetScale(t_scale);
+
+
+						glm::vec3 t_scale = shape_transform->GetScale();
+						float scl[3] = { t_scale.x, t_scale.y, t_scale.z };
+						ImGui::Text("Scale:"); ImGui::InputFloat3("c", &scl[0]);
+						t_scale.x = scl[0];
+						t_scale.y = scl[1];
+						t_scale.z = scl[2];
+						shape_transform->SetScale(t_scale);
+
+						ImGui::TreePop();
+					}
+					
+					if (ImGui::TreeNode("Material")) {
+						auto shape_material = shape->GetMaterial();
+						ImGui::Text(shape_material->GetName().c_str());
+
+
+						
+
+
+						ImGui::TreePop();
+					}
+
 
 					ImGui::TreePop();
 				}
 			}
-			
+
+			for (auto light_source : scene_.GetLightSources())
+			{
+				if (ImGui::TreeNode(light_source->GetName().c_str())) {
+					if (ImGui::TreeNode("Color Properties")) {
+						glm::vec3 t_color = light_source->GetColor();
+						float color[3] = { t_color.x, t_color.y, t_color.z };
+						ImGui::Text("Color:"); ImGui::InputFloat3("d", &color[0]);
+						t_color.x = color[0];
+						t_color.y = color[1];
+						t_color.z = color[2];
+						light_source->SetColor(t_color);
+
+						ImGui::TreePop();
+					}
+
+
+					if (ImGui::TreeNode("Transform")) {
+						// TODO(Rok Kos): Refac this
+						
+
+						glm::vec3 t_pos = light_source->GetPosition();
+						float pos[3] = { t_pos.x, t_pos.y, t_pos.z };
+						ImGui::Text("Pos:"); ImGui::InputFloat3("a", &pos[0]);
+						t_pos.x = pos[0];
+						t_pos.y = pos[1];
+						t_pos.z = pos[2];
+						light_source->SetPosition(t_pos);
+
+
+						glm::vec3 t_rot = light_source->GetDirection();
+						float rot[3] = { t_rot.x, t_rot.y, t_rot.z };
+						ImGui::Text("Rot:"); ImGui::InputFloat3("b", &rot[0]);
+						t_rot.x = rot[0];
+						t_rot.y = rot[1];
+						t_rot.z = rot[2];
+						light_source->SetDirection(t_rot);
+
+
+
+						glm::vec3 t_scale = light_source->GetIntensity();
+						float scl[3] = { t_scale.x, t_scale.y, t_scale.z };
+						ImGui::Text("Scale:"); ImGui::InputFloat3("c", &scl[0]);
+						t_scale.x = scl[0];
+						t_scale.y = scl[1];
+						t_scale.z = scl[2];
+						light_source->SetIntensity(t_scale);
+
+						ImGui::TreePop();
+					}
+					ImGui::TreePop();
+				}
+			}
 			
 			ImGui::TreePop();
 		}
