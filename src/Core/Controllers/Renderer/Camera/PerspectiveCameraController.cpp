@@ -54,7 +54,7 @@ namespace Core {
 	{
 		glm::vec2 mouse_pos = glm::vec2(e.GetX(), e.GetY());
 
-		if (Input::IsMouseButtonPressed(MouseCode::Button1) || Input::IsMouseButtonPressed(MouseCode::Button0)) {	
+		if (Input::IsMouseButtonPressed(MouseCode::ButtonRight) || Input::IsMouseButtonPressed(MouseCode::ButtonMiddle)) {
 			glm::vec2 offset = mouse_pos - prev_mouse_pos_;
 			offset *= camera_rotation_speed_;
 
