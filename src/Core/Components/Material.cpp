@@ -39,7 +39,7 @@ namespace Core {
 		// TODO(Rok Kos): Add null check
 		shader_->SetFloat3("u_DiffuseColor", phong_lighting_parameters_.diffuse_color_);
 		shader_->SetFloat3("u_SpecularColor", phong_lighting_parameters_.specular_color_);
-		shader_->SetFloat("u_SpecularScatering", phong_lighting_parameters_.specular_scatering_);
+		shader_->SetFloat("u_SpecularScatering", phong_lighting_parameters_.specular_scattering_);
 		shader_->SetFloat3("u_AmbientColor", phong_lighting_parameters_.ambient_color_);
 		shader_->SetFloat3("u_AmbientIntensity", phong_lighting_parameters_.ambient_intensity_);
 	}
