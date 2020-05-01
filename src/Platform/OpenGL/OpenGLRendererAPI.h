@@ -15,6 +15,7 @@ namespace Platform {
 		virtual void Clear() override;
 
 		virtual void DrawIndexed(const Core::Ref<Core::VertexArray>& vertexArray, uint32_t indexCount = 0) override;
+		virtual void DrawPoints(const std::vector<Core::Ref<Core::Point>>& points) override;
 	};
 
 

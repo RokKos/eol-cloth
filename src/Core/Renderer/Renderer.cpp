@@ -21,9 +21,11 @@ namespace Core {
 		RenderCommand::SetViewport(0, 0, width, height);
 	}
 
-	void Renderer::BeginScene(Camera& camera)
+	void Renderer::BeginScene(Camera& camera, std::vector<Ref<LightSource>> light_sources)
 	{
 		s_SceneData->ViewProjectionMatrix = camera.GetViewProjectionMatrix();
+		s_SceneData->camera_position_ = camera.GetPosition();
+		s_SceneData->light_sources_ = light_sources;
 	}
 
 	void Renderer::EndScene()
@@ -31,14 +33,33 @@ namespace Core {
 
 	}
 
-	void Renderer::Submit(const Ref<Shader>& shader, const Ref<VertexArray>& vertexArray, const glm::mat4& transform)
+	void Renderer::Submit(const Ref<Material>& material, const Ref<VertexArray>& vertexArray, const glm::mat4& transform)
 	{
+		material->BindTextures();
+
+		Ref<Shader> shader = material->GetShader();
 		shader->Bind();
 		shader->SetMat4("u_ViewProjection", s_SceneData->ViewProjectionMatrix);
+		shader->SetFloat3("u_CameraPosition", s_SceneData->camera_position_);
 		shader->SetMat4("u_Transform", transform);
+
+		material->BindLightData();
+		// TODO(Rok Kos): Temporary, find solution for multiple lights
+		for (auto light_source : s_SceneData->light_sources_)
+		{
+			shader->SetFloat3("u_LightPosition", light_source->GetPosition());
+			shader->SetFloat3("u_LightDirection", light_source->GetDirection());
+			shader->SetFloat3("u_LightIntensity", light_source->GetIntensity());
+			shader->SetFloat3("u_LightColor", light_source->GetColor());
+		}
 
 		vertexArray->Bind();
 		RenderCommand::DrawIndexed(vertexArray);
+	}
+
+	void Renderer::DrawPoints(const std::vector<Ref<Point>>& points)
+	{
+		RenderCommand::DrawPoints(points);
 	}
 
 }

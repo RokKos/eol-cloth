@@ -38,17 +38,20 @@ namespace Core {
 		bool OnMouseMove(MouseMovedEvent& e);
 		bool OnMouseScrolled(MouseScrolledEvent& e);
 		bool OnWindowResized(WindowResizeEvent& e);
+		void SetCameraRotation();
+
+
 	private:
 		PerspectiveCamera camera_;
 
 		glm::vec3 camera_up_ = {0.0f, 1.0f, 0.0f};
 
-		float zoom_level_ = 1.0f;
+		float zoom_level_ = 45.0f;
 		float camera_movement_speed_ = 1.0f;
 		float camera_rotation_speed_ = 0.1f;
 
 		glm::vec2 prev_mouse_pos_;
-		float yaw_ = -90.0f;
+		float yaw_ = 90.0f;
 		float pitch_ = 0.0f;
 	};
 

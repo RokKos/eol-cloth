@@ -27,17 +27,36 @@ namespace Core {
 
 		LOG_WARN("{0}", warn);
 
-		std::unordered_map<glm::vec3, uint32_t> unique_vertices = {};
+		std::unordered_map<Vertex, uint32_t> unique_vertices = {};
+
+		bool has_texture_cordinates = attrib.texcoords.size() > 0;
+		bool has_normals = attrib.normals.size() > 0;
 
 		for (const auto& shape : shapes) {
 			for (const auto& index : shape.mesh.indices) {
-				glm::vec3 vertex = { 
+				Vertex vertex{};
+				vertex.pos = { 
 					attrib.vertices[3 * index.vertex_index + 0],
 					attrib.vertices[3 * index.vertex_index + 1],
 					attrib.vertices[3 * index.vertex_index + 2] 
 				};
+				
+				if (has_normals) {
+					vertex.normal = {
+						attrib.normals[3 * index.normal_index + 0],
+						attrib.normals[3 * index.normal_index + 1],
+						attrib.normals[3 * index.normal_index + 2],
+					};
+				}
 
-				if (unique_vertices.count(vertex) == 0) {
+				if (has_texture_cordinates) {
+					vertex.tex_coord = {
+						attrib.texcoords[2 * index.texcoord_index + 0],
+						attrib.texcoords[2 * index.texcoord_index + 1]
+					};
+				}
+
+				if (unique_vertices.count(vertex) == 0) {  // TODO(Rok Kos): Check if this is true: There probably aren't two vertexes with same positions and different texture cordinates
 					unique_vertices[vertex] = static_cast<uint32_t>(model_data.vertices.size());
 					model_data.vertices.push_back(vertex);
 				}
