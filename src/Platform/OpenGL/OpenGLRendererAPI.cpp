@@ -76,4 +76,15 @@ namespace Platform {
 		glDisable(GL_POINT_SMOOTH);
 	}
 
+	void OpenGLRendererAPI::DispatchCompute(const Core::ComputeShaderConfiguration& compute_shader_configuration)
+	{
+		glDispatchComputeGroupSizeARB(compute_shader_configuration.GetWorkGroupSize()[0], compute_shader_configuration.GetWorkGroupSize()[1], compute_shader_configuration.GetWorkGroupSize()[2],
+								   compute_shader_configuration.GetLocalGroupSize()[0], compute_shader_configuration.GetLocalGroupSize()[1], compute_shader_configuration.GetLocalGroupSize()[2]);
+	}
+
+	void OpenGLRendererAPI::WaitMemoryBarrier()
+	{
+		glMemoryBarrier(GL_SHADER_STORAGE_BARRIER_BIT);
+	}
+
 }

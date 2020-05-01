@@ -5,6 +5,7 @@
 #include "../Primitives/LightSource.h"
 #include "../Components/Material.h"
 #include "Buffers/VertexArray.h"
+#include "Buffers/ShaderStorageArray.h"
 #include "Cameras/Camera.h"
 
 #include <vector>
@@ -22,6 +23,7 @@ namespace Core {
 		static void BeginScene(Camera& camera, std::vector<Ref<LightSource>> light_sources);
 		static void EndScene();
 		static void Submit(const Ref<Material>& material, const Ref<VertexArray>& vertexArray, const glm::mat4& transform = glm::mat4(1.0f));
+		static void DispatchComputeShader(const Ref<Shader> shader, const Ref<ShaderStorageArray>& shader_storage_array, const ComputeShaderConfiguration& compute_shader_configuration);
 		static void DrawPoints(const std::vector<Ref<Point>>& points);
 
 

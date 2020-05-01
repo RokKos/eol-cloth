@@ -4,10 +4,12 @@
 #include "../Core/Renderer/RenderCommand.h"
 #include "../Core/Core.h"
 #include "../Core/Input.h"
+#include "../Core/Renderer/Texture/Texture2D.h"
 #include "../Core/Components/Material.h"
 #include "../Core/Primitives/PhongLightingParamaters.h"
 
 #include <imgui.h>
+#include <cmath>
 #include <glm/gtc/type_ptr.hpp>
 
 #include "../Core/Tools/ModelLoader.h"
@@ -93,6 +95,32 @@ namespace EOL {
 		scene_.AddPoint(Core::CreateRef<Core::Point>(10, glm::vec3(0, 0, 0), glm::vec3(1, 0, 0)));
 		scene_.AddPoint(Core::CreateRef<Core::Point>(100, glm::vec3(10, 2, 5), glm::vec3(0, 1, 0)));
 
+		// Compute Shader Test
+
+		auto compute_particles_shader = shader_library_.Load(general_setting->RESOURCE_DIR + "Shaders/ComputeParticlesShader.glsl");
+		num_particles_ = 1024 * 1024;
+		compute_shader_configuration_ = Core::ComputeShaderConfiguration({ 1024 * 128, 1, 1 }, { 8, 1, 1 });
+
+		std::vector<glm::vec3> particle_positons;
+		particle_positons.reserve(num_particles_);
+		std::vector<glm::vec3> particle_velocities;
+		particle_velocities.reserve(num_particles_);
+		std::vector<glm::vec4> particle_colors;
+		particle_colors.reserve(num_particles_);
+		for (unsigned int i = 0; i < num_particles_; ++i) {
+			particle_positons.push_back(glm::vec3(i, 0, 100));
+			particle_velocities.push_back(glm::vec3(0, 1.0f / (float)i, 0));
+			particle_colors.push_back(glm::vec4(std::sin(i), std::cos(i), 0, 1.0f));
+		}
+
+		auto positions_buffer = Core::ShaderStorageBuffer::Create(particle_positons, particle_positons.size() * sizeof(glm::vec3));
+		auto velocities_buffer = Core::ShaderStorageBuffer::Create(particle_velocities, particle_velocities.size() * sizeof(glm::vec3));
+		auto color_buffer = Core::ShaderStorageBuffer::Create(particle_colors, particle_colors.size() * sizeof(glm::vec4));
+		particles_storage_array_ = Core::ShaderStorageArray::Create();
+		particles_storage_array_->AddShaderStorageBuffer(positions_buffer);
+		particles_storage_array_->AddShaderStorageBuffer(velocities_buffer);
+		particles_storage_array_->AddShaderStorageBuffer(color_buffer);
+
 	}
 
 	void EOLLayer::OnAttach()
@@ -118,12 +146,22 @@ namespace EOL {
 		Core::RenderCommand::SetClearColor(bg_color_);
 		Core::RenderCommand::Clear();
 
-		// Load Models on themand
+		// TODO(Rok Kos): Load Models on themand
 
-		//uv_texture_->Bind();
 		for (auto shape : scene_.GetShapes())
 		{
 			Core::Renderer::Submit(shape->GetMaterial(), shape->GetVertexArray(), shape->GetTransform()->GetTransformMatrix());
+		}
+
+		auto compute_particles_shader = shader_library_.Get("ComputeParticlesShader");
+		Core::Renderer::DispatchComputeShader(compute_particles_shader, particles_storage_array_, compute_shader_configuration_);
+
+		scene_.DeletePoints();
+		auto particle_positions_buffer = particles_storage_array_->GetShaderStorageBuffers()[0];
+		std::vector<glm::vec3> particle_positions = particle_positions_buffer->GetData(num_particles_ * sizeof(glm::vec3));
+		for (const auto& particle_position : particle_positions)
+		{
+			scene_.AddPoint(Core::CreateRef<Core::Point>(10, particle_position, glm::vec3(1, 1, 1)));
 		}
 
 		Core::Renderer::DrawPoints(scene_.GetPoints());

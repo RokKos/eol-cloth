@@ -57,6 +57,15 @@ namespace Core {
 		RenderCommand::DrawIndexed(vertexArray);
 	}
 
+	void Renderer::DispatchComputeShader(const Ref<Shader> shader, const Ref<ShaderStorageArray>& shader_storage_array, const ComputeShaderConfiguration& compute_shader_configuration)
+	{
+		shader_storage_array->Bind();
+		shader->Bind();
+		RenderCommand::DispatchCompute(compute_shader_configuration);
+		RenderCommand::WaitMemoryBarrier();
+
+	}
+
 	void Renderer::DrawPoints(const std::vector<Ref<Point>>& points)
 	{
 		RenderCommand::DrawPoints(points);

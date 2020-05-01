@@ -3,6 +3,7 @@
 #include "../Core.h"
 #include "Buffers/VertexArray.h"
 #include "../Primitives/Point.h"
+#include "../Primitives/ComputeShaderConfiguration.h"
 
 #include <glm/glm.hpp>
 
@@ -23,6 +24,8 @@ namespace Core {
 
 		virtual void DrawIndexed(const Ref<VertexArray>& vertexArray, uint32_t indexCount = 0) = 0;
 		virtual void DrawPoints(const std::vector<Ref<Point>>& points) = 0;
+		virtual void DispatchCompute(const ComputeShaderConfiguration& compute_shader_configuration) = 0;
+		virtual void WaitMemoryBarrier() = 0;
 
 		inline static API GetAPI() { return s_API; }
 		static Scope<RendererAPI> Create();

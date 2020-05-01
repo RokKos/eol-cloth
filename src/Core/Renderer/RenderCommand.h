@@ -36,6 +36,15 @@ namespace Core {
 		{
 			s_RendererAPI->DrawPoints(points);
 		}
+
+		static void DispatchCompute(const ComputeShaderConfiguration& compute_shader_configuration) {
+			s_RendererAPI->DispatchCompute(compute_shader_configuration);
+		}
+
+		static void WaitMemoryBarrier()
+		{
+			s_RendererAPI->WaitMemoryBarrier();
+		}
 	private:
 		static Scope<RendererAPI> s_RendererAPI;
 	};

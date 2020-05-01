@@ -9,10 +9,15 @@ namespace Platform {
 
 	static GLenum ShaderTypeFromString(const std::string& type)
 	{
-		if (type == "vertex")
+		if (type == "vertex") {
 			return GL_VERTEX_SHADER;
-		if (type == "fragment" || type == "pixel")
+		}
+		if (type == "fragment" || type == "pixel") {
 			return GL_FRAGMENT_SHADER;
+		}
+		if (type == "compute") {
+			return GL_COMPUTE_SHADER;
+		}
 
 		CORE_ASSERT(false, "Unknown shader type!");
 		return 0;

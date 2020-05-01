@@ -16,6 +16,9 @@ namespace Platform {
 
 		virtual void DrawIndexed(const Core::Ref<Core::VertexArray>& vertexArray, uint32_t indexCount = 0) override;
 		virtual void DrawPoints(const std::vector<Core::Ref<Core::Point>>& points) override;
+
+		virtual void DispatchCompute(const Core::ComputeShaderConfiguration& compute_shader_configuration) override;
+		virtual void WaitMemoryBarrier() override;
 	};
 
 

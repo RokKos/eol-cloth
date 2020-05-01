@@ -15,6 +15,7 @@ namespace Core {
 		void AddShape(const Ref<Shape>& shape) { shapes_.push_back(shape); }
 		const std::vector<Ref<Shape>>& GetShapes() const { return shapes_; }
 
+		void DeletePoints() { points_.clear(); };
 		void AddPoint(const Ref<Point>& point) { points_.push_back(point); }
 		const std::vector<Ref<Point>>& GetPoints() const { return points_; }
 

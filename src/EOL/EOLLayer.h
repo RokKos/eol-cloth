@@ -6,7 +6,8 @@
 #include "../Core/Events/MouseEvent.h"
 #include "../Core/Renderer/Shader.h"
 #include "../Core/Controllers/Renderer/Camera/PerspectiveCameraController.h"
-#include "../Core/Renderer/Texture/Texture2D.h"
+#include "../Core/Renderer/Buffers/ShaderStorageArray.h"
+#include "../Core/Primitives/ComputeShaderConfiguration.h"
 #include "../Core/Scene/Scene.h"
 
 #include "Settings/GeneralSettings.h"
@@ -42,7 +43,9 @@ namespace EOL {
 		Core::PerspectiveCameraController perspective_camera_controller_;
 
 		Core::Scene scene_;
-		Core::Ref<Core::Texture2D> uv_texture_;
-		Core::Ref<Core::Texture2D> gun_texture_;
+
+		Core::Ref<Core::ShaderStorageArray> particles_storage_array_;
+		Core::ComputeShaderConfiguration compute_shader_configuration_;
+		unsigned int num_particles_;
 	};
 }
